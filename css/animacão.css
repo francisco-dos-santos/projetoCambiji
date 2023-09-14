@@ -16,7 +16,7 @@
 .bouncedireito
 {
     animation-name:bouncedireito;
-    animation-duration:4s;
+    animation-duration:2s;
     animation-timing-function: ease-in-out;
 }
 
@@ -34,7 +34,7 @@
 .inclinado
 {
     animation-name:inclinado;
-    animation-duration:2s;
+    animation-duration:1s;
     animation-timing-function:ease-in;
 }
 @keyframes fadeIn{
@@ -44,7 +44,7 @@
 .fadeIn
 {
     animation-name:fadeIn;
-    animation-duration:2s;
+    animation-duration:1s;
     animation-timing-function: ease-in-out;
 }
 @keyframes subindo {
@@ -61,7 +61,7 @@
 .subindo
 {
     animation-name:subindo;
-    animation-duration:2s;
+    animation-duration:1s;
     animation-timing-function: ease-in-out;
 }
 @keyframes descendo{
@@ -78,7 +78,7 @@
 .descendo
 {
     animation-name:descendo;
-    animation-duration:2s;
+    animation-duration:1s;
     animation-timing-function: ease-in-out;
 }
 

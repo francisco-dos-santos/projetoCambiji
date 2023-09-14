@@ -197,7 +197,7 @@ ul li a:hover::after
 .conta:focus-within .dropdown 
 {
     display:block;
-    animation:bouncedireito 5s  ease-in-out;
+    animation:bouncedireito 2s  ease-in-out;
 }
  
 /* efito sacola */

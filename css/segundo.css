@@ -190,7 +190,7 @@ ul li a:hover::after
 .conta:focus-within .dropdown
 {
     display: block;
-    animation:bouncedireito 5s  ease-in-out;
+    animation:bouncedireito 2s  ease-in-out;
 }
 
  .conta img
@@ -287,7 +287,7 @@ ul li a:hover::after
     /* background-color:rgb(235, 232, 232); */
     display: block;
     /* border-bottom: 2px solid #ffa200; */
-    transition: all 2s;
+    transition: all 0.5s;
 }
 /*conteudo principal*/
 /* tornando menu fixo */
