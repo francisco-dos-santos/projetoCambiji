@@ -33,7 +33,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 A Cambiji-Nature é um site de vendas de produtos cosmetis, e também permite fazer reserva de serviços da pel.
 
-- [Acesse o projeto finalizado, online](https://maykbrito.github.io/devlinks)
+- [Acesse o projeto finalizado, online](https://francisco-dos-santos.github.io/projetoCambiji/)
 
 
 ## 🔖 Layout
