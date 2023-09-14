@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/segundo.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animacão.css"/>
+    <title>Finalizar Compra</title>
+</head>
+<body>
+    <header id="header-principal">
+        <h1 class="logo"> 
+            <a href="inicio logado.html">
+                <img src="../imagens/logo.png"  alt="cambiji_nature">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="inicio logado.html">Inicio</a></li>
+                <li><a href="produto logado.html">produtos</a></li>
+                <li><a href="servicos logado.html">Serviços</a></li>
+                <li><a href="sobre-nos logado.html">Sobre nós</a></li>
+                <li class="botao"><a href="contato logado.html">Conctato</a></li>
+            </ul>
+        </nav>
+        <article class="pesquisar">
+            <input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
+            <label for="pesq"><img src="../imagens/icons8_search.ico" alt="icon-search"></label>
+        </article>
+            <div class="conta" >
+               <a href="#"  title="Francisco dos santos"><img src="../imagens/logado-2.JPG" alt="suario cambiji"></a>
+               <div class="dropdown">
+                <a href="perfil.html">perfil</a>
+                <a href="#modal">Sair</a>
+               </div>
+            </div>
+            <div class="sacola" >
+                <a href="carrinho logado.html"><img src="../imagens/icons8_shopping_cart_with_money_32.png" width="32px" alt="sacola_cambiji"></a>
+                <div class="dropdow-sacola subindo">
+                    <div class="cart-principal">
+                        <img src="../imagens/produto7.png" alt="">
+                        <div class="alinhar-preco">
+                            <p>Creme ponde</p>
+                            <p>1X- <span>3000kz</span></p>
+                        </div>
+                    </div>
+                <!-- 2 -->
+                <div class="cart-principal">
+                    <img src="../imagens/produto4.png" alt="">
+                    <div class="alinhar-preco">
+                        <p>Perfume Cambiji</p>
+                        <p>1X- <span>3000kz</span></p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="cart-principal">
+                    <img src="../imagens/produto6.png" alt="">
+                    <div class="alinhar-preco">
+                        <p>Aromas </p>
+                        <p>1X- <span>500kz</span></p>
+                    </div>
+                </div>
+
+                <div class="cart-finaliza">
+                    <a href="#finalizar.html">Finalizar</a>
+                    <p>total <span>:6500kz</span></p>
+                </div>
+            </div>
+    </header>
+    
+       <!--editando o modal saindo-->
+       <div class="modal-cont" id="modal">
+        <div class="cont-info">
+          <div class="informacao-modal">
+            <p>O senhor tem a certeza que quer terminar a sessão?</p>
+            <div>
+              <a href="../inicio.html">Sim</a>
+              <a href="#l">Não</a>
+            </div>
+        </div>
+        </div>
+      </div>
+      
+      <div class="voltar">
+        <a href="carrinho logado.html">
+            <img src="../imagens/icons8_left.ico" width="32px" alt="voltar">
+        </a>
+    </div>
+
+<article class="main-finaliza">
+
+    <section class="Finaliza-pag bouncedireito">
+        <article class="card-finlaiza">
+            <h2>Detalhes de facturação</h2>
+            <form action="" method="get" autocomplete="on">
+                <p>Pais/Região*</p>
+                <select name="pais" class="input-finaliza" id="ipais" disabled="disabled">
+                    <option value=""> Angola</option>
+                </select>
+                <p>Enderenço Da entrega*</p>
+                <input type="text" class="input-finaliza" name="" id=""placeholder="Rocha Pinto/ rua 12 / 35">
+                <p>Numero de Telefone*</p>
+                <input type="tel" class="input-finaliza" name="" id="" placeholder="+244 (932925647)" >
+                <p>Nota ou Palvra chave*</p>
+                <textarea name="" class="input-finaliza" id="" cols="0" rows="2" placeholder="(informações expecias sobre a encomenda )"></textarea>
+            </form>
+
+
+        </article>
+<!-- card-2 -->
+        <article class="card-finliza2">
+            <h2>A sua encomenda</h2>
+            <div class="alinhar-preco">
+                <p>Produto</p>
+                <p>subtotal</p>
+            </div>
+            <!-- 1 -->
+            <div class="alinhar-preco">
+                <p><img src="../imagens/produto7.png" alt=""></p>
+                <p>
+                    <span>Creme</span>
+                    <br><br>
+                    3000kz
+                </p>
+            </div>
+            <!-- 2 -->
+            <div class="alinhar-preco">
+                <p><img src="../imagens/produto6.png" alt=""></p>
+                <p>
+                    <span>Aromas</span>
+                    <br><br>
+                    500kz</p>
+            </div>
+            <!-- 3-->
+            <div class="alinhar-preco">
+                <p><img src="../imagens/produto4.png" alt=""></p>
+                <p>
+                    <span>Perfume </span>
+                    <br><br>
+                    3000kz</p>
+            </div>
+            <!-- 4-->
+            <div class="alinhar-preco">
+                <p>Total</p>
+                <p>6500kz</p>
+            </div>
+            <div class="alinhar-preco">
+                <p>Envio</p>
+                <p> gratis</p>
+            </div>
+            <h5>Metodos de pagamentos</h5>
+            <form action="" autocomplete="on">
+                <select name="metodop" id="imetodop">
+                    <option value="">Transferência Bancaria</option>
+                    <option value="">Visa</option>
+                    <option value="">Paypal</option>
+                    <option value="">Multicaixa express</option>
+                </select>
+                <input type="checkbox" name="" id="checkbox" required>Eu li e a ceito os <a href="#">termos e condições de uso</a> da loja*
+                <a href="#modal2"><input type="button" id="btn-encomenda" value="Confirmar Encomenda"></a>
+            </form>
+        </article>
+    </section>
+
+     <!-- editando o modal maior -->
+     <div class="modal-cont" id="modal2">
+        <a href="#linicio logado.html" class="fexar">X</a>
+        <div class="cont-info-2">
+          <div class="informacao-modal-2">
+              <h2>Confirmacão da Compra</h2>
+              <p class="modal-cor">Caro senhor Francisco,</p>
+              <p>Obrigado por Comprar na nossa loja virtual. Um comprovativo de <b>factura</b> em formato pdf foi 
+                enviado para email <strong>franciscodossantosmr@gmail,</strong> podes fazer o dowloand, 
+                  clicando no botão <b>Dowloand,</b> para Sair, clica no X.<br>
+                  A sua encomenda chegará a ti, no praso de <b>72 hora</b>(3 dias) caso passar contacta-nos!</p>
+                  <p>Desde já agradecemos pela confiança em nossos servicos.</p>
+                  <span>Cordialmente,</span>
+                  <span>Central de relacionamento CAMBIJI NATURE</span>
+                  <div >
+                    <a href="#l">Dowloand pdf</a>
+                  </div>
+        </div>
+        </div>
+      </div>
+
+</article>
+<footer>
+    <div>
+        Cambiji_Nature &COPY Copyright; 2023 Todos os direitos reservados.
+    </div>  
+</footer>
+</body>
+</html>

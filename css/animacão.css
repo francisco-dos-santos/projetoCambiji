@@ -1,0 +1,94 @@
+@keyframes bouncedireito {
+	0% {
+        opacity:0;
+		transform: translateX(30px);
+	}
+	
+	20% {
+		opacity: 1;
+		transform: translateX(-0px);
+	}
+	
+	100% {
+		transform: translateX(0);
+	}
+}
+.bouncedireito
+{
+    animation-name:bouncedireito;
+    animation-duration:4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes inclinado{
+	0%{
+		opacity:1;
+		scale:1;
+	}
+	
+	100%{
+		scale:0.90;
+		transform:skew(-20deg);
+	}
+}
+.inclinado
+{
+    animation-name:inclinado;
+    animation-duration:2s;
+    animation-timing-function:ease-in;
+}
+@keyframes fadeIn{
+    0%{opacity: 0; scale:0.76;}
+	100%{opacity: 1; scale:1;}
+}
+.fadeIn
+{
+    animation-name:fadeIn;
+    animation-duration:2s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes subindo {
+	0%{
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.subindo
+{
+    animation-name:subindo;
+    animation-duration:2s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes descendo{
+	0%{
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.descendo
+{
+    animation-name:descendo;
+    animation-duration:2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slide
+{
+    0%{left:0;}
+    20%{left:0;}
+    30%{left:-900px;}
+    50%{left:-900px;}
+    70%{left:-1800px;}
+    90%{left:-1800px;}
+	100%{left:0;}
+}

@@ -1,0 +1,31 @@
+/* sarmtphones(600px para baixo) */
+@media screen and (max-width:600px)
+{
+    .sacola
+    {
+        width: 10px;
+    }
+    .pesquisar
+    {
+        display: none;
+    }
+    .sess1
+    {
+        flex-direction: column;
+    }
+    .headline
+    {
+        flex:100%;
+        margin-left: 0;
+    }
+    .imag-headline
+    {
+        flex:100%;
+        margin-right: 0;
+    }
+}
+/* smartphones com tela maiores a 600px */
+@media only screen and (min-width:600px)
+{
+    
+}

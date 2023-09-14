@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/segundo.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animacão.css"/>
+    <title>Perfil</title>
+
+</head>
+<body>
+    <main style="margin:0;">
+        <article class="perfil-principal">
+                <a href="inicio logado.html" class="btn-perfil">Voltar a pagina principal</a>
+
+            <!-- editando o container -->
+            <section class="conteiner-perfil">
+                <h1>Conta do Utilizador</h1>
+                <article class="conteiner-perfil-2">
+                    <div class="cont-perfil">
+                        <a href="#dados-pess">
+                            <div class="cont-perfil-1">
+                                <img src="../imagens/icons8_person.ico" alt="">
+                                <p>Dados Pessoais</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- 2 -->
+                    <div class="cont-perfil">
+                        <a href="#contato">
+                            <div class="cont-perfil-1">
+                                <img src="../imagens/icons8_contact.ico" alt="">
+                                <p>Contactos</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 3 -->
+
+                    <div class="cont-perfil">
+                        <a href="#endereco">
+                            <div class="cont-perfil-1">
+                                <img src="../imagens/icons8_home_address.ico" alt="">
+                                <p>Endereços</p>
+                            </div>
+                        </a>
+                    </div>
+                     <!-- 4 -->
+                     <div class="cont-perfil">
+                        <a href="perfil-compras.html">
+                            <div class="cont-perfil-1">
+                                <img src="../imagens/icons8_handcart.ico" alt="">
+                                <p>Compras</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="cont-perfil">
+                        <a href="perfil-servico.html">
+                            <div class="cont-perfil-1">
+                                <img src="../imagens/icons8_database_export.ico" alt="">
+                                <p>Pedidos de Serviços</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="cont-perfil" id="defer">
+                        <a href="#modal">
+                            <div class="cont-perfil-1">
+                                <img src="../imagens/icons8_security_shield_green.ico" alt="">
+                                <p>Alterar Senha </p>
+                            </div>
+                        </a>
+                    </div>
+
+                </article>
+            </section>
+        </article>
+
+        <!-- editando o modal maior  sessao de dados pessoasi-->
+        <div class="modal-cont" id="dados-pess">
+            <div class="cont-info-2">
+              <div class="informacao-modal-2">
+                  <h2>Dados Pessoais</h2> 
+                  <table border="1">
+                      <tr>
+                          <th>Nome Completo</th>
+                          <th>Data de Nascimento</th>
+                          <th>Idade</th>
+                          <th>Sexo</th>
+                          <th>Métodos de Pagamentos</th>
+                    </tr>
+                    <tr>
+                        <td>Francisco Dos Santos</td>
+                        <td>06/06/2001</td>
+                        <td>22 Anos</td>
+                        <td>Masculino</td>
+                        <td>
+                            Multicaixa express
+                            <hr>
+                            PayPal
+                            <hr>
+                            Visa
+                        </td>
+                  </tr>
+                  </table>
+                      <p>Desde agradecemos pela confiança em nossos servicos.</p>
+                      <div >
+                <a href="#l">Ok</a>
+                    </div>
+            </div>
+            </div>
+          </div>
+
+            <!-- editando o modal maior  sessao de Contatos-->
+        <div class="modal-cont" id="contato">
+            <div class="cont-info-2">
+              <div class="informacao-modal-2">
+                  <h2>Contactos</h2> 
+                  <table border="1">
+                      <tr>
+                          <th >Email</th>
+                          <th>Número de Telefone</th>
+                    </tr>
+                    <tr>
+                        <td>franciscodossantosmr@gmail.com</td>
+                        <td>(+244)932925647</td>
+                  </tr>
+                  </table>
+                      <p>Desde agradecemos pela confiança em nossos servicos.</p>
+                      <div >
+                <a href="#l">Ok</a>
+                    </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- editando o modal maior  sessao de endereço-->
+        <div class="modal-cont" id="endereco">
+            <div class="cont-info-2">
+              <div class="informacao-modal-2">
+                  <h2>Dados Pessoais</h2> 
+                  <table border="1">
+                      <tr>
+                          <th>Provincia</th>
+                          <th>Munícipio</th>
+                          <th>Bairro</th>
+                          <th>endereço</th>
+                    </tr>
+                    <tr>
+                        <td>Luanda</td>
+                        <td>Maianga</td>
+                        <td>Rocha Pinto</td>
+                        <td>Rocha pinto/moagem casa 32</td>
+                  </tr>
+                  </table>
+                      <p>Desde agradecemos pela confiança em nossos servicos.</p>
+                      <div >
+                <a href="#l">Ok</a>
+                    </div>
+            </div>
+            </div>
+          </div>
+
+        <!-- editando o modal maior  sessao alerar senha-->
+        <div class="modal-cont" id="modal">
+            <a href="#" class="fexar">X</a>
+            <div class="cont-info-2">
+              <div class="informacao-modal-2">
+                  <h2>Alteração de Senha</h2>
+                  <p class="modal-cor">Preencha os campos abaixo para alterar a senha.</p> 
+                  <form action="" method="post">
+                      <input type="password" name="senha" class="input-senha" id="isenha" placeholder="Senha Atual" autofocus>
+                      <input type="password" name="senha" class="input-senha" id="isenha" placeholder="Nova Senha">
+                      <input type="password" name="senha" class="input-senha" id="isenha" placeholder="Confirmar a Nova Senha">
+                  </form>
+                      <p>Desde agradecemos pela confiança em nossos servicos.</p>
+                      <div >
+                <a href="#modal">Alterar Senha</a>
+                    </div>
+            </div>
+            </div>
+          </div>
+
+    </main>
+    <footer>
+        <div>
+            Cambiji_Nature &COPY Copyright; 2023 Todos os direitos reservados.
+        </div> 
+    </footer>
+</body>
+</html>

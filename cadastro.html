@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de clintes</title>
+    <link rel="shortcut icon" href="imagens/logo2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/segundo.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animacão.css"/>
+</head>
+    <header id="header-principal">
+        <h1 class="logo"> 
+            <a href="inicio.html">
+                <img src="imagens/logo.png"  alt="cambiji_nature">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="produto.html">produtos</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="sobre-nos.html">Sobre nós</a></li>
+                <li class="botao"><a href="contato.html">Conctato</a></li>
+            </ul>
+        </nav>
+        <article class="pesquisar">
+            <input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
+            <label for="pesq"><img src="imagens/icons8_search.ico" alt="icon-search"></label>
+        </article>
+             <div class="conta" >
+                 <a href="#" title="entrar/cadastro"><img src="imagens/icons8_male_user_32.png" width="32px" alt="suario cambiji"></a>
+                 <div class="dropdown">
+                    <a href="login.html">Entrar</a>
+                    <a href="#">Cadastra-se</a>
+                </div>
+             </div>
+            <div class="sacola" >
+                <a href="carrinho.html"><img src="imagens/icons8_shopping_cart_32.png" width="32px" alt="sacola_cambiji"></a>
+
+                <!-- <div class="dropdow-sacola subindo">
+                    <div class="cart-principal">
+                        <img src="imagens/produto7.png" alt="">
+                        <div class="alinhar-preco">
+                            <p>Creme ponde</p>
+                            <p>1X- <span>4000kz</span></p>
+                        </div>
+                    </div> -->
+                <!-- 2 -->
+                <!-- <div class="cart-principal">
+                    <img src="imagens/produto4.png" alt="">
+                    <div class="alinhar-preco">
+                        <p>Perfume Cambiji</p>
+                        <p>1X- <span>4000kz</span></p>
+                    </div>
+                </div> -->
+                <!-- 3 -->
+                <!-- <div class="cart-principal">
+                    <img src="imagens/produto6.png" alt="">
+                    <div class="alinhar-preco">
+                        <p>Aromas </p>
+                        <p>1X- <span>1000kz</span></p>
+                    </div>
+                </div> -->
+
+                <!-- <div class="cart-finaliza">
+                    <a href="carrinho.html">Carrinho</a>
+                    <p>total <span>:9000kz</span></p>
+                </div> -->
+
+
+            </div>
+    </header>
+
+<body>
+    <main>
+        <section class="titulo fadeIn">
+            <h3>Página De Cadastro</h3>
+        </section>
+
+        <section class="pag-cadast">
+            <article class="card-cadast descendo" >
+                <img src="imagens/logo.png" alt="logo-cambiji">
+                <div class="card-2-cadast">
+
+                    <form action="" method="GET" autocomplete="on">
+                    <div class="separado">
+                       <fieldset>
+                        <legend>Dados pessoais</legend>
+                        <input type="text" name="nome" class="input" id="inome" placeholder="Nome Completo" required autofocus>
+                        <input type="email" name="email"  class="input" id="iemail" placeholder="francisco@gmail.com" required>
+                        <input type="password" name="ipasse"  class="input" id="ipasse" placeholder="Palavra-passe" required>
+                        <input type="password" name="cpasse"  class="input" id="icpasse" placeholder="Confirmar Palavra-passe" required>
+                        <p>Data de Nacimento</p>
+                        <input type="date" name="nasc" class="input" id="inasc">
+                        <div id="radio">
+                            <p>Sexo</p>
+                            <input type="radio" name="sexo" id="ima">
+                            <label for="ima">Masculino</label><br>
+                            <input type="radio" name="sexo"id="ife">
+                            <label for="ife">Femenino</label>
+                        </div>
+                       </fieldset>
+                    </div>
+                    <div class="separado">
+                        <fieldset>
+                            <legend>Endereços</legend>
+                            <select name="pais" class="input" id="ipais" disabled="disabled">
+                                <option value="">Região/Angola</option>
+                            </select>
+                            <select name="Provincia"class="input" id="iProvincia" required>
+                                <option value="">Sua Província ?</option>
+                                <option value="">Luanda</option>
+                                <option value="">Huambo</option>
+                                <option value="">Kuanza-Sul</option>
+                                <option value="">Kuanza-Norte</option>
+                                <option value="">Bengo</option>
+                                <option value="">Benguela</option>
+                                <option value="">Uije</option>
+                                <option value="">Namibe</option>
+                                <option value="">Huila</option>
+                            </select>
+                            <input type="text" class="input" name="" id="" placeholder="Município?">
+                            <input type="text" name="endereco"class="input" id="iendereco" placeholder="Bairro/número da casa">
+                            <input type="tel" class="input" name="" id="" maxlength="9" placeholder="+244 (932925647)" >
+                            <h5>Sua imagem*</h5>
+                            <input type="file" name="imagen" id="iimagen" accept=".png, .jpg" class="input">
+                        </fieldset>
+                    </div>
+                    
+                    </form>
+                    <a href="#modal">
+                        <input type="button" id="btn-cadast" value="Cadastra-se">
+                    </a>
+                    <p>já tens uma conta?<a href="login.html">entrar</a></p>
+                    <p>A tua conta será criada com nossos <a href="politica-privacidade.html">Termos e política de privacidade</a></p>
+                </div>
+            </article>
+        </section>
+
+
+         <!-- editando o modal maior -->
+         <div class="modal-cont" id="modal">
+            <a href="#linicio logado.html" class="fexar">X</a>
+            <div class="cont-info-2">
+              <div class="informacao-modal-2">
+                  <h2>Confirmacão de Cadastro</h2>
+                  <p class="modal-cor">Caro senhor Francisco,</p>
+                  <p>Obrigado por se cadastrar em nossa loja virtual. Um email de confirmação foi enviado para email
+                      <strong>franciscodossantosmr@gmail.com</strong>, 
+                      para concluimos o cadastro, e entrar na tua conta clica em Ok.</p>
+                      <p>Desde agradecemos pela confiança em nossos servicos.</p>
+                      <span>Cordialmente,</span>
+                      <span>Central de relacionamento CAMBIJI NATURE</span>
+                      <div >
+                        <a href="logado/inicio logado.html">OK</a>
+                    </div>
+            </div>
+            </div>
+          </div>
+
+    </main>
+    <footer>
+        <div>
+            Cambiji_Nature &COPY Copyright; 2023 Todos os direitos reservados.
+        </div> 
+    </footer>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vierwport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/segundo.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animacão.css"/>
+    <title>Fazer reserva</title>
+</head>
+<body>
+    <header id="header-principal">
+        <h1 class="logo"> 
+            <a href="inicio logado.html">
+                <img src="../imagens/logo.png"  alt="cambiji_nature">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="inicio logado.html">Inicio</a></li>
+                <li><a href="produto logado.html">produtos</a></li>
+                <li><a href="servicos logado.html">Serviços</a></li>
+                <li><a href="sobre-nos logado.html">Sobre nós</a></li>
+                <li class="botao"><a href="contato logado.html">Conctato</a></li>
+            </ul>
+        </nav>
+        <article class="pesquisar">
+            <input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
+            <label for="pesq"><img src="../imagens/icons8_search.ico" alt="icon-search"></label>
+        </article>
+            <div class="conta" >
+               <a href="#"  title="Francisco dos santos"><img src="../imagens/logado-2.JPG" alt="usuario cambiji"></a>
+               <div class="dropdown">
+                <a href="perfil.html">Perfil</a>
+                <a href="#modal">Sair</a>
+               </div>
+            </div>
+            <div class="sacola" >
+                <a href="carrinho logado.html"><img src="../imagens/icons8_shopping_cart_with_money_32.png" width="32px" alt="sacola_cambiji"></a>
+                <div class="dropdow-sacola subindo">
+                    <div class="cart-principal">
+                        <img src="../imagens/produto7.png" alt="">
+                        <div class="alinhar-preco">
+                            <p>Creme ponde</p>
+                            <p>1X- <span>3000kz</span></p>
+                        </div>
+                    </div>
+                <!-- 2 -->
+                <div class="cart-principal">
+                    <img src="../imagens/produto4.png" alt="">
+                    <div class="alinhar-preco">
+                        <p>Perfume Cambiji</p>
+                        <p>1X- <span>3000kz</span></p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="cart-principal">
+                    <img src="../imagens/produto6.png" alt="">
+                    <div class="alinhar-preco">
+                        <p>Aromas </p>
+                        <p>1X- <span>500kz</span></p>
+                    </div>
+                </div>
+
+                <div class="cart-finaliza">
+                    <a href="finalizar.html">Finalizar</a>
+                    <p>total <span>:6500kz</span></p>
+                </div>
+            </div>
+    </header>
+    
+<main>
+           <!--editando o modal saindo-->
+            <div class="modal-cont" id="modal">
+                <div class="cont-info">
+                <div class="informacao-modal">
+                    <p>O senhor tem a certeza que quer terminar a sessão?</p>
+                    <div>
+                    <a href="../inicio.html">OK</a>
+                    <a href="#l">Não</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+    <section class="fundo-titulo fadeIn">
+        <h1>Fazer Reservas</h1>
+    </section>
+    
+    <section class="fazer-reser descendo">
+        <!-- session 1 -->
+        <div class="dest-reserva">
+            <div class="img-reserva">
+                <img src="../imagens/logo.png" alt="">
+            </div>
+
+            <div class="text-reserva">
+                <p>A cambiji nature tem os seus serviços prestados com qualidade. 
+                    <strong> E com vagas limitadas,</strong> de segunda <br> à sábado das( 8h as 17h30) </p>
+            </div>
+            <div class="cont-serv-reserva subindo">
+                <div class="serv-reserva">
+                    <img src="../imagens/combo2 - pequeno.jpg" alt="">
+                    <h6>Combo Serviço</h6>
+                    <p>30.00kz</p>
+                    <p>duração:2h00</p>
+                </div>
+
+                <div class="serv-reserva">
+                    <img src="../imagens/massagem2 - pequeno.jpg" alt="">
+                    <h6>massagem Simples</h6>
+                    <p>10.000kz</p>
+                    <p>duração:1h30</p>
+                </div>
+
+                <div class="serv-reserva">
+                    <img src="../imagens/lipaface - pequeno.jpg" alt="">
+                    <h6>Limpeza &nbsp;facial</h6>
+                    <p>15.000kz</p>
+                    <p>duração:1h00</p>
+                </div>
+            </div>
+        </div>
+        <!-- session 2 -->
+        <article class="sess-input-1">
+            <form autocomplete="on" >
+                <p>Numero de Telefone*</p>
+                <input type="tel" class="input" name="" id="" placeholder="+244 (932925647)" >
+                <p>Data da reserva*</p>
+                <input type="date" class="input" name="" id="" value="dia da reserva">
+                <input type="time" class="input" name="" id="" placeholder="Hora">
+                <p>Metodo de pagamnetos*</p>
+                <select name="metodop" class="input" id="imetodop">
+                    <option value="">Transferência Bancaria</option>
+                    <option value="">Visa</option>
+                    <option value="">Paypal</option>
+                    <option value="">Multicaixa express</option>
+                </select>
+                <p>tipo de serviço</p>
+                <select name="metodop" class="input" id="imetodop">
+                    <option value="10000kz">Massagem Simples
+                         <p>10.000kz</p> 
+                    </option>
+                    <option value="">Combo Serviços
+                        <p>30.000kz</p> 
+                    </option>
+                    <option value="">Limpeza Facial
+                        <p>15.000kz</p> 
+                    </option>
+                </select>
+                <a href="#modal2"><input type="button" id="btn-encomenda" value=" Confirmar Reserva"></a>
+            </form>
+        </article>
+    </section>
+
+    <!-- editando o modal maior -->
+    <div class="modal-cont" id="modal2">
+        <a href="#linicio logado.html" class="fexar">X</a>
+        <div class="cont-info-2">
+          <div class="informacao-modal-2">
+              <h2>Confirmacão da Reserva</h2>
+              <p class="modal-cor">Caro senhor Francisco,</p>
+              <p>Obrigado por usar uns dos nossos serviços, um comprovativo de <b>factura</b> em pdf foi enviado para seu email
+                  <b>franciscodossantosmr@gmail.com,</b> podes fazer o dowloand, 
+                  clicando no botão <b>Dowloand</b>, para Sair, clica no X. Em caso de imprevistos contacto-nos.<br>
+                  Esperamos o senhor em nossa instalação, até lá cuida-se, e conservar bem o talão <b>(Factura)</b> para data do serviço.</p>
+                  <p>Desde já agradecemos pela confiança em nossos servicos.</p>
+                  <span>Cordialmente,</span>
+                  <span>Central de relacionamento CAMBIJI NATURE</span>
+                  <div >
+                 <a href="#l">Dowloand pdf</a>
+                </div>
+        </div>
+        </div>
+      </div>
+
+</main>
+
+<footer>
+    <div>
+        Cambiji_Nature &COPY Copyright; 2023 Todos os direitos reservados.
+    </div> 
+</footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contato logado</title>
+    <link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/segundo.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animacão.css"/>
+</head>
+<body>
+    <header id="header-principal">
+        <h1 class="logo"> 
+            <a href="#">
+                <img src="../imagens/logo.png"  alt="cambiji_nature">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="inicio logado.html">Inicio</a></li>
+                <li><a href="produto logado.html">produtos</a></li>
+                <li><a href="servicos logado.html">Serviços</a></li>
+                <li><a href="sobre-nos logado.html">Sobre nós</a></li>
+                <li class="botao"><a href="#">Conctato</a></li>
+            </ul>
+        </nav>
+        <article class="pesquisar">
+            <input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
+            <label for="pesq"><img src="../imagens/icons8_search.ico" alt="icon-search"></label>
+        </article>
+            <div class="conta" >
+                <a href="#"title="Francisco dos santos"><img src="../imagens/logado-2.JPG" alt="usuario cambiji"></a>
+                <div class="dropdown">
+                    <a href="perfil.html">Perfil</a>
+                    <a href="#modal">Sair</a>
+                </div>
+             </div>
+            <div class="sacola" >
+                <a href="carrinho logado.html"><img src="../imagens/icons8_shopping_cart_with_money_32.png" width="32px" alt="sacola_cambiji"></a>
+
+                <div class="dropdow-sacola subindo">
+                    <div class="cart-principal">
+                        <img src="../imagens/produto7.png" alt="">
+                        <div class="alinhar-preco">
+                            <p>Creme ponde</p>
+                            <p>1X- <span>3000kz</span></p>
+                        </div>
+                    </div>
+                <!-- 2 -->
+                <div class="cart-principal">
+                    <img src="../imagens/produto4.png" alt="">
+                    <div class="alinhar-preco">
+                        <p>Perfume Cambiji</p>
+                        <p>1X- <span>3000kz</span></p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="cart-principal">
+                    <img src="../imagens/produto6.png" alt="">
+                    <div class="alinhar-preco">
+                        <p>Aromas </p>
+                        <p>1X- <span>500kz</span></p>
+                    </div>
+                </div>
+
+                <div class="cart-finaliza">
+                    <a href="finalizar.html">Finalizar</a>
+                    <p>total <span>:6500kz</span></p>
+                </div>
+
+
+            </div>
+    </header>
+    <main style="background: #f6fff1fa;"> 
+             <!--titulo-pagina-->
+            <section class="titulo">
+                <p>Saudável e Verde</p>
+                <h3>Página Contato</h3>
+                <div class="linha-t"></div>
+                <p>A Cambiji Nature da aos cliente a possibilidade de enviar</p>
+                  <p>mensagem e como sempre respondemos dentro de 24h</p>
+            </section>
+
+            
+    <!--editando o modal saindo-->
+    <div class="modal-cont" id="modal">
+        <div class="cont-info">
+          <div class="informacao-modal">
+            <p>O senhor tem a certeza que quer terminar a sessão?</p>
+            <div>
+              <a href="../inicio.html">Sim</a>
+              <a href="#l">Não</a>
+            </div>
+        </div>
+        </div>
+      </div>
+      
+            <article class="fundo-cont">
+                <section class="fund-1"> 
+                    <h5>Contato-nos</h5>
+                    <h4>Venha saber sobre</h4>
+                    <h4> O amor que sentimos por ti!</h4>
+                </section>
+
+                <section class="fund-2">
+                    <article class="fund-card-1">
+                        <div class="card-cont">
+                            <img src="../imagens/icons8_place_marker_32.png" alt="">
+                            <div >
+                                <h3>Nossa localização</h3>
+                                <span>Avenida Torres Gracia<br>[Junto ao colegio Twapandula]</span>
+                            </div>
+                        </div>
+
+                        <div class="card-cont">
+                            <img src="../imagens/icons8_secured_letter_32.png" alt="">
+                            <div>
+                                <h3>Email da Empresa</h3>
+                                <span>CAMBIJINATURE@GMAIL.COM<br>possibilidade de enviar</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 2 -->
+
+                    <article  class="fund-card-2">
+                        <div class="card-cont">
+                            <img src="../imagens/icons8_phone_32.png" alt="">
+                            <div>
+                                <h3>Telefone Central</h3>
+                                <span>+244 &nbsp;943224568</span>
+                            </div>
+                        </div>
+
+                        <div class="card-cont">
+                            <img src="../imagens/icons8_naira_32.png" alt="">
+                            <div>
+                                <h3>Nosso NIF</h3>
+                                <span>000012192LA016</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </section>
+
+                <!-- editando o card input -->
+                <div class="card-input subindo" >
+
+                    <h2>Envia-nos uma Mensagem</h2>
+                    <form action="" method="get" autocomplete="on">
+                        <p>Nome Completo*</p>
+                        <input type="text" name="" class="input" id="nome" placeholder="Francisco dos Santos" required autofocus>
+                        <p>Email*</p>
+                        <input type="email" name=""class="input" id="email" placeholder="francisco@gmail.com" required>
+                        <p>Número*</p>
+                        <input type="tel" name="" class="input" id="telefone" placeholder="+244 932925647">
+                        <p>Mensagem*</p>
+                        <textarea name="" id="" cols="0" rows="1" class="input" placeholder="escreve aqui a mensagem" ></textarea>
+                        <br>
+                        <a href="#modal2">
+                        <input type="button"  value="Enviar Mensagem" id="bt-cont"></a>
+                    </form>
+                </div>
+            </article>
+
+            <!-- editando o modal maior -->
+         <div class="modal-cont" id="modal2">
+            <div class="cont-info-2">
+              <div class="informacao-modal-2">
+                  <h2>Mensagem Recebida!</h2> 
+                  <p class="modal-cor">Caro senhor Francisco,</p>
+                  <p>Obrigado por Contato-nos. Em breve responderemos a sua inquietação, receberá uma mensagem em seu email
+                      <strong>franciscodossantosmr@gmail.com</strong>, dentro de 24h(1 dia). MUI ATENCIOSAMENTE!</p>
+                      <p>Desde já agradecemos pela confiança em nossos servicos.</p>
+                      <span>Cordialmente,</span><br>
+                      <span>Central de relacionamento CAMBIJI NATURE</span><br>
+                      <div >
+                        <a href="#llogado/inicio logado.html">OK</a>
+                    </div>
+            </div>
+            </div>
+          </div>
+            
+    </main>
+    <footer>
+        <div>
+            Cambiji_Nature &COPY Copyright; 2023 Todos os direitos reservados.
+        </div> 
+    </footer>
+</body>
+</html>
