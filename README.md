@@ -20,7 +20,7 @@
 <br>
 
 <p align="center">
-  <img alt="projeto Cambiji-nature" src=".github/" width="100%">
+  <img alt="projeto Cambiji-nature" src=".github/preview.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
