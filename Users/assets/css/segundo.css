@@ -1342,7 +1342,7 @@ form .input:focus-visible
 {
     font-weight: 500;
 }
-#btn-cadast
+#btn-access
 {
     width:50%;
     text-align: center;
@@ -1356,7 +1356,7 @@ form .input:focus-visible
     border-radius:5px;
     cursor: pointer;
 }
-#btn-cadast:hover
+#btn-access:hover
 {
     color: #36b64f;
     background: #fff;

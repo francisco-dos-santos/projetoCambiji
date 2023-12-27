@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de clintes</title>
-    <link rel="shortcut icon" href="imagens/logo2.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="css/segundo.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animacão.css"/>
+    <link rel="shortcut icon" href="../assets/imagens/logo2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/segundo.css">
+    <link rel="stylesheet" href="../assets/css/animacão.css">
 </head>
     <header id="header-principal">
         <h1 class="logo"> 
             <a href="inicio.html">
-                <img src="imagens/logo.png"  alt="cambiji_nature">
+                <img src="../assets/imagens/logo.png"  alt="cambiji_nature">
             </a>
         </h1>
         <nav>
@@ -26,17 +25,17 @@
         </nav>
         <article class="pesquisar">
             <input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
-            <label for="pesq"><img src="imagens/icons8_search.ico" alt="icon-search"></label>
+            <label for="pesq"><img src="../assets/imagens/icons8_search.ico" alt="icon-search"></label>
         </article>
              <div class="conta" >
-                 <a href="#" title="entrar/cadastro"><img src="imagens/icons8_male_user_32.png" width="32px" alt="suario cambiji"></a>
+                 <a href="#" title="entrar/cadastro"><img src="../assets/imagens/icons8_male_user_32.png" width="32px" alt="suario cambiji"></a>
                  <div class="dropdown">
                     <a href="login.html">Entrar</a>
                     <a href="#">Cadastra-se</a>
                 </div>
              </div>
             <div class="sacola" >
-                <a href="carrinho.html"><img src="imagens/icons8_shopping_cart_32.png" width="32px" alt="sacola_cambiji"></a>
+                <a href="carrinho.html"><img src="../assets/imagens/icons8_shopping_cart_32.png" width="32px" alt="sacola_cambiji"></a>
 
                 <!-- <div class="dropdow-sacola subindo">
                     <div class="cart-principal">
@@ -80,58 +79,21 @@
 
         <section class="pag-cadast">
             <article class="card-cadast descendo" >
-                <img src="imagens/logo.png" alt="logo-cambiji">
+                <img src="../assets/imagens/logo.png" alt="logo-cambiji">
                 <div class="card-2-cadast">
 
                     <form action="" method="GET" autocomplete="on">
-                    <div class="separado">
                        <fieldset>
                         <legend>Dados pessoais</legend>
-                        <input type="text" name="nome" class="input" id="inome" placeholder="Nome Completo" required autofocus>
-                        <input type="email" name="email"  class="input" id="iemail" placeholder="francisco@gmail.com" required>
-                        <input type="password" name="ipasse"  class="input" id="ipasse" placeholder="Palavra-passe" required>
-                        <input type="password" name="cpasse"  class="input" id="icpasse" placeholder="Confirmar Palavra-passe" required>
-                        <p>Data de Nacimento</p>
-                        <input type="date" name="nasc" class="input" id="inasc">
-                        <div id="radio">
-                            <p>Sexo</p>
-                            <input type="radio" name="sexo" id="ima">
-                            <label for="ima">Masculino</label><br>
-                            <input type="radio" name="sexo"id="ife">
-                            <label for="ife">Femenino</label>
-                        </div>
+                        <input type="text" name="nome" class="input" id="name" placeholder="Nome Completo" required autofocus>
+                        <input type="email" name="email"  class="input" id="email" placeholder="francisco@gmail.com" required>
+                        <input type="password" name="passe1"  class="input" id="passe1" placeholder="Palavra-passe" required>
+                        <input type="password" name="passe2"  class="input" id="passe2" placeholder="Confirmar Palavra-passe" required>
                        </fieldset>
                     </div>
-                    <div class="separado">
-                        <fieldset>
-                            <legend>Endereços</legend>
-                            <select name="pais" class="input" id="ipais" disabled="disabled">
-                                <option value="">Região/Angola</option>
-                            </select>
-                            <select name="Provincia"class="input" id="iProvincia" required>
-                                <option value="">Sua Província ?</option>
-                                <option value="">Luanda</option>
-                                <option value="">Huambo</option>
-                                <option value="">Kuanza-Sul</option>
-                                <option value="">Kuanza-Norte</option>
-                                <option value="">Bengo</option>
-                                <option value="">Benguela</option>
-                                <option value="">Uije</option>
-                                <option value="">Namibe</option>
-                                <option value="">Huila</option>
-                            </select>
-                            <input type="text" class="input" name="" id="" placeholder="Município?">
-                            <input type="text" name="endereco"class="input" id="iendereco" placeholder="Bairro/número da casa">
-                            <input type="tel" class="input" name="" id="" maxlength="9" placeholder="+244 (932925647)" >
-                            <h5>Sua imagem*</h5>
-                            <input type="file" name="imagen" id="iimagen" accept=".png, .jpg" class="input">
-                        </fieldset>
-                    </div>
                     
+                    <input type="button" id="btn-access" value="Cadastra-se">
                     </form>
-                    <a href="#modal">
-                        <input type="button" id="btn-cadast" value="Cadastra-se">
-                    </a>
                     <p>já tens uma conta?<a href="login.html">entrar</a></p>
                     <p>A tua conta será criada com nossos <a href="politica-privacidade.html">Termos e política de privacidade</a></p>
                 </div>
@@ -165,5 +127,6 @@
             Cambiji_Nature &COPY Copyright; 2023 Todos os direitos reservados.
         </div> 
     </footer>
+    <script src="../assets/js/index.js"></script>
 </body>
 </html>
