@@ -1,0 +1,232 @@
+/* editando pagina carrinho */
+#carrinho
+{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height:400px;
+}
+#carrinho > p
+{
+    /* background:#ffa200; */
+    width:500px;
+    border-radius: 3px;
+    box-shadow: 0px 4px 8px 0px rgba(0,0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#carrinho p >  a
+{
+    padding: 15px 25px;
+    width: 100%;
+    text-align: center;
+    background: #36b64f;
+    color: #ffffff;
+    border-radius: 3px;
+    font-size: 18px;
+}
+#carrinho p >  a:hover
+{
+    opacity:0.7;
+    transition:all .4s;
+}
+/* editando carrinho logado */
+#carrinho-logado
+{
+    width:84%;
+    margin-right:8%;
+    margin-left:8%;
+    margin-top:50px;
+    /* background:#eca727; */
+}
+.car-titulo
+{
+    display: flex;
+    align-items:center;
+    border-top: 1px solid #36b64f;
+    border-bottom: 1px solid #36b64f;
+    gap: 10px;
+}
+.car-titulo >p
+{
+    flex:14%;
+    /* background: #ffa200; */
+    text-align: center;
+    font-size: 20px;
+    color: #36b64f;
+}
+.car-produto
+{
+    display: flex;
+    align-items:center;
+    gap:10px;
+}
+.car-produto >p
+{
+    margin:10px 0px;
+    flex:14%;
+    text-align: center;
+}
+.car-produto p:nth-child(2) img
+{
+    width:60px;
+    height:60px;
+}
+.car-total
+{
+    text-align: right;
+    margin-right:5px;
+    font-size: 20px;
+}
+#cor-preco
+{
+    color: #36b64f;
+    font-weight: 500;
+
+}
+.car-botao
+{
+    width:15%;
+    padding: 10px 15px;
+    background: #36b64f;
+    margin:10px  auto;
+    border-radius: 5px;
+}
+.car-botao >a
+{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.car-botao:hover
+{
+    opacity: 0.7;
+    transition: opacity .4s;
+}
+/* editando finalizar */
+.main-finaliza
+{
+    min-height:150vh;
+    background: #f6fff1fa;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.voltar
+{
+    width:32px;
+    height:32px;
+    position:relative;
+    text-align: center;
+    z-index:600;
+    left:20px;
+    top:120px;
+    border-radius:10px;
+}
+.voltar:hover
+{   
+    border-radius:5px;
+    background-color:rgba(0, 0, 0, 0.2);
+    transition: all 0.4s;
+}
+.main-finaliza .Finaliza-pag
+{
+    background: #ffffff;
+    width:50%;
+    border-radius:3px;
+    /* height:30rem; */
+    display:flex;
+    gap:50px;
+}
+
+.card-finlaiza
+{
+    padding: 10px 10px 5px 15px ;
+    /* border: 1px solid #36b64f; */
+    flex:50%;
+}
+.card-finlaiza>form .input-finaliza
+{
+    border: 1px solid #e3f7d8fa;
+    width: 100%;
+    outline: none;
+    height: 47px;
+    background: #f6fff1bd;
+    border-radius: 5px;
+}
+.card-finlaiza>form .input-finaliza:focus-visible
+{
+    border: 1px solid #36b64f;
+    transition: all .4s;
+}
+.card-finlaiza>form p
+{
+    margin-bottom: 5px;
+}
+.card-finliza2
+{
+    padding: 10px 10px 5px 15px ;
+    flex: 50%;
+    /* border: 1px solid #36b64f; */
+}
+.card-finliza2>.alinhar-preco
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ecf3e8fa;
+}
+.card-finliza2 .alinhar-preco p >img
+{
+    height:40px;
+    width: 40px;
+}
+#imetodop
+{
+    border: 1px solid #e3f7d8fa;
+    width: 100%;
+    outline: none;
+    height: 47px;
+    background: #f6fff1bd;
+    border-radius: 5px;
+}
+#btn-encomenda
+{
+    display: block;
+    width: 100%;
+    padding:13px 20px;
+    border-radius:3px;
+    color: #ffffff;
+    border: none;
+    outline:none;
+    background:#36b64f;
+    margin-top:20px;
+}
+#btn-encomenda:hover
+{
+    background: #fff;
+    outline: 1px solid #36b64f;
+    color: #36b64f;
+    transition: all .4s;
+}
+#sair
+{
+    background: #36b64f;
+    padding:10px 20px;
+    color: #ffffff;
+    width:100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-top:20px;
+    border-radius: 3px;
+}
+#sair:hover
+{
+    background: #fff;
+    outline: 1px solid #36b64f;
+    color: #36b64f;
+    transition: all .4s;
+}
