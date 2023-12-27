@@ -20,7 +20,7 @@ a{
     text-decoration:none;
     cursor: pointer;
 }
-#header-principal
+#header-main
 {
     display: flex;
     justify-content:space-between;
@@ -111,7 +111,7 @@ ul li a:hover::after
     transition: all .6s ease-in-out;
 }
 /* editando a sessao de pesquisa */
-.pesquisar
+.search
 {
     height:35px;
     background-color:rgb(235, 232, 232);
@@ -126,7 +126,7 @@ ul li a:hover::after
     top:0px;
     padding:5px;
 }
-.pesquisar label> img 
+.search label> img 
 {
     position: absolute;
     right:15px;
@@ -135,7 +135,7 @@ ul li a:hover::after
     height:23px;
     cursor: pointer;
 }
-#pesq
+#input-search
 {
     border-radius:25px;
     position: absolute;
