@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="../assets/imagens/logo2.jpg" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/pageCadastro.css">
     <link rel="stylesheet" href="../assets/css/animacão.css">
+    <link rel="stylesheet" href="../assets/css/headerFooter.css">
 </head>
     <header id="header-principal">
         <h1 class="logo"> 
@@ -82,14 +83,30 @@
           <img src="../assets/imagens/logo.png" alt="logo-cambiji">
           <div class="card-2-cadast">
 
-            <form action="" method="GET" autocomplete="on">
-              <fieldset>
-              <legend>Dados pessoais</legend>
-              <input type="text" name="nome" class="input" id="name" placeholder="Nome Completo" required autofocus>
-              <input type="email" name="email"  class="input" id="email" placeholder="francisco@gmail.com" required>
-              <input type="password" name="passe1"  class="input" id="passe1" placeholder="Palavra-passe" required>
-              <input type="password" name="passe2"  class="input" id="passe2" placeholder="Confirmar Palavra-passe" required>
-              </fieldset>
+            <form action="" method="GET" class="form"  autocomplete="on">
+              <div>
+                <input type="text" name="nome" class="input" id="name" 
+                placeholder="Nome Completo"  autofocus>
+                <small>Error message</small>
+              </div>
+
+              <div>
+                <input type="email" name="email"  class="input" id="email" 
+                placeholder="francisco@gmail.com">
+                <small>Error message</small>
+              </div>
+
+              <div>
+                <input type="password" name="passe1"  class="input" id="passe1" 
+                placeholder="Palavra-passe">
+                <small>Error message</small>
+              </div>
+              <div>
+                <input type="password" name="passe2"  class="input" id="passe2" 
+                placeholder="Confirmar Palavra-passe" >
+                <small >Error message</small>
+              </div>
+              
               <input type="button" id="btn-access" value="Cadastra-se">
               </form>
               <p>já tens uma conta?<a href="login.html">entrar</a></p>
@@ -104,6 +121,6 @@
             Cambiji_Nature &COPY Copyright; 2023 Todos os direitos reservados.
         </div> 
     </footer>
-    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/pageCadastro.js"></script>
 </body>
 </html>
