@@ -1,13 +1,43 @@
-let SetUsers=function(userName,email,password){
+
+let response =`[
+  {
+    "userName":"Francisco Dos Santos",
+    "email":"franciscodossantosmr@gmail.com",
+    "password":"Dev5050"
+  },
+  {
+    "userName":"Miro Developer",
+    "email":"mirodeveloper@gmail.com",
+    "password":"miro2001"
+  },
+  {
+    "userName":"Unydev Community Lda",
+    "email":"unydevcommunity@gmail.com",
+    "password":"uny2020"
+  }
+]`;
+  let dataJson=JSON.parse(response);
+  localStorage.setItem("BD_Users",JSON.stringify(dataJson));
+
+
+const form=document.querySelector(".form");
+const userName=document.querySelector("#name");
+const userEmail=document.querySelector("#email")
+const userPasse=document.querySelector("#passe1");
+const userPasseTwo=document.querySelector("#passe2");
+const btnAccess=document.querySelector("#btn-access");
+
+function SetUsers(userName,email,password){
   this.userName=userName,
   this.email=email,
   this.password=password
 }
 
 const users={
-    List:[],
+    List: JSON.parse(localStorage.getItem("BD_Users"))||[],
     contains:function(newEmail){
-        return let RetValue=this.List.some(user => user.email === newEmail);
+      let RetValue=this.List.some(user => user.email === newEmail);
+        return RetValue;
       },
 
     add:function(name,email,passe){
@@ -24,41 +54,12 @@ const users={
       localStorage.setItem("BD_Users",JSON.stringify(this.List))
     }
   }
-
-
-users.show = function() {
-for(let user of this.List) {
-  console.log(`${user.userName} (${user.email}, ${user.password})`);
-	}
+function clearField(){
+  userName.value="";
+  userEmail.value="";
+  userPasse.value="";
+  userPasseTwo.value="";
 }
-
-const form=document.querySelector(".form");
-const userName=document.querySelector("#name");
-const userEmail=document.querySelector("#email")
-const userPasse=document.querySelector("#passe1");
-const userPasseTwo=document.querySelector("#passe2");
-const btnAccess=document.querySelector("#btn-access");
-
-
-btnAccess.addEventListener("click",()=>{
-  if(checkedfilds()){
-    let userNameValue=userName.value;
-    let userEmailValue=userEmail.value;
-    let userPasseValue=userPasse.value;
-    let userPasseTwoValue=userPasseTwo.value;
-    setTimeout(()=>{
-    users.add(userNameValue,userEmailValue,userPasseTwoValue);
-	  userName.value="";
-	  userEmail.value="";
-	  userPasse.value="";
-    userPasseTwo.value="";
-    return
-    },3000)
-    console.log("loading...")
-    
-  }
-  console.log("não foi enviado");
-})
 
 function checkedfilds(){
   let userNameValue=userName.value.trim();
@@ -134,3 +135,40 @@ function iscount(senha){
 function isnumber(senha){
   return /[0-9]+/.test(senha);
 }
+function toggleEyes(){
+  const eyes=document.getElementsByClassName('eye');
+  for(let eye of eyes){
+    eye.onclick=function(event){
+      let eyesTarget=event.target;
+      let input=eyesTarget.previousElementSibling;
+      if(input.type ==="password"){
+        input.setAttribute("type","text");
+        eyesTarget.setAttribute("src","../assets/imagens/icons8_hide.ico")
+      }else{
+        input.setAttribute("type","password");
+        eyesTarget.setAttribute("src","../assets/imagens/icons8_eye.ico")
+      }
+    }
+  }
+}
+toggleEyes();
+
+btnAccess.addEventListener("click",()=>{
+  if(checkedfilds()){
+    let userNameValue=userName.value;
+    let userEmailValue=userEmail.value;
+    let userPasseValue=userPasse.value;
+    let userPasseTwoValue=userPasseTwo.value;
+    setTimeout(()=>{
+    users.add(userNameValue,userEmailValue,userPasseTwoValue);
+    clearField();
+    },3000)
+    console.log("loading...")
+  }else{
+    console.log("não foi enviado");
+  }
+});
+
+
+console.log("bag");
+

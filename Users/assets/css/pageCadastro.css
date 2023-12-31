@@ -83,9 +83,19 @@
     outline: 1px solid #36b64f;
     transition: all .5s;
 }
+form div{
+  position: relative;
+}
+.eye{
+	position:absolute;
+	right:1.2rem;
+	top:0.4rem;
+	cursor:pointer;
+}
+
 .form div .input:focus
 {
-    border-color:#777;
+  border-color:#777;
 }
 .form div .error .input{
     border-color: #e74c3c;

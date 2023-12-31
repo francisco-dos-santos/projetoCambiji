@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/pageCadastro.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/animacão.css"/>
+    <link rel="stylesheet" href="../assets/css/headerFooter.css">
 </head>
     <header id="header-principal">
         <h1 class="logo"> 
@@ -78,18 +79,22 @@
             <h3></h3>
         </section>
         <section class="pag-cadast">
-            <article class="card-cadast subindo" style="width:400px;" >
+            <article class="card-cadast subindo" style="width:min(95vw,400px);">
                 <div class="card-2-cadast">
-                    <img src="../assets/imagens/logo.png" alt="">
-                    <form  autocomplete="on" style="display: block;">
-                        <input type="email" name=""  class="input" id="" placeholder="francisco@gmail.com" required autofocus>
-                        <input type="password" name=""  class="input" id="" placeholder="Palavra-passe" required>
-                        <a href="#" >
-                            <input type="submit" id="btn-cadast" value="Entrar">
-                            </a>
+                    <img src="../assets/imagens/logo.png" alt="logo-cambiji">
+                    <form autocomplete="on" class="form">
+                        <div>
+                            <input type="email" name="" class="input" id="email" 
+                            placeholder="francisco@gmail.com" autofocus>
+                            <small>Error messsage</small>
+                        </div>
+                        <div>
+                            <input type="password" name=""  class="input" id="passe" 
+                            placeholder="Palavra-passe">
+                            <small>Error message</small>
+                        </div>
+                            <input type="button" id="btn-access" value="Entrar">
                     </form>
-
-                   
 
                     <p>Esqueceu a Senha? <a href="#"> Clica aqui</a></p>
                     <p>Não tens uma conta?<a href="cadastro.html">Cadastra-se</a></p>
@@ -108,6 +113,6 @@
             Cambiji_Nature &COPY Copyright; 2023 Todos os direitos reservados.
         </div>  
     </footer>
-
+<script src="../assets/js/pagesLogin.js"></script>
 </body>
 </html>

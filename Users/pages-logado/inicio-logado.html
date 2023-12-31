@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ínicio logado</title>
+    <link rel="shortcut icon" href="../assets/imagens/logo2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/headerFooter.css"/>
+</head>
+<body>
+    <header id="header-main">
+      <div class="container-head">
+        <h1 class="logo"> 
+            <a href="#">
+                <img src="../assets/imagens/logo.png" alt="cambiji_nature">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="loja-logado.html">Loja</a></li>
+                <li><a href="servicos-logado.html">Serviços</a></li>
+                <li><a href="sobre-nos-logado.html">Sobre nós</a></li>
+                <li class="botao"><a href="contato-logado.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <article class="pesquisar">
+            <input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
+            <label for="pesq"><img src="../assets/imagens/icons8_search.ico" alt="icon-search"></label>
+        </article>
+            <div class="conta" >
+              <a href="#" id="cont" title="Francisco dos santos" >
+                <img src="../assets/imagens/logado-2.JPG" alt="usuario cambiji">
+              </a>
+              <div class="dropdown" >
+                <a href="perfil.html">Perfil</a>
+                <a href="#sair">Sair</a>
+              </div>
+            </div>
+            <div class="cart-wrapper"  id="icon-cart" data-countCart="0">
+                <a href="carrinho-logado.html">
+                  <img 
+                  src="../assets/imagens/icons8_handcart.ico" 
+                  alt="sacola_cambiji"
+                  >
+                </a>
+                <div class="container-cart">
+                  <div id="content-text-cart">
+                    <p>Seu carrinho tem <span class="quantity">5</span> itens</p>
+                    <button id="close-cart">x</button>
+                  </div>
+                  <section id="content-cards-cart">
+                    <div class="content-card-cart">
+                      <div class="content-img">
+                        <img src="../assets/imagens/produto6.png" alt="produto-1">
+                      </div>
+                      <div class="contents-info-product-cart">
+                        <p>Nome produto<br><span class="description-cart">descrição...</span></p>
+                        <div class="content-price-quantity">
+                          <p>Kz2000</p>
+                          <div class="content-add-quantity">
+                            <button class="btn-less">-</button>
+                            <input type="number" size="3" max="10" min="1">
+                            <button class="btn-plus">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="content-card-cart">
+                      <div class="content-img">
+                        <img src="../assets/imagens/produto6.png" alt="produto-1">
+                      </div>
+                      <div class="contents-info-product-cart">
+                        <p>Nome produto<br><span class="description-cart">descrição...</span></p>
+                        <div class="content-price-quantity">
+                          <p>Kz2000</p>
+                          <div class="content-add-quantity">
+                            <button class="btn-less">-</button>
+                            <input type="number" size="3" max="10" min="1">
+                            <button class="btn-plus">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content-card-cart">
+                      <div class="content-img">
+                        <img src="../assets/imagens/produto6.png" alt="produto-1">
+                      </div>
+                      <div class="contents-info-product-cart">
+                        <p>Nome produto<br><span class="description-cart">descrição...</span></p>
+                        <div class="content-price-quantity">
+                          <p>Kz2000</p>
+                          <div class="content-add-quantity">
+                            <button class="btn-less">-</button>
+                            <input type="number" size="3" max="10" min="1">
+                            <button class="btn-plus">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content-card-cart">
+                      <div class="content-img">
+                        <img src="../assets/imagens/produto6.png" alt="produto-1">
+                      </div>
+                      <div class="contents-info-product-cart">
+                        <p>Nome produto<br><span class="description-cart">descrição...</span></p>
+                        <div class="content-price-quantity">
+                          <p>Kz2000</p>
+                          <div class="content-add-quantity">
+                            <button class="btn-less">-</button>
+                            <input type="number" size="3" max="10" min="1">
+                            <button class="btn-plus">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content-card-cart">
+                      <div class="content-img">
+                        <img src="../assets/imagens/produto6.png" alt="produto-1">
+                      </div>
+                      <div class="contents-info-product-cart">
+                        <p>Nome produto<br><span class="description-cart">descrição...</span></p>
+                        <div class="content-price-quantity">
+                          <p class="price">Kz2000</p>
+                          <div class="content-add-quantity">
+                            <button id="btn-less" class="control-less-plus">-</button>
+                            <button id="input-quantity">1</button>
+                            <button id="btn-plus" class="control-less-plus">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </section>
+                  <div class="content-finally-cart">
+                    <div class="content-price-total">
+                      <span>Total:</span>
+                      <span id="Total-Cart">Kz10.681,60</span>
+                    </div>
+                    <button class="finally-cart-button">Finalizar Compra</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+    </header>
+
+  <main>
+
+    <article id="wrapper">
+      <section class="sess1">
+        <article class="headline">
+            <h3>cosmetics products </h3>
+            <h2>Cambiji Nature S.A</h2>
+            <div id="linha">
+            </div>
+            <p>Acreditamos levar a natureza em realidade, 
+              sobre os cuidados da pele.<br><strong>MY SKIN MATTERS</strong>
+              </p> 
+                <div class="content-sess1-btn">
+                    <a href="loja-logado.html" class="btn">Comprar</a>
+                    <a href="servicos-logado.html" class="btn">Serviços</a>
+                </div>
+        </article>
+      </section>
+       <!-- PRODUTOS Oferta do day-->
+      <article class="content-ground">
+        <section class="container-ofert-day">
+          <div class="container-ofert-day-title">
+            <h2>Ofertas do dia</h2>
+            <div class="container-clock">
+              <img src="" alt="relogio"> Terminará
+              <span class="time">5h:50:27</span>
+            </div>
+          </div>
+
+          <div class="content-cards-products" id="ofert-day">
+            <!-- cards -->
+            <!-- 1 -->
+            <!-- <div class="card">
+                <div class="cont-img">
+                    <img src="../assets/imagens/ponds-3.png" alt="produto-1">
+                    <div class="percentage" id="porcent">50%</div>
+                </div>
+                <h3 class="preco">MUR20.23</h3>
+                <del class="text-riscado">MUR20.2</del>
+                <p>Nome</p>
+                <div class="content">
+                  <small class="categoria">categoria</small>
+                  <button class="add-cart">
+                    <img src="" alt="cart" >
+                  </button>
+                </div>
+            </div> -->
+
+          </div>
+        </section>
+      </article>
+
+       <!-- PRODUTOS recomendados -->
+        <section class="container-products">
+        <article class="content-title-products">
+          <h2>Produtos Recomendados</h2>
+          <p>Saudável e Verde</p>
+        </article>
+        <article class="content-cards-products" id="produt-recomed">
+          <!-- cards -->
+            <!-- 1 -->
+            <!-- <div class="card">
+              <div class="cont-img">
+                  <img src="../assets/imagens/OIP(4).png" alt="produto-1">
+              </div>
+              <h3 class="preco">MUR20.23</h3>
+              <del class="text-riscado">MUR20.2</del>
+              <p>Nome</p>
+              <div class="content">
+                <small class="categoria">categoria</small>
+                <button class="add-cart">
+                  <img src="" alt="cart" >
+                </button>
+              </div>
+          </div> -->
+
+        </article>
+        </section>
+
+        <!-- Secaão promocão -->
+        <section id="container-promotion">
+          <img src="../assets/imagens/icons8_euro_money_64.png" alt="">
+          <h2>DESCONTO DE ATÉ -50% PARA OS CLIENTES NOVOS</h2>
+          <div><a href="contato.html">Saber mais</a></div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section id="container-service">
+            <section class="container-title">
+              <h2>Nossos Serviços</h2>
+              <p>A Cambiji Nature tem os melhores serviços para ti</p>
+            </section>
+            <article id="content-service">
+                <!-- primeiro card serviço -->
+    
+                <div class="card-serv bouncedireito">
+                    <div class="img">
+                        <div id="img-1"></div>
+                    </div>
+                    <h3>Combo Serviços</h3>
+                    <h4>best to cosmetcs</h4>
+                    <span>30000kz</span>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis aperiam 
+                        perferendis, reiciendis deleniti earum voluptas,autem itaque 
+                        corporis tempora quaerat.</p>
+                    <a href="fazer-reserva.html" class="btn">reservar</a>
+                </div>
+                 <!-- segundo card serviço -->
+    
+                <div class="card-serv bouncedireito" >
+                    <div class="img">
+                        <div id="img-2"></div>
+                    </div>
+                    <h3>Massagem simples</h3>
+                    <h4>best to cosmetcs</h4>
+                    <span>15000kz</span>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis aperiam 
+                        perferendis, reiciendis deleniti earum voluptas,autem itaque 
+                        corporis tempora quaerat.</p>
+                    <a href="fazer-reserva.html" class="btn">reservar</a>
+                </div>
+                 <!-- terceiro card serviço -->
+    
+                 <div class="card-serv bouncedireito" >
+                    <div class="img">
+                        <div id="img-3"></div>
+                    </div>
+                    <h3>Limpeza Facial</h3>
+                    <h4>best to cosmetcs</h4>
+                    <span>10000kz</span>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis aperiam 
+                        perferendis, reiciendis deleniti earum voluptas,autem itaque 
+                        corporis tempora quaerat.</p>
+                    <a href="fazer-reserva.html" class="btn">reservar</a>
+                </div>
+            </article>  
+        </section>
+        
+         <!-- DEPOIMENTOS -->
+      <section id="container-testimony">
+          <section class="container-title">
+            <h2>Depoimentos</h2>
+              <p>Os testemunhos dos nossos clientes são uma cagarantia da nossa qualidade</p>
+          </section>
+        <section id="content-testimony">
+            <div id="navegation">
+              <label for="slide1"></label>
+              <label for="slide2"></label>
+              <label for="slide3"></label>
+            </div>
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+    
+    
+          <article class="testimony s1 descendo">
+    
+              <div class="card-dep ">
+                  <img src="../assets/imagens/depo.jpg" >
+                  <span>Carlitos Cambiji</span>
+                  <p>Desde que aderece a cambiji nature só me sinto feliz,
+                    serviços e produtos de qualidade, com entregas das encomedas
+                    dentro do prazo adere não te arrependerás.   
+                  </p>
+              </div>
+              <div class="card-dep" >
+                  <img src="../assets/imagens/depo2.jpg" >
+                  <span>Joana Silva</span>
+                  <p>Desde que aderece a cambiji nature só me sinto feliz,
+                    serviços e produtos de qualidade, com entregas das encomedas
+                    dentro do prazo adere não te arrependerás.</p>
+              </div>
+              <div class="card-dep">
+                  <img src="../assets/imagens/depo3.jpg">
+                  <span>Rebeca Paulo</span>
+                  <p>Desde que aderece a cambiji nature só me sinto feliz,
+                    serviços e produtos de qualidade, com entregas das encomedas
+                    dentro do prazo adere não te arrependerás.</p>
+              </div>
+          </article>
+    
+          <!-- 2 -->
+          <article class="testimony s2 descendo">
+            <div class="card-dep">
+                <img src="../assets/imagens/depo.jpg" >
+                <span>Carlitos Cambiji</span>
+                <p>Desde que aderece a cambiji nature só me sinto feliz,
+                  serviços e produtos de qualidade, com entregas das encomedas
+                  dentro do prazo adere não te arrependerás.</p>
+            </div>
+            <div class="card-dep" >
+                <img src="../assets/imagens/logado-2.JPG" >
+                <span>Francisco dos Santos</span>
+                <p>Desde que aderece a cambiji nature só me sinto feliz,
+                  serviços e produtos de qualidade, com entregas das encomedas
+                  dentro do prazo adere não te arrependerás.</p>
+            </div>
+            <div class="card-dep">
+                <img src="../assets/imagens/logado-2.JPG">
+                <span>Oliveira pundo</span>
+                <p>Desde que aderece a cambiji nature só me sinto feliz,
+                  serviços e produtos de qualidade, com entregas das encomedas
+                  dentro do prazo adere não te arrependerás.</p>
+            </div>
+        </article>
+    
+        <!-- 3 -->
+    
+        <article class="testimony s3 descendo">
+          <div class="card-dep">
+              <img src="../assets/imagens/logado-2.JPG" >
+              <span>Eo Tobra</span>
+              <p>Desde que aderece a cambiji nature só me sinto feliz,
+                serviços e produtos de qualidade, com entregas das encomedas
+                dentro do prazo adere não te arrependerás.</p>
+          </div>
+          <div class="card-dep" >
+              <img src="../assets/imagens/depo3.jpg" >
+              <span>Joana Silva</span>
+              <p>Desde que aderece a cambiji nature só me sinto feliz,
+                serviços e produtos de qualidade, com entregas das encomedas
+                dentro do prazo adere não te arrependerás.</p>
+          </div>
+          <div class="card-dep">
+              <img src="../assets/imagens/logado-2.JPG">
+              <span>Carmen</span>
+              <p>Desde que aderece a cambiji nature só me sinto feliz,
+                serviços e produtos de qualidade, com entregas das encomedas
+                dentro do prazo adere não te arrependerás.</p>
+          </div>
+        </article>
+        </section>
+      </section>
+    </article>
+    
+        <!-- FOOTER SECUNDARIO -->
+      <section class="sess6">
+          <article>
+            <div class="footer-seg">
+                <h2>Sobre nós</h2>
+                <p>Nós Somos uma empresa que presta serviços mo ramo da cosmetics, trabalhando
+                    para bem de todos os clientes que nos visitam e acessam a nossa pagina na internet.
+                </p>
+              <div class="sesstion-rede">
+                <a href="#" class="rede">
+                  <img src="../assets/imagens/icons8_facebook_f.ico" alt="">
+                </a>
+                <a href="#" class="rede">
+                  <img src="../assets/imagens/icons8_whatsapp.ico" alt="">
+                </a>
+                <a href="#" class="rede">
+                  <img src="../assets/imagens/icons8_youtube_play_button_32.png" alt="">
+                </a>
+                <a href="#" class="rede">
+                  <img src="../assets/imagens/icons8_instagram_logo_32.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="footer-seg" style="margin-left:20px;">
+                <h2>Links Rápidos </h2>
+                <div>
+                    <a href="#">Inicio</a>
+                    <a href="produto-logado.html">Produtos</a>
+                    <a href="servicos-logado.html">Serviços</a>
+                    <a href="sobre-nos-logado.html">Sobre nós</a>
+                    <a href="contato-logado.html">Conctato</a>
+                </div>
+            </div>
+            <div class="footer-seg">
+                <h2>Links Útil</h2>
+                <div>
+                <a href="#">Ajuda central</a>
+                <a href="#">Termos e condições de uso</a>
+                <a href="politica-privacidade-logado.html">Politica e privacidade</a>
+                <a href="contato-logado.html">Enviar Feedeback</a>
+                <a href="#cont">Conta</a>
+                </div>
+            </div>
+            <div class="footer-seg">
+                <h2>Contato</h2>
+                <h4>Contacta-nos para mais</h4>
+                <form >
+                    <input type="email"class="input" placeholder="Email@gmail.com" required>
+                    <textarea name="mensagem..." id="textarea" placeholder="Menssagem..." cols="27" rows="3"></textarea>
+                    <input type="button" value="Enviar Feed">
+                </form>
+            </div>
+          </article>  
+      </section>
+  </main>
+    <footer>
+        <!-- FOOTER PRINCIPAL -->
+        <div>
+            Cambiji_Nature &COPY Copyright; 2023 Todos os direitos reservados.
+        </div> 
+    </footer>
+    <script src="../assets/js/pageInicio.js"></script>
+</body>
+</html>

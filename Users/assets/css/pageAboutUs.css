@@ -92,8 +92,7 @@
 /* editando a sessão 2 bem-vido */
 .cont-bev
 {
-    margin-left:auto;
-    margin-right:auto;
+    margin:0 auto 1rem;
     padding:5px; 
     /* background: chocolate; */
     width:80%;
@@ -140,57 +139,4 @@
     padding-bottom:0px;
     font-size:13px;
 }
-.galeria
-{
-   margin-inline: 8%;
-   /* background: #36b64f;  */
-   column-count:3;
-   column-gap:5px;
-}
-.fotos
-{
-    display: flex;
-    align-items:flex-start;
-    flex-direction: column;
-    margin-bottom: 5px;
-}
-.fotos>img
-{
-    width:100%;
-    margin:0px;
-    /* height:170px; */
-}
-.sub-gal
-{
-    background:#fff;
-    width: 100%;
-    padding: 10px;
-    position: relative;
-}
-.sub-gal>h4
-{
-    margin:2px;
-    font-size:20px;
-    color: #36b64f;
-}
-.sub-gal>span
-{
-    font-weight:500;
-    font-size:14px;
-    color: #000;
-}
-.sub-gal> img
-{
-    position: absolute;
-    top:25%;
-    right:10px;
-    transform: rotate(-50deg);
-}
-#verd
-{
-    background: #36b64f;
-}
-#verd>h4
-{
-    color: #fff;
-}
+
