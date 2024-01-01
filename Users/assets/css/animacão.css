@@ -90,5 +90,10 @@
     50%{left:-900px;}
     70%{left:-1800px;}
     90%{left:-1800px;}
-	100%{left:0;}
+		100%{left:0;}
+}
+@keyframes loader{
+	to{
+		transform: rotate(1turn);
+	}
 }

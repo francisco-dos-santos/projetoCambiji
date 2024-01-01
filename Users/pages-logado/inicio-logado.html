@@ -6,8 +6,9 @@
     <title>Ínicio logado</title>
     <link rel="shortcut icon" href="../assets/imagens/logo2.jpg" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animacão.css">
     <link rel="stylesheet" href="../assets/css/headerFooter.css"/>
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
 <body>
     <header id="header-main">
@@ -30,118 +31,53 @@
             <input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
             <label for="pesq"><img src="../assets/imagens/icons8_search.ico" alt="icon-search"></label>
         </article>
-            <div class="conta" >
-              <a href="#" id="cont" title="Francisco dos santos" >
-                <img src="../assets/imagens/logado-2.JPG" alt="usuario cambiji">
+            <div class="conta">
+              <a href="#" id="cont-link" title="Francisco dos santos" >
+                <img src="../assets/imagens/icons8_male_user-logado.ico" width="32px" alt="usuario cambiji">
+                <span id="user-name">Nome</span>
               </a>
               <div class="dropdown" >
                 <a href="perfil.html">Perfil</a>
-                <a href="#sair">Sair</a>
+                <a href="../inicio.html">Sair</a>
               </div>
             </div>
-            <div class="cart-wrapper"  id="icon-cart" data-countCart="0">
+            <div class="cart-wrapper"  id="icon-cart" data-count="0">
                 <a href="carrinho-logado.html">
                   <img 
                   src="../assets/imagens/icons8_handcart.ico" 
                   alt="sacola_cambiji"
                   >
                 </a>
-                <div class="container-cart">
+                <div class="container-cart bouncedireito">
                   <div id="content-text-cart">
                     <p>Seu carrinho tem <span class="quantity">5</span> itens</p>
                     <button id="close-cart">x</button>
                   </div>
                   <section id="content-cards-cart">
-                    <div class="content-card-cart">
+                    <!-- <div class="content-card-cart">
                       <div class="content-img">
                         <img src="../assets/imagens/produto6.png" alt="produto-1">
                       </div>
                       <div class="contents-info-product-cart">
                         <p>Nome produto<br><span class="description-cart">descrição...</span></p>
                         <div class="content-price-quantity">
-                          <p>Kz2000</p>
+                          <p class="price-cart">Kz 2000</p>
                           <div class="content-add-quantity">
-                            <button class="btn-less">-</button>
-                            <input type="number" size="3" max="10" min="1">
-                            <button class="btn-plus">+</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="content-card-cart">
-                      <div class="content-img">
-                        <img src="../assets/imagens/produto6.png" alt="produto-1">
-                      </div>
-                      <div class="contents-info-product-cart">
-                        <p>Nome produto<br><span class="description-cart">descrição...</span></p>
-                        <div class="content-price-quantity">
-                          <p>Kz2000</p>
-                          <div class="content-add-quantity">
-                            <button class="btn-less">-</button>
-                            <input type="number" size="3" max="10" min="1">
-                            <button class="btn-plus">+</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="content-card-cart">
-                      <div class="content-img">
-                        <img src="../assets/imagens/produto6.png" alt="produto-1">
-                      </div>
-                      <div class="contents-info-product-cart">
-                        <p>Nome produto<br><span class="description-cart">descrição...</span></p>
-                        <div class="content-price-quantity">
-                          <p>Kz2000</p>
-                          <div class="content-add-quantity">
-                            <button class="btn-less">-</button>
-                            <input type="number" size="3" max="10" min="1">
-                            <button class="btn-plus">+</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="content-card-cart">
-                      <div class="content-img">
-                        <img src="../assets/imagens/produto6.png" alt="produto-1">
-                      </div>
-                      <div class="contents-info-product-cart">
-                        <p>Nome produto<br><span class="description-cart">descrição...</span></p>
-                        <div class="content-price-quantity">
-                          <p>Kz2000</p>
-                          <div class="content-add-quantity">
-                            <button class="btn-less">-</button>
-                            <input type="number" size="3" max="10" min="1">
-                            <button class="btn-plus">+</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="content-card-cart">
-                      <div class="content-img">
-                        <img src="../assets/imagens/produto6.png" alt="produto-1">
-                      </div>
-                      <div class="contents-info-product-cart">
-                        <p>Nome produto<br><span class="description-cart">descrição...</span></p>
-                        <div class="content-price-quantity">
-                          <p class="price">Kz2000</p>
-                          <div class="content-add-quantity">
-                            <button id="btn-less" class="control-less-plus">-</button>
-                            <button id="input-quantity">1</button>
+                            <button id="btn-less" class="control-less-plus">--</button>
+                            <input type="button" id="input-quantity" value="1">
                             <button id="btn-plus" class="control-less-plus">+</button>
                           </div>
                         </div>
                       </div>
-                    </div>
-
-
+                    </div> -->
+        
                   </section>
                   <div class="content-finally-cart">
                     <div class="content-price-total">
-                      <span>Total:</span>
-                      <span id="Total-Cart">Kz10.681,60</span>
+                      <span>Total:Kz</span>
+                      <span id="Total-Cart">Kz0,00</span>
                     </div>
-                    <button class="finally-cart-button">Finalizar Compra</button>
+                    <button id="finally-cart-button">Finalizar Compra</button>
                   </div>
                 </div>
             </div>
@@ -152,13 +88,13 @@
 
     <article id="wrapper">
       <section class="sess1">
-        <article class="headline">
+        <article class="headline fadeIn">
             <h3>cosmetics products </h3>
             <h2>Cambiji Nature S.A</h2>
             <div id="linha">
             </div>
             <p>Acreditamos levar a natureza em realidade, 
-              sobre os cuidados da pele.<br><strong>MY SKIN MATTERS</strong>
+              sobre os cuidados da pele.<strong>YOUR SKIN MATTERS</strong>
               </p> 
                 <div class="content-sess1-btn">
                     <a href="loja-logado.html" class="btn">Comprar</a>
@@ -172,8 +108,8 @@
           <div class="container-ofert-day-title">
             <h2>Ofertas do dia</h2>
             <div class="container-clock">
-              <img src="" alt="relogio"> Terminará
-              <span class="time">5h:50:27</span>
+              <img src="../assets/imagens/icons8_wall_clock.ico" width="25px" alt="relogio"> Terminará
+              <span id="time">5h:50:27</span>
             </div>
           </div>
 
@@ -445,5 +381,7 @@
         </div> 
     </footer>
     <script src="../assets/js/pageInicio.js"></script>
+    <script src="../assets/js/workCart.js"></script>
+    <script src="../assets/js/workheaderLogado.js"></script>
 </body>
 </html>

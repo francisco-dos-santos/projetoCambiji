@@ -1,5 +1,5 @@
-*
-{
+
+*{
     box-sizing: border-box;
     padding:0;
     margin:0;
@@ -9,12 +9,9 @@
 }
 body
 {
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:rgba(41, 40, 40, 0.842); 
-		font-size:1.6rem;
-    /* background-image:linear-gradient(315deg,#ffa20075,#ffffff,#094b0e75); */
-    /* background: #ffa200; */
+    font-family:sans-serif;
+    color:rgba(31, 30, 30, 0.842); 
+	font-size:1.6rem;
 }
 html
 {
@@ -24,11 +21,13 @@ html
 a{
     text-decoration:none;
     cursor: pointer;
+    color:rgba(31, 30, 30, 0.842); 
 }
 a:focus-within
 {
     color: #ff0000;
     font-weight:400;
+    color:rgba(31, 30, 30, 0.842); 
 }
 button{
 	border: none;
@@ -135,12 +134,7 @@ ul li a:hover::after
     height:100%;
     cursor:pointer;
 }
-.conta
-{
-    margin-top:5px;
-    display: inline-block;
-    position: relative;
-}
+
 .dropdown
 {
     display:none;
@@ -171,6 +165,11 @@ ul li a:hover::after
     display: block;
     animation:bouncedireito 2s  ease-in-out;
 }
+#cont-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
  .conta img
 {
@@ -180,6 +179,9 @@ ul li a:hover::after
 {
     outline: 3px solid rgba(233, 229, 229, 0.685);
     transition: all 0.4s;
+}
+#user-name{
+ font-weight:bold;   
 }
 /* efeito sacola */
 .cart-wrapper
@@ -192,7 +194,7 @@ ul li a:hover::after
 	position: relative;
 }
 .cart-wrapper::before{
-	content:attr(data-countCart);
+	content:attr(data-count);
 	background:red;
 	font-size:1.1rem;
 	font-family: sans-serif;
@@ -208,7 +210,7 @@ ul li a:hover::after
 	border-radius:50%;
 }
 .container-cart{
-	min-width:300px;
+	min-width:30rem;
 	min-height:100vh;
 	background:#fff;
 	box-shadow: 0 0.3rem 1rem #c9c7c5;
@@ -216,6 +218,10 @@ ul li a:hover::after
 	top:-1.5rem;
 	right:-17.4rem;
 	padding:3.5rem 0;
+	display: none;
+}
+.open{
+	display:block;
 }
 #content-text-cart
 {
@@ -223,51 +229,96 @@ ul li a:hover::after
 	align-items: center;
 	justify-content: space-between;
 	padding:0 1rem 1rem;
-	border-bottom: 0.1rem solid #000;
+	border-bottom: 0.1rem solid #e1e1e1;
 }
 #close-cart{
-	font-size:1.7rem;
+	font-size:1.8rem;
+    color:#ff0000;
 }
 #content-cards-cart
 {
 	display:grid;
 	grid-template-rows: repeat(3,1fr);
 	row-gap: 1.5rem;
-	border: 1px solid red;
+	background:#f6fff1fa;
 	padding:1rem;
 	height:400px;
 	overflow-y: auto;
+	border-bottom: 0.1rem solid #e1e1e1;
 }
 .content-card-cart{
 	display: flex;
 	align-items:center;
-	gap: 0.5rem;
+	gap: 0.8rem;
 	border: 1px solid red;
 }
 .content-card-cart .content-img{
-	width:100px;
+	width:150px;
 	height:100px;
-	border: 1px solid yellow;
+	background: #e1e1e1;
+	border-radius:.5rem;
 }
 .content-card-cart .content-img img{
 	max-width:100%;
-	height: 100%;
+	height:100%;
 }
 .contents-info-product-cart{
 	display:grid;
+	row-gap: 1rem;
 	width:100%;
 	border: 1px solid green;
+}
+.contents-info-product-cart > p{
+	font-size:1.3rem;
+}
+.price-cart{
+	font-weight:bold;
 }
 .content-price-quantity{
 	display:flex;
 	align-items: center;
 	justify-content:space-between;
-	width:100%;
 	border: 1px solid red;
 }
-button > .control-less-plus{
-	border:0.2rem solid #36b64f !important; 
+.control-less-plus{
+	border:0.1rem solid #36b64f !important;
+	border-radius:.3rem;
+	text-align: center;
+	width:2.5rem;
+	height: 2.5rem;
 }
+#btn-less{
+	border:0.1rem solid #b9b7b3 !important;
+}
+#input-quantity{
+  border:none;
+  outline:none;
+	padding:.8rem;
+	background: transparent;
+	font-weight: bold;
+}
+.content-price-total{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size:1.6rem;
+}
+.content-price-total span{
+	font-weight: bold;
+}
+.content-finally-cart{
+	display: grid;
+	row-gap: 1rem;
+	padding:.8rem 1.2rem;
+}
+#finally-cart-button{
+	background: #36b64f;
+	border-radius:.3rem;
+	padding:1.5rem 0;
+	color:#fff;
+	font-size: 1.5rem;
+}
+
 /*conteudo principal*/
 /* tornando menu fixo */
 main{
@@ -401,13 +452,14 @@ main{
 }
 footer
 {
-    height:50px;
-    border-top: 2px solid #36b64f;
+    height:4rem;
+    border-top:2px solid #36b64f;
 }
 footer div
 {
     color: #36b64f;
     font-weight:600;
-    text-align: center;
+    text-align:center;
     margin-top:1rem;
+    font-size: 1.3rem;
 }

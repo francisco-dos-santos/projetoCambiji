@@ -4,85 +4,99 @@
     <meta charset="UTF-8">
     <meta name="vierwport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="../css/segundo.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/animacão.css"/>
+    <link rel="stylesheet" href="../assets/css/segundo.css">
+    <link rel="stylesheet" href="../assets/css/animacão.css">
+    <link rel="stylesheet" href="../assets/css/headerFooter.css"/>
+    <link rel="stylesheet" href="../assets/css/responsive.css">
     <title>Fazer reserva</title>
 </head>
 <body>
-    <header id="header-principal">
-        <h1 class="logo"> 
-            <a href="inicio logado.html">
-                <img src="../imagens/logo.png"  alt="cambiji_nature">
-            </a>
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="inicio logado.html">Inicio</a></li>
-                <li><a href="produto logado.html">produtos</a></li>
-                <li><a href="servicos logado.html">Serviços</a></li>
-                <li><a href="sobre-nos logado.html">Sobre nós</a></li>
-                <li class="botao"><a href="contato logado.html">Conctato</a></li>
-            </ul>
-        </nav>
-        <article class="pesquisar">
-            <input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
-            <label for="pesq"><img src="../imagens/icons8_search.ico" alt="icon-search"></label>
-        </article>
-            <div class="conta" >
-               <a href="#"  title="Francisco dos santos"><img src="../imagens/logado-2.JPG" alt="usuario cambiji"></a>
-               <div class="dropdown">
-                <a href="perfil.html">Perfil</a>
-                <a href="#modal">Sair</a>
-               </div>
-            </div>
-            <div class="sacola" >
-                <a href="carrinho logado.html"><img src="../imagens/icons8_shopping_cart_with_money_32.png" width="32px" alt="sacola_cambiji"></a>
-                <div class="dropdow-sacola subindo">
-                    <div class="cart-principal">
-                        <img src="../imagens/produto7.png" alt="">
-                        <div class="alinhar-preco">
-                            <p>Creme ponde</p>
-                            <p>1X- <span>3000kz</span></p>
-                        </div>
-                    </div>
-                <!-- 2 -->
-                <div class="cart-principal">
-                    <img src="../imagens/produto4.png" alt="">
-                    <div class="alinhar-preco">
-                        <p>Perfume Cambiji</p>
-                        <p>1X- <span>3000kz</span></p>
-                    </div>
-                </div>
-                <!-- 3 -->
-                <div class="cart-principal">
-                    <img src="../imagens/produto6.png" alt="">
-                    <div class="alinhar-preco">
-                        <p>Aromas </p>
-                        <p>1X- <span>500kz</span></p>
-                    </div>
-                </div>
-
-                <div class="cart-finaliza">
-                    <a href="finalizar.html">Finalizar</a>
-                    <p>total <span>:6500kz</span></p>
-                </div>
-            </div>
-    </header>
+	<header id="header-main">
+		<div class="container-head">
+			<h1 class="logo"> 
+					<a href="#">
+							<img src="../assets/imagens/logo.png" alt="cambiji_nature">
+					</a>
+			</h1>
+			<nav>
+					<ul>
+							<li><a href="./inicio-logado.html">Inicio</a></li>
+							<li><a href="loja-logado.html">Loja</a></li>
+							<li><a href="servicos-logado.html">Serviços</a></li>
+							<li><a href="sobre-nos-logado.html">Sobre nós</a></li>
+							<li class="botao"><a href="contato-logado.html">Contacto</a></li>
+					</ul>
+			</nav>
+			<article class="pesquisar">
+					<input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
+					<label for="pesq"><img src="../assets/imagens/icons8_search.ico" alt="icon-search"></label>
+			</article>
+					<div class="conta">
+						<a href="#" id="cont-link" title="Francisco dos santos" >
+							<img src="../assets/imagens/icons8_male_user-logado.ico" width="32px" alt="usuario cambiji">
+							<span id="user-name">Nome</span>
+						</a>
+						<div class="dropdown" >
+							<a href="perfil.html">Perfil</a>
+							<a href="../inicio.html">Sair</a>
+						</div>
+					</div>
+					<div class="cart-wrapper"  id="icon-cart" data-count="0">
+							<a href="carrinho-logado.html">
+								<img 
+								src="../assets/imagens/icons8_handcart.ico" 
+								alt="sacola_cambiji"
+								>
+							</a>
+							<div class="container-cart bouncedireito">
+								<div id="content-text-cart">
+									<p>Seu carrinho tem <span class="quantity">5</span> itens</p>
+									<button id="close-cart">x</button>
+								</div>
+								<section id="content-cards-cart">
+									<!-- <div class="content-card-cart">
+										<div class="content-img">
+											<img src="../assets/imagens/produto6.png" alt="produto-1">
+										</div>
+										<div class="contents-info-product-cart">
+											<p>Nome produto<br><span class="description-cart">descrição...</span></p>
+											<div class="content-price-quantity">
+												<p class="price-cart">Kz 2000</p>
+												<div class="content-add-quantity">
+													<button id="btn-less" class="control-less-plus">--</button>
+													<input type="button" id="input-quantity" value="1">
+													<button id="btn-plus" class="control-less-plus">+</button>
+												</div>
+											</div>
+										</div>
+									</div> -->
+			
+								</section>
+								<div class="content-finally-cart">
+									<div class="content-price-total">
+										<span>Total:Kz</span>
+										<span id="Total-Cart">Kz0,00</span>
+									</div>
+									<button id="finally-cart-button">Finalizar Compra</button>
+								</div>
+							</div>
+					</div>
+				</div>
+	</header>
     
 <main>
-           <!--editando o modal saindo-->
-            <div class="modal-cont" id="modal">
-                <div class="cont-info">
-                <div class="informacao-modal">
-                    <p>O senhor tem a certeza que quer terminar a sessão?</p>
-                    <div>
-                    <a href="../inicio.html">OK</a>
-                    <a href="#l">Não</a>
-                    </div>
-                </div>
-                </div>
-            </div>
+	<!--editando o modal saindo-->
+	<div class="modal-cont" id="modal">
+			<div class="cont-info">
+			<div class="informacao-modal">
+					<p>O senhor tem a certeza que quer terminar a sessão?</p>
+					<div>
+					<a href="../inicio.html">OK</a>
+					<a href="#l">Não</a>
+					</div>
+			</div>
+			</div>
+	</div>
 
     <section class="fundo-titulo fadeIn">
         <h1>Fazer Reservas</h1>
@@ -90,90 +104,90 @@
     
     <section class="fazer-reser descendo">
         <!-- session 1 -->
-        <div class="dest-reserva">
-            <div class="img-reserva">
-                <img src="../imagens/logo.png" alt="">
-            </div>
+		<div class="dest-reserva">
+				<div class="img-reserva">
+						<img src="../imagens/logo.png" alt="">
+				</div>
 
-            <div class="text-reserva">
-                <p>A cambiji nature tem os seus serviços prestados com qualidade. 
-                    <strong> E com vagas limitadas,</strong> de segunda <br> à sábado das( 8h as 17h30) </p>
-            </div>
-            <div class="cont-serv-reserva subindo">
-                <div class="serv-reserva">
-                    <img src="../imagens/combo2 - pequeno.jpg" alt="">
-                    <h6>Combo Serviço</h6>
-                    <p>30.00kz</p>
-                    <p>duração:2h00</p>
-                </div>
+				<div class="text-reserva">
+						<p>A cambiji nature tem os seus serviços prestados com qualidade. 
+								<strong> E com vagas limitadas,</strong> de segunda <br> à sábado das( 8h as 17h30) </p>
+				</div>
+				<div class="cont-serv-reserva subindo">
+						<div class="serv-reserva">
+								<img src="../imagens/combo2 - pequeno.jpg" alt="">
+								<h6>Combo Serviço</h6>
+								<p>30.00kz</p>
+								<p>duração:2h00</p>
+						</div>
 
-                <div class="serv-reserva">
-                    <img src="../imagens/massagem2 - pequeno.jpg" alt="">
-                    <h6>massagem Simples</h6>
-                    <p>10.000kz</p>
-                    <p>duração:1h30</p>
-                </div>
+						<div class="serv-reserva">
+								<img src="../imagens/massagem2 - pequeno.jpg" alt="">
+								<h6>massagem Simples</h6>
+								<p>10.000kz</p>
+								<p>duração:1h30</p>
+						</div>
 
-                <div class="serv-reserva">
-                    <img src="../imagens/lipaface - pequeno.jpg" alt="">
-                    <h6>Limpeza &nbsp;facial</h6>
-                    <p>15.000kz</p>
-                    <p>duração:1h00</p>
-                </div>
-            </div>
-        </div>
-        <!-- session 2 -->
-        <article class="sess-input-1">
-            <form autocomplete="on" >
-                <p>Numero de Telefone*</p>
-                <input type="tel" class="input" name="" id="" placeholder="+244 (932925647)" >
-                <p>Data da reserva*</p>
-                <input type="date" class="input" name="" id="" value="dia da reserva">
-                <input type="time" class="input" name="" id="" placeholder="Hora">
-                <p>Metodo de pagamnetos*</p>
-                <select name="metodop" class="input" id="imetodop">
-                    <option value="">Transferência Bancaria</option>
-                    <option value="">Visa</option>
-                    <option value="">Paypal</option>
-                    <option value="">Multicaixa express</option>
-                </select>
-                <p>tipo de serviço</p>
-                <select name="metodop" class="input" id="imetodop">
-                    <option value="10000kz">Massagem Simples
-                         <p>10.000kz</p> 
-                    </option>
-                    <option value="">Combo Serviços
-                        <p>30.000kz</p> 
-                    </option>
-                    <option value="">Limpeza Facial
-                        <p>15.000kz</p> 
-                    </option>
-                </select>
-                <a href="#modal2"><input type="button" id="btn-encomenda" value=" Confirmar Reserva"></a>
-            </form>
-        </article>
+						<div class="serv-reserva">
+								<img src="../imagens/lipaface - pequeno.jpg" alt="">
+								<h6>Limpeza &nbsp;facial</h6>
+								<p>15.000kz</p>
+								<p>duração:1h00</p>
+						</div>
+				</div>
+		</div>
+		<!-- session 2 -->
+		<article class="sess-input-1">
+				<form autocomplete="on" >
+						<p>Numero de Telefone*</p>
+						<input type="tel" class="input" name="" id="" placeholder="+244 (932925647)" >
+						<p>Data da reserva*</p>
+						<input type="date" class="input" name="" id="" value="dia da reserva">
+						<input type="time" class="input" name="" id="" placeholder="Hora">
+						<p>Metodo de pagamnetos*</p>
+						<select name="metodop" class="input" id="imetodop">
+								<option value="">Transferência Bancaria</option>
+								<option value="">Visa</option>
+								<option value="">Paypal</option>
+								<option value="">Multicaixa express</option>
+						</select>
+						<p>tipo de serviço</p>
+						<select name="metodop" class="input" id="imetodop">
+								<option value="10000kz">Massagem Simples
+											<p>10.000kz</p> 
+								</option>
+								<option value="">Combo Serviços
+										<p>30.000kz</p> 
+								</option>
+								<option value="">Limpeza Facial
+										<p>15.000kz</p> 
+								</option>
+						</select>
+						<a href="#modal2"><input type="button" id="btn-encomenda" value=" Confirmar Reserva"></a>
+				</form>
+		</article>
     </section>
 
     <!-- editando o modal maior -->
     <div class="modal-cont" id="modal2">
-        <a href="#linicio logado.html" class="fexar">X</a>
-        <div class="cont-info-2">
-          <div class="informacao-modal-2">
-              <h2>Confirmacão da Reserva</h2>
-              <p class="modal-cor">Caro senhor Francisco,</p>
-              <p>Obrigado por usar uns dos nossos serviços, um comprovativo de <b>factura</b> em pdf foi enviado para seu email
-                  <b>franciscodossantosmr@gmail.com,</b> podes fazer o dowloand, 
-                  clicando no botão <b>Dowloand</b>, para Sair, clica no X. Em caso de imprevistos contacto-nos.<br>
-                  Esperamos o senhor em nossa instalação, até lá cuida-se, e conservar bem o talão <b>(Factura)</b> para data do serviço.</p>
-                  <p>Desde já agradecemos pela confiança em nossos servicos.</p>
-                  <span>Cordialmente,</span>
-                  <span>Central de relacionamento CAMBIJI NATURE</span>
-                  <div >
-                 <a href="#l">Dowloand pdf</a>
-                </div>
+		<a href="#linicio logado.html" class="fexar">X</a>
+		<div class="cont-info-2">
+			<div class="informacao-modal-2">
+				<h2>Confirmacão da Reserva</h2>
+				<p class="modal-cor">Caro senhor Francisco,</p>
+				<p>Obrigado por usar uns dos nossos serviços, um comprovativo de <b>factura</b> em pdf foi enviado para seu email
+				<b>franciscodossantosmr@gmail.com,</b> podes fazer o dowloand, 
+				clicando no botão <b>Dowloand</b>, para Sair, clica no X. Em caso de imprevistos contacto-nos.<br>
+				Esperamos o senhor em nossa instalação, até lá cuida-se, e conservar bem o talão <b>(Factura)</b> para data do serviço.</p>
+				<p>Desde já agradecemos pela confiança em nossos servicos.</p>
+				<span>Cordialmente,</span>
+				<span>Central de relacionamento CAMBIJI NATURE</span>
+				<div>
+				<a href="#l">Dowloand pdf</a>
+				</div>
+		</div>
         </div>
-        </div>
-      </div>
+    </div>
 
 </main>
 
@@ -182,5 +196,7 @@
         Cambiji_Nature &COPY Copyright; 2023 Todos os direitos reservados.
     </div> 
 </footer>
+<script src="../assets/js/workCart.js"></script>
+<script src="../assets/js/workheaderLogado.js"></script>
 </body>
 </html>

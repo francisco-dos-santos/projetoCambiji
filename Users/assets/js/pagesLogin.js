@@ -1,9 +1,8 @@
 const usersList=JSON.parse(localStorage.getItem("BD_Users"))??[];
 const userEmail=document.getElementById("email");
 const userSenha=document.getElementById("passe");
-const btnLogin=document.getElementById("btn-access")
-
-console.log(usersList);
+const btnLogin=document.getElementById("btn-access");
+const loader=document.querySelector(".loader");
 
 function setError(input,message){
   const parent=input.parentNode;
@@ -45,23 +44,39 @@ function checkedInputs(){
   }
   return true;
 }
+function toggleEye(){
+  const eye=document.querySelector('.eye');
+  if(userSenha.type ==="password"){
+    userSenha.setAttribute("type","text");
+    eye.setAttribute("src","../assets/imagens/icons8_hide.ico")
+  }else{
+    userSenha.setAttribute("type","password");
+    eye.setAttribute("src","../assets/imagens/icons8_eye.ico")
+  }
+}
 
 function isCheckedUsers(){
   let userEmailV= userEmail.value;
   let userSenhaV=userSenha.value;
   if(checkedInputs()){
     setTimeout(()=>{
-      usersList.forEach((element,index)=>{
-        if(element.email===userEmailV && element.password===userSenhaV){
-          console.log("User find: "+element.email+" :"+element.password);
-          saveIdUsers(index);
-        }
-        else{
-          console.log(" not is there users with this data try again");
-        }
-      });
-    },2000)
-    console.log("checkeding user if existe...")
+      loader.classList.remove("show");
+      let isUser=usersList.find(user=>{
+        return (user.email===userEmailV) && (user.password===userSenhaV);
+      })
+      if(isUser){
+        usersList.forEach((element,index)=>{
+          if(element.email==isUser.email && element.password==isUser.password){
+            saveIdUsers(index);
+            window.location.href="../pages-logado/inicio-logado.html";
+          }
+        });
+      }else{
+        alert("user inexistent digite outros dados");
+      }
+      console.log("finally")
+    },4000);
+    loader.classList.add("show");
   }
   else{
     console.log("was checked filds is invalidity");
@@ -72,4 +87,7 @@ function saveIdUsers(index){
   localStorage.setItem("Id_users",JSON.stringify(index));
 }
 
-btnLogin.addEventListener("click", isCheckedUsers);
+btnLogin.addEventListener("click",()=>{
+  isCheckedUsers();
+  console.log("checked there is users exists");
+});

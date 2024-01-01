@@ -26,6 +26,7 @@ const userEmail=document.querySelector("#email")
 const userPasse=document.querySelector("#passe1");
 const userPasseTwo=document.querySelector("#passe2");
 const btnAccess=document.querySelector("#btn-access");
+const loader=document.querySelector(".loader");
 
 function SetUsers(userName,email,password){
   this.userName=userName,
@@ -45,8 +46,9 @@ const users={
 			{
 				this.List.push(new SetUsers(name,email,passe));
 				this.saveStorage();
+        clearField();
 			}else{
-        alert("já existe uma conta com esse email digite outro");
+        console.log("já existe uma conta com esse email digite outro");
       }
     },
 
@@ -160,10 +162,11 @@ btnAccess.addEventListener("click",()=>{
     let userPasseValue=userPasse.value;
     let userPasseTwoValue=userPasseTwo.value;
     setTimeout(()=>{
+    loader.classList.remove("show");
     users.add(userNameValue,userEmailValue,userPasseTwoValue);
-    clearField();
-    },3000)
-    console.log("loading...")
+    },4000)
+    console.log("loading...");
+    loader.classList.add("show");
   }else{
     console.log("não foi enviado");
   }

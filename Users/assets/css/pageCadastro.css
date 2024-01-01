@@ -48,7 +48,7 @@
 }
 .form .input:focus-visible
 {
-    border: 1px solid #36b64f;
+    border: .1rem solid #36b64f;
     transition: all .5s;
 }
 .card-2-cadast p a:link
@@ -72,9 +72,14 @@
     background: #36b64f;
     padding-top:15px;
     padding-bottom:15px;
+    text-align: center;
     color:#ffffff;
     border-radius:5px;
     cursor:pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:1.2rem;
 }
 #btn-access:hover
 {
@@ -83,26 +88,31 @@
     outline: 1px solid #36b64f;
     transition: all .5s;
 }
+.loader{
+    display: none;
+    animation: loader .9s infinite ease-out;
+}
+.show{
+    display: block;
+}
 form div{
   position: relative;
 }
 .eye{
 	position:absolute;
 	right:1.2rem;
-	top:0.4rem;
+	top:0.9rem;
 	cursor:pointer;
+    max-width:2.5rem;
 }
 
-.form div .input:focus
-{
-  border-color:#777;
-}
-.form div .error .input{
+.form>div.error .input{
     border-color: #e74c3c;
 }
-.form div .sucess .input{
+.form>div.sucess .input{
     border-color:#2ecc71;
 }
+
 
 .form div small{
     color: #e74c3c;

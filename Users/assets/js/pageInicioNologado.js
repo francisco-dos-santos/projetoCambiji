@@ -2,7 +2,7 @@ console.log('testando');
 let response=`[
   {
     "id":0,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":3000,
     "category":"Aromas",
@@ -10,7 +10,7 @@ let response=`[
   },
   {
     "id":1,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":3000,
     "category":"Aromas",
@@ -18,140 +18,140 @@ let response=`[
   },
   {
     "id":2,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":3000,
     "quantity":1
   },
   {
     "id":3,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":5000,
     "quantity":1
   },
   {
     "id":4,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":4500,
     "quantity":1
   },
   {
     "id":5,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":1500,
     "quantity":1
   },
   {
     "id":6,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":2500,
     "quantity":1
   },
   {
     "id":7,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":2500,
     "quantity":1
   },
   {
     "id":8,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":500,
     "quantity":1
   },
   {
     "id":9,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":1800,
     "quantity":1
   },
   {
     "id":10,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":400,
     "quantity":1
   },
   {
     "id":11,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":2000,
     "quantity":1
   },
   {
     "id":12,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":2200,
     "quantity":1
   },
   {
     "id":13,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":1500,
     "quantity":1
   },
   {
     "id":15,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":3500,
     "quantity":1
   },
   {
     "id":16,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":2500,
     "quantity":1
   },
   {
     "id":17,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":2000,
     "quantity":1
   },
   {
     "id":18,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":500,
     "quantity":1
   },
   {
     "id":19,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":600,
     "quantity":1
   },
   {
     "id":20,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":700,
     "quantity":1
   },
   {
     "id":21,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":1000,
     "quantity":1
   },
   {
     "id":22,
-    "imageProduct":"../assets/imagens/ponds-2.png",
+    "imageProduct":"./assets/imagens/ponds-2.png",
     "product":"Pondes",
     "price":300,
     "quantity":1
@@ -185,8 +185,8 @@ let datajson=JSON.parse(response);
         <p>${element.product}</p>
         <div class="content">
           <small class="categoria">${element.category}</small>
-          <button class="add-cart" onclick=addCart(${element.id})>
-            <img src="../assets/imagens/icons8_add_shopping_cart.ico" width:16px; alt="cart">
+          <button class="add-cart" onclick=goLodin()>
+            <img src="./assets/imagens/icons8_add_shopping_cart.ico" width:16px; alt="cart">
           </button>
         </div>
     </div>
@@ -208,7 +208,7 @@ let datajson=JSON.parse(response);
         <div class="content">
           <small class="categoria">${element.category}</small>
           <button class="add-cart">
-            <img src="../assets/imagens/icons8_add_shopping_cart.ico"" alt="cart" onclick=addCart(${element.id})>
+            <img src="./assets/imagens/icons8_add_shopping_cart.ico"" alt="cart" onclick=goLodin()>
           </button>
         </div>
     </div>
@@ -222,7 +222,9 @@ let datajson=JSON.parse(response);
   setTimeout(()=>{
     renderProducts();
   },1500)
-
+  function goLodin(){
+    window.location.href="./pages/login.html";
+  }
   containerOfortDay.innerHTML=`<h3 
   style="width:100vw;
   height:200px; 
