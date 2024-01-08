@@ -55,7 +55,7 @@ function toggleEye(){
   }
 }
 
-function isCheckedUsers(){
+function isUsersExit(){
   let userEmailV= userEmail.value;
   let userSenhaV=userSenha.value;
   if(checkedInputs()){
@@ -88,6 +88,6 @@ function saveIdUsers(index){
 }
 
 btnLogin.addEventListener("click",()=>{
-  isCheckedUsers();
+  isUsersExit();
   console.log("checked there is users exists");
 });
