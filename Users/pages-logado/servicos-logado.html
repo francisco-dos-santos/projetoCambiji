@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>seriços logado</title>
-    <link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
-		<link rel="stylesheet" href="../assets/css/pageServices.css">
-    <link rel="stylesheet" href="../assets/css/animacão.css">
-    <link rel="stylesheet" href="../assets/css/headerFooter.css"/>
-    <link rel="stylesheet" href="../assets/css/responsive.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>seriços logado</title>
+	<link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
+	<link rel="stylesheet" href="../assets/css/pageServices.css">
+	<link rel="stylesheet" href="../assets/css/animacão.css">
+	<link rel="stylesheet" href="../assets/css/headerFooter.css" />
+	<link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
+
 <body>
-    <header id="header-main">
+	<header id="header-main">
 		<div class="container-head">
-			<h1 class="logo"> 
+			<h1 class="logo">
 				<a href="#">
 					<img src="../assets/imagens/logo.png" alt="cambiji_nature">
 				</a>
@@ -31,30 +33,27 @@
 				<input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
 				<label for="pesq"><img src="../assets/imagens/icons8_search.ico" alt="icon-search"></label>
 			</article>
-					<div class="conta">
-						<a href="#" id="cont-link" title="Francisco dos santos" >
-							<img src="../assets/imagens/icons8_male_user-logado.ico" width="32px" alt="usuario cambiji">
-							<span id="user-name">Nome</span>
-						</a>
-						<div class="dropdown" >
-							<a href="perfil.html">Perfil</a>
-							<a href="../inicio.html">Sair</a>
-						</div>
+			<div class="conta">
+				<a href="#" id="cont-link" title="Francisco dos santos">
+					<img src="../assets/imagens/icons8_male_user-logado.ico" width="32px" alt="usuario cambiji">
+					<span id="user-name">Nome</span>
+				</a>
+				<div class="dropdown">
+					<a href="perfil.html">Perfil</a>
+					<a href="../inicio.html">Sair</a>
+				</div>
+			</div>
+			<div class="cart-wrapper" id="icon-cart" data-count="0">
+				<a href="carrinho-logado.html">
+					<img src="../assets/imagens/icons8_handcart.ico" alt="sacola_cambiji">
+				</a>
+				<div class="container-cart bouncedireito">
+					<div id="content-text-cart">
+						<p>Seu carrinho tem <span class="quantity">5</span> itens</p>
+						<button id="close-cart">x</button>
 					</div>
-					<div class="cart-wrapper"  id="icon-cart" data-count="0">
-							<a href="carrinho-logado.html">
-								<img 
-								src="../assets/imagens/icons8_handcart.ico" 
-								alt="sacola_cambiji"
-								>
-							</a>
-							<div class="container-cart bouncedireito">
-								<div id="content-text-cart">
-									<p>Seu carrinho tem <span class="quantity">5</span> itens</p>
-									<button id="close-cart">x</button>
-								</div>
-								<section id="content-cards-cart">
-									<!-- <div class="content-card-cart">
+					<section id="content-cards-cart">
+						<!-- <div class="content-card-cart">
 										<div class="content-img">
 											<img src="../assets/imagens/produto6.png" alt="produto-1">
 										</div>
@@ -70,83 +69,83 @@
 											</div>
 										</div>
 									</div> -->
-			
-								</section>
-								<div class="content-finally-cart">
-									<div class="content-price-total">
-										<span>Total:Kz</span>
-										<span id="Total-Cart">Kz0,00</span>
-									</div>
-									<button id="finally-cart-button">Finalizar Compra</button>
-								</div>
-							</div>
+
+					</section>
+					<div class="content-finally-cart">
+						<div class="content-price-total">
+							<span>Total:Kz</span>
+							<span id="Total-Cart">Kz0,00</span>
+						</div>
+						<button id="finally-cart-button">Finalizar Compra</button>
 					</div>
 				</div>
-		</header>
-    <main>
-      <section class="titulo fadeIn">
-				<p>Saudável e Verde</p>
-				<h3>Página Serviços</h3>
-				<div class="linha-t"></div>
-					<p>A Cambiji Nature tem os melhores serviços para e tratamos</p>
-					<p>da tua pele como nunca viu, serve um e desfruta do melhor de angola.</p>
-      </section>
-      <article class="fundo-serv">
-        <div class="circulo">
-        </div>
-        <section class="pagina-serv ">
-          <!-- primeiro card serviço -->
-            <div class="card-serv fadeIn" >
-              <div class="img">
-                <div id="img-1"></div>
-              </div>
-              	<h3>Combo Serviços</h3>
-                <h4>best to cosmetcs</h4>
-                <span>30000kz</span>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis aperiam 
-                  perferendis, reiciendis deleniti earum voluptas,autem itaque 
-                  corporis tempora quaerat.</p>
-                <a href="./fazer-reserva.html" class="btn">reservar</a>
-            </div>
-             <!-- segundo card serviço -->
-            <div class="card-serv fadeIn" >
-                <div class="img">
-                    <div id="img-2"></div>
-                </div>
-                <h3>Massagem simples</h3>
-                <h4>best to cosmetcs</h4>
-                <span>15000kz</span>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis aperiam 
-                  perferendis, reiciendis deleniti earum voluptas,autem itaque 
-                  corporis tempora quaerat.</p>
-                  <a href="./fazer-reserva.html" class="btn">reservar</a>
-            </div>
-             <!-- terceiro card serviço -->
-             <div class="card-serv fadeIn" >
-                <div class="img">
-                  <div id="img-3"></div>
-                </div>
-                <h3>Limpeza Facial</h3>
-                <h4>best to cosmetcs</h4>
-                <span>10000kz</span>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis aperiam 
-                  perferendis, reiciendis deleniti earum voluptas,autem itaque 
-                  corporis tempora quaerat.</p>
-                  <a href="./fazer-reserva.html" class="btn">reservar</a>
-            </div>
-        </section>
-    </article>
-    <!-- FOOTER SECUNDARIO -->
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="title fadeIn">
+			<p>Saudável e Verde</p>
+			<h3>Página Serviços</h3>
+			<div class="row-title"></div>
+			<p>A Cambiji Nature tem os melhores serviços para e tratamos</p>
+			<p>da tua pele como nunca viu, serve um e desfruta do melhor de angola.</p>
+		</section>
+		<article class="fundo-serv">
+			<div class="circulo">
+			</div>
+			<section class="pagina-serv ">
+				<!-- primeiro card serviço -->
+				<div class="card-serv fadeIn">
+					<div class="img">
+						<div id="img-1"></div>
+					</div>
+					<h3>Combo Serviços</h3>
+					<h4>best to cosmetcs</h4>
+					<span>30000kz</span>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis aperiam
+						perferendis, reiciendis deleniti earum voluptas,autem itaque
+						corporis tempora quaerat.</p>
+					<a href="./fazer-reserva.html" class="btn">reservar</a>
+				</div>
+				<!-- segundo card serviço -->
+				<div class="card-serv fadeIn">
+					<div class="img">
+						<div id="img-2"></div>
+					</div>
+					<h3>Massagem simples</h3>
+					<h4>best to cosmetcs</h4>
+					<span>15000kz</span>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis aperiam
+						perferendis, reiciendis deleniti earum voluptas,autem itaque
+						corporis tempora quaerat.</p>
+					<a href="./fazer-reserva.html" class="btn">reservar</a>
+				</div>
+				<!-- terceiro card serviço -->
+				<div class="card-serv fadeIn">
+					<div class="img">
+						<div id="img-3"></div>
+					</div>
+					<h3>Limpeza Facial</h3>
+					<h4>best to cosmetcs</h4>
+					<span>10000kz</span>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis aperiam
+						perferendis, reiciendis deleniti earum voluptas,autem itaque
+						corporis tempora quaerat.</p>
+					<a href="./fazer-reserva.html" class="btn">reservar</a>
+				</div>
+			</section>
+		</article>
+		<!-- FOOTER SECUNDARIO -->
 		<section class="sess6">
 			<article>
 				<div class="footer-seg">
-						<h2>
-							<img src="../assets/imagens/logo.png" width="80px" alt="icone-logo">
-							Cambiji Nature
-						</h2>
-						<p>Uma empresa que presta serviços de cosmetics, trabalhando
-							para bem da tua pele natural.
-						</p>
+					<h2>
+						<img src="../assets/imagens/logo.png" width="80px" alt="icone-logo">
+						Cambiji Nature
+					</h2>
+					<p>Uma empresa que presta serviços de cosmetics, trabalhando
+						para bem da tua pele natural.
+					</p>
 					<div class="section-rede">
 						<a href="#" class="rede">
 							<img src="../assets/imagens/icons8_facebook_f.ico" alt="facebook-icone">
@@ -163,44 +162,43 @@
 					</div>
 				</div>
 				<div class="footer-seg">
-						<h2>Links Rápidos </h2>
-						<div>
-							<a href="#">Inicio</a>
-							<a href="produto-logado.html">Produtos</a>
-							<a href="servicos-logado.html">Serviços</a>
-							<a href="sobre-nos-logado.html">Sobre-nós</a>
-							<a href="contato-logado.html">Conctato</a>
-						</div>
+					<h2>Links Rápidos </h2>
+					<div>
+						<a href="#">Inicio</a>
+						<a href="produto-logado.html">Produtos</a>
+						<a href="servicos-logado.html">Serviços</a>
+						<a href="sobre-nos-logado.html">Sobre-nós</a>
+						<a href="contato-logado.html">Conctato</a>
+					</div>
 				</div>
 				<div class="footer-seg">
 					<h2>Atendimento ao Cliente</h2>
 					<div>
-					<a href="#">Ajuda central</a>
-					<a href="#">Termos e condições de uso</a>
-					<a href="politica-privacidade-logado.html">Politica e privacidade</a>
-					<a href="contato-logado.html">Enviar Feedeback</a>
-					<a href="#cont">Conta</a>
+						<a href="#">Ajuda central</a>
+						<a href="#">Termos e condições de uso</a>
+						<a href="politica-privacidade-logado.html">Politica e privacidade</a>
+						<a href="contato-logado.html">Enviar Feedeback</a>
+						<a href="#cont">Conta</a>
 					</div>
 				</div>
 				<div class="footer-seg">
 					<h2>Informações de Contato</h2>
 					<p>Subscreve-se na nossa Newsletter</p>
 					<form>
-						<input type="email"class="input" id="Newsletter-email" 
-						placeholder="your@gmail.com" required>
+						<input type="email" class="input" id="Newsletter-email" placeholder="your@gmail.com" required>
 						<button id="btn-newsletter">Subscrever</button>
 					</form>
 					<p>Telefone: (+244) 932945647</p>
 					<p>Email: [Cambiji@gmail.com]</p>
 					<p>Seg-Sab: 8h-22h</p>
 				</div>
-			</article>  
-	</section>
-</main>
-<!-- FOOTER PRINCIPAL -->
-<footer>
+			</article>
+		</section>
+	</main>
+	<!-- FOOTER PRINCIPAL -->
+	<footer>
 		<div class="copyright">
-				 &COPY;2023 Cambiji_Nature Todos os direitos reservados.
+			&COPY;2023 Cambiji_Nature Todos os direitos reservados.
 		</div>
 		<div class="method-pay">
 			<a href="#">
@@ -215,9 +213,10 @@
 			<a href="#">
 				<img src="" alt="unitelMoney">
 			</a>
-		</div> 
-</footer>
-    <script src="../assets/js/workCart.js"></script>
-    <script src="../assets/js/workheaderLogado.js"></script>
+		</div>
+	</footer>
+	<script src="../assets/js/workCart.js"></script>
+	<script src="../assets/js/workheaderLogado.js"></script>
 </body>
+
 </html>

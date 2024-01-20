@@ -1,115 +1,135 @@
 /* editando pagina contacto */
-.fundo-cont
-{
-    min-height:700px;
-    /* background:#ffa200; */
-    position: relative;
+.title {
+	text-align: center;
+	padding: 1.5rem 0;
 }
-.fund-1
-{
-    background:#e3f7d8fa;
-    padding-left:30px;
-    padding-top:180px;
-    padding-bottom:50px;
+.title>p {
+	line-height: 2.5rem;
 }
-.fund-1 >h5
-{
-    font-size:23px;
-    font-weight:500;
-    padding:0px;
-    margin:0px;
+.title h3 {
+	font-size: 2.5rem;
+	margin-top: 1rem;
 }
-.fund-1 >h4
-{
-    font-weight: 700;
-    font-size: 30px;
-    padding:0px;
-    margin:0px;
+.row-title {
+	border-bottom: .5rem solid #36b64f;
+	width: 15rem;
+	margin: 1rem auto;
+	box-shadow: 0 .2rem .2rem #67db7e;
+	border-radius: .5rem;
 }
-.fund-2
-{
-    background: #ffffff;
-    height: 360px;
+.fundo-cont {
+	min-height: 700px;
+	/* background:#ffa200; */
+	position: relative;
 }
-.fund-card-1
-{
-    /* background: #67db7e; */
-    display:flex;
-    align-items: center;
-    gap:16.2rem;
-    margin-left:30px;
+
+.fund-1 {
+	background: #e3f7d8fa;
+	padding-left: 30px;
+	padding-top: 180px;
+	padding-bottom: 50px;
 }
-.fund-card-2
-{
-    margin-top: 50px;
-    margin-left:30px;
-    /* background:#ffa200; */
-    display:flex;
-    align-items: center;
-    gap:20.7rem;
+
+.fund-1>h5 {
+	font-size: 23px;
+	font-weight: 500;
+	padding: 0px;
+	margin: 0px;
 }
-.card-cont
-{
-    /* background: #ffffff; */
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
+
+.fund-1>h4 {
+	font-weight: 700;
+	font-size: 30px;
+	padding: 0px;
+	margin: 0px;
 }
-.card-cont div
-{
-    margin-top:10px;
+
+.fund-2 {
+	background: #ffffff;
+	height: 360px;
 }
-.card-cont h3
-{
-    margin-bottom:5px;
+
+.fund-card-1 {
+	/* background: #67db7e; */
+	display: flex;
+	align-items: center;
+	gap: 16.2rem;
+	margin-left: 30px;
 }
-.card-input
-{
-    background:#ffffff;
-    padding:50px;
-    position: absolute;
-    top:50px;
-    right:50px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px 0px rgba(230, 248, 226, 0.877), 0 6px 20px 0px rgba(228, 247, 228, 0.897) ;
+
+.fund-card-2 {
+	margin-top: 50px;
+	margin-left: 30px;
+	/* background:#ffa200; */
+	display: flex;
+	align-items: center;
+	gap: 20.7rem;
 }
-.card-input p
-{
-    margin-bottom:5px;
-    color: black;
+
+.card-cont {
+	/* background: #ffffff; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap:10px;
 }
-form .input
-{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width:100%;
-    font-size:16px;
-    padding:10px 0px 15px 0px;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid rgb(238, 230, 230);
+
+.card-cont div {
+	margin-top: 10px;
 }
-form .input:focus-visible
-{
-    border-bottom: 1px solid #36b64f;
-    transition: all .5s;
+
+.card-cont h3 {
+	margin-bottom:.5rem;
 }
-#bt-cont
-{
-    margin-top:20px;
-    font-size: 16px;
-    background:#36b64f;
-    padding: 15px 20px;
-    color: #ffffff;
-    border: none;
-    outline: none;
-    border-radius: 5px;
+
+.card-input {
+	background: #ffffff;
+	padding:5rem;
+	position:absolute;
+	top:5rem;
+	right:5rem;
+	border-radius:1rem;
+	box-shadow: 0px 4px 8px 0px rgba(230, 248, 226, 0.877), 0 6px 20px 0px rgba(228, 247, 228, 0.897);
 }
-#bt-cont:hover
-{
-    color: #36b64f;
-    outline: 1px solid #36b64f;
-    background: #fff;
-    transition: all 1s;
-    cursor: pointer;
+
+.card-input h2{
+	margin-bottom:1rem;
+}
+.card-input p {
+	margin-top:.5rem;
+	color: black;
+}
+
+form .input {
+	width:100%;
+	font-size:1.6rem;
+	padding: 10px 0px 15px 0px;
+	margin-bottom:1rem;
+	outline: none;
+	border: none;
+	border-bottom:.1rem solid rgb(238, 230, 230);
+}
+
+form .input:focus-visible {
+	border-bottom: 1px solid #36b64f;
+	transition: all .5s;
+}
+
+#bt-cont {
+	margin-top: 20px;
+	font-size: 16px;
+	background: #36b64f;
+	padding: 15px 20px;
+	color: #ffffff;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+#bt-cont:hover {
+	color: #36b64f;
+	outline: 1px solid #36b64f;
+	background: #fff;
+	transition: all 1s;
+	cursor: pointer;
 }

@@ -1,17 +1,19 @@
+
 const iconCart=document.getElementById("icon-cart");
 const containerCardsCart=document.getElementById("content-cards-cart")
 let TotalValueCart=document.getElementById("Total-Cart");
 const btnfinallyCart=document.getElementById("finally-cart-button");
 const carts=JSON.parse(localStorage.getItem("BD_carts"))??[];
+// const btnAddCart=document.getElementsByClassName("add-cart");
 
 const openCart={
   boxCart:document.querySelector(".container-cart"),
   btncloseCart:document.getElementById("close-cart"),
   open(){
-    openCart.boxCart.classList.add("open");
+    this.boxCart.classList.add("open");
   },
   close(){
-    openCart.boxCart.classList.remove("open");
+    this.boxCart.classList.remove("open");
   }
 } 
 function incrementP(pos){
@@ -46,7 +48,7 @@ function renderCart(){
     newcart=`
     <div class="content-card-cart">
     <div class="content-img">
-      <img src="${element.imageProduct}" alt="produto-1">
+      <img src="../assets/${element.imageProduct}" alt="produto-1">
     </div>
     <div class="contents-info-product-cart">
       <p>${element.product}<br><span class="description-cart">descrição...</span></p>
@@ -101,7 +103,8 @@ document.querySelector(".quantity").textContent=carts.length;
 getTotalValues()
 renderCart();
 let savecartStorage=()=>localStorage.setItem("BD_carts",JSON.stringify(carts));
-
+// callbacks
+// events
 openCart.btncloseCart.onclick=()=>{
   openCart.close();
 }

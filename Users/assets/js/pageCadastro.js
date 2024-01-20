@@ -1,25 +1,12 @@
-
-let response =`[
-  {
-    "userName":"Francisco Dos Santos",
-    "email":"franciscodossantosmr@gmail.com",
-    "password":"Dev5050"
-  },
-  {
-    "userName":"Miro Developer",
-    "email":"mirodeveloper@gmail.com",
-    "password":"miro2001"
-  },
-  {
-    "userName":"Unydev Community Lda",
-    "email":"unydevcommunity@gmail.com",
-    "password":"uny2020"
-  }
-]`;
-  let dataJson=JSON.parse(response);
-  localStorage.setItem("BD_Users",JSON.stringify(dataJson));
-
-
+import { eyestoggle } from "./toggles.js";
+import { setError,setSucess,isLetters,iscount,ismail,isnumber } from "./funtctionValidatyForm.js";
+fetch("../users.json")
+.then((response)=>{
+  return response.json();
+})
+.then((data)=>{
+  localStorage.setItem("BD_Users",JSON.stringify(data));
+});
 const form=document.querySelector(".form");
 const userName=document.querySelector("#name");
 const userEmail=document.querySelector("#email")
@@ -112,44 +99,14 @@ function checkedfilds(){
 
   return true
 }
-function setError(input,message){
-  const parent=input.parentNode;
-  const small=parent.querySelector("small");
-  parent.classList.remove("sucess");
-  parent.classList.add("error");
-  small.textContent=message;
-}
-function setSucess(input){
-  const parent =input.parentNode;
-  parent.classList.remove("error");
-  parent.classList.add("sucess");
-}
-function ismail(email){
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-}
 
-function isLetters(senha){
-  return /[A-Za-z]+/.test(senha);
-}
-function iscount(senha){
-  return senha.length>=7?true:false;
-}
-function isnumber(senha){
-  return /[0-9]+/.test(senha);
-}
 function toggleEyes(){
   const eyes=document.getElementsByClassName('eye');
   for(let eye of eyes){
     eye.onclick=function(event){
       let eyesTarget=event.target;
       let input=eyesTarget.previousElementSibling;
-      if(input.type ==="password"){
-        input.setAttribute("type","text");
-        eyesTarget.setAttribute("src","../assets/imagens/icons8_hide.ico")
-      }else{
-        input.setAttribute("type","password");
-        eyesTarget.setAttribute("src","../assets/imagens/icons8_eye.ico")
-      }
+      eyestoggle(eyesTarget,input);
     }
   }
 }

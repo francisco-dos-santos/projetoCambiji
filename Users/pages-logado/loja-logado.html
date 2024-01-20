@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>produtos logado</title>
-    <link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
-		<link rel="stylesheet" href="../assets/css/pageProduct.css">
-    <link rel="stylesheet" href="../assets/css/animacão.css">
-    <link rel="stylesheet" href="../assets/css/headerFooter.css"/>
-    <link rel="stylesheet" href="../assets/css/responsive.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>produtos logado</title>
+	<link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
+	<link rel="stylesheet" href="../assets/css/pageProduct.css"/>
+	<link rel="stylesheet" href="../assets/css/animacão.css">
+	<link rel="stylesheet" href="../assets/css/headerFooter.css" />
+	<link rel="stylesheet" href="../assets/css/responsive.css"/>
 </head>
+
 <body>
-    <header id="header-main">
-        <div class="container-head">
-          <h1 class="logo"> 
-              <a href="#">
-                  <img src="../assets/imagens/logo.png" alt="cambiji_nature">
-              </a>
-          </h1>
-          <nav>
-              <ul>
-                  <li><a href="./inicio-logado.html">Inicio</a></li>
-                  <li><a href="loja-logado.html">Loja</a></li>
-                  <li><a href="servicos-logado.html">Serviços</a></li>
-                  <li><a href="sobre-nos-logado.html">Sobre nós</a></li>
-                  <li class="botao"><a href="contato-logado.html">Contacto</a></li>
-              </ul>
-          </nav>
-          <article class="pesquisar">
-              <input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
-              <label for="pesq"><img src="../assets/imagens/icons8_search.ico" alt="icon-search"></label>
-          </article>
-              <div class="conta">
-                <a href="#" id="cont-link" title="Francisco dos santos" >
-                  <img src="../assets/imagens/icons8_male_user-logado.ico" width="32px" alt="usuario cambiji">
-                  <span id="user-name">Nome</span>
-                </a>
-                <div class="dropdown" >
-                  <a href="perfil.html">Perfil</a>
-                  <a href="../inicio.html">Sair</a>
-                </div>
-              </div>
-              <div class="cart-wrapper"  id="icon-cart" data-count="0">
-                  <a href="carrinho-logado.html">
-                    <img 
-                    src="../assets/imagens/icons8_handcart.ico" 
-                    alt="sacola_cambiji"
-                    >
-                  </a>
-                  <div class="container-cart bouncedireito">
-                    <div id="content-text-cart">
-                      <p>Seu carrinho tem <span class="quantity">5</span> itens</p>
-                      <button id="close-cart">x</button>
-                    </div>
-                    <section id="content-cards-cart">
-                      <!-- <div class="content-card-cart">
+	<header id="header-main">
+		<div class="container-head">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../assets/imagens/logo.png" alt="cambiji_nature">
+				</a>
+			</h1>
+			<nav>
+				<ul>
+					<li><a href="./inicio-logado.html">Inicio</a></li>
+					<li><a href="loja-logado.html">Loja</a></li>
+					<li><a href="servicos-logado.html">Serviços</a></li>
+					<li><a href="sobre-nos-logado.html">Sobre nós</a></li>
+					<li class="botao"><a href="contato-logado.html">Contacto</a></li>
+				</ul>
+			</nav>
+			<article class="pesquisar">
+				<input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
+				<label for="pesq"><img src="../assets/imagens/icons8_search.ico" alt="icon-search"></label>
+			</article>
+			<div class="conta">
+				<a href="#" id="cont-link" title="Francisco dos santos">
+					<img src="../assets/imagens/icons8_male_user-logado.ico" width="32px" alt="usuario cambiji">
+					<span id="user-name">Nome</span>
+				</a>
+				<div class="dropdown">
+					<a href="perfil.html">Perfil</a>
+					<a href="../inicio.html">Sair</a>
+				</div>
+			</div>
+			<div class="cart-wrapper" id="icon-cart" data-count="0">
+				<a href="carrinho-logado.html">
+					<img src="../assets/imagens/icons8_handcart.ico" alt="sacola_cambiji">
+				</a>
+				<div class="container-cart bouncedireito">
+					<div id="content-text-cart">
+						<p>Seu carrinho tem <span class="quantity">5</span> itens</p>
+						<button id="close-cart">x</button>
+					</div>
+					<section id="content-cards-cart">
+						<!-- <div class="content-card-cart">
                         <div class="content-img">
                           <img src="../assets/imagens/produto6.png" alt="produto-1">
                         </div>
@@ -70,673 +69,234 @@
                           </div>
                         </div>
                       </div> -->
-          
-                    </section>
-                    <div class="content-finally-cart">
-                      <div class="content-price-total">
-                        <span>Total:Kz</span>
-                        <span id="Total-Cart">Kz0,00</span>
-                      </div>
-                      <button id="finally-cart-button">Finalizar Compra</button>
-                    </div>
-                  </div>
-              </div>
-            </div>
-    </header>
-    
-    <main>
-			<!-- editando a categoria -->
-			<!-- Cat-creme -->
-			<aside id="categ">
-				<h3>Categorias</h3>
-				<div class="cont-categ">
-						<img src="../imagens/icons8_tube-cream.ico" alt="icone-categoria">
-						<a href="#creme">Cremes</a>
-				</div>
 
-				<div class="cont-categ">
-						<img src="../imagens/icons8_soap.ico" alt="icone-categoria">
-						<a href="#sabonete">Sabonetes</a>
+					</section>
+					<div class="content-finally-cart">
+						<div class="content-price-total">
+							<span>Total:Kz</span>
+							<span id="Total-Cart">Kz0,00</span>
+						</div>
+						<button id="finally-cart-button">Finalizar Compra</button>
+					</div>
 				</div>
-				<div class="cont-categ">
-						<img src="../imagens/icons8_throat_spray-oil.ico" alt="icone-categoria">
-						<a href="#miniatura/oleo">Miniaturas / Oleo</a>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<article id="wrapper-loja">
+			<aside id="sidebar-loja">
+				<div class="category">
+					<div class="flex-div">
+						<h4>Categorias</h4>
+						<img src="../assets/imagens/icons8_up_arrow.ico" alt="seta-up" class="arrow">
+					</div>
+					<div class="list-category">
+						<ul>
+							<li>
+								<a href="#container-aromas">Aromas</a>
+							</li>
+							<li>
+								<a href="#container-sabonetes">Sabonetes</a>
+							</li>
+							<li>
+								<a href="#container-dezodorizantes">Dezodorizantes</a>
+							</li>
+							<li>
+								<a href="#container-miniaturas">Miniaturas</a>
+							</li>
+							<li>
+								<a href="#container-cremes">Cremes</a>
+							</li>
+							<li>
+								<a href="#container-oleos">Oleos</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<div class="cont-categ">
-						<img src="../imagens/icons8_spray.ico" alt="icone-categoria">
-						<a href="#perfume">Perfumes</a>
+				<div class="filter-price">
+					<div class="flex-div">
+						<h4>Margem de Preço</h4>
+						<img src="../assets/imagens/icons8_up_arrow.ico" alt="seta-up" class="arrow">
+					</div>
+					<div class="content-filter">
+						<input id="slider" type="range" min="4" max="32" value="16" />
+						<p>price: kz
+							<span id="min-price">500</span>
+							- kz
+							<span id="max-price">5000</span> 
+						</p>
+					</div>
 				</div>
-				<div class="cont-categ">
-						<img src="../imagens/icons8_aroma.ico" alt="icone-categoria">
-						<a href="#aroma">Aromas</a>
+				<div class="size-ml">
+					<div class="flex-div">
+						<h4>Tamanho (ml)</h4>
+						<img src="../assets/imagens/icons8_up_arrow.ico" alt="seta-up" class="arrow">
+					</div>
+					<div class="list-size">
+						<a href="#">50</a>
+						<a href="#">30</a>
+						<a href="#">15</a>
+						<a href="#">10</a>
+						<a href="#">5</a>
+					</div>
 				</div>
-				
-				<div class="cont-categ">
-						<img src="../imagens/icons8_spray-mo.ico" alt="icone-categoria">
-						<a href="#desodorizar">Desodorizantes</a>
+				<div class="marks">
+					<div class="flex-div">
+						<h4>Marcas</h4>
+						<img src="../assets/imagens/icons8_up_arrow.ico" alt="seta-up" class="arrow">
+					</div>
+					<div class="list-marks">
+						<div class="check-mark">
+							<input type="checkbox" name="" id="ferra-black">
+							<label for="ferra-black">Ferra Black</label>
+						</div>
+						<div class="check-mark">
+							<input type="checkbox" name="" id="versace-man">
+							<label for="versace-man">Versace Man</label>
+						</div>
+						<div class="check-mark">
+							<input type="checkbox" name="" id="paco-1-millian">
+							<label for="paco-1-millian">Paco 1 Millian</label>
+						</div>
+						<div class="check-mark">
+							<input type="checkbox" name="" id="hugo-boss">
+							<label for="hugo-boss">Hugo Boss</label>
+						</div>
+						<div class="check-mark">
+							<input type="checkbox" name="" id="britney-fantasy">
+							<label for="britney-fantasy">Britney Fantasy</label>
+						</div>
+						<div class="check-mark">
+							<input type="checkbox" name="" id="caroline-goorgl">
+							<label for="caroline-goorgl">Caroline Goorgl</label>
+						</div>
+						<div class="check-mark">
+							<input type="checkbox" name="" id="lavie-est-bella">
+							<label for="lavie-est-bella">Lavie Est Bella</label>
+						</div>
+					</div>
+				</div>
+				<div class="avaliable">
+					<div class="flex-div">
+						<h4>Avaliação dos Clientes</h4>
+						<img src="../assets/imagens/icons8_up_arrow.ico" alt="seta-up" class="arrow">
+					</div>
+					<div class="list-avaliable">
+						<div class="check">
+							<input type="checkbox" name="" id="star-five">
+							<label for="star-five" class="star">
+								&#9733; &#9733; &#9733; &#9733; &#9733;
+							</label>
+						</div>
+						<div class="check">
+							<input type="checkbox" name="" id="star-four">
+							<label for="star-four" class="star">
+								&#9733; &#9733; &#9733; &#9733;
+								<span class="star-color">&#9733;</span>
+							</label>
+						</div>
+						<div class="check">
+							<input type="checkbox" name="" id="star-three">
+							<label for="star-three" class="star">
+								&#9733; &#9733; &#9733;
+								<span class="star-color">&#9733;</span>
+								<span class="star-color">&#9733;</span>
+							</label>
+						</div>
+						<div class="check">
+							<input type="checkbox" name="" id="star-two">
+							<label for="star-two" class="star">
+								&#9733; &#9733;
+								<span class="star-color">&#9733;</span>
+								<span class="star-color">&#9733;</span>
+								<span class="star-color">&#9733;</span>
+							</label>
+						</div>
+						<div class="check">
+							<input type="checkbox" name="" id="star-one">
+							<label for="star-one" class="star">
+								&#9733;
+								<span class="star-color">&#9733;</span>
+								<span class="star-color">&#9733;</span>
+								<span class="star-color">&#9733;</span>
+								<span class="star-color">&#9733;</span>
+							</label>
+						</div>
+					</div>
 				</div>
 			</aside>
-			<section id="creme" class="cat">
-				<section class="fundo-titulo fadeIn">
-					<h1>Cremes- Cambiji </h1>
-				</section>
+			<section id="products">
+				<!-- Aromas -->
+				<article id="container-aromas" >
+					<section class="contents-product" id="one">
+					
+					</section>
+				</article>
+				<!-- Sabonetes -->
+				<article id="container-sabonetes" >
+					<section class="contents-product" id="two">
 
-				<section class="pagina-pro">
-						<!-- 1-->
-						<div class="card">
-								<a href="creme.html">
-										<img src="../imagens/produto7.png" alt="pagina-pro">
-								</a>
-								<h4>Creme pond´s</h4>
-										<h3>1500 KZ </h3>
-										<a href="#">
-												<div class="btn-carr">
-														<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-														<div class="letra-btn">Adicionar</div>
-												</div>
-										</a>
-										<div class="efeito-promo">50%</div>
-						</div>
-							<!-- 2-->
-						<div class="card">
-								<a href="">
-										<img src="../imagens/produto12.png" alt="pagina-pro">
-								</a>
-								<h4>Creme Aqueous</h4>
-										<h3>1500 KZ </h3>
-										<a href="#">
-												<div class="btn-carr">
-														<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-														<div class="letra-btn">Adicionar</div>
-												</div>
-										</a>
-						</div>
-							<!--3-->
-						<div class="card">
-								<img src="../imagens/produto7.png" alt="pagina-pro">
-								<h4>Cremes pondes</h4>
-										<h3>1500 KZ </h3>
-										<a href="#">
-												<div class="btn-carr">
-														<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-														<div class="letra-btn">Adicionar</div>
-												</div>
-										</a>
-						</div>
-							<!--4-->
-						<div class="card">
-								<img src="../imagens/produto12.png" alt="pagina-pro">
-								<h4>Creme Aqueous</h4>
-										<h3>1500 KZ </h3>
-										<a href="#">
-												<div class="btn-carr">
-														<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-														<div class="letra-btn">Adicionar</div>
-												</div>
-										</a>
-										<div class="efeito-promo">30%</div>
-						</div>
-						<!--5-->
-						<div class="card">
-								<img src="../imagens/ponds-3.png" alt="pagina-pro">
-								<h4>Creme Aqueous</h4>
-										<h3>1500 KZ </h3>
-										<a href="#">
-												<div class="btn-carr">
-														<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-														<div class="letra-btn">Adicionar</div>
-												</div>
-										</a>
-										<div class="efeito-promo">50%</div>
-						</div>
-				</section>
-    </section>
-
-    <!-- Cat-Sabone -->
-    <section id="sabonete" class="cat">
-				<section class="fundo-titulo">
-					<h1>Sabonetes- Cambiji </h1>
-				</section>
-			<section class="pagina-pro">
-				<!-- 1-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto9.png" alt="pagina-pro">
-						</a>
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-								<div class="efeito-promo">30%</div>
-				</div>
-				<!--2-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto10.png" alt="pagina-pro">
-						</a>
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-				</div>
-				<!--3-->
-				<div class="card">
-						<img src="../imagens/produto11.png" alt="pagina-pro">
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-				</div>
-				<!-- 4-->
-				<div class="card">
-						<img src="../imagens/produto6.png" alt="pagina-pro">
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-								<div class="efeito-promo">30%</div>
-				</div>
-					<!-- 5-->
-					<div class="card">
-						<img src="../imagens/produto6.png" alt="pagina-pro">
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-								<div class="efeito-promo">50%</div>
-					</div>
-			</section>
-		</section>
-
-<!-- miniatura -->
-	<section id="miniatura/oleo" class="cat">
-    <section class="fundo-titulo">
-        <h1>Miniaturas / Oleo- Cambiji </h1>
-    </section>
-   
-		<section class="pagina-pro">
-				
-				<!-- 1-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto8.png" alt="pagina-pro">
-						</a>
-						
-						<h4>Miniatura 10ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#modal">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-										</a>
-								<div class="efeito-promo">30%</div>
-				</div>
-				<!--2-->
-				<div class="card">
-						<img src="../imagens/produto5.png" alt="pagina-pro">
-						<h4>Oleo Jamaica 30ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#modal">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-				</div>
-				<!--3-->
-				<div class="card">
-						<img src="../imagens/produto1.png" alt="pagina-pro">
-						<h4>Miniatura 10ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#modal">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-				</div>
-				<!-- 4-->
-				<div class="card">
-						<img src="../imagens/produto2.png" alt="pagina-pro">
-						<h4>Miniatura 30ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#modal">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-								<div class="efeito-promo">30%</div>
-				</div>
-				<!--5-->
-				<div class="card">
-						<img src="../imagens/produto2.png" alt="pagina-pro">
-						<h4>Miniatura 30ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#modal">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-								<div class="efeito-promo">30%</div>
-				</div>
-
-		</section>
-
-				<!-- 1-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto2.png" alt="pagina-pro">    
-						</a>
-						
-						<h4>Miniatura 30ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#modal">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-										</a>
-								<div class="efeito-promo">30%</div>
-				</div>
-				<!--2-->
-				<div class="card">
-						<img src="../imagens/produto2.png" alt="pagina-pro">
-						<h4>Miniatura 30ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#modal">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-				</div>
-				<!--3-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto8.png" alt="pagina-pro">
-						</a>
-						<h4>Miniatura 10ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#modal">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-				</div>
-				<!--4-->
-				<div class="card">
-						<img src="../imagens/produto8.png" alt="pagina-pro">
-						<h4>Miniatura 10ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#modal">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-								<div class="efeito-promo">30%</div>
-				</div>
-				
-				<!--5-->
-				<div class="card">
-						<img src="../imagens/produto8.png" alt="pagina-pro">
-						<h4>Miniatura 10ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#modal">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-								<div class="efeito-promo">50%</div>
-				</div>
-	</section>
-
-<!-- Perfumes -Cambiji -->
-	<section id="perfume" class="cat">
-    <section class="fundo-titulo">
-        <h1>Perfumes- Cambiji </h1>
-    </section>
-    
-		<section class="pagina-pro">
-				<!--1-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto4.png" alt="pagina-pro">
-						</a>
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-								<div class="efeito-promo">30%</div>
-				</div>
-				<!--2-->
-				<div class="card">
-						<img src="../imagens/produto4.png" alt="pagina-pro">
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-				</div>
-				<!--3-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto3.png" alt="pagina-pro">
-						</a>
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-				</div>
-				<!--4-->
-				<div class="card">
-						<img src="../imagens/produto3.png" alt="pagina-pro">
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-								<div class="efeito-promo">30%</div>
-				</div>
-				
-				<!--5-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto3.png" alt="pagina-pro">
-						</a>
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-				</div>
-		</section>
-				
-				<!--1-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto4.png" alt="pagina-pro">    
-						</a>
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-				</div>
-				<!--2-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto3.png" alt="pagina-pro">
-						</a>
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-										</a>
-								<div class="efeito-promo">30%</div>
-				</div>
-				<!--3-->
-				<div class="card">
-						<img src="../imagens/produto8.png" alt="pagina-pro">
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-				</div>
-				<!--4-->
-				<div class="card">
-						<img src="../imagens/produto4.png" alt="pagina-pro">
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-				</div>
-
-				<!--5-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto3.png" alt="pagina-pro">
-						</a>
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-								<div class="efeito-promo">50%</div>
-				</div>
-	</section>
-
-<!-- Aromas -->
-	<section id="aroma" class="cat">
-    <section class="fundo-titulo">
-        <h1>Aromas- Cambiji </h1>
-    </section>
-    
-		<section class="pagina-pro">
-				
-				<!-- 1-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto6.png" alt="pagina-pro">    
-						</a>
-						
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-								<div class="efeito-promo">30%</div>
-				</div>
-				<!--2-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto6.png" alt="pagina-pro">
-						</a>
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-				</div>
-				<!--3-->
-				<div class="card">
-						<img src="../imagens/produto14.png" alt="pagina-pro">
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-								<div class="btn-carr">
-										<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-										<div class="letra-btn">Adicionar</div>
+					</section>
+				</article>
+				<!-- Dezodorizantes -->
+				<article id="container-dezodorizantes" >
+					<section class="contents-product" id="three">
+						<!-- <div class="card">
+								<div class="cont-img">
+									<img src="../assets/imagens/ponds-2.png" alt="produto-1">
 								</div>
-						</a>
-				</div>
-				<!--4-->
-				<div class="card">
-						<img src="../imagens/produto16.png" alt="pagina-pro">
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-								<div class="efeito-promo">30%</div>
-				</div>
-
-				<!--4-->
-				<div class="card">
-						<a href="">
-								<img src="../imagens/produto16.png" alt="pagina-pro">
-						</a>
-						<h4>Miniatura 10 ml</h4>
-								<h3>1500 KZ </h3>
-								<a href="#">
-										<div class="btn-carr">
-												<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-												<div class="letra-btn">Adicionar</div>
-										</div>
-								</a>
-								<div class="efeito-promo">50%</div>
-				</div>
-		</section>
-	</section>
-
-<!-- dezodorizante -->
-  <section id="desodorizar" class="cat">
-			<section class="fundo-titulo">
-					<h1>Desodorizantes- Cambiji </h1>
+								<h3 class="preco">A0A20.23</h3>
+								<del class="text-riscado">A0A20.2</del>
+								<p>Nome</p>
+								<div class="content">
+									<small class="categoria">dezodorizantes</small>
+									<button class="add-cart">
+										<img src="../assets/imagens/icons8_add_shopping_cart.ico" alt="cart" >
+									</button>
+								</div>
+						</div> -->
+					</section>
+				</article>
+				<!-- Miniaturas -->
+				<article id="container-miniaturas" >
+					<section class="contents-product" id="four">
+					
+					</section>
+				</article>
+				<!-- Cremes -->
+				<article id="container-cremes" >
+					<section class="contents-product" id="five">
+				
+					</section>
+				</article>
+				<!--Oleo -->
+				<article id="container-oleos" >
+					<section class="contents-product" id="six">
+					
+					</section>
+				</article>
 			</section>
-			
-			<section class="pagina-pro">
-			
-			<!--1-->
-			<div class="card">
-					<a href="">
-							<img src="../imagens/produto13.png" alt="pagina-p">
-					</a>
-					<h4>Miniatura 10 ml</h4>
-							<h3>1500 KZ </h3>
-							<a href="#modal">
-									<div class="btn-carr">
-											<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-											<div class="letra-btn">Adicionar</div>
-									</div>
-							</a>
-							<div class="efeito-promo">30%</div>
-			</div>
-			<!-- 2-->
-			<div class="card">
-					<a href="">
-							<img src="../imagens/produto14.png" alt="pagina-pro">
-					</a>
-					<h4>Miniatura 10 ml</h4>
-							<h3>1500 KZ </h3>
-							<a href="#modal">
-									<div class="btn-carr">
-											<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-											<div class="letra-btn">Adicionar</div>
-									</div>
-							</a>
-			</div>
-			<!-- 3-->
-			<div class="card">
-					<img src="../imagens/produto16.png" alt="pagina-pro">
-					<h4>Miniatura 10 ml</h4>
-							<h3>1500 KZ </h3>
-							<a href="#modal">
-									<div class="btn-carr">
-											<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-											<div class="letra-btn">Adicionar</div>
-									</div>
-							</a>
-			</div>
-			<!-- 4-->
-			<div class="card">
-					<img src="../imagens/produto16.png" alt="pagina-pro">
-					<h4>Miniatura 10 ml</h4>
-							<h3>1500 KZ </h3>
-							<a href="#modal">
-									<div class="btn-carr">
-											<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-											<div class="letra-btn">Adicionar</div>
-									</div>
-							</a>
-							<div class="efeito-promo">30%</div>
-			</div>
+			<div id="nav-footer">
+				<div class="nav-list">
+					<button >1</button>
+					<button >2</button>
+					<button >3</button>
 
-			<!--5-->
-			<div class="card">
-					<img src="../imagens/produto16.png" alt="pagina-pro">
-					<h4>Miniatura 10 ml</h4>
-							<h3>1500 KZ </h3>
-							<a href="#modal">
-									<div class="btn-carr">
-											<div class="icon-btn"><img src="../imagens/icons8_shopping_cart-branco_32.png" alt=""></div>
-											<div class="letra-btn">Adicionar</div>
-									</div>
-							</a>
-							<div class="efeito-promo">50%</div>
+				</div>
 			</div>
-			</section>
-	</section>
-
+		</article>
 		<!-- FOOTER SECUNDARIO -->
 		<section class="sess6">
 			<article>
 				<div class="footer-seg">
-						<h2>
-							<img src="../assets/imagens/logo.png" width="80px" alt="icone-logo">
-							Cambiji Nature
-						</h2>
-						<p>Uma empresa que presta serviços de cosmetics, trabalhando
-							para bem da tua pele natural.
-						</p>
+					<h2>
+						<img src="../assets/imagens/logo.png" width="80px" alt="icone-logo">
+						Cambiji Nature
+					</h2>
+					<p>Uma empresa que presta serviços de cosmetics, trabalhando
+						para bem da tua pele natural.
+					</p>
 					<div class="section-rede">
 						<a href="#" class="rede">
 							<img src="../assets/imagens/icons8_facebook_f.ico" alt="facebook-icone">
@@ -753,61 +313,62 @@
 					</div>
 				</div>
 				<div class="footer-seg">
-						<h2>Links Rápidos </h2>
-						<div>
-							<a href="#">Inicio</a>
-							<a href="produto-logado.html">Produtos</a>
-							<a href="servicos-logado.html">Serviços</a>
-							<a href="sobre-nos-logado.html">Sobre-nós</a>
-							<a href="contato-logado.html">Conctato</a>
-						</div>
+					<h2>Links Rápidos </h2>
+					<div>
+						<a href="#">Inicio</a>
+						<a href="produto-logado.html">Produtos</a>
+						<a href="servicos-logado.html">Serviços</a>
+						<a href="sobre-nos-logado.html">Sobre-nós</a>
+						<a href="contato-logado.html">Conctato</a>
+					</div>
 				</div>
 				<div class="footer-seg">
 					<h2>Atendimento ao Cliente</h2>
 					<div>
-					<a href="#">Ajuda central</a>
-					<a href="#">Termos e condições de uso</a>
-					<a href="politica-privacidade-logado.html">Politica e privacidade</a>
-					<a href="contato-logado.html">Enviar Feedeback</a>
-					<a href="#cont">Conta</a>
+						<a href="#">Ajuda central</a>
+						<a href="#">Termos e condições de uso</a>
+						<a href="politica-privacidade-logado.html">Politica e privacidade</a>
+						<a href="contato-logado.html">Enviar Feedeback</a>
+						<a href="#cont">Conta</a>
 					</div>
 				</div>
 				<div class="footer-seg">
 					<h2>Informações de Contato</h2>
 					<p>Subscreve-se na nossa Newsletter</p>
 					<form>
-						<input type="email"class="input" id="Newsletter-email" 
-						placeholder="your@gmail.com" required>
+						<input type="email" class="input" id="Newsletter-email" placeholder="your@gmail.com" required>
 						<button id="btn-newsletter">Subscrever</button>
 					</form>
 					<p>Telefone: (+244) 932945647</p>
 					<p>Email: [Cambiji@gmail.com]</p>
 					<p>Seg-Sab: 8h-22h</p>
 				</div>
-			</article>  
+			</article>
 		</section>
 	</main>
-		<!-- FOOTER PRINCIPAL -->
-		<footer>
-			<div class="copyright">
-					&COPY;2023 Cambiji_Nature Todos os direitos reservados.
-			</div>
-			<div class="method-pay">
-				<a href="#">
-					<img src="" alt="visa">
-				</a>
-				<a href="#">
-					<img src="" alt="paypay">
-				</a>
-				<a href="#">
-					<img src="" alt="bank">
-				</a>
-				<a href="#">
-					<img src="" alt="unitelMoney">
-				</a>
-			</div> 
-		</footer>		
+	<!-- FOOTER PRINCIPAL -->
+	<footer>
+		<div class="copyright">
+			&COPY;2023 Cambiji_Nature Todos os direitos reservados.
+		</div>
+		<div class="method-pay">
+			<a href="#">
+				<img src="" alt="visa">
+			</a>
+			<a href="#">
+				<img src="" alt="paypay">
+			</a>
+			<a href="#">
+				<img src="" alt="bank">
+			</a>
+			<a href="#">
+				<img src="" alt="unitelMoney">
+			</a>
+		</div>
+	</footer>
+	<script src="../assets/js/pageLoja.js"></script>
 	<script src="../assets/js/workCart.js"></script>
 	<script src="../assets/js/workheaderLogado.js"></script>
 </body>
+
 </html>

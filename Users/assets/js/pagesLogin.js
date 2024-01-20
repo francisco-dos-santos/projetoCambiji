@@ -1,26 +1,13 @@
+import { eyestoggle } from "./toggles.js";
+import { setError,setSucess,ismail } from "./funtctionValidatyForm.js";
 const usersList=JSON.parse(localStorage.getItem("BD_Users"))??[];
 const userEmail=document.getElementById("email");
 const userSenha=document.getElementById("passe");
 const btnLogin=document.getElementById("btn-access");
 const loader=document.querySelector(".loader");
+const eye=document.querySelector('.eye');
 
-function setError(input,message){
-  const parent=input.parentNode;
-  parent.classList.remove("sucess")
-  parent.classList.add("error")
-  let small=parent.querySelector("small");
-  small.textContent=message;
-}
-
-function setSucess(input){
-  const parent=input.parentNode;
-  parent.classList.add("sucess")
-  parent.classList.remove("error");
-}
-function ismail(email){
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email); 
-}
-
+// functions
 function checkedInputs(){
   let userEmailV= userEmail.value.trim();
   let userSenhaV=userSenha.value.trim();
@@ -45,16 +32,8 @@ function checkedInputs(){
   return true;
 }
 function toggleEye(){
-  const eye=document.querySelector('.eye');
-  if(userSenha.type ==="password"){
-    userSenha.setAttribute("type","text");
-    eye.setAttribute("src","../assets/imagens/icons8_hide.ico")
-  }else{
-    userSenha.setAttribute("type","password");
-    eye.setAttribute("src","../assets/imagens/icons8_eye.ico")
-  }
+  eyestoggle(eye,userSenha);
 }
-
 function isUsersExit(){
   let userEmailV= userEmail.value;
   let userSenhaV=userSenha.value;
@@ -82,12 +61,12 @@ function isUsersExit(){
     console.log("was checked filds is invalidity");
   }
 }
-
 function saveIdUsers(index){
   localStorage.setItem("Id_users",JSON.stringify(index));
 }
-
+// events
 btnLogin.addEventListener("click",()=>{
   isUsersExit();
   console.log("checked there is users exists");
 });
+eye.addEventListener("click",toggleEye)

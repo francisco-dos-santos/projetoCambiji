@@ -1,109 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro page</title>
-    <link rel="shortcut icon" href="../assets/imagens/logo2.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/pageCadastro.css">
-    <link rel="stylesheet" href="../assets/css/animacão.css">
-    <link rel="stylesheet" href="../assets/css/headerFooter.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro page</title>
+  <link rel="shortcut icon" href="../assets/imagens/logo2.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/pageCadastro.css">
+  <link rel="stylesheet" href="../assets/css/animacão.css">
+  <link rel="stylesheet" href="../assets/css/headerFooter.css">
 </head>
 <header id="header-main">
-    <div class="container-head">
-      <h1 class="logo"> 
-          <a href="#">
-              <img src="../assets/imagens/logo.png" alt="cambiji_nature">
-          </a>
-      </h1>
-      <nav>
-        <ul>
-          <li><a href="../inicio.html">Inicio</a></li>
-          <li><a href="./loja.html">Loja</a></li>
-          <li><a href="./servicos.html">Serviços</a></li>
-          <li><a href="./sobre-nos.html">Sobre nós</a></li>
-          <li class="botao"><a href="./contato.html">Contacto</a></li>
+  <div class="container-head">
+    <h1 class="logo">
+      <a href="#">
+        <img src="../assets/imagens/logo.png" alt="cambiji_nature">
+      </a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="../inicio.html">Inicio</a></li>
+        <li><a href="./loja.html">Loja</a></li>
+        <li><a href="./servicos.html">Serviços</a></li>
+        <li><a href="./sobre-nos.html">Sobre nós</a></li>
+        <li class="botao"><a href="./contato.html">Contacto</a></li>
       </ul>
-      </nav>
-      <article class="pesquisar">
-          <input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
-          <label for="pesq"><img src="../assets/imagens/icons8_search.ico" alt="icon-search"></label>
-      </article>
-          <div class="conta" >
-              <a href="#" id="cont" title="Francisco dos santos" >
-                <img src="../assets/imagens/icons8_male_user_32.png" 
-                alt="usuario cambiji">
-              </a>
-              <div  class="dropdown" >
-                  <a href="./login.html">Entrar</a>
-                  <a href="#">Criar conta</a>
-              </div>
-          </div>
-          <div class="cart-wrapper" id="icon-cart" data-count="0">
-              <a href="carrinho logado.html">
-                <img src="../assets/imagens/icons8_handcart.ico" 
-                width="32px" alt="sacola_cambiji">
-            </a>
-          </div>
+    </nav>
+    <article class="pesquisar">
+      <input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
+      <label for="pesq"><img src="../assets/imagens/icons8_search.ico" alt="icon-search"></label>
+    </article>
+    <div class="conta">
+      <a href="#" id="cont" title="Francisco dos santos">
+        <img src="../assets/imagens/icons8_male_user_32.png" alt="usuario cambiji">
+      </a>
+      <div class="dropdown">
+        <a href="./login.html">Entrar</a>
+        <a href="#">Criar conta</a>
+      </div>
     </div>
+    <div class="cart-wrapper" id="icon-cart" data-count="0">
+      <a href="carrinho logado.html">
+        <img src="../assets/imagens/icons8_handcart.ico" width="32px" alt="sacola_cambiji">
+      </a>
+    </div>
+  </div>
 </header>
 
 <body>
-    <main>
-      <section class="titulo fadeIn">
-        <h3>Página De Cadastro</h3>
-      </section>
+  <main>
+    <section class="titulo fadeIn">
+      <h3>Página De Cadastro</h3>
+    </section>
 
-      <section class="pag-cadast">
-        <article class="card-cadast descendo">
-          <img src="../assets/imagens/logo.png" alt="logo-cambiji">
-          <div class="card-2-cadast">
+    <section class="pag-cadast">
+      <article class="card-cadast descendo">
+        <img src="../assets/imagens/logo.png" alt="logo-cambiji">
+        <div class="card-2-cadast">
 
-            <form action="" method="GET" class="form"  autocomplete="on">
-              <div>
-                <input type="text" name="nome" class="input" id="name" 
-                placeholder="Nome Completo"  autofocus>
-                <small>Error message</small>
-              </div>
+          <form action="" method="GET" class="form" autocomplete="on">
+            <div>
+              <input type="text" name="nome" class="input" id="name" placeholder="Nome Completo" autofocus>
+              <small>Error message</small>
+            </div>
 
-              <div>
-                <input type="email" name="email"  class="input" id="email" 
-                placeholder="francisco@gmail.com">
-                <small>Error message</small>
-              </div>
+            <div>
+              <input type="email" name="email" class="input" id="email" placeholder="francisco@gmail.com">
+              <small>Error message</small>
+            </div>
 
-              <div>
-                <input type="password" name="passe1"  class="input" id="passe1" 
-                placeholder="Palavra-passe">
-                <img src="../assets/imagens/icons8_eye.ico" alt="eyes" class="eye">
-                <small>Error message</small>
-              </div>
-              <div>
-                <input type="password" name="passe2"  class="input" id="passe2" 
-                placeholder="Confirmar Palavra-passe" >
-                <img src="../assets/imagens/icons8_eye.ico" alt="eyes" class="eye">
-                <small >Error message</small>
-              </div>
-              
-              <button type="button" id="btn-access">
-                <img src="../assets/imagens/icons8_loader.ico" width="32px" alt="loader" class="loader">
-                Cadastra-se
-              </button>
-              </form>
-              <p>já tens uma conta?<a href="./login.html">entrar</a></p>
-              <p>A tua conta será criada com nossos <a href="politica-privacidade.html">Termos e política de privacidade</a></p>
-          </div>
-        </article>
+            <div>
+              <input type="password" name="passe1" class="input" id="passe1" placeholder="Palavra-passe">
+              <img src="../assets/imagens/icons8_eye.ico" alt="eyes" class="eye">
+              <small>Error message</small>
+            </div>
+            <div>
+              <input type="password" name="passe2" class="input" id="passe2" placeholder="Confirmar Palavra-passe">
+              <img src="../assets/imagens/icons8_eye.ico" alt="eyes" class="eye">
+              <small>Error message</small>
+            </div>
+
+            <button type="button" id="btn-access">
+              <img src="../assets/imagens/icons8_loader.ico" width="32px" alt="loader" class="loader">
+              Cadastra-se
+            </button>
+          </form>
+          <p>já tens uma conta?<a href="./login.html">entrar</a></p>
+          <p>A tua conta será criada com nossos <a href="politica-privacidade.html">Termos e política de privacidade</a>
+          </p>
+        </div>
+      </article>
     </section>
 
     <!-- FOOTER SECUNDARIO -->
     <section class="sess6">
       <article>
         <div class="footer-seg">
-            <h2>Sobre nós</h2>
-            <p>Nós Somos uma empresa que presta serviços mo ramo da cosmetics, trabalhando
-                para bem de todos os clientes que nos visitam e acessam a nossa pagina na internet.
-            </p>
+          <h2>Sobre nós</h2>
+          <p>Nós Somos uma empresa que presta serviços mo ramo da cosmetics, trabalhando
+            para bem de todos os clientes que nos visitam e acessam a nossa pagina na internet.
+          </p>
           <div class="sesstion-rede">
             <a href="#" class="rede">
               <img src="../assets/imagens/icons8_facebook_f.ico" alt="">
@@ -120,43 +116,43 @@
           </div>
         </div>
         <div class="footer-seg" style="margin-left:20px;">
-            <h2>Links Rápidos </h2>
-            <div>
-                <a href="#">Inicio</a>
-                <a href="produto-logado.html">Produtos</a>
-                <a href="servicos-logado.html">Serviços</a>
-                <a href="sobre-nos-logado.html">Sobre nós</a>
-                <a href="contato-logado.html">Conctato</a>
-            </div>
+          <h2>Links Rápidos </h2>
+          <div>
+            <a href="#">Inicio</a>
+            <a href="produto-logado.html">Produtos</a>
+            <a href="servicos-logado.html">Serviços</a>
+            <a href="sobre-nos-logado.html">Sobre nós</a>
+            <a href="contato-logado.html">Conctato</a>
+          </div>
         </div>
         <div class="footer-seg">
-            <h2>Links Útil</h2>
-            <div>
+          <h2>Links Útil</h2>
+          <div>
             <a href="#">Ajuda central</a>
             <a href="#">Termos e condições de uso</a>
             <a href="politica-privacidade-logado.html">Politica e privacidade</a>
             <a href="contato-logado.html">Enviar Feedeback</a>
             <a href="#cont">Conta</a>
-            </div>
+          </div>
         </div>
         <div class="footer-seg">
-            <h2>Contato</h2>
-            <h4>Contacta-nos para mais</h4>
-            <form >
-                <input type="email"class="input" placeholder="Email@gmail.com" required>
-                <textarea name="mensagem..." id="textarea" placeholder="Menssagem..." cols="27" rows="3"></textarea>
-                <input type="button" value="Enviar Feed">
-            </form>
+          <h2>Contato</h2>
+          <h4>Contacta-nos para mais</h4>
+          <form>
+            <input type="email" class="input" placeholder="Email@gmail.com" required>
+            <textarea name="mensagem..." id="textarea" placeholder="Menssagem..." cols="27" rows="3"></textarea>
+            <input type="button" value="Enviar Feed">
+          </form>
         </div>
-      </article>  
-  </section>
-</main>
-<footer>
+      </article>
+    </section>
+  </main>
+  <footer>
     <!-- FOOTER PRINCIPAL -->
     <div>
-        Cambiji_Nature &COPY Copyright; 2023 Todos os direitos reservados.
-    </div> 
-</footer>
-    <script src="../assets/js/pageCadastro.js"></script>
+      Cambiji_Nature &COPY Copyright; 2023 Todos os direitos reservados.
+    </div>
+  </footer>
+  <script src="../assets/js/pageCadastro.js" type="module"></script>
 </body>
 </html>

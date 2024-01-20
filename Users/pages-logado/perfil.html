@@ -1,205 +1,271 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/segundo.css">
-    <link rel="stylesheet" href="../assets/css/animacão.css">
-    <link rel="stylesheet" href="../assets/css/headerFooter.css"/>
-    <link rel="stylesheet" href="../assets/css/responsive.css">
-    <title>Perfil</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
+	<link rel="stylesheet" href="../assets/css/segundo.css">
+	<link rel="stylesheet" href="../assets/css/animacão.css">
+	<link rel="stylesheet" href="../assets/css/headerFooter.css" />
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+	<title>Perfil</title>
 
 </head>
+
 <body>
-    <main style="margin:0;">
-        <article class="perfil-principal">
-            <a href="inicio-logado.html" 
-							class="btn-perfil">Voltar a pagina principal
+	<header id="header-main">
+		<div class="container-head">
+			<h1 class="logo"> 
+				<a href="#">
+					<img src="../assets/imagens/logo.png" alt="cambiji_nature">
+				</a>
+			</h1>
+			<nav>
+				<ul>
+					<li><a href="./inicio-logado.html">Inicio</a></li>
+					<li><a href="loja-logado.html">Loja</a></li>
+					<li><a href="servicos-logado.html">Serviços</a></li>
+					<li><a href="sobre-nos-logado.html">Sobre nós</a></li>
+					<li class="botao"><a href="contato-logado.html">Contacto</a></li>
+				</ul>
+			</nav>
+			<article class="pesquisar">
+					<input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
+					<label for="pesq"><img src="../assets/imagens/icons8_search.ico" alt="icon-search"></label>
+			</article>
+					<div class="conta">
+						<a href="#" id="cont-link" title="Francisco dos santos" >
+							<img src="../assets/imagens/icons8_male_user-logado.ico" width="32px" alt="usuario cambiji">
+							<span id="user-name">Nome</span>
 						</a>
+						<div class="dropdown" >
+							<a href="perfil.html">Perfil</a>
+							<a href="../inicio.html">Sair</a>
+						</div>
+					</div>
+					<div class="cart-wrapper"  id="icon-cart" data-count="0">
+							<a href="carrinho-logado.html">
+								<img 
+								src="../assets/imagens/icons8_handcart.ico" 
+								alt="sacola_cambiji"
+								>
+							</a>
+							<div class="container-cart bouncedireito">
+								<div id="content-text-cart">
+									<p>Seu carrinho tem <span class="quantity">5</span> itens</p>
+									<button id="close-cart">x</button>
+								</div>
+								<section id="content-cards-cart">
+									<!-- <div class="content-card-cart">
+										<div class="content-img">
+											<img src="../assets/imagens/produto6.png" alt="produto-1">
+										</div>
+										<div class="contents-info-product-cart">
+											<p>Nome produto<br><span class="description-cart">descrição...</span></p>
+											<div class="content-price-quantity">
+												<p class="price-cart">Kz 2000</p>
+												<div class="content-add-quantity">
+													<button id="btn-less" class="control-less-plus">--</button>
+													<input type="button" id="input-quantity" value="1">
+													<button id="btn-plus" class="control-less-plus">+</button>
+												</div>
+											</div>
+										</div>
+									</div> -->
+			
+								</section>
+								<div class="content-finally-cart">
+									<div class="content-price-total">
+										<span>Total:Kz</span>
+										<span id="Total-Cart">Kz0,00</span>
+									</div>
+									<button id="finally-cart-button">Finalizar Compra</button>
+								</div>
+							</div>
+					</div>
+		</div>
+	</header>
 
-            <!-- editando o container -->
-            <section class="conteiner-perfil">
-                <h1>Conta do Utilizador</h1>
-                <article class="conteiner-perfil-2">
-                    <div class="cont-perfil">
-                        <a href="#dados-pess">
-                            <div class="cont-perfil-1">
-                                <img src="../imagens/icons8_person.ico" alt="">
-                                <p>Dados Pessoais</p>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <!-- 2 -->
-                    <div class="cont-perfil">
-                        <a href="#contato">
-                            <div class="cont-perfil-1">
-                                <img src="../imagens/icons8_contact.ico" alt="">
-                                <p>Contactos</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- 3 -->
+	<main>
+		<article class="wrapper-profile">
+			<!-- editando o container -->
+			<aside class="navbar-profile">
+					<div class="title-navbar">
+						<img src="" alt="menu">
+						<span>Menu(Perfil)</span>
+					</div>
+					<ul class="list-navbar">
+						<li>
+							<a href="#profile" class="flex-div">
+								<img src="" alt="pess">
+								<span>Meu Perfil</span>
+							</a>
+						</li>
+						<li >
+							<a href="#shopping" class="flex-div">
+								<img src="" alt="pess">
+								<span>Compras</span>
+							</a>
+						</li>
+						<li >
+							<a href="#services" class="flex-div">
+								<img src="" alt="pess">
+								<span>Pedidos de Serviços</span>
+							</a>
+						</li>
+						<li >
+							<a href="#analits" class="flex-div">
+								<img src="" alt="notif">
+								<span>Analists & Reports</span>
+							</a>
+						</li>
+						<li >
+							<a href="#notification" class="flex-div">
+								<img src="" alt="pess">
+								<span>Notificações</span>
+							</a>
+						</li>
+					</ul>
+			</aside>
+			<section class="zone-content">
+				<article id="profile" class="size">
+					<h2>Meu Perfil</h2>
+				</article>
 
-                    <div class="cont-perfil">
-                        <a href="#endereco">
-                            <div class="cont-perfil-1">
-                                <img src="../imagens/icons8_home_address.ico" alt="">
-                                <p>Endereços</p>
-                            </div>
-                        </a>
-                    </div>
-                     <!-- 4 -->
-                     <div class="cont-perfil">
-                        <a href="perfil-compras.html">
-                            <div class="cont-perfil-1">
-                                <img src="../imagens/icons8_handcart.ico" alt="">
-                                <p>Compras</p>
-                            </div>
-                        </a>
-                    </div>
+				<article id="shopping" class="size">
+					<h2>Minhas Compras</h2>
+				</article>
 
-                    <!-- 5 -->
-                    <div class="cont-perfil">
-                        <a href="perfil-servico.html">
-                            <div class="cont-perfil-1">
-                                <img src="../imagens/icons8_database_export.ico" alt="">
-                                <p>Pedidos de Serviços</p>
-                            </div>
-                        </a>
-                    </div>
+				<article id="services" class="size">
+					<h2>Minhas Reservas</h2>
+				</article>
+				<article id="analits" class="size">
+					<h2>Analises & reportagens</h2>
+				</article>
 
-                    <!-- 6 -->
-                    <div class="cont-perfil" id="defer">
-                        <a href="#modal">
-                            <div class="cont-perfil-1">
-                                <img src="../imagens/icons8_security_shield_green.ico" alt="">
-                                <p>Alterar Senha </p>
-                            </div>
-                        </a>
-                    </div>
+				<article id="notification" class="size">
+					<h2>Notificações</h2>
+				</article>
+			</section>
+		</article>
 
-                </article>
-            </section>
-        </article>
+		<!-- editando o modal maior  sessao de dados pessoasi-->
+		<!-- <div class="modal-cont" id="dados-pess">
+			<div class="cont-info-2">
+				<div class="informacao-modal-2">
+					<h2>Dados Pessoais</h2>
+					<table border="1">
+						<tr>
+							<th>Nome Completo</th>
+							<th>Data de Nascimento</th>
+							<th>Idade</th>
+							<th>Sexo</th>
+							<th>Métodos de Pagamentos</th>
+						</tr>
+						<tr>
+							<td>Francisco Dos Santos</td>
+							<td>06/06/2001</td>
+							<td>22 Anos</td>
+							<td>Masculino</td>
+							<td>
+								Multicaixa express
+								<hr>
+								PayPal
+								<hr>
+								Visa
+							</td>
+						</tr>
+					</table>
+					<p>Desde agradecemos pela confiança em nossos servicos.</p>
+					<div>
+						<a href="#l">Ok</a>
+					</div>
+				</div>
+			</div>
+		</div> -->
 
-        <!-- editando o modal maior  sessao de dados pessoasi-->
-        <div class="modal-cont" id="dados-pess">
-            <div class="cont-info-2">
-              <div class="informacao-modal-2">
-                  <h2>Dados Pessoais</h2> 
-                  <table border="1">
-                      <tr>
-                          <th>Nome Completo</th>
-                          <th>Data de Nascimento</th>
-                          <th>Idade</th>
-                          <th>Sexo</th>
-                          <th>Métodos de Pagamentos</th>
-                    </tr>
-                    <tr>
-                        <td>Francisco Dos Santos</td>
-                        <td>06/06/2001</td>
-                        <td>22 Anos</td>
-                        <td>Masculino</td>
-                        <td>
-                            Multicaixa express
-                            <hr>
-                            PayPal
-                            <hr>
-                            Visa
-                        </td>
-                  </tr>
-                  </table>
-                      <p>Desde agradecemos pela confiança em nossos servicos.</p>
-                      <div >
-                <a href="#l">Ok</a>
-                    </div>
-            </div>
-            </div>
-        </div>
+		<!-- editando o modal maior  sessao de Contatos
+		<!--<div class="modal-cont" id="contato">
+			<div class="cont-info-2">
+				<div class="informacao-modal-2">
+					<h2>Contactos</h2>
+					<table border="1">
+						<tr>
+							<th>Email</th>
+							<th>Número de Telefone</th>
+						</tr>
+						<tr>
+							<td>franciscodossantosmr@gmail.com</td>
+							<td>(+244)932925647</td>
+						</tr>
+					</table>
+					<p>Desde agradecemos pela confiança em nossos servicos.</p>
+					<div>
+						<a href="#l">Ok</a>
+					</div>
+				</div>
+			</div>
+		</div> -->
 
-          <!-- editando o modal maior  sessao de Contatos-->
-        <div class="modal-cont" id="contato">
-            <div class="cont-info-2">
-              <div class="informacao-modal-2">
-                  <h2>Contactos</h2> 
-                  <table border="1">
-                      <tr>
-                          <th >Email</th>
-                          <th>Número de Telefone</th>
-                    </tr>
-                    <tr>
-                        <td>franciscodossantosmr@gmail.com</td>
-                        <td>(+244)932925647</td>
-                  </tr>
-                  </table>
-                      <p>Desde agradecemos pela confiança em nossos servicos.</p>
-                      <div >
-                <a href="#l">Ok</a>
-                    </div>
-            </div>
-            </div>
-        </div>
+		<!-- editando o modal maior  sessao de endereço-->
+		<!-- <div class="modal-cont" id="endereco">
+			<div class="cont-info-2">
+				<div class="informacao-modal-2">
+					<h2>Dados Pessoais</h2>
+					<table border="1">
+						<tr>
+							<th>Provincia</th>
+							<th>Munícipio</th>
+							<th>Bairro</th>
+							<th>endereço</th>
+						</tr>
+						<tr>
+							<td>Luanda</td>
+							<td>Maianga</td>
+							<td>Rocha Pinto</td>
+							<td>Rocha pinto/moagem casa 32</td>
+						</tr>
+					</table>
+					<p>Desde agradecemos pela confiança em nossos servicos.</p>
+					<div>
+						<a href="#l">Ok</a>
+					</div>
+				</div>
+			</div>
+		</div> -->
 
-          <!-- editando o modal maior  sessao de endereço-->
-        <div class="modal-cont" id="endereco">
-            <div class="cont-info-2">
-              <div class="informacao-modal-2">
-                  <h2>Dados Pessoais</h2> 
-                  <table border="1">
-                      <tr>
-                          <th>Provincia</th>
-                          <th>Munícipio</th>
-                          <th>Bairro</th>
-                          <th>endereço</th>
-                    </tr>
-                    <tr>
-                        <td>Luanda</td>
-                        <td>Maianga</td>
-                        <td>Rocha Pinto</td>
-                        <td>Rocha pinto/moagem casa 32</td>
-                  </tr>
-                  </table>
-                      <p>Desde agradecemos pela confiança em nossos servicos.</p>
-                      <div >
-                <a href="#l">Ok</a>
-                    </div>
-            </div>
-            </div>
-        </div>
+		<!-- editando o modal maior  sessao alerar senha-->
+		<!-- <div class="modal-cont" id="modal">
+			<a href="#" class="fexar">X</a>
+			<div class="cont-info-2">
+				<div class="informacao-modal-2">
+					<h2>Alteração de Senha</h2>
+					<p class="modal-cor">Preencha os campos abaixo para alterar a senha.</p>
+					<form action="" method="post">
+						<input type="password" name="senha" class="input-senha" id="isenha" placeholder="Senha Atual" autofocus>
+						<input type="password" name="senha" class="input-senha" id="isenha" placeholder="Nova Senha">
+						<input type="password" name="senha" class="input-senha" id="isenha" placeholder="Confirmar a Nova Senha">
+					</form>
+					<p>Desde agradecemos pela confiança em nossos servicos.</p>
+					<div>
+						<a href="#modal">Alterar Senha</a>
+					</div>
+				</div>
+			</div>
+		</div> -->
 
-        <!-- editando o modal maior  sessao alerar senha-->
-        <div class="modal-cont" id="modal">
-            <a href="#" class="fexar">X</a>
-            <div class="cont-info-2">
-              <div class="informacao-modal-2">
-                  <h2>Alteração de Senha</h2>
-                  <p class="modal-cor">Preencha os campos abaixo para alterar a senha.</p> 
-                  <form action="" method="post">
-                      <input type="password" name="senha" class="input-senha" id="isenha" placeholder="Senha Atual" autofocus>
-                      <input type="password" name="senha" class="input-senha" id="isenha" placeholder="Nova Senha">
-                      <input type="password" name="senha" class="input-senha" id="isenha" placeholder="Confirmar a Nova Senha">
-                  </form>
-                      <p>Desde agradecemos pela confiança em nossos servicos.</p>
-                      <div >
-                <a href="#modal">Alterar Senha</a>
-                    </div>
-            </div>
-            </div>
-        </div>
-
-    <!-- FOOTER SECUNDARIO -->
+		<!-- FOOTER SECUNDARIO -->
 		<section class="sess6">
 			<article>
 				<div class="footer-seg">
-						<h2>
-							<img src="../assets/imagens/logo.png" width="80px" alt="icone-logo">
-							Cambiji Nature
-						</h2>
-						<p>Uma empresa que presta serviços de cosmetics, trabalhando
-							para bem da tua pele natural.
-						</p>
+					<h2>
+						<img src="../assets/imagens/logo.png" width="80px" alt="icone-logo">
+						Cambiji Nature
+					</h2>
+					<p>Uma empresa que presta serviços de cosmetics, trabalhando
+						para bem da tua pele natural.
+					</p>
 					<div class="section-rede">
 						<a href="#" class="rede">
 							<img src="../assets/imagens/icons8_facebook_f.ico" alt="facebook-icone">
@@ -216,59 +282,62 @@
 					</div>
 				</div>
 				<div class="footer-seg">
-						<h2>Links Rápidos </h2>
-						<div>
-							<a href="#">Inicio</a>
-							<a href="produto-logado.html">Produtos</a>
-							<a href="servicos-logado.html">Serviços</a>
-							<a href="sobre-nos-logado.html">Sobre-nós</a>
-							<a href="contato-logado.html">Conctato</a>
-						</div>
+					<h2>Links Rápidos </h2>
+					<div>
+						<a href="#">Inicio</a>
+						<a href="produto-logado.html">Produtos</a>
+						<a href="servicos-logado.html">Serviços</a>
+						<a href="sobre-nos-logado.html">Sobre-nós</a>
+						<a href="contato-logado.html">Conctato</a>
+					</div>
 				</div>
 				<div class="footer-seg">
 					<h2>Atendimento ao Cliente</h2>
 					<div>
-					<a href="#">Ajuda central</a>
-					<a href="#">Termos e condições de uso</a>
-					<a href="politica-privacidade-logado.html">Politica e privacidade</a>
-					<a href="contato-logado.html">Enviar Feedeback</a>
-					<a href="#cont">Conta</a>
+						<a href="#">Ajuda central</a>
+						<a href="#">Termos e condições de uso</a>
+						<a href="politica-privacidade-logado.html">Politica e privacidade</a>
+						<a href="contato-logado.html">Enviar Feedeback</a>
+						<a href="#cont">Conta</a>
 					</div>
 				</div>
 				<div class="footer-seg">
 					<h2>Informações de Contato</h2>
 					<p>Subscreve-se na nossa Newsletter</p>
 					<form>
-						<input type="email"class="input" id="Newsletter-email" 
-						placeholder="your@gmail.com" required>
+						<input type="email" class="input" id="Newsletter-email" placeholder="your@gmail.com" required>
 						<button id="btn-newsletter">Subscrever</button>
 					</form>
 					<p>Telefone: (+244) 932945647</p>
 					<p>Email: [Cambiji@gmail.com]</p>
 					<p>Seg-Sab: 8h-22h</p>
 				</div>
-			</article>  
+			</article>
 		</section>
 	</main>
-<!-- FOOTER PRINCIPAL -->
+	<!-- FOOTER PRINCIPAL -->
 	<footer>
-			<div class="copyright">
-					&COPY;2023 Cambiji_Nature Todos os direitos reservados.
-			</div>
-			<div class="method-pay">
-				<a href="#">
-					<img src="" alt="visa">
-				</a>
-				<a href="#">
-					<img src="" alt="paypay">
-				</a>
-				<a href="#">
-					<img src="" alt="bank">
-				</a>
-				<a href="#">
-					<img src="" alt="unitelMoney">
-				</a>
-			</div> 
+		<div class="copyright">
+			&COPY;2023 Cambiji_Nature Todos os direitos reservados.
+		</div>
+		<div class="method-pay">
+			<a href="#">
+				<img src="" alt="visa">
+			</a>
+			<a href="#">
+				<img src="" alt="paypay">
+			</a>
+			<a href="#">
+				<img src="" alt="bank">
+			</a>
+			<a href="#">
+				<img src="" alt="unitelMoney">
+			</a>
+		</div>
 	</footer>
+	<script src="../assets/js/workCart.js"></script>
+	<script src="../assets/js/pageProfile.js"></script>
+	<script src="../assets/js/workheaderLogado.js"></script>
 </body>
+
 </html>
