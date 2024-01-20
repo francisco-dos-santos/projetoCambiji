@@ -28,7 +28,7 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- HTML e CSS
+- HTML e CSS e javascript
 - Git e Github
 
 ## 💻 Projeto
