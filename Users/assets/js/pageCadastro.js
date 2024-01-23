@@ -1,4 +1,4 @@
-import { eyestoggle } from "./toggles.js";
+import { eyestoggle } from "./togglesEyes.js";
 import { setError,setSucess,isLetters,iscount,ismail,isnumber } from "./funtctionValidatyForm.js";
 fetch("../users.json")
 .then((response)=>{
@@ -7,7 +7,6 @@ fetch("../users.json")
 .then((data)=>{
   localStorage.setItem("BD_Users",JSON.stringify(data));
 });
-const form=document.querySelector(".form");
 const userName=document.querySelector("#name");
 const userEmail=document.querySelector("#email")
 const userPasse=document.querySelector("#passe1");
@@ -35,14 +34,14 @@ const users={
 				this.saveStorage();
         clearField();
 			}else{
-        console.log("já existe uma conta com esse email digite outro");
+        alert("já existe uma conta com esse email digite outro");
       }
     },
 
     saveStorage:function(){
       localStorage.setItem("BD_Users",JSON.stringify(this.List))
     }
-  }
+}
 function clearField(){
   userName.value="";
   userEmail.value="";

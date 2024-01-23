@@ -1,4 +1,4 @@
-import { eyestoggle } from "./toggles.js";
+import { eyestoggle } from "./togglesEyes.js";
 import { setError,setSucess,ismail } from "./funtctionValidatyForm.js";
 const usersList=JSON.parse(localStorage.getItem("BD_Users"))??[];
 const userEmail=document.getElementById("email");

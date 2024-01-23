@@ -1,3 +1,5 @@
+import { addNameUser } from "./workheaderLogado.js";
+import { addCart,openCart, iconCart,handleClicksButtons,goFinallyShopping} from "./workCart.js";
 
 const products = JSON.parse(localStorage.getItem('BD_products')) ?? [];
 const aromas = document.querySelector('#container-aromas .contents-product');
@@ -25,7 +27,7 @@ function renderPoducts() {
     let newCard = `
     <div class="card subindo">
       <div class="cont-img">
-        <img src="../assets/${element.imageProduct}" alt="produto-1"onclick=salveIdProduct(${element.id}) >
+        <img src="../assets/${element.imageProduct}" alt="produto-${element.id}">
         <!--<div class="percentage" id="porcent">60%</div>-->
       </div>
       <h3 class="preco">A0A ${element.price}.00</h3>
@@ -33,8 +35,8 @@ function renderPoducts() {
       <p>${element.product}</p>
       <div class="content">
         <small class="categoria">${element.category}</small>
-        <button class="add-cart">
-          <img src="../assets/imagens/icons8_add_shopping_cart.ico"" alt="cart" onclick=addCart(${element.id})>
+        <button class="add-cart" id="${element.id}">
+          <img src="../assets/imagens/icons8_add_shopping_cart.ico"" alt="cart">
         </button>
       </div>
   </div>
@@ -68,4 +70,29 @@ function renderPoducts() {
 // functions execute
 setTimeout(() => {
   renderPoducts();
+  document.addEventListener('click', function(event){
+    if(event.target.parentNode.classList.contains('add-cart')){
+      let id = parseInt(event.target.parentNode.id);
+      addCart(id,products);
+    }
+   })
 }, 1500)
+// events
+// events
+openCart.btncloseCart.onclick=()=>{
+  openCart.close();
+}
+iconCart.onmousemove=()=>{
+  openCart.open();
+}
+window.addEventListener("keydown",closeWidthESC)
+function closeWidthESC(event){
+  if(event.key==="Escape"){
+    openCart.close();
+  }
+}
+document.addEventListener("DOMContentLoaded", function(){
+  addNameUser();
+  handleClicksButtons();
+  goFinallyShopping();
+})

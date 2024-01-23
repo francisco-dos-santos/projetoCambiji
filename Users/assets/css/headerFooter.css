@@ -13,7 +13,7 @@ body{
 	font-weight: normal;
 	color: rgba(0, 0, 0, 0.9);
 	font-size: 1.6rem;
-	min-height: 100vh;
+	min-height:100vh;
 	scroll-behavior: smooth;
 }
 
@@ -316,7 +316,7 @@ nav ul li a:hover::after {
 	height: 2.5rem;
 }
 
-#btn-less {
+.btn-less {
 	border: 0.1rem solid #cc2b1cb1 !important;
 }
 

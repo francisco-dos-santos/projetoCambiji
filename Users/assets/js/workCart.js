@@ -1,12 +1,11 @@
 
-const iconCart=document.getElementById("icon-cart");
+export const iconCart=document.getElementById("icon-cart");
 const containerCardsCart=document.getElementById("content-cards-cart")
 let TotalValueCart=document.getElementById("Total-Cart");
 const btnfinallyCart=document.getElementById("finally-cart-button");
 const carts=JSON.parse(localStorage.getItem("BD_carts"))??[];
-// const btnAddCart=document.getElementsByClassName("add-cart");
 
-const openCart={
+export const openCart={
   boxCart:document.querySelector(".container-cart"),
   btncloseCart:document.getElementById("close-cart"),
   open(){
@@ -17,17 +16,18 @@ const openCart={
   }
 } 
 function incrementP(pos){
-  if(carts[pos].quantity==10){
-    return false;
+  if(carts[pos].quantity===10){
+    return;
   }else{
-    carts[pos].quantity+=1;
+    carts[pos].quantity+=1 
+    savecartStorage()
+    renderCart();
+    getTotalValues(); 
   }
-  savecartStorage()
-  renderCart();
-  getTotalValues()
+  
 }
 function decrementP(pos){
-  if(carts[pos].quantity==1){
+  if(carts[pos].quantity===1){
     let isdel=window.confirm(`Desejas eliminar o ${carts[pos].product} do carrinho?`);
     if(isdel){
       carts.splice(pos,1);
@@ -37,9 +37,7 @@ function decrementP(pos){
   }
   savecartStorage()
   renderCart();
-  getTotalValues()
-  iconCart.dataset.count=carts.length;
-  document.querySelector(".quantity").textContent=carts.length;
+  getTotalValues();
 }
 function renderCart(){
   containerCardsCart.innerHTML="";
@@ -48,16 +46,16 @@ function renderCart(){
     newcart=`
     <div class="content-card-cart">
     <div class="content-img">
-      <img src="../assets/${element.imageProduct}" alt="produto-1">
+      <img src="../assets/${element.imageProduct}" alt="produto-${index}">
     </div>
     <div class="contents-info-product-cart">
       <p>${element.product}<br><span class="description-cart">descrição...</span></p>
       <div class="content-price-quantity">
         <p class="price-cart">Kz ${element.price}</p>
         <div class="content-add-quantity">
-          <button id="btn-less" class="control-less-plus" onclick=decrementP(${index})>--</button>
+          <button class="control-less-plus btn-less" id="${index}">–</button>
           <input type="button" id="input-quantity" value="${element.quantity}">
-          <button id="btn-plus" class="control-less-plus" onclick=incrementP(${index})>+</button>
+          <button class="control-less-plus btn-plus" id="${index}">+</button>
         </div>
       </div>
     </div>
@@ -65,6 +63,9 @@ function renderCart(){
     `;
     containerCardsCart.innerHTML+=newcart;
   })
+  iconCart.dataset.count=carts.length;
+  document.querySelector(".quantity").textContent=carts.length;
+  getTotalValues();
 }
 function getTotalValues(){
   let prices = carts.map((item)=>{
@@ -75,8 +76,8 @@ function getTotalValues(){
   },0)
   TotalValueCart.textContent=(Total).toFixed(2);
 }
-
-function addCart(productId){
+let savecartStorage=()=>localStorage.setItem("BD_carts",JSON.stringify(carts));
+export function addCart(productId ,products){
   let cart=products.find((product)=>product.id==productId); 
   if(carts.length===0){
     carts.push(cart);
@@ -92,28 +93,33 @@ function addCart(productId){
   }
   savecartStorage();
   getTotalValues();
+  renderCart();
   iconCart.dataset.count=carts.length;
   document.querySelector(".quantity").textContent=carts.length;
+}
+export function handleClicksButtons(){
+  containerCardsCart.addEventListener('click', function(event){
+    if (event.target.classList.contains('btn-less')) {
+      let index = parseInt(event.target.id);
+      decrementP(index);
+    } else if(event.target.classList.contains('btn-plus')) {
+      let index = parseInt(event.target.id);
+      incrementP(index);
+    }
+  });
+}
+document.addEventListener('DOMContentLoaded',function(){
+  iconCart.dataset.count=carts.length;
+  document.querySelector(".quantity").textContent=carts.length;
+  getTotalValues();
   renderCart();
+})
 
+ export function goFinallyShopping(){
+  btnfinallyCart.addEventListener('click',()=>{
+    window.location.href="../pages-logado/carrinho-logado.html";
+  })
 }
 
-iconCart.dataset.count=carts.length;
-document.querySelector(".quantity").textContent=carts.length;
-getTotalValues()
-renderCart();
-let savecartStorage=()=>localStorage.setItem("BD_carts",JSON.stringify(carts));
-// callbacks
-// events
-openCart.btncloseCart.onclick=()=>{
-  openCart.close();
-}
-iconCart.onmousemove=()=>{
-  openCart.open();
-}
-window.addEventListener("keydown",closeWidthESC)
-function closeWidthESC(e){
-  if(e.key==="Escape"){
-    openCart.close();
-  }
-}
+
+

@@ -173,7 +173,7 @@
 	background: #36b64f;
 	border-radius: 10px;
 	width:70rem;
-	margin: 0px auto;
+	margin:4rem auto 0;
 }
 
 .dest-reserva {
@@ -247,7 +247,7 @@
 	padding: 5px 10px;
 }
 
-.sess-input-1 form>input {
+.sess-input-1 form> .input {
 	border: 1px solid #e3f7d8fa;
 	width: 100%;
 	outline: none;
@@ -264,7 +264,25 @@
 	margin: 5px 0;
 }
 
-.sess-input-1>form .input:focus-visible {
+.sess-input-1>form .input:focus{
 	border: 1px solid #36b64f;
 	transition: all .4s;
+}
+#btn-encomenda{
+	background: #67db7e;
+	color:white;
+	width: 100%;
+	
+	border: none;
+	border-radius:.6rem;
+	outline:none;
+	padding: 1.6rem 0;
+	font-size: 1.6rem;
+	font-family: "Roboto", sans-serif;
+}
+#btn-encomenda:hover {
+	background-color: #fff;
+	color: #36b64f;
+	outline:.1rem solid #36b64f;
+	transition: all .5s;
 }

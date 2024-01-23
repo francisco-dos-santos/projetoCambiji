@@ -83,11 +83,7 @@
 		</div>
 	</header>
 
-	<main>
-		<section class="fundo-titulo fadeIn">
-			<h1>Fazer Reservas</h1>
-		</section>
-
+	<main style="height:100vh;">
 		<section class="fazer-reser descendo">
 			<!-- session 1 -->
 			<div class="dest-reserva">
@@ -125,90 +121,31 @@
 			<article class="sess-input-1">
 				<form autocomplete="on">
 					<p>Numero de Telefone*</p>
-					<input type="tel" class="input" name="" id="" placeholder="+244 (932925647)">
+					<input type="tel" class="input" name="" id="number-reserv" placeholder="+244 (932925647)">
 					<p>Data da reserva*</p>
-					<input type="date" class="input" name="" id="" value="dia da reserva">
-					<input type="time" class="input" name="" id="" placeholder="Hora">
+					<input type="date" class="input" name="" id="data-reserv">
+					<input type="time" class="input" name="" id="hour-reserv">
 					<p>Metodo de pagamnetos*</p>
-					<select name="metodop" class="input" id="imetodop">
-						<option value="">Transferência Bancaria</option>
-						<option value="">Visa</option>
-						<option value="">Paypal</option>
-						<option value="">Multicaixa express</option>
+					<select class="input" id="pay-metod">
+						<option value="Transferência-Bancaria">Transferência Bancaria</option>
+						<option value="Visa">Visa</option>
+						<option value="Paypal">Paypal</option>
+						<option value="Multicaixa-express">Multicaixa express</option>
 					</select>
-					<p>tipo de serviço</p>
-					<select name="metodop" class="input" id="imetodop">
+					<p>Tipo de serviço</p>
+					<select name="metodop" class="input" id="type-service">
 						<option value="10000kz">Massagem Simples
 							<p>10.000kz</p>
 						</option>
-						<option value="">Combo Serviços
+						<option value="30.000kz">Combo Serviços
 							<p>30.000kz</p>
 						</option>
-						<option value="">Limpeza Facial
+						<option value="15.000kz">Limpeza Facial
 							<p>15.000kz</p>
 						</option>
 					</select>
 					<input type="button" id="btn-encomenda" value=" Confirmar Reserva">
 				</form>
-			</article>
-		</section>
-		<!-- FOOTER SECUNDARIO -->
-		<section class="sess6">
-			<article>
-				<div class="footer-seg">
-					<h2>
-						<img src="../assets/imagens/logo.png" width="80px" alt="icone-logo">
-						Cambiji Nature
-					</h2>
-					<p>Uma empresa que presta serviços de cosmetics, trabalhando
-						para bem da tua pele natural.
-					</p>
-					<div class="section-rede">
-						<a href="#" class="rede">
-							<img src="../assets/imagens/icons8_facebook_f.ico" alt="facebook-icone">
-						</a>
-						<a href="#" class="rede">
-							<img src="../assets/imagens/icons8_whatsapp.ico" alt="watsapp-icone">
-						</a>
-						<a href="#" class="rede">
-							<img src="../assets/imagens/icons8_youtube_play_button.ico" alt="youtube-icone">
-						</a>
-						<a href="#" class="rede">
-							<img src="../assets/imagens/icons8_instagram_logo.ico" alt="instagram-icone">
-						</a>
-					</div>
-				</div>
-				<div class="footer-seg">
-					<h2>Links Rápidos </h2>
-					<div>
-						<a href="#">Inicio</a>
-						<a href="produto-logado.html">Produtos</a>
-						<a href="servicos-logado.html">Serviços</a>
-						<a href="sobre-nos-logado.html">Sobre-nós</a>
-						<a href="contato-logado.html">Conctato</a>
-					</div>
-				</div>
-				<div class="footer-seg">
-					<h2>Atendimento ao Cliente</h2>
-					<div>
-						<a href="#">Ajuda central</a>
-						<a href="#">Termos e condições de uso</a>
-						<a href="politica-privacidade-logado.html">Politica e privacidade</a>
-						<a href="contato-logado.html">Enviar Feedeback</a>
-						<a href="#cont">Conta</a>
-					</div>
-				</div>
-				<div class="footer-seg">
-					<h2>Informações de Contato</h2>
-					<p>Subscreve-se na nossa Newsletter</p>
-					<form>
-						<input type="email" class="input" id="Newsletter-email" placeholder="your@gmail.com" required>
-						<button id="btn-newsletter">Subscrever</button>
-					</form>
-					<p>Telefone: (+244) 932945647</p>
-					<p>Email: [Cambiji@gmail.com]</p>
-					<p>Seg-Sab: 8h-22h</p>
-				</div>
 			</article>
 		</section>
 	</main>
@@ -232,8 +169,7 @@
 			</a>
 		</div>
 	</footer>
-	<script src="../assets/js/workCart.js" type="module"></script>
-	<script src="../assets/js/workheaderLogado.js"></script>
+	
 </body>
 
 </html>
