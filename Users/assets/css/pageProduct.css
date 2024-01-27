@@ -32,7 +32,9 @@
 .flex-div .arrow{
 	width:2rem;
 	cursor: pointer;
+	transition:all .2s;
 }
+
 .list-category ul{
 	list-style:none;
 }
@@ -46,7 +48,7 @@
 .list-size
 {
 	/* border: 1px solid red; */
-	display: inline-flex;
+	display:inline-flex;
 	gap: 1rem;
 }
 
@@ -69,6 +71,11 @@ input[type="checkbox"]{
 }
 .star-color{
 	color:#c1c1c1;
+}
+.hide{
+	display: none;
+	transform:translateY(-50px);
+	transition:.4s;
 }
 #products{
 	border: .1rem solid #f4f4f4;
@@ -147,8 +154,7 @@ input[type="checkbox"]{
 	/* border:.1rem solid red; */
 	grid-area:nav;
 	display:grid;
-	align-self:self-start;
-	justify-self: center;
+	place-content:center;
 }
 .nav-list button{
 	background: #67db7e;

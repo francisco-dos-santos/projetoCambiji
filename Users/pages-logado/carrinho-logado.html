@@ -1,61 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrinho logado</title>
-    <link rel="shortcut icon" href="../assets/imagens/logo2.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/pageCart.css">
-    <link rel="stylesheet" href="../assets/css/animacão.css">
-    <link rel="stylesheet" href="../assets/css/headerFooter.css">
-</head>
-<body>
+    <link
+      rel="shortcut icon"
+      href="../assets/imagens/logo2.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../assets/css/pageCart.css" />
+    <link rel="stylesheet" href="../assets/css/animacão.css" />
+    <link rel="stylesheet" href="../assets/css/headerFooter.css" />
+  </head>
+  <body>
     <header id="header-main">
-        <div class="container-head">
-          <h1 class="logo"> 
-              <a href="#">
-                  <img src="../assets/imagens/logo.png" alt="cambiji_nature">
-              </a>
-          </h1>
-          <nav>
-              <ul>
-                <li><a href="./inicio-logado.html">Inicio</a></li>
-                <li><a href="loja-logado.html">Loja</a></li>
-                <li><a href="servicos-logado.html">Serviços</a></li>
-                <li><a href="sobre-nos-logado.html">Sobre nós</a></li>
-                <li class="botao"><a href="contato-logado.html">Contacto</a></li>
-              </ul>
-          </nav>
-          <article class="pesquisar">
-            <input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
-            <label for="pesq">
-              <img src="../assets/imagens/icons8_search.ico" alt="icon-search">
-            </label>
-          </article>
-            <div class="conta">
-              <a href="#" id="cont-link" title="Francisco dos santos" >
-                <img src="../assets/imagens/icons8_male_user-logado.ico" width="32px" alt="usuario cambiji">
-                <span id="user-name">Nome</span>
-              </a>
-              <div class="dropdown" >
-                <a href="perfil.html">Perfil</a>
-                <a href="../inicio.html">Sair</a>
-              </div>
+      <div class="container-head">
+        <h1 class="logo">
+          <a href="#">
+            <img src="../assets/imagens/logo.png" alt="cambiji_nature" />
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="./inicio-logado.html">Inicio</a></li>
+            <li><a href="loja-logado.html">Loja</a></li>
+            <li><a href="servicos-logado.html">Serviços</a></li>
+            <li><a href="sobre-nos-logado.html">Sobre nós</a></li>
+            <li class="botao"><a href="contato-logado.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <article class="pesquisar">
+          <input
+            type="search"
+            name=""
+            id="pesq"
+            placeholder="Pesquisar produtos..."
+          />
+          <label for="pesq">
+            <img src="../assets/imagens/icons8_search.ico" alt="icon-search" />
+          </label>
+        </article>
+        <div class="conta">
+          <a href="#" id="cont-link" title="Francisco dos santos">
+            <img
+              src="../assets/imagens/icons8_male_user-logado.ico"
+              width="32px"
+              alt="usuario cambiji"
+            />
+            <span id="user-name">Nome</span>
+          </a>
+          <div class="dropdown">
+            <a href="perfil.html">Perfil</a>
+            <a href="../inicio.html">Sair</a>
+          </div>
+        </div>
+        <div class="cart-wrapper" id="icon-cart" data-count="0">
+          <a href="carrinho-logado.html">
+            <img
+              src="../assets/imagens/icons8_handcart.ico"
+              alt="sacola_cambiji"
+            />
+          </a>
+          <div class="container-cart bouncedireito">
+            <div id="content-text-cart">
+              <p>Seu carrinho tem <span class="quantity">5</span> itens</p>
+              <button id="close-cart">x</button>
             </div>
-              <div class="cart-wrapper"  id="icon-cart" data-count="0">
-                <a href="carrinho-logado.html">
-                  <img 
-                  src="../assets/imagens/icons8_handcart.ico" 
-                  alt="sacola_cambiji"
-                  >
-                </a>
-                  <div class="container-cart bouncedireito">
-                    <div id="content-text-cart">
-                      <p>Seu carrinho tem <span class="quantity">5</span> itens</p>
-                      <button id="close-cart">x</button>
-                    </div>
-                    <section id="content-cards-cart">
-                      <!-- <div class="content-card-cart">
+            <section id="content-cards-cart">
+              <!-- <div class="content-card-cart">
                         <div class="content-img">
                           <img src="../assets/imagens/produto6.png" alt="produto-1">
                         </div>
@@ -71,71 +84,260 @@
                           </div>
                         </div>
                       </div> -->
-          
-                    </section>
-                    <div class="content-finally-cart">
-                      <div class="content-price-total">
-                        <span>Total:Kz</span>
-                        <span id="Total-Cart">Kz0,00</span>
-                      </div>
-                      <button id="finally-cart-button">Finalizar Compra</button>
-                    </div>
-                  </div>
+            </section>
+            <div class="content-finally-cart">
+              <div class="content-price-total">
+                <span>Total:Kz</span>
+                <span id="Total-Cart">Kz0,00</span>
               </div>
+              <button id="finally-cart-button">Finalizar Compra</button>
+            </div>
+          </div>
         </div>
+      </div>
     </header>
     <main>
-        <section class="titulo fadeIn">
-					<h3>
-							Carrinho de Compras
-					</h3>
-        </section>
-        <section id="carrinho-logado">
-				<div class="car-titulo">
-					<p>Remover</p>
-					<p>Imagem</p>
-					<p>Produtos</p>
-					<p>preço</p>
-					<p>Quantidades</p>
-					<p>Subtotal</p>
-				</div>   
-           <div class="car-produto">
-							<p><a href="#"><img src="../assets/imagens/icons8_cancel_32.png" alt=""></a></p>
-							<p><a href="#"><img src="../assets/imagens/produto7.png" alt=""></a></p>
-							<p>Creme Cambiji</p>
-							<p>3000kz</p>
-							<p><input type="number" name="numero" id="inumero" value="1" min="1" max="10"></p>
-							<p>3000kz</p>
+      <section class="title fadeIn">
+        <p>Saudável e Verde</p>
+        <h3>Página de Compras</h3>
+        <div class="row-title"></div>
+        <p>A Cambiji Nature da aos cliente a possibilidade</p>
+        <p>de enviar mensagem e como sempre respondemos dentro de 24h</p>
+      </section>
+      <section class="wrapper">
+        <article class="screen-1">
+          <div id="shopping-info">
+            <div class="cart-title">
+              <h4 class="first">Product</h4>
+              <h4>Size</h4>
+              <h4>Preço</h4>
+              <h4>Quantidade</h4>
+              <h4>Total Preço</h4>
+              <h4>Acão</h4>
             </div>
-            <div class="car-produto">
-							<p><a href="#"><img src="../assets/imagens/icons8_cancel_32.png" alt=""></a></p>
-							<p><a href="#"><img src="../assets/imagens/produto7.png" alt=""></a></p>
-							<p>Aromas Cambiji</p>
-							<p>500kz</p>
-							<p><input type="number" name="numero" id="inumero" value="1" min="1"  max="10"></p>
-							<p>500kz</p>
+            <section class="carts-cont">
+              <div class="cart-product">
+                <div class="product-content">
+                  <div class="content-img">
+                    <img
+                      src="../assets/imagens/produto6.png"
+                      alt="produto-imagem"
+                    />
+                  </div>
+                  <div class="name-product">
+                    <p>Nome</p>
+                    <small>descrição</small>
+                  </div>
+                </div>
+                <div class="content-size">
+                  <select name="size" id="size">
+                    <option value="10">
+                      10
+                    </option>
+                    <option value="30">
+                      30
+                    </option>
+                    <option value="15">
+                      15
+                    </option>
+                    <option value="50">
+                      50
+                    </option>
+                  </select>
+                </div>
+                <div class="price-cont">
+                  <p>
+                    A0 <span class="price">
+                      3000
+                    </span>
+                  </p>
+                </div>
+                <div class="add-quantity">
+                  <button id="${index}" class="control btn-less less">–</button>
+                  <input type="text" id="input-quant" value="1" size="2">
+                  <button id="${index}" class="control btn-plus">+</button>
+                </div>
+                <div class="tl-price-cont">
+                  <p>A0 <span class="tl-price">
+                    3000
+                  </span>
+                  </p>
+                </div>
+                <div class="deletar delete" id="${index}">
+                  <img src="" alt="buttton deletar">
+                </div>
+              </div>
+            </section>
+            <div class="content-total">
+              <p>SubTotal:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <span id="price-subtotal">
+                  6500kz
+                </span>
+              </p>
+              <p>Shopping:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <span id="frete" >
+                  Free
+                </span>
+              </p>
+              <h3>Total:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <span id="price-total">
+                6500kz 
+                </span>
+              </h3>
             </div>
-            <div class="car-produto">
-							<p><a href="#"><img src="../assets/imagens/icons8_cancel_32.png" alt=""></a></p>
-							<p><a href="#"><img src="../assets/imagens/produto7.png" alt=""></a></p>
-							<p>Perfume Cambiji</p>
-							<p>3000kz</p>
-							<p><input type="number" name="numero" id="inumero" value="1" min="1" max="10"></p>
-							<p>3000kz</p>
+          </div>
+          <div id="payment-info">
+            <h2>Informações de Pagamentos</h2>
+            <div class="wrapper-card">
+              <div class="pay-visa">
+                <input type="radio" name="card" id="visa" checked>
+                <label for="visa">
+                  <img src="" alt="visa-card">
+                </label>
+              </div>
+              <div class="pay-paypay">
+                <input type="radio" name="card" id="paypay">
+                <label for="paypay">
+                  <img src="" alt="paypay-card">
+                </label>
+              </div>
+              <div class="pay-back-card">
+                <input type="radio" name="card" id="back-card">
+                <label for="back-card">
+                  <img src="" alt="card-card">
+                </label>
+              </div>
+              <div class="pay-money-unitel">
+                <input type="radio" name="card" id="money-unitel">
+                <label for="money-unitel">
+                  <img src="" alt="money-unitel">
+                </label>
+              </div>
             </div>
-            <div class="car-total">
-              <p>Total: <span id="cor-preco">6500kz </span></p>
+            <div class="content-inputs">
+              <div class="wrapper-input">
+                <input type="text" name="" id="number-card">
+                <small>Error</small>
+              </div>
+              <div class="wrapper-input">
+                <div>
+                  <input type="text" name="" id="number-card" placeholder="number">
+                  <input type="text" name="" id="data-experição">
+                </div>
+                <small>Error</small>
+              </div>
             </div>
-            <div class="car-botao">
-              <a href="finalizar.html"> Finalizar Compras</a>
+           
+          </div>
+        </article>
+        <article class="screen-2">
+        </article>
+      </section>
+      <!-- FOOTER SECUNDARIO -->
+      <section class="sess6">
+        <article>
+          <div class="footer-seg">
+            <h2>
+              <img
+                src="../assets/imagens/logo.png"
+                width="80px"
+                alt="icone-logo"
+              />
+              Cambiji Nature
+            </h2>
+            <p>
+              Uma empresa que presta serviços de cosmetics, trabalhando para bem
+              da tua pele natural.
+            </p>
+            <div class="section-rede">
+              <a href="#" class="rede">
+                <img
+                  src="../assets/imagens/icons8_facebook_f.ico"
+                  alt="facebook-icone"
+                />
+              </a>
+              <a href="#" class="rede">
+                <img
+                  src="../assets/imagens/icons8_whatsapp.ico"
+                  alt="watsapp-icone"
+                />
+              </a>
+              <a href="#" class="rede">
+                <img
+                  src="../assets/imagens/icons8_youtube_play_button.ico"
+                  alt="youtube-icone"
+                />
+              </a>
+              <a href="#" class="rede">
+                <img
+                  src="../assets/imagens/icons8_instagram_logo.ico"
+                  alt="instagram-icone"
+                />
+              </a>
             </div>
-    </section>
+          </div>
+          <div class="footer-seg">
+            <h2>Links Rápidos</h2>
+            <div>
+              <a href="#">Inicio</a>
+              <a href="produto-logado.html">Produtos</a>
+              <a href="servicos-logado.html">Serviços</a>
+              <a href="sobre-nos-logado.html">Sobre-nós</a>
+              <a href="contato-logado.html">Conctato</a>
+            </div>
+          </div>
+          <div class="footer-seg">
+            <h2>Atendimento ao Cliente</h2>
+            <div>
+              <a href="#">Ajuda central</a>
+              <a href="#">Termos e condições de uso</a>
+              <a href="politica-privacidade-logado.html"
+                >Politica e privacidade</a
+              >
+              <a href="contato-logado.html">Enviar Feedeback</a>
+              <a href="#cont">Conta</a>
+            </div>
+          </div>
+          <div class="footer-seg">
+            <h2>Informações de Contato</h2>
+            <p>Subscreve-se na nossa Newsletter</p>
+            <form>
+              <input
+                type="email"
+                class="input"
+                id="Newsletter-email"
+                placeholder="your@gmail.com"
+                required
+              />
+              <button id="btn-newsletter">Subscrever</button>
+            </form>
+            <p>Telefone: (+244) 932945647</p>
+            <p>Email: [Cambiji@gmail.com]</p>
+            <p>Seg-Sab: 8h-22h</p>
+          </div>
+        </article>
+      </section>
     </main>
+    <!-- FOOTER PRINCIPAL -->
     <footer>
-      <div>
-        Cambiji_Nature &COPY Copyright; 2023 Todos os direitos reservados.
-      </div> 
+      <div class="copyright">
+        &COPY;2023 Cambiji_Nature Todos os direitos reservados.
+      </div>
+      <div class="method-pay">
+        <a href="#">
+          <img src="" alt="visa" />
+        </a>
+        <a href="#">
+          <img src="" alt="paypay" />
+        </a>
+        <a href="#">
+          <img src="" alt="bank" />
+        </a>
+        <a href="#">
+          <img src="" alt="unitelMoney" />
+        </a>
+      </div>
     </footer>
-	<script type="module" src="../assets/js/pageCarrinho.js"></script>
-</body>
+    <script type="module" src="../assets/js/pageCarrinho.js"></script>
+  </body>
 </html>

@@ -1,65 +1,73 @@
 console.log("testando");
 import {openCart, iconCart,handleClicksButtons,goFinallyShopping} from "./workCart.js";
-import {addNameUser} from"./workheaderLogado.js";
+import {addNameUser ,index} from"./workheaderLogado.js";
 
-const phoneNumber=document.getElementById("number-reserv");
-const dataReserv=document.getElementById("data-reserv");
-const hourReserv=document.getElementById("hour-reserv");
-const payMetod=document.getElementById("pay-metod");
-const typeService=document.getElementById("type-service");
-const btnReserv=document.getElementById("btn-encomenda");
-
-function Service(number,data,hour,pay,type){
-  this.number=number,
-  this.data=data,
-  this.hour=hour,
-  this.pay=pay,
-  this.types=type 
-}
-
-const toDoReserv={
-  List:JSON.parse(localStorage.getItem("BD_Service"))||[],
-  seeQuantity:function(){
-    let reVal=false;
-    this.List.forEach(element=>{
-      if(element.types.length>=3){
-        return reVal=true;
-      }
-    });
-    reVal;
-  },
-  setService:function(number,data,hour,pay,type){
-    if(number=="" && data=="" && hour==""){
-      alert("erro Campos vazio");
-    }else if(this.seeQuantity()){
-      alert("esgotaste o limite de reservas");
-    }
-    else{
-      this.List.push(new Service(number,data,hour,pay,type));
-      console.log(this.List);
-      this.saveStorage();
-    }
-  },
-  saveStorage:function(){
-    localStorage.setItem("BD_Service",JSON.stringify(this.List))
+ const Service = class {
+  constructor({number,data,hour,pay,type}){
+  this.number=number;
+  this.data=data;
+  this.hour=hour;
+  this.pay=pay;
+  this.type=type;
+  this.id=index-1;
   }
-
-
 }
-btnReserv.addEventListener("click", ()=>{
-  let number=phoneNumber.value.trim();
-  let data=dataReserv.value;
-  let hour=hourReserv.value;
-  let pay=payMetod.value;
-  let type=typeService.value;
-  toDoReserv.setService(number,data,hour,pay,type);
-});
-
+class GerinceService{
+  constructor(){
+    this.List=JSON.parse(localStorage.getItem("BD_Service"))||[];
+  };
+  add({number,data,hour,pay,type}){
+    if(number!==""&& data!==""&& hour!==""&& pay!=="" && type!==""){
+      const newservice=new Service({number,data,hour,pay,type});
+      this.List.push(newservice);
+      this.saveStorage();
+      this.atualizarList();
+    }else{
+      alert("um dos campos está vazio");
+      return
+    }
+  };
+  saveStorage(){
+    localStorage.setItem("BD_Service",JSON.stringify(this.List))
+  };
+  atualizarList(){
+    console.log(this.List);
+  }
+}
 
 // events
-openCart.btncloseCart.onclick=()=>{
+document.addEventListener("DOMContentLoaded",function(){
+
+  const btnReserv=document.getElementById("btn-encomenda");
+
+  const phoneNumber=document.getElementById("number-reserv");
+  const dataReserv=document.getElementById("data-reserv");
+  const hourReserv=document.getElementById("hour-reserv");
+  const payMetod=document.getElementById("pay-metod");
+  const typeService=document.getElementById("type-service");
+  
+  const gerinceService=new GerinceService();
+  btnReserv.addEventListener('click',()=>{
+    console.log("clicado");
+    let phoneNumberValue = phoneNumber.value;
+    let dataReservValue = dataReserv.value;
+    let hourReservValue = hourReserv.value;
+    let payMetodValue = payMetod.value;
+    let typeServiceValue = typeService.value;
+
+    gerinceService.add({
+      data: dataReservValue,
+      hour: hourReservValue,
+      pay: payMetodValue,
+      type: typeServiceValue,
+      number: phoneNumberValue
+    });
+  });
+});
+
+openCart.btncloseCart.addEventListener('click',()=>{
   openCart.close();
-}
+});
 iconCart.onmousemove=()=>{
   openCart.open();
 }

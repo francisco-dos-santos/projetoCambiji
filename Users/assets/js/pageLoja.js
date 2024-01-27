@@ -1,4 +1,5 @@
 import { addNameUser } from "./workheaderLogado.js";
+import { handleArrowForToggle } from "./togglesEyes.js";
 import { addCart,openCart, iconCart,handleClicksButtons,goFinallyShopping} from "./workCart.js";
 
 const products = JSON.parse(localStorage.getItem('BD_products')) ?? [];
@@ -94,5 +95,6 @@ function closeWidthESC(event){
 document.addEventListener("DOMContentLoaded", function(){
   addNameUser();
   handleClicksButtons();
+  handleArrowForToggle();
   goFinallyShopping();
 })

@@ -7,3 +7,21 @@ export function eyestoggle(eye,senha){
     eye.setAttribute("src","../assets/imagens/icons8_eye.ico")
   }
 }
+export function handleArrowForToggle(){
+  const sidebarProducts= document.getElementById("sidebar-loja");
+  sidebarProducts.addEventListener('click',(event)=>{
+    if(event.target.classList.contains('arrow')){
+      let elementParent=event.target.parentNode;
+      let hideElement= elementParent.nextElementSibling;
+      hideElement.style.transfom="translateY(0)";
+      hideElement.style.transition="0.5s";
+      hideElement.classList.toggle("hide");
+      if(hideElement.classList.contains('hide')){
+        event.target.setAttribute("src","../assets/imagens/icons8_down_arrow.ico")
+      }else{
+        event.target.setAttribute("src","../assets/imagens/icons8_up_arrow.ico")
+      }
+    }
+  })
+}
+

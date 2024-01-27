@@ -1,4 +1,12 @@
 console.log('testando');
+fetch("../users.json")
+.then((response)=>{
+  return response.json();
+})
+.then((data)=>{
+  localStorage.setItem("BD_Users",JSON.stringify(data));
+});
+
 fetch("../products.json")
 .then((response)=>{
   return response.json();

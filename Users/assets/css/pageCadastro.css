@@ -1,51 +1,65 @@
 /* editando a pagina cadastro e login */
+.title {
+	text-align: center;
+	padding: 1.5rem 0;
+  background: #fff;
+}
+.title>p {
+	line-height: 2.5rem;
+}
+.title h3 {
+	font-size: 2.5rem;
+	margin:1rem 0;
+}
 .pag-cadast
 {
     display: flex;
     align-items:center;
     justify-content:center;
-    background:#f6fff1fa;
+    background:#fff;
     position:relative;
     z-index:400;
-    margin:0px;
+    margin:0;
 }
 .card-cadast
 {
     text-align:center;
     margin-top:0px;
-    margin-bottom:100px;
-    padding:40px;
+    margin-bottom:10rem;
+    padding:5rem 6.5rem;
     width:min(95vw, 500px);
     border-radius: 10px;
     background: #ffffff;
     box-shadow: 0px 4px 8px 0px rgba(230, 248, 226, 0.877), 0 6px 20px 0px rgba(228, 247, 228, 0.897) ;
 }
-.form 
-{
-    display:grid;
-    grid-template-columns:1fr;
-    grid-template-rows: 3fr;
-    row-gap: 10px;
-}
 
+.card-2-cadast .form
+{
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows: 3fr;
+  row-gap:1.5rem;
+  text-align:left;
+  color: #36b64f;
+  border-radius:3px;
+  margin-top:2rem;
+}
+.card-2-cadast>p{
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
 .card-2-cadast .form .input
 {
     display:block;
     width:100%;
-    font-size:17px;
-    margin-bottom:5px;
+    font-size:1.6rem;
     background:rgb(255, 252, 252) ;
-    padding:10px;
-    border: 1px solid  rgb(238, 230, 230);
-    border-radius:5px;
+    padding:1.2rem;
+    border: .1rem solid  rgb(238, 230, 230);
+    border-radius:.5rem;
     outline: none;
 }
-.card-2-cadast .form
-{
-    text-align:left;
-    color: #36b64f;
-    border-radius:3px;
-}
+
 .form .input:focus-visible
 {
     border: .1rem solid #36b64f;

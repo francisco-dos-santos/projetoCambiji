@@ -117,8 +117,10 @@ document.addEventListener('DOMContentLoaded',function(){
 
  export function goFinallyShopping(){
   btnfinallyCart.addEventListener('click',()=>{
-    window.location.href="../pages-logado/carrinho-logado.html";
-  })
+    if(carts.length!==0){
+      window.location.href="../pages-logado/carrinho-logado.html";
+    }
+  });
 }
 
 

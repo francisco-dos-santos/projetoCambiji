@@ -179,11 +179,6 @@ nav ul li a:hover::after {
 	justify-content: center;
 }
 
-.conta img:hover {
-	outline: 3px solid rgba(233, 229, 229, 0.685);
-	transition: all 0.4s;
-}
-
 #user-name {
 	font-weight: bold;
 }
@@ -309,7 +304,7 @@ nav ul li a:hover::after {
 }
 
 .control-less-plus {
-	border: 0.1rem solid #36b64f !important;
+	border: 0.1rem solid #36b64f ;
 	border-radius: .3rem;
 	text-align: center;
 	width: 2.5rem;
@@ -317,7 +312,7 @@ nav ul li a:hover::after {
 }
 
 .btn-less {
-	border: 0.1rem solid #cc2b1cb1 !important;
+	border: 0.1rem solid #cc2b1cb1;
 }
 
 #input-quantity {

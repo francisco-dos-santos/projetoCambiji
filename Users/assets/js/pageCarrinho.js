@@ -1,8 +1,6 @@
 import {openCart, iconCart,handleClicksButtons} from "./workCart.js";
 import {addNameUser} from"./workheaderLogado.js";
 
-
-
 // events
 openCart.btncloseCart.onclick=()=>{
   openCart.close();
