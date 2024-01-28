@@ -34,7 +34,6 @@ class GerinceService{
     console.log(this.List);
   }
 }
-
 // events
 document.addEventListener("DOMContentLoaded",function(){
 

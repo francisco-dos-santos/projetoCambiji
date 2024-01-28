@@ -41,6 +41,7 @@ button{
 	outline: none;
 	background-color: transparent;
 	cursor: pointer;
+	font-family: 'Roboto' sans-serif;
 }
 
 #header-main {
@@ -382,7 +383,7 @@ main{
 /* editando a sessao do footer segundo */
 .sess6 {
 	background:#f6fff1fa;
-	min-height: 35rem;
+	height: 35rem;
 	display: grid;
 	place-items:center;
 }

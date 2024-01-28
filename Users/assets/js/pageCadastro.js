@@ -1,5 +1,7 @@
 import { eyestoggle } from "./togglesEyes.js";
 import { setError,setSucess,isLetters,iscount,ismail,isnumber } from "./funtctionValidatyForm.js";
+import { Modal } from "./modal.js";
+
 fetch("../users.json")
 .then((response)=>{
   return response.json();
@@ -32,9 +34,10 @@ const users={
 			{
 				this.List.push(new SetUsers(name,email,passe));
 				this.saveStorage();
+        Modal.open('','conta criada com sucesso');
         clearField();
 			}else{
-        alert("já existe uma conta com esse email digite outro");
+        Modal.open("","já existe usário com esse email digite outro");
       }
     },
 

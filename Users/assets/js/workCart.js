@@ -1,4 +1,4 @@
-
+import { ConfirmModal, Modal } from "./modal.js";
 export const iconCart=document.getElementById("icon-cart");
 const containerCardsCart=document.getElementById("content-cards-cart")
 let TotalValueCart=document.getElementById("Total-Cart");
@@ -26,9 +26,9 @@ function incrementP(pos){
   }
   
 }
-function decrementP(pos){
+ async function decrementP(pos){
   if(carts[pos].quantity===1){
-    let isdel=window.confirm(`Desejas eliminar o ${carts[pos].product} do carrinho?`);
+    let isdel= await ConfirmModal.open(`Desejas eliminar o ${carts[pos].product} do carrinho?`);
     if(isdel){
       carts.splice(pos,1);
     }
@@ -87,7 +87,7 @@ export function addCart(productId ,products){
     if(!isundefined){
       carts.push(cart)
     }else{
-      alert("this is product yet was add in cart");
+      Modal.open("","este produto já foi adicionado no carrinho");
     }
     
   }

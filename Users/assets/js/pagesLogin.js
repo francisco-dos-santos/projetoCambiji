@@ -1,5 +1,6 @@
 import { eyestoggle } from "./togglesEyes.js";
 import { setError,setSucess,ismail } from "./funtctionValidatyForm.js";
+import { Modal } from "./modal.js";
 const usersList=JSON.parse(localStorage.getItem("BD_Users"))??[];
 const userEmail=document.getElementById("email");
 const userSenha=document.getElementById("passe");
@@ -34,6 +35,10 @@ function checkedInputs(){
 function toggleEye(){
   eyestoggle(eye,userSenha);
 }
+function clearField(){
+  userEmail.value="";
+  userSenha.value="";
+}
 function isUsersExit(){
   let userEmailV= userEmail.value;
   let userSenhaV=userSenha.value;
@@ -50,22 +55,21 @@ function isUsersExit(){
             window.location.href="../pages-logado/inicio-logado.html";
           }
         });
+        clearField();
       }else{
-        alert("user inexistent digite outros dados");
+        Modal.open("","user inexistente digite outros dados");
       }
       console.log("finally")
     },4000);
     loader.classList.add("show");
-  }
-  else{
-    console.log("was checked filds is invalidity");
   }
 }
 function saveIdUsers(index){
   localStorage.setItem("Id_users",JSON.stringify(index));
 }
 // events
-btnLogin.addEventListener("click",()=>{
+btnLogin.addEventListener("click",(event)=>{
+  event.preventDefault();
   isUsersExit();
   console.log("checked there is users exists");
 });

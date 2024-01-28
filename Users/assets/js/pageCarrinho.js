@@ -1,5 +1,6 @@
 import {openCart, iconCart,handleClicksButtons} from "./workCart.js";
 import {addNameUser} from"./workheaderLogado.js";
+import { Modal } from "./modal.js";
 
 // events
 openCart.btncloseCart.onclick=()=>{
@@ -17,4 +18,5 @@ function closeWidthESC(event){
 document.addEventListener("DOMContentLoaded", function(){
   addNameUser();
   handleClicksButtons();
+  Modal.open("","já existe usário com esse email digite outro");
 })
