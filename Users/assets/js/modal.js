@@ -45,21 +45,22 @@ export class Modal {
 
 
 
-    modalWrapper.style.position = "absolute";
-    modalWrapper.style.inset = "0";
-    modalWrapper.style.height = "100%"; 
-    modalWrapper.style.width = "100%";
-    modalWrapper.style.zIndex = "900";
+    modalWrapper.style.position = "fixed";
+    modalWrapper.style.top = "0";
+    modalWrapper.style.right = "0";
+    modalWrapper.style.bottom = "0";
+    modalWrapper.style.left = "0";
+    modalWrapper.style.zIndex = "999";
     modalWrapper.style.display = "none";
-    modalWrapper.style.placeContent = "center";
     modalWrapper.style.backgroundColor ="rgba(0,0,0,0.60)";
+    modalWrapper.style.placeContent = "center";
 
     modal.style.backgroundColor = "white";
     modal.style.paddingBlock = "50px";
     modal.style.paddingInline = "68px";
     modal.style.width="400px";
     modal.style.position = "relative";
-    modal.style.top="-80px";
+    modal.style.top="-100px";
     modal.style.borderRadius = "1rem";
     modal.style.display = "flex";
     modal.style.flexDirection = "column";
@@ -162,6 +163,8 @@ export class ConfirmModal {
     modalWrapper.style.backgroundColor ="rgba(0,0,0,0.60)";
     modalWrapper.style.placeContent = "center";
 
+    p.style.textAlign="center";
+    
     btnCancel.textContent = "Cancelar";
 
     btnConfirm.textContent = "Confirmar";
@@ -173,6 +176,8 @@ export class ConfirmModal {
         max-width:400px;
         width:100%;
         padding:30px 50px;
+        position:relative;
+        top:-100px;
         display:grid;
         place-items:center;
         row-gap:2rem;

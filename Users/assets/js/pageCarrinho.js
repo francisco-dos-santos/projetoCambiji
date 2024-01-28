@@ -3,12 +3,12 @@ import {addNameUser} from"./workheaderLogado.js";
 import { Modal } from "./modal.js";
 
 // events
-openCart.btncloseCart.onclick=()=>{
-  openCart.close();
-}
-iconCart.onmousemove=()=>{
-  openCart.open();
-}
+// openCart.btncloseCart.onclick=()=>{
+//   openCart.close();
+// }
+// iconCart.onmousemove=()=>{
+//   openCart.open();
+// }
 window.addEventListener("keydown",closeWidthESC)
 function closeWidthESC(event){
   if(event.key==="Escape"){
