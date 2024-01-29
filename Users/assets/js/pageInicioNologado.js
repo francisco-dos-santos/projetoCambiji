@@ -4,7 +4,9 @@ fetch("../users.json")
   return response.json();
 })
 .then((data)=>{
-  localStorage.setItem("BD_Users",JSON.stringify(data));
+  if(localStorage.getItem('BD_Users')==null){
+    localStorage.setItem("BD_Users",JSON.stringify(data));
+  }
 });
 
 fetch("../products.json")

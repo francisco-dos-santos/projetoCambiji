@@ -10,7 +10,7 @@ export class Modal {
     const modal = new Modal(src,message);
     modal.createModal(src, message);
     modal.modalWrapper.style.display = "grid";
-    // Espera um pequeno intervalo antes de aplicar a animação para garantir que o elemento esteja renderizado
+    // Espera um pouco antes de aplicar a animação para garantir que o elemento esteja renderizado
     setTimeout(() => {
       let child = modal.modalWrapper.querySelector('.modal');
       child.style.transform = "translateY(0)";

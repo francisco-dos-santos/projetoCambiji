@@ -2,16 +2,19 @@
   {
     "userName":"Francisco Dos Santos",
     "email":"franciscodossantosmr@gmail.com",
-    "password":"Dev5050"
+    "password":"Dev5050",
+    "id":0
   },
   {
     "userName":"Miro Developer",
     "email":"mirodeveloper@gmail.com",
-    "password":"miro2001"
+    "password":"miro2001",
+    "id":1
   },
   {
     "userName":"Unydev Community Lda",
     "email":"unydevcommunity@gmail.com",
-    "password":"uny2020"
+    "password":"uny2020",
+    "id":2
   }
 ]

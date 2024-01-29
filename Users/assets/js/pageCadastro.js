@@ -7,7 +7,9 @@ fetch("../users.json")
   return response.json();
 })
 .then((data)=>{
-  localStorage.setItem("BD_Users",JSON.stringify(data));
+  if(localStorage.getItem('BD_Users')==null){
+    localStorage.setItem("BD_Users",JSON.stringify(data));
+  }
 });
 const userName=document.querySelector("#name");
 const userEmail=document.querySelector("#email")
@@ -16,35 +18,41 @@ const userPasseTwo=document.querySelector("#passe2");
 const btnAccess=document.querySelector("#btn-access");
 const loader=document.querySelector(".loader");
 
-function SetUsers(userName,email,password){
-  this.userName=userName,
-  this.email=email,
-  this.password=password
+class SetUser{
+  constructor({ userName, email, password, id}) {
+    this.userName = userName;
+    this.email = email;
+    this.password = password;
+    this.id = id;
+  }
 }
 
-const users={
-    List: JSON.parse(localStorage.getItem("BD_Users"))||[],
-    contains:function(newEmail){
-      let RetValue=this.List.some(user => user.email === newEmail);
-        return RetValue;
-      },
+class SetUsers{
+  constructor() {
+    this.List = JSON.parse(localStorage.getItem('BD_Users'))||[];
+  }
 
-    add:function(name,email,passe){
-      if(!this.contains(email))
-			{
-				this.List.push(new SetUsers(name,email,passe));
-				this.saveStorage();
-        Modal.open('','conta criada com sucesso');
-        clearField();
-			}else{
-        Modal.open("","já existe usário com esse email digite outro");
-      }
-    },
+  contains(newEmail) {
+    return this.List.some(user => user.email === newEmail);
+  }
 
-    saveStorage:function(){
-      localStorage.setItem("BD_Users",JSON.stringify(this.List))
+  static addUser({ name, email, passe }) {
+    const userSet = new SetUsers();
+    if (!userSet.contains(email)) {
+      userSet.List.push(new SetUser({ userName: name, email:email, password: passe,id:userSet.List.length}));
+      userSet.saveStorage();
+      Modal.open('', 'Conta criada com sucesso');
+      clearField();
+    } else {
+      Modal.open('', 'Já existe usuário com esse email, digite outro');
     }
+  }
+
+  saveStorage() {
+    localStorage.setItem('BD_Users', JSON.stringify(this.List));
+  }
 }
+
 function clearField(){
   userName.value="";
   userEmail.value="";
@@ -118,11 +126,14 @@ btnAccess.addEventListener("click",()=>{
   if(checkedfilds()){
     let userNameValue=userName.value;
     let userEmailValue=userEmail.value;
-    let userPasseValue=userPasse.value;
     let userPasseTwoValue=userPasseTwo.value;
     setTimeout(()=>{
     loader.classList.remove("show");
-    users.add(userNameValue,userEmailValue,userPasseTwoValue);
+    SetUsers.addUser({
+      name:userNameValue,
+      email:userEmailValue,
+      passe:userPasseTwoValue
+    })
     },4000)
     console.log("loading...");
     loader.classList.add("show");

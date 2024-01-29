@@ -42,7 +42,7 @@
           </label>
         </article>
         <div class="conta">
-          <a href="#" id="cont-link" title="Francisco dos santos">
+          <a href="#" id="cont-link">
             <img
               src="../assets/imagens/icons8_male_user-logado.ico"
               width="32px"
@@ -101,8 +101,7 @@
         <p>Saudável e Verde</p>
         <h3>Página de Compras</h3>
         <div class="row-title"></div>
-        <p>A Cambiji Nature da aos cliente a possibilidade</p>
-        <p>de enviar mensagem e como sempre respondemos dentro de 24h</p>
+        <p>finaliza as suas compras</p>
       </section>
       <section class="wrapper">
         <article class="screen-1">
@@ -163,8 +162,10 @@
                   </span>
                   </p>
                 </div>
-                <div class="deletar delete" id="${index}">
-                  <img src="" alt="buttton deletar">
+                <div class="content-deletar">
+                  <button class="deletar delete" id="${index}">
+                    <img src="../assets/imagens/icons8_delete.ico" alt="buttton deletar" width="20px">
+                  </button>
                 </div>
               </div>
             </section>
@@ -189,43 +190,57 @@
           <div id="payment-info">
             <h2>Informações de Pagamentos</h2>
             <div class="wrapper-card">
-              <div class="pay-visa">
+              <div class="pay-visa pay">
                 <input type="radio" name="card" id="visa" checked>
                 <label for="visa">
-                  <img src="" alt="visa-card">
+                  <img src="../assets/imagens/visaCard.png" alt="visa-card">
                 </label>
               </div>
-              <div class="pay-paypay">
+              <div class="pay-paypay pay">
                 <input type="radio" name="card" id="paypay">
                 <label for="paypay">
-                  <img src="" alt="paypay-card">
+                  <img src="../assets/imagens/afrimoney.png" alt="paypay-card"/>
                 </label>
               </div>
-              <div class="pay-back-card">
+              <div class="pay-back-card pay">
                 <input type="radio" name="card" id="back-card">
                 <label for="back-card">
-                  <img src="" alt="card-card">
+                  <img src="../assets/imagens/visaCard.png" alt="card-card">
                 </label>
               </div>
-              <div class="pay-money-unitel">
+              <div class="pay-money-unitel pay">
                 <input type="radio" name="card" id="money-unitel">
                 <label for="money-unitel">
-                  <img src="" alt="money-unitel">
+                  <img src="../assets/imagens/unitelMoney.png" alt="money-unitel">
+                </label>
+              </div>
+              <div class="pay-afrimoney pay">
+                <input type="radio" name="card" id="afrimoney">
+                <label for="afrimoney">
+                  <img src="../assets/imagens/afrimoney.png" alt="afrimoney-card"/>
                 </label>
               </div>
             </div>
             <div class="content-inputs">
-              <div class="wrapper-input">
-                <input type="text" name="" id="number-card">
-                <small>Error</small>
+              <div class="wrapper-input number">
+                <label for="name-card">Nome do Cartão</label>
+                <input type="text" name="" id="name-card" placeholder="Visa Card">
+                <small></small>
               </div>
-              <div class="wrapper-input">
+              <div class="wrapper-input number">
+                <label for="number-card">Número do Cartão</label>
+                <input type="text" name="" id="number-card" placeholder="••••••••••••••••••••••4893">
+                <small></small>
+              </div>
+              <div class="wrapper-input data-experition">
+                <label for="data-experição">Data de Experição</label>
                 <div>
-                  <input type="text" name="" id="number-card" placeholder="number">
-                  <input type="text" name="" id="data-experição">
+                  <input type="text" name="" id="data-experição" placeholder="20/05/2023">
+                  <input type="text" name="" id="number-cvv" size="2" placeholder="Cvv">
                 </div>
-                <small>Error</small>
+                <small></small>
               </div>
+              <button id="btn-cheked-card"> Fazer Chekout</button>
             </div>
            
           </div>
