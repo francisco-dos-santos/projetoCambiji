@@ -1,4 +1,4 @@
-import {openCart, iconCart,handleClicksButtons,goFinallyShopping} from "./workCart.js";
+import {openCart, iconCart,initWorkCartPage} from "./workCart.js";
 import {addNameUser} from"./workheaderLogado.js";
 
 // events
@@ -16,6 +16,5 @@ function closeWidthESC(event){
 }
 document.addEventListener("DOMContentLoaded", function(){
   addNameUser();
-  handleClicksButtons();
-  goFinallyShopping();
+  initWorkCartPage();
 })

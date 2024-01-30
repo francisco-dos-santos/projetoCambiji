@@ -1,6 +1,6 @@
 import { addNameUser } from "./workheaderLogado.js";
 import { handleArrowForToggle } from "./togglesEyes.js";
-import { addCart,openCart, iconCart,handleClicksButtons,goFinallyShopping} from "./workCart.js";
+import { addCart,openCart, iconCart,initWorkCartPage} from "./workCart.js";
 
 const products = JSON.parse(localStorage.getItem('BD_products')) ?? [];
 const aromas = document.querySelector('#container-aromas .contents-product');
@@ -9,7 +9,6 @@ const dezodorizante = document.querySelector("#container-dezodorizantes .content
 const miniatura = document.querySelector("#container-miniaturas .contents-product");
 const creme = document.querySelector("#container-cremes .contents-product");
 const oleo = document.querySelector("#container-oleos .contents-product");
-console.log(aromas)
 // functions
 function renderPoducts() {
   let counta= 0;
@@ -94,7 +93,6 @@ function closeWidthESC(event){
 }
 document.addEventListener("DOMContentLoaded", function(){
   addNameUser();
-  handleClicksButtons();
+  initWorkCartPage();
   handleArrowForToggle();
-  goFinallyShopping();
 })

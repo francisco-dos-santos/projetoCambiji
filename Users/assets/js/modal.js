@@ -14,7 +14,7 @@ export class Modal {
     setTimeout(() => {
       let child = modal.modalWrapper.querySelector('.modal');
       child.style.transform = "translateY(0)";
-    }, 100); 
+    },50); 
   }
   close(el){
     el.style.display = "none";
@@ -104,7 +104,7 @@ export class ConfirmModal {
     this.message = message;
     this.result = null;
     this.createModal();
-    this.modalWrapper = document.querySelector(".modal-wrapper");
+    this.modalWrapper = document.querySelector(".modal-wrapper-comfitm");
     this.btnCancel = document.querySelector('.cancel');
     this.btnConfirm = document.querySelector('.confirm');
     this.bindEvents();
@@ -113,7 +113,7 @@ export class ConfirmModal {
   static async open(message) {
     const modal = new ConfirmModal(message);
     modal.modalWrapper.style.display = "grid";
-    await new Promise(resolve => {
+   await new Promise(resolve => { 
       modal.resolve = resolve;
     });
     return modal.result;
@@ -128,12 +128,14 @@ export class ConfirmModal {
       this.result = false;
       this.close();
       this.resolve(this.result);
+      console.log(this.result)
     });
 
     this.btnConfirm.addEventListener('click', () => {
       this.result = true;
       this.close();
       this.resolve(this.result);
+      console.log(this.result)
     });
   }
 
@@ -148,10 +150,10 @@ export class ConfirmModal {
 
     document.body.appendChild(modalWrapper);
 
-    modalWrapper.classList.add('modal-wrapper');
+    modalWrapper.classList.add('modal-wrapper-comfitm');
     btnCancel.classList.add('cancel');
     btnConfirm.classList.add('confirm');
-    modal.classList.add('modal');
+    modal.classList.add('modal-confirm');
 
     modalWrapper.style.position = "fixed";
     modalWrapper.style.top = "0";
@@ -172,7 +174,7 @@ export class ConfirmModal {
     // Adiciona o estilo CSS para a animação ao modal
     const style = document.createElement('style');
     style.textContent = `
-      .modal{
+      .modal-confirm{
         max-width:400px;
         width:100%;
         padding:30px 50px;
@@ -186,27 +188,27 @@ export class ConfirmModal {
         transition: transform 0.3s ease;
         transform: translateY(-40px);
       }
-      .modal>div{
+      .modal-confirm>div{
         display:flex;
         align-items:center;
         justify-content:flex-end;
         gap:1rem;
       }
-      .modal button.cancel, 
-      .modal button.confirm{
+      .modal-confirm button.cancel, 
+      .modal-confirm button.confirm{
         padding:1rem;
         border-radius:.8rem;
         font-weight:bold;
         color:white;
         transition: opacity 0.3s ease;
       }
-      .modal .cancel{
+      .modal-confirm .cancel{
         background:#ff0d0d;
       }
-      .modal .confirm{
+      .modal-confirm .confirm{
         background:#67db7e;
       }
-      .modal>div>button:hover{
+      .modal-confirm>div>button:hover{
         opacity:0.75;
       }
     `;
@@ -223,8 +225,3 @@ export class ConfirmModal {
     this.btnConfirm = btnConfirm;
   }
 }
-// (async () => {
-//   const result = await ConfirmModal.open("Deseja sair da tua conta?");
-//   console.log("Resultado:", result);
-// })();
-

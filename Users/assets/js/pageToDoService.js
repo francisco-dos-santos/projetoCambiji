@@ -1,5 +1,5 @@
 console.log("testando");
-import {openCart, iconCart,handleClicksButtons,goFinallyShopping} from "./workCart.js";
+import {openCart, iconCart,initWorkCartPage} from "./workCart.js";
 import {addNameUser ,index} from"./workheaderLogado.js";
 
  const Service = class {
@@ -78,8 +78,6 @@ function closeWidthESC(event){
 }
 document.addEventListener("DOMContentLoaded", function(){
   addNameUser();
-  handleClicksButtons();
-  goFinallyShopping();
+  initWorkCartPage();
 })
-
 
