@@ -8,7 +8,6 @@ export class Modal {
 
   static open(src, message) {
     const modal = new Modal(src,message);
-    modal.createModal(src, message);
     modal.modalWrapper.style.display = "grid";
     // Espera um pouco antes de aplicar a animação para garantir que o elemento esteja renderizado
     setTimeout(() => {
@@ -17,7 +16,9 @@ export class Modal {
     },50); 
   }
   close(el){
-    el.style.display = "none";
+    // el.style.display = "none";
+    document.body.removeChild(el);
+    document.head.removeChild(this.style)
   }
 
   bindEvents() {
@@ -56,7 +57,7 @@ export class Modal {
     modalWrapper.style.placeContent = "center";
 
     modal.style.backgroundColor = "white";
-    modal.style.paddingBlock = "50px";
+    modal.style.paddingBlock = "48px";
     modal.style.paddingInline = "68px";
     modal.style.width="400px";
     modal.style.position = "relative";
@@ -64,18 +65,19 @@ export class Modal {
     modal.style.borderRadius = "1rem";
     modal.style.display = "flex";
     modal.style.flexDirection = "column";
+    modal.style.alignItems="center";
     modal.style.textAlign = "center";
     modal.style.gap = "15px";
 
     // Adiciona o estilo CSS para a animação ao modal
-    const style = document.createElement('style');
-    style.textContent = `
+    this.style = document.createElement('style');
+    this.style.textContent = `
       .modal {
         transition: transform 0.3s ease;
         transform: translateY(-40px);
       }
     `;
-    document.head.appendChild(style);
+    document.head.appendChild(this.style);
 
     buttonClose.textContent = "X";
     buttonClose.style.position = "absolute";
@@ -86,11 +88,12 @@ export class Modal {
     buttonClose.style.backgroundColor = "transparent";
     buttonClose.style.color="#ff0d0d";
     buttonClose.style.fontSize = "1.6rem";
-    p.style.fontSize="2rem";
+    p.style.fontSize="1.8rem";
     p.style.fontFamily="'Roboto',sans-serif";
 
     modalWrapper.appendChild(modal);
     img.setAttribute('src', src);
+    img.setAttribute('width','64px');
     img.setAttribute('alt', "imagem de userExperinence");
     p.appendChild(text);
     modal.appendChild(buttonClose);
@@ -102,8 +105,8 @@ export class Modal {
 export class ConfirmModal {
   constructor(message) {
     this.message = message;
-    this.result = null;
     this.createModal();
+    this.result = null;
     this.modalWrapper = document.querySelector(".modal-wrapper-comfitm");
     this.btnCancel = document.querySelector('.cancel');
     this.btnConfirm = document.querySelector('.confirm');
@@ -120,7 +123,9 @@ export class ConfirmModal {
   }
 
   close() {
-    this.modalWrapper.style.display = "none";
+    // this.modalWrapper.style.display = "none";
+    document.body.removeChild(this.modalWrapper);
+    document.head.removeChild(this.style);
   }
 
   bindEvents() {
@@ -172,8 +177,8 @@ export class ConfirmModal {
     btnConfirm.textContent = "Confirmar";
 
     // Adiciona o estilo CSS para a animação ao modal
-    const style = document.createElement('style');
-    style.textContent = `
+    this.style = document.createElement('style');
+    this.style.textContent = `
       .modal-confirm{
         max-width:400px;
         width:100%;
@@ -212,7 +217,7 @@ export class ConfirmModal {
         opacity:0.75;
       }
     `;
-    document.head.appendChild(style);
+    document.head.appendChild(this.style);
 
     p.appendChild(text);
     modal.appendChild(p);

@@ -28,7 +28,7 @@ function incrementP(pos){
 }
 async function decrementP(pos){
   if(carts[pos].quantity===1){
-    let isdel= await ConfirmModal.open(`Desejas eliminar o ${carts[pos].product} do carrinho?`);
+    let isdel= await ConfirmModal.open(`Desejas eliminar o "${carts[pos].product}" do carrinho?`);
     if(isdel){
       carts.splice(pos,1);
     }
@@ -170,7 +170,7 @@ export function addCart(productId ,products){
     if(!isundefined){
       carts.push(cart);
     }else{
-      Modal.open("","este produto já foi adicionado no carrinho");
+      Modal.open("../assets/imagens/icons8_error.ico","Este produto já foi adicionado no carrinho");
     }
   }
   savecartStorage();

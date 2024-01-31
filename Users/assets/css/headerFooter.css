@@ -71,8 +71,10 @@ h1.logo {
 	padding: 0;
 	/* border:.1rem solid #dd2a1a; */
 }
+ul{
+	list-style:none;
+}
 nav ul{
-	list-style: none;
 	display: flex;
 	align-items: center;
 	justify-content: center;

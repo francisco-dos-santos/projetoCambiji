@@ -38,13 +38,13 @@ class SetUsers{
 
   static addUser({ name, email, passe }) {
     const userSet = new SetUsers();
-    if (!userSet.contains(email)) {
+    if (!userSet.contains(email)){
       userSet.List.push(new SetUser({ userName: name, email:email, password: passe,id:userSet.List.length}));
       userSet.saveStorage();
-      Modal.open('', 'Conta criada com sucesso');
+      Modal.open('../assets/imagens/icons8_ok.ico','A sua conta foi criada com sucesso');
       clearField();
     } else {
-      Modal.open('', 'Já existe usuário com esse email, digite outro');
+      Modal.open('../assets/imagens/icons8_error.ico','Já existe usuário com esse email, digite outro');
     }
   }
 

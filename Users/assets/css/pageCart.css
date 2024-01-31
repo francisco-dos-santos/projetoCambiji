@@ -20,12 +20,15 @@ main{
   box-shadow: 0 0.2rem 0.2rem #67db7e;
   border-radius: 0.5rem;
 }
+
 .wrapper{
-  max-width:108rem;
+	max-width:108rem;
 	width:100%;
 	margin:1.5rem auto;
 	/* border: 1px solid red; */
+	min-height:50vh;
 }
+/* editando o screen 1 */
 .screen-1{
 	width:100%;
 	display:flex;
@@ -33,6 +36,10 @@ main{
 	justify-content: center;
 	gap:2.5rem;
 }
+.hide{
+	display: none !important;
+}
+
 #shopping-info{
 	padding:1rem;
 	max-width:80rem;
@@ -126,11 +133,11 @@ main{
 	border: none !important;
 }
 #input-quant{
-	width:2rem;
+	width:2.5rem;
 	border: none;
 	outline: none;
 	padding:.5rem;
-	margin-inline:.2rem;
+	margin-inline:.1rem;
 	background:transparent;
 	font-weight: bold;
 	font-size: 1.4rem;
@@ -153,14 +160,17 @@ main{
 	border: .1rem solid #e1e1e1;
 	border-radius:.8rem;
 }
-#payment-info> h2{
+#payment-info > h2{
 	font-size: 1.8rem;
+}
+#payment-info >p{
+	font-size: 1.3rem;
 }
 .wrapper-card{
 	display: flex;
 	align-items:center;
 	gap:.6rem;
-	margin-block: 1rem;
+	margin:2rem 0;
 }
 .wrapper-card .pay>input{
 	display: none;
@@ -175,6 +185,7 @@ main{
 	height:3.5rem;
 	position: relative;
 	overflow: hidden;
+	cursor: pointer;
 }
 .wrapper-card .pay input + label>img{
 	position: absolute;
@@ -190,23 +201,67 @@ main{
 	flex-direction: column;
 	gap:1rem;
 }
-.content-inputs .wrapper-input{
-	display:flex;
-	flex-direction:column;
-	gap: 1rem;
-}
-.content-inputs .wrapper-input>div{
-	display: inline-flex;
-	justify-content: space-between;
-}
+
 .content-inputs .wrapper-input input{
+	display: block;
+	width: 100%;
 	border:.1rem solid #e1e1e1;
 	outline: none;
 	padding:.8rem 1.6rem;
-	border-radius: .5rem;
+	border-radius:.5rem;
+	font-size: 1.6rem;
 }
+.content-inputs .wrapper-input label{
+	display: block;
+	margin-bottom: 1rem;
+	font-size: 1.4rem;
+}
+#name-card{
+	font-weight: bold;
+}
+.content-inputs .wrapper-input>div{
+	display: inline-flex;
+	justify-content:center;
+	gap: 1rem;
+}
+#number-cvv{
+	width:10rem;
+}
+.wrapper-input.mobileMoney{
+	display: none;
+}
+.wrapper-input input:focus-visible{
+	border: .1rem solid #36b64f;
+  transition: all .5s;
+}
+
 .content-inputs .wrapper-input input::placeholder{
 	font-size: 1.6rem;
+}
+
+.wrapper-input.error input{
+	border-color: #e74c3c;
+}
+.wrapper-input.sucess input{
+	border-color:#2ecc71;
+}
+.wrapper-input small{
+	color: #e74c3c;
+	display: flex;
+	display:none;
+	transform: translateY(-48px);
+	transition:transform .4s ease;
+	font-size:1.2rem;
+}
+.wrapper-input.sucess small
+{
+	display: none;
+	transform: translateY(0);
+}
+.wrapper-input.error small
+{
+	display: block;
+	transform: translateY(0);
 }
 
 #btn-cheked-card{
@@ -215,7 +270,6 @@ main{
 	padding: 1.5rem 0;
 	color: #fff;
 	font-size:1.6rem;
-
 	transition: all .4s ease-out;
 }
 #btn-cheked-card:hover{
@@ -225,3 +279,95 @@ main{
 	box-shadow: inset 0rem 0rem .9rem #36b64f;
 }
 
+/* screen-2  editando*/
+.screen-2{
+	/* border: .1rem solid green; */
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	align-items:center;
+	gap:2rem;
+}
+.conatiner-add-adress-shopping{
+	border: .1rem solid #e1e1e1;
+	padding:2rem 3rem;
+}
+.container-list-product-shopping{
+	background: #f7f7f7;
+	border-radius:.8rem;
+	padding:1rem 1.5rem;
+}
+form.adress-content-shopping{
+	margin:1rem 0 0;
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	align-items:center;
+	justify-content:center;
+	column-gap:4rem;
+	row-gap:1.5rem;
+}
+form.adress-content-shopping> .wrapper-input> input{
+	display: block;
+	width:100%;
+	padding: 1.6rem;
+	font-size:1.6rem;
+	border:none;
+	outline:.1rem groove #e1e1e1;
+	border-radius:.5rem;
+}
+form.adress-content-shopping> .wrapper-input> label{
+	display: block;
+	font-size: 1.4rem;
+	margin-bottom:1rem;
+}
+
+#finesh-checkout{
+	background: #36b64f;
+	border-radius:.5rem;
+	padding: 1.6rem;
+	color: #fff;
+	font-size:1.6rem;
+	transition: all .4s ease-out;
+	align-self: flex-end;
+}
+#finesh-checkout:hover{
+	color: #36b64f;
+	background: #ffffff;
+	outline: .1rem solid #36b64f;
+	box-shadow: inset 0rem 0rem .9rem #36b64f;
+}
+.list-product-for-checkeout{
+	display:flex;
+	flex-direction:column;
+	gap:1rem;
+	margin-top: 1rem;
+	max-height:40rem;
+	overflow: auto;
+
+}
+.list-product-for-checkeout> li:not(:first-child){
+	border-top: .1rem dotted #e1e1e1;
+	padding: .5rem 0 0;
+}
+.list-product-for-checkeout> li> p.price-list-for-checkout{
+	font-size: 1.3rem;
+}
+.list-product-for-checkeout> li p +p{
+	display: flex;
+	align-items: center;
+	gap:2rem;
+	font-size: 1.4rem;
+} 
+.container-list-product-shopping .container-total-screen2{
+	width: 100%;
+	text-align: right;
+	transform: translateX(0);
+	margin-top: 1rem;
+}
+.container-total-screen2> p{
+	display: flex;
+	justify-content: flex-end;
+	gap:2.5rem;
+}
+.container-total-screen2> p> span:nth-child(1){
+	font-weight:600;
+}

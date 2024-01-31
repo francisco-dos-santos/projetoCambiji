@@ -49,15 +49,11 @@ function isUsersExit(){
         return (user.email===userEmailV) && (user.password===userSenhaV);
       })
       if(isUser){
-        usersList.forEach((element,index)=>{
-          if(element.email==isUser.email && element.password==isUser.password){
-            saveIdUsers(index);
-            window.location.href="../pages-logado/inicio-logado.html";
-          }
-        });
+        saveIdUsers(isUser.id);
+        window.location.href="../pages-logado/inicio-logado.html";
         clearField();
       }else{
-        Modal.open("","user inexistente digite outros dados");
+        Modal.open("../assets/imagens/icons8_error.ico","Dados invalido(email ou senha) digite outros dados");
       }
       console.log("finally")
     },4000);
@@ -65,7 +61,7 @@ function isUsersExit(){
   }
 }
 function saveIdUsers(index){
-  localStorage.setItem("Id_users",JSON.stringify(index));
+  sessionStorage.setItem("Id_users",JSON.stringify(index));
 }
 // events
 btnLogin.addEventListener("click",(event)=>{

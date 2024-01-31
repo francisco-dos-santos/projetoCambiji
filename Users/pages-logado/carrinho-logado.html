@@ -104,7 +104,7 @@
         <p>Finaliza as suas compras aqui...</p>
       </section>
       <section class="wrapper">
-        <article class="screen-1">
+        <article class="screen-1 hide">
           <div id="shopping-info">
             <div class="cart-title">
               <h4 class="first">Product</h4>
@@ -189,52 +189,58 @@
           </div>
           <div id="payment-info">
             <h2>Informações de Pagamentos</h2>
+            <p>Seleciona o tipo de pagamento clicando 👇..!</p>
             <div class="wrapper-card">
               <div class="pay-visa pay">
-                <input type="radio" name="card" id="visa" checked>
+                <input type="radio" name="card" id="visa" value="Visa Card" >
                 <label for="visa">
                   <img src="../assets/imagens/visaCard.png" alt="visa-card">
                 </label>
               </div>
               <div class="pay-paypay pay">
-                <input type="radio" name="card" id="paypay">
+                <input type="radio" name="card" value="PayPay Card" id="paypay">
                 <label for="paypay">
                   <img src="../assets/imagens/afrimoney.png" alt="paypay-card"/>
                 </label>
               </div>
               <div class="pay-back-card pay">
-                <input type="radio" name="card" id="back-card">
+                <input type="radio" name="card" id="back-card" value="Cartão do Banco">
                 <label for="back-card">
                   <img src="../assets/imagens/visaCard.png" alt="card-card">
                 </label>
               </div>
               <div class="pay-money-unitel pay">
-                <input type="radio" name="card" id="money-unitel">
+                <input type="radio" name="card" id="money-unitel" value="UnitelMoney">
                 <label for="money-unitel">
                   <img src="../assets/imagens/unitelMoney.png" alt="money-unitel">
                 </label>
               </div>
               <div class="pay-afrimoney pay">
-                <input type="radio" name="card" id="afrimoney">
+                <input type="radio" name="card" id="afrimoney" value="AfriMoney">
                 <label for="afrimoney">
                   <img src="../assets/imagens/afrimoney.png" alt="afrimoney-card"/>
                 </label>
               </div>
             </div>
             <div class="content-inputs">
-              <div class="wrapper-input number">
+              <div class="wrapper-input ">
                 <label for="name-card">Nome do Cartão</label>
                 <input type="text" name="" id="name-card" placeholder="Visa Card">
                 <small></small>
               </div>
-              <div class="wrapper-input number">
+              <div class="wrapper-input  card-pay">
                 <label for="number-card">Número do Cartão</label>
                 <input type="text" name="" id="number-card" placeholder="••••••••••••••••••••••4893">
                 <small></small>
               </div>
-              <div class="wrapper-input data-experition">
+              <div class="wrapper-input mobileMoney">
+                <label for="number-phone">Número do Telefone</label>
+                <input type="tel" name="" id="number-mobilemoney" placeholder="••••••••••••••4543">
+                <small></small>
+              </div>
+              <div class="wrapper-input  card-pay">
                 <label for="data-experição">Data de Experição</label>
-                <div>
+                <div >
                   <input type="text" name="" id="data-experição" placeholder="20/05/2023">
                   <input type="text" name="" id="number-cvv" size="2" placeholder="Cvv">
                 </div>
@@ -242,10 +248,130 @@
               </div>
               <button id="btn-cheked-card"> Fazer Chekout</button>
             </div>
-           
+
           </div>
         </article>
-        <article class="screen-2">
+        <article class="screen-2 ">
+          <div class="conatiner-add-adress-shopping">
+            <h2>Enderenços</h2>
+            <form class="adress-content-shopping">
+              <div class="wrapper-input">
+                <label for="">Número telefonico</label>
+                <input type="tel" name="" id="phone-number" placeholder="Número de telefone">
+                <small>error</small>
+              </div>
+              <div class="wrapper-input">
+                <label for="">País</label>
+                <input type="text" name="" id="country" placeholder="Pais" value="Angola" disabled>
+                <small>error</small>
+              </div>
+              <div class="wrapper-input ">
+                <label for="">Província</label>
+                <input type="text" name="" id="province" placeholder="Provincia">
+                <small>error</small>
+              </div>
+              <div class="wrapper-input ">
+                <label for="">Cidade/Município</label>
+                <input type="text" name="" id="cidade" placeholder="Cidade ou Municipio">
+                <small>error</small>
+              </div>
+              <div class="wrapper-input">
+                <label for="">Enderenço</label>
+                <input type="text" name="" id="home-adress" placeholder="Enderenço Residencial">
+                <small>error</small>
+              </div>
+              <button type="button" id="finesh-checkout">
+                Finalizar Checkout
+              </button>
+            </form>
+          </div>
+          <div class="container-list-product-shopping">
+            <h3>Lista de produtos para o checkout</h3>
+            <ul class="list-product-for-checkeout">
+              <li>
+                <h5>Nome prudut</h5>
+                <small>descrição...</small>
+                <p class="price-list-for-checkout">500</p>
+                <p>
+                  <span class="quantity-list-for-checkout">2x</span>
+                  <span>1000</span>
+                </p>
+              </li>
+              <li>
+                <h5>Nome prudut</h5>
+                <small>descrição</small>
+                <p class="price-list-for-checkout">500</p>
+                <p>
+                  <span class="quantity-list-for-checkout">2x</span>
+                  <span>1000</span>
+                </p>
+              </li>
+              <li>
+                <h5>Nome prudut</h5>
+                <small>descrição</small>
+                <p class="price-list-for-checkout">500</p>
+                <p>
+                  <span class="quantity-list-for-checkout">2x</span>
+                  <span>1000</span>
+                </p>
+              </li>
+              <li>
+                <h5>Nome prudut</h5>
+                <small>descrição</small>
+                <p class="price-list-for-checkout">500</p>
+                <p>
+                  <span class="quantity-list-for-checkout">2x</span>
+                  <span>1000</span>
+                </p>
+              </li>
+              <li>
+                <h5>Nome prudut</h5>
+                <small>descrição</small>
+                <p class="price-list-for-checkout">500</p>
+                <p>
+                  <span class="quantity-list-for-checkout">2x</span>
+                  <span>1000</span>
+                </p>
+              </li>
+              <li>
+                <h5>Nome prudut</h5>
+                <small>descrição</small>
+                <p class="price-list-for-checkout">500</p>
+                <p>
+                  <span class="quantity-list-for-checkout">2x</span>
+                  <span>1000</span>
+                </p>
+              </li>
+              <li>
+                <h5>Nome prudut</h5>
+                <small>descrição</small>
+                <p class="price-list-for-checkout">500</p>
+                <p>
+                  <span class="quantity-list-for-checkout">2x</span>
+                  <span>1000</span>
+                </p>
+              </li>
+              <li>
+                <h5>Nome prudut</h5>
+                <small>descrição</small>
+                <p class="price-list-for-checkout">500</p>
+                <p>
+                  <span class="quantity-list-for-checkout">2x</span>
+                  <span>1000</span>
+                </p>
+              </li>
+            </ul>
+            <div class="container-total-screen2">
+              <p>
+                <span>SubTotal:kz</span>
+                <span class="subtotal-screen2">8000</span>
+              </p>
+              <p>
+                <span>Total:kz</span>
+                <span class="total-screen2">8000</span>
+              </p>
+            </div>
+          </div>
         </article>
       </section>
       <!-- FOOTER SECUNDARIO -->
