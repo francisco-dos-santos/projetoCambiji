@@ -26,7 +26,6 @@ main{
 	width:100%;
 	margin:1.5rem auto;
 	/* border: 1px solid red; */
-	min-height:50vh;
 }
 /* editando o screen 1 */
 .screen-1{
@@ -35,9 +34,7 @@ main{
 	align-items: center;
 	justify-content: center;
 	gap:2.5rem;
-}
-.hide{
-	display: none !important;
+	transition: transform .4s ease;
 }
 
 #shopping-info{
@@ -247,21 +244,23 @@ main{
 }
 .wrapper-input small{
 	color: #e74c3c;
-	display: flex;
 	display:none;
-	transform: translateY(-48px);
-	transition:transform .4s ease;
 	font-size:1.2rem;
+	transform: translateY(-38px);
+	opacity:0;
+	transition:transform .4s ease opacity .4s ease;
 }
 .wrapper-input.sucess small
 {
 	display: none;
 	transform: translateY(0);
+	opacity: 1;
 }
 .wrapper-input.error small
 {
 	display: block;
 	transform: translateY(0);
+	opacity: 1;
 }
 
 #btn-cheked-card{
@@ -360,7 +359,6 @@ form.adress-content-shopping> .wrapper-input> label{
 .container-list-product-shopping .container-total-screen2{
 	width: 100%;
 	text-align: right;
-	transform: translateX(0);
 	margin-top: 1rem;
 }
 .container-total-screen2> p{
@@ -370,4 +368,7 @@ form.adress-content-shopping> .wrapper-input> label{
 }
 .container-total-screen2> p> span:nth-child(1){
 	font-weight:600;
+}
+.hide{
+	display: none;
 }

@@ -1,8 +1,7 @@
 import { ConfirmModal, Modal } from "./modal.js";
 export const iconCart=document.getElementById("icon-cart");
 const btnfinallyCart=document.getElementById("finally-cart-button");
-const carts=JSON.parse(localStorage.getItem("BD_carts"))??[];
-
+const carts=JSON.parse(sessionStorage.getItem("BD_carts"))??[];
 
 export const openCart={
   boxCart:document.querySelector(".container-cart"),
@@ -24,7 +23,7 @@ function incrementP(pos){
     renderShopping();
     getTotalValues(); 
   }
-  console.log("entrou na funcão incrementar ")
+  // console.log("entrou na funcão incrementar ")
 }
 async function decrementP(pos){
   if(carts[pos].quantity===1){
@@ -39,7 +38,7 @@ async function decrementP(pos){
   renderCart();
   renderShopping();
   getTotalValues();
-  console.log("entrou na funcão decrementar ")
+  // console.log("entrou na funcão decrementar ")
 }
 function renderCart(){
   const containerCardsCart=document.getElementById("content-cards-cart");
@@ -73,7 +72,7 @@ function renderCart(){
 function renderShopping(){
   const containerCardsShopping=document.querySelector(" #shopping-info .carts-cont");
   if(!containerCardsShopping){
-    console.error("Element container da pagina carrinnho não encontrado");
+    // console.error("Element container da pagina carrinnho não encontrado");
     return;
   }
   containerCardsShopping.innerHTML="";
@@ -151,14 +150,18 @@ function getTotalValues(){
   },0);
   TotalValueCart.innerText=Total.toFixed(2);
   if(contentTotalShopping){
-    let TotalValueShopping=document.getElementById("price-total");
-    let subTotalValueshopping=document.getElementById("price-subtotal");
-    TotalValueShopping.innerText=Total.toFixed(2);
-    subTotalValueshopping.textContent=Total.toFixed(2);
+    let TotalValueShopping=document.querySelectorAll(".total-screen");
+    let subTotalValueshopping=document.querySelectorAll(".subtotal-screen");
+    TotalValueShopping.forEach(element=>{
+      element .innerText=Total.toFixed(2);
+    })
+    subTotalValueshopping.forEach(element=>{
+      element .innerText=Total.toFixed(2);
+    })
   }
 }
 function savecartStorage(){
-  localStorage.setItem("BD_carts",JSON.stringify(carts));
+  sessionStorage.setItem("BD_carts",JSON.stringify(carts));
 }
 export function addCart(productId ,products){
   let cart=products.find((product)=>product.id==productId); 
@@ -219,6 +222,50 @@ export function goFinallyShopping(){
   });
 }
 
+export class DataShopping {
+  constructor() {
+    this.carts = JSON.parse(sessionStorage.getItem("BD_carts")) ?? [];
+    this.ListUser = JSON.parse(localStorage.getItem("BD_Users")) ?? [];
+    this.index = 1 + JSON.parse(sessionStorage.getItem("Id_users")) || '';
+    const { date, time } = this.setDateAndhour();
+    this.date = date;
+    this.time = time;
+  }
+
+  static addShoppings({ numberPhone, province, municipe, adress, payment }) {
+    const shopping = new DataShopping();
+    if (shopping.carts.length !== 0) {
+      const newShopping = {
+        numberPhone,
+        province,
+        municipe,
+        adress,
+        payment,
+        date: shopping.date,
+        time: shopping.time,
+        products: shopping.carts
+      };
+      const currentUser = shopping.ListUser[shopping.index - 1];
+      currentUser.shoppings = currentUser.shoppings || [];
+      currentUser.shoppings.push(newShopping);
+      shopping.saveStorage();
+      sessionStorage.removeItem("BD_carts");
+    }
+  }
+
+  setDateAndhour() {
+    const now = new Date();
+    const formattedDate = `${String(now.getDate()).padStart(2, '0')}/${String(now.getMonth() + 1).padStart(2, '0')}/${now.getFullYear()}`;
+    const formattedTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+    return { date: formattedDate, time: formattedTime };
+  }
+
+  saveStorage() {
+    localStorage.setItem('BD_Users', JSON.stringify(this.ListUser));
+  }
+}
+
+
 export function initWorkCartPage(){
   iconCart.dataset.count = carts.length;
   document.querySelector(".quantity").textContent = carts.length;
@@ -229,13 +276,6 @@ export function initWorkCartPage(){
   goFinallyShopping();
 }
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   initWorkCartPage(); estava achamar isso aqui e em outras pages... 
-// }); 
 
-/*ESSE você encontrar esse comentário saiba que isso 
-estava a me deixar locou fiquei um dia inteiro só drome as 5h.
-ESSA FUNCÃO INITIWORKCARTPAGE estva a ser chamso duas vezes permitindo
-asim que no carrrinho o botão add + e - add 2 os valores...  
-*/
+
 

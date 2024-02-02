@@ -1,4 +1,4 @@
-import { eyestoggle } from "./togglesEyes.js";
+import { eyestoggle } from "./toggles.js";
 import { setError,setSucess,isLetters,iscount,ismail,isnumber } from "./funtctionValidatyForm.js";
 import { Modal } from "./modal.js";
 

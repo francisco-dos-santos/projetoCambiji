@@ -1,5 +1,5 @@
 import { addNameUser } from "./workheaderLogado.js";
-import { handleArrowForToggle } from "./togglesEyes.js";
+import { handleArrowForToggle } from "./toggles.js";
 import { addCart,openCart, iconCart,initWorkCartPage} from "./workCart.js";
 
 const products = JSON.parse(localStorage.getItem('BD_products')) ?? [];

@@ -88,7 +88,7 @@ export class Modal {
     buttonClose.style.backgroundColor = "transparent";
     buttonClose.style.color="#ff0d0d";
     buttonClose.style.fontSize = "1.6rem";
-    p.style.fontSize="1.8rem";
+    p.style.fontSize="2rem";
     p.style.fontFamily="'Roboto',sans-serif";
 
     modalWrapper.appendChild(modal);
@@ -133,14 +133,14 @@ export class ConfirmModal {
       this.result = false;
       this.close();
       this.resolve(this.result);
-      console.log(this.result)
+      // console.log(this.result)
     });
 
     this.btnConfirm.addEventListener('click', () => {
       this.result = true;
       this.close();
       this.resolve(this.result);
-      console.log(this.result)
+      // console.log(this.result)
     });
   }
 

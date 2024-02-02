@@ -1,4 +1,4 @@
-import { eyestoggle } from "./togglesEyes.js";
+import { eyestoggle } from "./toggles.js";
 import { setError,setSucess,ismail } from "./funtctionValidatyForm.js";
 import { Modal } from "./modal.js";
 const usersList=JSON.parse(localStorage.getItem("BD_Users"))??[];

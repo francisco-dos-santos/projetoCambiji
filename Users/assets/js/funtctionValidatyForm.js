@@ -31,7 +31,7 @@ export function isData(input){
 
 }
 export function isNumberA0(input){
-  return /^9[1236]\d{7}$/.test(input);
+  return /^9[12345]\d{7}$/.test(input);
 }
 export function isValueCVV(input){
   return /^\d{3}$/.test(input);

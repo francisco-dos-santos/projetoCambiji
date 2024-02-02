@@ -25,3 +25,10 @@ export function handleArrowForToggle(){
   })
 }
 
+export function handleScreensToShowShopping(){
+  const screenOne=document.querySelector('.wrapper .screen-1');
+  const screenTwo=document.querySelector('.wrapper .screen-2');
+  screenOne.classList.toggle('hide');
+  screenTwo.classList.toggle('hide');
+}
+

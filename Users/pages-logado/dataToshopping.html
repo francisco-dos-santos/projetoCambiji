@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/segundo.css" />
+    <link rel="stylesheet" href="../assets/css/animacão.css" />
+    <link rel="stylesheet" href="../assets/css/headerFooter.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <title>Page-Dados da Entrega</title>
+  </head>
+  <body>
+    <header id="header-main">
+      <div class="container-head">
+        <h1 class="logo">
+          <a href="#">
+            <img src="../assets/imagens/logo.png" alt="cambiji_nature" />
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="./inicio-logado.html">Inicio</a></li>
+            <li><a href="loja-logado.html">Loja</a></li>
+            <li><a href="servicos-logado.html">Serviços</a></li>
+            <li><a href="sobre-nos-logado.html">Sobre nós</a></li>
+            <li class="botao"><a href="contato-logado.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <article class="pesquisar">
+          <input
+            type="search"
+            name=""
+            id="pesq"
+            placeholder="Pesquisar produtos..."
+          />
+          <label for="pesq">
+            <img src="../assets/imagens/icons8_search.ico" alt="icon-search" />
+          </label>
+        </article>
+        <div class="conta">
+          <a href="#" id="cont-link">
+            <img
+              src="../assets/imagens/icons8_male_user-logado.ico"
+              width="32px"
+              alt="usuario cambiji"
+            />
+            <span id="user-name">Nome</span>
+          </a>
+          <div class="dropdown">
+            <a href="perfil.html">Perfil</a>
+            <a href="../inicio.html">Sair</a>
+          </div>
+        </div>
+        <div class="cart-wrapper" id="icon-cart" data-count="0">
+          <a href="carrinho-logado.html">
+            <img
+              src="../assets/imagens/icons8_handcart.ico"
+              alt="sacola_cambiji"
+            />
+          </a>
+          <div class="container-cart bouncedireito">
+            <div id="content-text-cart">
+              <p>Seu carrinho tem <span class="quantity">5</span> itens</p>
+              <button id="close-cart">x</button>
+            </div>
+            <section id="content-cards-cart">
+              <!-- <div class="content-card-cart">
+                          <div class="content-img">
+                            <img src="../assets/imagens/produto6.png" alt="produto-1">
+                          </div>
+                          <div class="contents-info-product-cart">
+                            <p>Nome produto<br><span class="description-cart">descrição...</span></p>
+                            <div class="content-price-quantity">
+                              <p class="price-cart">Kz 2000</p>
+                              <div class="content-add-quantity">
+                                <button id="btn-less" class="control-less-plus">--</button>
+                                <input type="button" id="input-quantity" value="1">
+                                <button id="btn-plus" class="control-less-plus">+</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div> -->
+            </section>
+            <div class="content-finally-cart">
+              <div class="content-price-total">
+                <span>Total:Kz</span>
+                <span id="Total-Cart">Kz0,00</span>
+              </div>
+              <button id="finally-cart-button">Finalizar Compra</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <article class="main-finaliza">
+      <section class="Finaliza-pag bouncedireito">
+        <article class="card-finlaiza">
+          <h2>Detalhes de facturação</h2>
+          <form action="" method="get" autocomplete="on">
+            <p>Pais/Região*</p>
+            <select
+              name="pais"
+              class="input-finaliza"
+              id="ipais"
+              disabled="disabled"
+            >
+              <option value="">Angola</option>
+            </select>
+            <p>Enderenço Da entrega*</p>
+            <input
+              type="text"
+              class="input-finaliza"
+              name=""
+              id=""
+              placeholder="Rocha Pinto/ rua 12 / 35"
+            />
+            <p>Numero de Telefone*</p>
+            <input
+              type="tel"
+              class="input-finaliza"
+              name=""
+              id=""
+              placeholder="+244 (932925647)"
+            />
+            <p>Nota ou Palvra chave*</p>
+            <textarea
+              name=""
+              class="input-finaliza"
+              id=""
+              cols="0"
+              rows="2"
+              placeholder="(informações expecias sobre a encomenda )"
+            ></textarea>
+          </form>
+        </article>
+        <!-- card-2 -->
+        <article class="card-finliza2">
+          <h2>A sua encomenda</h2>
+          <div class="alinhar-preco">
+            <p>Produto</p>
+            <p>subtotal</p>
+          </div>
+          <!-- 1 -->
+          <div class="alinhar-preco">
+            <p><img src="../imagens/produto7.png" alt="" /></p>
+            <p>
+              <span>Creme</span>
+              <br /><br />
+              3000kz
+            </p>
+          </div>
+          <!-- 2 -->
+          <div class="alinhar-preco">
+            <p><img src="../imagens/produto6.png" alt="" /></p>
+            <p>
+              <span>Aromas</span>
+              <br /><br />
+              500kz
+            </p>
+          </div>
+          <!-- 3-->
+          <div class="alinhar-preco">
+            <p><img src="../imagens/produto4.png" alt="" /></p>
+            <p>
+              <span>Perfume </span>
+              <br /><br />
+              3000kz
+            </p>
+          </div>
+          <!-- 4-->
+          <div class="alinhar-preco">
+            <p>Total</p>
+            <p>6500kz</p>
+          </div>
+          <div class="alinhar-preco">
+            <p>Envio</p>
+            <p>gratis</p>
+          </div>
+          <h5>Metodos de pagamentos</h5>
+          <form action="" autocomplete="on">
+            <select name="metodop" id="imetodop">
+              <option value="">Transferência Bancaria</option>
+              <option value="">Visa</option>
+              <option value="">Paypal</option>
+              <option value="">Multicaixa express</option>
+            </select>
+            <input type="checkbox" name="" id="checkbox" required />Eu li e a
+            ceito os <a href="#">termos e condições de uso</a> da loja*
+            <a href="#modal2"
+              ><input
+                type="button"
+                id="btn-encomenda"
+                value="Confirmar Encomenda"
+            /></a>
+          </form>
+        </article>
+      </section>
+    </article>
+    <!-- FOOTER PRINCIPAL -->
+    <footer>
+      <div class="copyright">
+        &COPY;2023 Cambiji_Nature Todos os direitos reservados.
+      </div>
+      <div class="method-pay">
+        <a href="#">
+          <img src="" alt="visa" />
+        </a>
+        <a href="#">
+          <img src="" alt="paypay" />
+        </a>
+        <a href="#">
+          <img src="" alt="bank" />
+        </a>
+        <a href="#">
+          <img src="" alt="unitelMoney" />
+        </a>
+      </div>
+    </footer>
+    <script type="module" src="../assets/js/pageDataShoppings.js"></script>
+  </body>
+</html>
