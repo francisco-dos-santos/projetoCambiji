@@ -173,8 +173,11 @@
 }
 .card p {
 	font-size: 1.5rem;
+	font-weight: bold;
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	margin:.2rem 0 0 0;
-	font-weight: 500;
 }
 .card del {
 	font-size:1.2rem;

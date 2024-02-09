@@ -134,6 +134,12 @@ input[type="checkbox"]{
 .card del {
 	font-size:1.2rem;
 }
+.card p{
+	font-weight: bold;
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 .card .content {
 	display: flex;
 	justify-content: space-between;
@@ -170,6 +176,7 @@ input[type="checkbox"]{
 .nav-list button:first-child{
 	background:#e1e1e1;
 }
+
 /* Edit to pag infomations the products */
 .bag-quemal {
 	display: flex;

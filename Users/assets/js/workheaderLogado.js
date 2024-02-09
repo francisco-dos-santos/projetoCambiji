@@ -4,8 +4,7 @@
   const index=1+JSON.parse(sessionStorage.getItem("Id_users"))||'';
   export function addNameUser(){
   if(users.length!==0 && index!==undefined){
-    let cortar=(users[index-1].userName).slice(0,4);
-    userNameHeader.textContent=cortar+"...";
+    userNameHeader.textContent=users[index-1].userName;
     const contLink= document.getElementById('cont-link');
     contLink.setAttribute('title',`${users[index-1].userName}`);
   }

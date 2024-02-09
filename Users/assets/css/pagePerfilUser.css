@@ -1,0 +1,83 @@
+/* Editando a pagina do perfil */
+.wrapper-profile
+{
+	display: grid;
+	grid-template-columns:28rem 1fr;
+	min-height:100vh;
+	background: #fff;
+	column-gap:1.6rem;
+	padding:1rem 1.6rem 4rem 1rem;
+}
+.navbar-profile{
+	border:.1rem solid #e1e1e1;
+	background: #fff;
+	padding:1.6rem;
+	border-radius:1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.title-navbar{
+	display:flex;
+	align-items:center;
+	padding:3rem;
+	border: .1rem solid red;
+}
+.list-navbar{
+	flex: 1;
+	list-style:none;
+}
+.list-navbar li> button{
+	font-size:1.6rem;
+	color:rgba(0,0,0,0.8);
+	padding: 1.6rem;
+	border-radius:.8rem;
+	width: 100%;
+	transition: background .3s ease-in;
+}
+.list-navbar li> button
+{
+	margin-top:1.6rem;
+}
+.list-navbar li> button:hover{
+	background: #F3F4F6;
+}
+.list-navbar li> button.activo{
+	background: #67db7e;
+	box-shadow: 0px 4px 4px -2px rgba(0,0,0,0.1);
+}
+.flex-div{
+	display: flex;
+	align-items: center;
+	gap:.5rem;
+}
+#logout-content{
+	flex-shrink: 0;
+}
+#logout-content> button{
+	background: #67db7e;
+	color: #fff;
+	width: 100%;
+	padding:1.6rem;
+	text-align: center;
+	border-radius: .8rem;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+.zone-content{
+	border:.1rem solid #e1e1e1;
+	border-radius:1rem;
+	max-height:100vh;
+	overflow-y:hidden;
+}
+.content{
+	max-width:100%;
+	height:100%;
+	padding: 1rem;
+	display: none;
+}
+.content.show{
+	display: block;
+	background:#F9FAFB;
+}
