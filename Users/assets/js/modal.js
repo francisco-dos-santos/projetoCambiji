@@ -88,7 +88,7 @@ export class Modal {
     buttonClose.style.backgroundColor = "transparent";
     buttonClose.style.color="#ff0d0d";
     buttonClose.style.fontSize = "1.6rem";
-    p.style.fontSize="2rem";
+    p.style.fontSize="1.6rem";
     p.style.fontFamily="'Roboto',sans-serif";
 
     modalWrapper.appendChild(modal);

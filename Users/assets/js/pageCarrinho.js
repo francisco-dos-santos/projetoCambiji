@@ -1,7 +1,7 @@
 
 import {addNameUser} from"./workheaderLogado.js";
 import{setError,setSucess,isNumberA0,isData,isValueCVV,isnumberCard,setErrorInTwoInputs,setSucessInTwoInputs}from "./funtctionValidatyForm.js";
-import { initWorkCartPage,DataShopping} from "./workCart.js";
+import { initWorkCartPage,DataShopping,Total} from "./workCart.js";
 import { handleScreensToShowShopping } from "./toggles.js";
 import { Modal } from "./modal.js";
 
@@ -218,7 +218,8 @@ finallyCheckoutShopping.addEventListener('click',()=>{
           province:provinceUser.value,
           municipe:cityUser.value,
           adress:adressUser.value,
-          payment:payment
+          payment:payment,
+          valor:Total
         });
         Modal.open('../assets/imagens/icons8_ok.ico','Compra efituado com sucesso!');
         // console.log(payment);

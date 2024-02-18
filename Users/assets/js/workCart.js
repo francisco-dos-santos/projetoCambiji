@@ -2,6 +2,7 @@ import { ConfirmModal, Modal } from "./modal.js";
 export const iconCart=document.getElementById("icon-cart");
 const btnfinallyCart=document.getElementById("finally-cart-button");
 const carts=JSON.parse(sessionStorage.getItem("BD_carts"))??[];
+export let Total=0;
 
 export const openCart={
   boxCart:document.querySelector(".container-cart"),
@@ -145,7 +146,7 @@ function getTotalValues(){
   let prices = carts.map((item)=>{
     return Number(item.price)*Number(item.quantity);
   });
-  let Total = prices.reduce((prev,next)=>{
+  Total = prices.reduce((prev,next)=>{
     return prev + next;
   },0);
   TotalValueCart.innerText=Total.toFixed(2);
@@ -232,7 +233,7 @@ export class DataShopping {
     this.time = time;
   }
 
-  static addShoppings({ numberPhone, province, municipe, adress, payment }) {
+  static addShoppings({ numberPhone, province, municipe, adress, payment,valor }) {
     const shopping = new DataShopping();
     if (shopping.carts.length !== 0) {
       const newShopping = {
@@ -243,7 +244,9 @@ export class DataShopping {
         payment,
         date: shopping.date,
         time: shopping.time,
-        products: shopping.carts
+        valor:valor,
+        products: shopping.carts,
+        status:false
       };
       const currentUser = shopping.ListUser[shopping.index - 1];
       currentUser.shoppings = currentUser.shoppings || [];

@@ -3,13 +3,6 @@ import { initWorkCartPage} from "./workCart.js";
 
 
 
-
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function(){
   addNameUser();
   initWorkCartPage();

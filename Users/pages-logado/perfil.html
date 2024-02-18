@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="../assets/css/pagePerfilUser.css" />
-    <link rel="stylesheet" href="../assets/css/animacão.css" />
-    <link rel="stylesheet" href="../assets/css/headerFooter.css" />
-    <link rel="stylesheet" href="../assets/css/responsive.css" />
     <title>Perfil</title>
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
 
   <body>
@@ -100,54 +99,220 @@
         <!-- editando o container -->
         <aside class="navbar-profile">
           <div class="title-navbar item-nav-bar">
-            <img src="" alt="menu"/>
+            <i class="ph ph-house"></i>
             <span>Menu(Perfil)</span>
           </div>
           <ul class="list-navbar item-nav-bar">
             <li>
               <button href="#" class="flex-div activo" content-id="profile">
-                <img src="" alt="pess" />
-                <span>Meu Perfil</span>
+                <i class="ph ph-user-square"></i>
+                <span>Perfil</span>
               </button>
             </li>
             <li>
               <button href="#" class="flex-div" content-id="shopping">
-                <img src="" alt="pess" />
-                <span>Compras</span>
+                <i class="ph ph-shopping-bag"></i>
+                <span>Minhas Compras</span>
               </button>
             </li>
             <li>
               <button href="#" class="flex-div" content-id="services">
-                <img src="" alt="pess" />
+                <i class="ph ph-calendar-check"></i>
                 <span>Pedidos de Serviços</span>
               </button>
             </li>
             <li>
               <button href="#" class="flex-div" content-id="analits">
-                <img src="" alt="notif" />
+                <i class="ph ph-chart-line"></i>
                 <span>Analists & Reports</span>
               </button>
             </li>
           </ul>
           <div id="logout-content" class="item-nav-bar">
-            <button>Sair da Conta</button>
+            <button>
+              <i class="ph ph-sign-out"></i>
+              <span>Sair</span>
+            </button>
           </div>
         </aside>
 
         <section class="zone-content">
           <article id="profile" class="content show">
-            <h2>Meu Perfil</h2>
+            <h2>Meus Dados</h2>
+            <div class="container-profile-date">
+              <div class="content-profile-user">
+                <div class="user-profile">
+                  <i class="ph-fill ph-user"></i>
+                </div>
+              </div>
+
+              <div class="content-date-people">
+
+                <div class="screen-1" >
+                  <form action="">
+                    <fieldset>
+                      <div class="container-fieldset">
+                        <legend>Dados Pessoais</legend>
+                        <div class="wrapper-inputs">
+                          <div class="input-wrapper">
+                            <label for="bio-user">Biografia</label>
+                            <textarea id="bio-user" wrap="soft" class="bio" disabled>Sua Bibiografia
+                            </textarea>
+                          </div>
+                          <div class="input-wrapper">
+                            <label for="name-user">Seu Nome</label>
+                            <input type="text" name="" id="name-user" disabled >
+                          </div>
+                          <div class="input-wrapper">
+                            <label for="email-user">Seu Email</label>
+                            <input type="email" name="" id="email-user" disabled>
+                          </div>
+                          <div class="input-wrapper">
+                            <label for="phone-user">Seu Telefone</label>
+                            <input type="tel" name="" id="phone-user" disabled placeholder="ex: 920005874">
+                          </div>
+                          <div class="input-wrapper icone-wrapper">
+                            <label for="born-data-user">Sua Data de Nascimento</label>
+                            <input type="text" name="" id="born-data-user" disabled placeholder="02/03/2025">
+                            <i class="ph-bold ph-calendar"></i>
+                          </div>
+                          <div class="input-wrapper icone-wrapper">
+                            <label for="genere-user">Seu Genero</label>
+                            <input list="genere" id="genere-user" placeholder="Genero" disabled>
+                            <i class="ph-fill ph-caret-down"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn" id="alter-user">Alterar Dados</button>
+                    </fieldset>
+                  </form>
+                </div>
+
+                <div class="screen-2 hide" >
+                  <form action="" autocomplete="on">
+                    <fieldset>
+                      <div class="container-fieldset">
+                        <legend> Alterar Dados Pessoais</legend>
+                        <div class="wrapper-inputs">
+                          <div class="input-wrapper">
+                            <label for="edit-bio-user">Biografia</label>
+                            <textarea id="edit-bio-user" class="bio">Sua Bibiografia
+                            </textarea>
+                          </div>
+                          <div class="input-wrapper">
+                            <label for="edit-name-user">Seu Nome</label>
+                            <input type="text" name="" id="edit-name-user">
+                            <small>Error</small>
+                          </div>
+                          <div class="input-wrapper">
+                            <label for="edit-email-user">Seu Email</label>
+                            <input type="email" name="" id="edit-email-user">
+                            <small>Error</small>
+                          </div>
+                          <div class="input-wrapper">
+                            <label for="edit-phone-user">Seu Telefone</label>
+                            <input type="tel" name="" id="edit-phone-user" value="ex: 920005874">
+                            <small>error</small>
+                          </div>
+                          <div class="input-wrapper icone-wrapper">
+                            <label for="edit-born-data-user">Sua Data de Nascimento</label>
+                            <input type="date" name="" id="edit-born-data-user">
+                            <small>Error</small>
+                          </div>
+                          <div class="input-wrapper">
+                            <label for="edit-genere-user">Seu Genero</label>
+                            <input list="genere" id="edit-genere-user" placeholder="Genero">
+                            <datalist id="genere">
+                              <option value="Masculino"></option>
+                              <option value="Femenino"></option>
+                              <option value="outro"></option>
+                            </datalist>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn" id="salva-data-user">Salvar Dados</button>
+                    </fieldset>
+                  </form>
+                </div>
+
+                <div class="wrapper-data-private">
+                  <form action="">
+                    <fieldset>
+                      <div class="container-fieldset">
+                        <legend>Dados Privados (Altera a sua senha)</legend>
+                        <div class="wrapper-inputs">
+                          <div class="input-wrapper">
+                            <label for="pass-user">Digite a Senha Atual</label>
+                            <input type="password" 
+                            name="" 
+                            id="pass-user" 
+                            placeholder="Sua senha atual">
+                            <small>Error</small>
+                          </div>
+                          <div class="input-wrapper">
+                            <label for="pass-new-user">Digite a senha Nova</label>
+                            <input type="password" 
+                            name="" 
+                            id="pass-new-user"  
+                            placeholder="Sua senha nova">
+                            <small>Error</small>
+                          </div>
+                          <div class="input-wrapper">
+                            <label for="pass-new2-user">Confirma a sua senha nova</label>
+                            <input type="password" 
+                            name="" 
+                            id="pass-new2-user"  
+                            placeholder="Confirme a Sua senha">
+                            <small>Error</small>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn" id="alter-pass-user">Alterar Senha</button>
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
           </article>
 
           <article id="shopping" class="content">
             <h2>Minhas Compras</h2>
+            <div class="container-shopping-user">
+              <!-- apartir do js -->
+              <template>
+                <div class="item-shopping">
+                  <div class="content-item-img">
+                    <img src="" 
+                    alt="imagem do produto">
+                    <p class="info-product">
+                      <span>Nome</span>
+                      <span>descrição</span>
+                    </p>
+                  </div>
+                  <p class="price-item">A0 200.00</p>
+                  <p class="sub-total">A0 400.00</p>
+                  <p class="payment">pagamento</p>
+                  <p class="status">Em process</p>
+                </div>
+              </template>
+            <!--<template>
+              <div class="separator-shoppings">
+                <p>02 DEC, 2024 &nbsp;</p>
+                <p>&nbsp;/&nbsp;20h48min</p>
+              </div>
+            </template> -->
+            </div>
           </article>
 
           <article id="services" class="content">
             <h2>Minhas Reservas</h2>
+            <div class="container-reserve-user">
+            </div>
           </article>
           <article id="analits" class="content">
             <h2>Analises & reportagens</h2>
+            <div class="container-analytics-user">
+            </div>
           </article>
         </section>
       </article>
@@ -256,7 +421,7 @@
         </a>
       </div>
     </footer>
-
+    
     <script src="../assets/js/pageProfile.js" type="module"></script>
   </body>
 </html>

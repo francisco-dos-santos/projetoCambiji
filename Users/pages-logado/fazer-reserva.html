@@ -6,9 +6,7 @@
 	<meta name="vierwport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
 	<link rel="stylesheet" href="../assets/css/pageServices.css">
-	<link rel="stylesheet" href="../assets/css/animacão.css">
-	<link rel="stylesheet" href="../assets/css/headerFooter.css" />
-	<link rel="stylesheet" href="../assets/css/responsive.css">
+
 	<title>Fazer reserva</title>
 </head>
 
@@ -83,71 +81,117 @@
 		</div>
 	</header>
 
-	<main style="height:100vh;">
-		<section class="fazer-reser descendo">
-			<!-- session 1 -->
-			<div class="dest-reserva">
-				<div class="img-reserva">
-					<img src="../assets/imagens/logo.png" alt="logo">
-				</div>
-
-				<div class="text-reserva">
-					<p>A cambiji nature tem os seus serviços prestados com qualidade.
-						<strong> E com vagas limitadas,</strong> de segunda <br> à sábado das( 8h as 17h30)
-					</p>
-				</div>
-				<div class="cont-serv-reserva subindo">
-					<div class="serv-reserva">
-						<img src="../assets/imagens/combo2 - pequeno.jpg" alt="">
-						<h6>Combo Serviço</h6>
-						<p>30.00kz</p>
-						<p>duração:2h00</p>
+	<main>
+		<div class="wrapper-Reserv">
+			<section class="fazer-reser descendo">
+				<!-- session 1 -->
+				<div class="dest-reserva">
+					<div class="img-reserva">
+						<img src="../assets/imagens/logo.png" alt="logo">
 					</div>
-					<div class="serv-reserva">
-						<img src="../assets/imagens/massagem2 - pequeno.jpg" alt="">
-						<h6>massagem Simples</h6>
-						<p>10.000kz</p>
-						<p>duração:1h30</p>
+	
+					<div class="text-reserva">
+						<p>A cambiji nature tem os seus serviços prestados com qualidade.
+							<strong> E com vagas limitadas,</strong> de segunda <br> à sábado das( 8h as 17h30)
+						</p>
 					</div>
-					<div class="serv-reserva">
-						<img src="../assets/imagens/lipaface - pequeno.jpg" alt="">
-						<h6>Limpeza &nbsp;facial</h6>
-						<p>15.000kz</p>
-						<p>duração:1h00</p>
-					</div>
-				</div>
-			</div>
-			<!-- session 2 -->
-			<article class="sess-input-1">
-				<form autocomplete="on">
-					<p>Numero de Telefone*</p>
-					<input type="tel" class="input" id="number-reserv" placeholder="+244 (932925647)">
-					<p>Data da reserva*</p>
-					<input type="date" class="input" id="data-reserv">
-					<input type="time" class="input" id="hour-reserv">
-					<p>Metodo de pagamnetos*</p>
-					<select class="input" id="pay-metod">
-						<option value="Transferência-Bancaria">Transferência Bancaria</option>
-						<option value="Visa">Visa</option>
-						<option value="Paypal">Paypal</option>
-						<option value="Multicaixa-express">Multicaixa express</option>
-					</select>
-					<p>Tipo de serviço</p>
-					<select name="metodop" class="input" id="type-service">
-						<option value="10.000kz">Massagem Simples
+					<div class="cont-serv-reserva subindo">
+						<div class="serv-reserva">
+							<img src="../assets/imagens/combo2 - pequeno.jpg" alt="">
+							<h6>Combo Serviço</h6>
+							<p>30.00kz</p>
+							<p>duração:2h00</p>
+						</div>
+						<div class="serv-reserva">
+							<img src="../assets/imagens/massagem2 - pequeno.jpg" alt="">
+							<h6>massagem Simples</h6>
 							<p>10.000kz</p>
-						</option>
-						<option value="30.000kz">Combo Serviços
-							<p>30.000kz</p>
-						</option>
-						<option value="15.000kz">Limpeza Facial
+							<p>duração:1h30</p>
+						</div>
+						<div class="serv-reserva">
+							<img src="../assets/imagens/lipaface - pequeno.jpg" alt="">
+							<h6>Limpeza &nbsp;facial</h6>
 							<p>15.000kz</p>
-						</option>
-					</select>
-					<input type="button" id="btn-encomenda" value=" Confirmar Reserva">
-				</form>
-			</article>
-		</section>
+							<p>duração:1h00</p>
+						</div>
+					</div>
+				</div>
+	
+				<!-- session 2 -->
+				<article class="sess-input-1">
+					<form autocomplete="on">
+						<fieldset>
+							<div class="wrapper-fieldset">
+								<legend>Fazer Reservas</legend>
+								<div class="input-wrapper">
+									<label for="number-reserv">Numero de Telefone <span>(Somente números validos em Angola)</span></label>
+									<input 
+									type="tel" 
+									class="input" 
+									id="number-reserv" 
+									placeholder="+244(932925647)">
+									<small></small>
+								</div>
+	
+								<div class="wrapper-date-time">
+									<div class="input-wrapper">
+										<label for="data-reserv">Data da reserva*</label>
+										<input type="date" 
+										class="input" id="data-reserv">
+										<small></small>
+									</div>
+		
+									<div class="input-wrapper">
+										<label for="hour-reserv">Hora da reserva*</label>
+										<input list="hora" id="hour-reserv" placeholder="Seleciona a hora" >
+										<datalist id="hora">
+											<option value="8:30"></option>
+											<option value="10:00"></option>
+											<option value="11:50"></option>
+											<option value="13:00"></option>
+											<option value="14h30"></option>
+											<option value="16h00"></option>
+											<option value="17:45"></option>
+										</datalist>
+										<small></small>
+									</div>
+								</div>
+	
+								<div class="input-wrapper">
+									<label for="pay-metod">Metodo de pagamnetos*</label>
+									<datalist  id="metod">
+										<option value="Transferência-Bancaria"></option>
+										<option value="Visa"></option>
+										<option value="Paypal"></option>
+										<option value="UnitelMoney"></option>
+										<option value="AfriMoney"></option>
+									</datalist>
+									<input type="text" id="pay-metod" list="metod" placeholder="Escolha Metodo de Pagamento">
+									<small>Error</small>
+								</div>
+	
+								<div class="input-wrapper">
+									<label for="type-service">Tipo de serviço</label>
+									<input type="text" list="service" id="type-service" placeholder="Escolha Tipo Serviço">
+									<datalist  id="service">
+										<option value="Massagem Simples">8.000kz</option>
+										<option value="Combo Serviço">20.000kz</option>
+										<option value="Limpeza Facial">8.000kz</option>
+									</datalist>
+									<small>Error</small>
+								</div>
+	
+							</div>
+						</fieldset>
+	
+						<button id="btn-encomenda">
+							Confirmar Reserva
+						</button>
+					</form>
+				</article>
+	
+			</section>
+		</div>
 	</main>
 	<!-- FOOTER PRINCIPAL -->
 	<footer>

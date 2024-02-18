@@ -1,3 +1,5 @@
+@import "./headerFooter.css";
+@import "./animacão.css";
 /* editando a pagina serviços */
 .title {
 	text-align: center;
@@ -167,21 +169,33 @@
 }
 
 /* fazer reserva */
+.wrapper-Reserv{
+	width:90%;
+	margin:0 auto;
+	padding:10rem 0;
+	display:grid;
+	place-content:center;
+
+}
 .fazer-reser {
-	display: flex;
-	align-items: center;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
 	background: #36b64f;
-	border-radius: 10px;
-	width:70rem;
-	margin:4rem auto 0;
+	border-radius:1rem;
+	max-width:100rem;
+	width:100%;
 }
 
 .dest-reserva {
-	padding: 5px 10px;
-	flex: 50%;
 	display: flex;
-	align-items: center;
-	flex-direction: column;
+	align-items:center;
+	justify-content:center;
+	flex-direction:column;
+	gap:2.5rem;
+	/* background: #F3F4F0; */
+	flex:40%;
+	padding:1rem 3rem;	
 }
 
 .img-reserva {
@@ -189,15 +203,16 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-radius:55%;
-	width: 40%;
-	padding: 8px;
+	border-radius:50%;
+	width:15rem;
+	height:15rem;
 }
 
 .text-reserva>p {
 	color: #fff;
-	font-size: 15px;
-	text-align: center;
+	font-size:15px;
+	text-align:center;
+	max-width:250px;
 	/* background: #fff; */
 }
 
@@ -209,7 +224,7 @@
 }
 
 .serv-reserva {
-	height: 180px;
+	height:180px;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -241,30 +256,82 @@
 
 .sess-input-1 {
 	border-radius: 0px 10px 10px 0px;
-	height: 100%;
-	flex: 50%;
+	flex:60%;
 	background: #fff;
-	padding: 5px 10px;
+	padding:1.6rem 2.5rem;
+}
+fieldset{
+	border: none;
+	margin-bottom: 1.6rem;
+}
+fieldset legend{
+	font-size:2.5rem;
+	font-weight: 600;
+	line-height: 2.6rem;
+	padding-bottom: 1.6rem;
+	border-bottom: .1rem solid #F3F4F0;
+}
+.wrapper-fieldset{
+	display:flex;
+	flex-direction:column;
+	gap:2rem;
 }
 
-.sess-input-1 form> .input {
-	border: 1px solid #e3f7d8fa;
+.wrapper-date-time{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	width: 100%;
+}
+.wrapper-date-time .input-wrapper:first-child{
+	width:20rem;
+}
+.wrapper-date-time .input-wrapper:last-child{
+	width:13rem;
+}
+.input-wrapper{
+	display:flex;
+	flex-direction:column;
+}
+.input-wrapper label{
+	font-size:1.4rem;
+	color: #727274;
+	margin-bottom: 1rem;
+}
+.input-wrapper input, 
+#pay-metod, #type-service 
+{
+	border: 1px solid #e3f7d8fa;
+	width:100%;
 	outline: none;
-	height: 45px;
+	height:45px;
 	background: #f6fff1bd;
-	border-radius: 5px;
-	margin-bottom: 5px;
-	padding-left: 10px;
+	border-radius:5px;
+	padding-left:10px;
 }
 
-.sess-input-1 form>p {
-	color: #36b64f;
-	padding: 0;
-	margin: 5px 0;
+.input-wrapper small{
+	color: #e74c3c;
+	display:none;
+	padding-top:.5rem;
+}
+.input-wrapper.error input{
+	border-color: #e74c3c;
+}
+.input-wrapper.sucess input{
+	border-color:#2ecc71;
+}
+.input-wrapper.error small
+{
+	display:block;
+}
+.input-wrapper.sucess small
+{
+	display:none;
 }
 
-.sess-input-1>form .input:focus{
+.input-wrapper input:focus,
+#pay-metod:focus, #type-service:focus {
 	border: 1px solid #36b64f;
 	transition: all .4s;
 }

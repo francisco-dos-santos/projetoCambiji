@@ -50,5 +50,4 @@ export function setSucessInTwoInputs(input){
   parent.classList.add("sucess")
   parent.classList.remove("error")
 }
-
-export{ setError,setSucess,isLetters,iscount,ismail,isnumber}
+export{setError,setSucess,isLetters,iscount,ismail,isnumber}

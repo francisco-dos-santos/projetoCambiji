@@ -31,4 +31,12 @@ export function handleScreensToShowShopping(){
   screenOne.classList.toggle('hide');
   screenTwo.classList.toggle('hide');
 }
+export function handleScreensEditProfile(){
+  const screenOne=document.querySelector('.content-date-people .screen-1');
+  const screenTwo=document.querySelector('.content-date-people .screen-2');
+  setTimeout(()=>{
+    screenOne.classList.toggle('hide');
+    screenTwo.classList.toggle('hide');
+  },300);
+}
 

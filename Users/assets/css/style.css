@@ -1,7 +1,9 @@
+@import "./headerFooter.css";
+@import "./animacão.css";
+@import"./responsive.css";
 #wrapper {
 	background: #fff;
 }
-
 /* sessao 1  */
 .sess1 {
 	background: #f6fff1fa;

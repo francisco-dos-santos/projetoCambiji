@@ -1,9 +1,14 @@
 import { addNameUser } from "./workheaderLogado.js";
+import { handleScreensEditProfile} from "./toggles.js";
+import { Modal } from "./modal.js";
 import { initWorkCartPage,openCart,iconCart } from "./workCart.js";
-
-const tabsButton= document.querySelectorAll('.list-navbar li button');
+import { setSucess,setError,ismail } from "./funtctionValidatyForm.js";
+const users=JSON.parse(localStorage.getItem("BD_Users"))??[];
+const index=1+JSON.parse(sessionStorage.getItem("Id_users"))||'';
 
 // functions
+function initTabProfile(){
+  const tabsButton= document.querySelectorAll('.list-navbar li button');
 function tabclicked(tab){
   const contents=document.querySelectorAll('.zone-content .content');
   contents.forEach(content=>content.classList.remove('show'));
@@ -20,7 +25,157 @@ tabsButton.forEach(tab=>{
   tab.addEventListener('click',()=>{
     tabclicked(tab);
   });
-})
+});
+};
+function initRenderShoppingUser(){
+  const containerShoppings=document.querySelector('.container-shopping-user');
+  const template= document.querySelector('.container-shopping-user template');
+  console.log(template);
+if(users[index-1].shoppings!==undefined){
+  containerShoppings.innerHTML="";
+  for (let shopping of users[index-1].shoppings){
+    for (let item of shopping.products){
+      const ItemShopping=template.content.cloneNode(true);
+      let contentImage=ItemShopping.querySelector('.content-item-img img');
+      contentImage.src="../assets/"+item.imageProduct;
+      ItemShopping.querySelector('.info-product span:first-child').innerText=item.product;
+      ItemShopping.querySelector('.info-product span:last-child').innerText="Categoria: "+item.category;
+      ItemShopping.querySelector('.price-item').innerText="A0 "+item.price +" X"+item.quantity+' ->';
+
+      ItemShopping.querySelector('.sub-total').textContent="A0 "+item.price*item.quantity;
+      ItemShopping.querySelector('.payment').textContent=shopping.payment;
+      containerShoppings.appendChild(ItemShopping);
+    }
+    containerShoppings.innerHTML+=`
+      <div class="separator-shoppings">
+      <p>${shopping.date}&nbsp;/&nbsp;${shopping.time.replace(':','H')}min</p>
+      <p>Valor: A0 ${shopping.valor}</p>
+      </div>
+    `;
+  }
+}else{
+  const h3=document.createElement('h3');
+  const texto=document.createTextNode('Estas sem Compras efeituadas!');
+  h3.appendChild(texto);
+  h3.style.textAlign="center";
+  containerShoppings.appendChild(h3);
+}
+  
+}
+function saveStorage(){
+  localStorage.setItem('BD_Users',JSON.stringify(users));
+}
+function validarFieldsObrigators(){
+  const inputEditName=document.getElementById('edit-name-user');
+  const inputEditEmail=document.getElementById('edit-email-user');
+
+  if(inputEditName.value==""){
+    setError(inputEditName,'O nome é obrigatório');
+    return
+  }else{
+    setSucess(inputEditName);
+  }
+
+  if(inputEditEmail.value===""){
+    setError(inputEditEmail,'O email é obrigatório');
+    return
+  }else if(!ismail(inputEditEmail.value)){
+    setError(inputEditEmail,'Não é um email valido ex:francisco@gmail.com');
+    return
+  }else{
+    setSucess(inputEditEmail);
+  }
+
+  return true;
+}
+function initWorkProfileUser(){
+  const btnAlterData=document.querySelector('.screen-1 #alter-user');
+  const btnSalveData=document.querySelector('.screen-2 #salva-data-user');
+  const btnAlterPass=document.querySelector('.wrapper-data-private #alter-pass-user');
+
+  const inputEditName=document.getElementById('edit-name-user');
+  const inputEditEmail=document.getElementById('edit-email-user');
+  const inputEditBio=document.getElementById('edit-bio-user');
+  const inputEditPhone=document.getElementById('edit-phone-user');
+  const inputEditDataBorn=document.getElementById('edit-born-data-user');
+  const inputEditgenere=document.getElementById('edit-genere-user');
+
+
+  btnAlterData.addEventListener('click',function(){
+    if(true){
+      handleScreensEditProfile();
+    }
+  });
+
+  inputEditName.value=users[index-1].userName;
+  inputEditEmail.value=users[index-1].email;
+
+  if(users[index-1].biografia!==undefined){
+    inputEditBio.value=users[index-1].biografia;
+  }
+
+  if(users[index-1].phoneNumber!==undefined){
+    inputEditPhone.value=users[index-1].phoneNumber;
+  }
+
+  if(users[index-1].bornData!==undefined){
+    inputEditDataBorn.value=users[index-1].bornData;
+  }
+
+  if(users[index-1].genere!==undefined){
+    inputEditgenere.value=users[index-1].genere;
+  }
+
+  btnSalveData.addEventListener('click',()=>{
+    if(validarFieldsObrigators()){
+      users[index-1].userName= inputEditName.value;
+      users[index-1].email= inputEditEmail.value;
+      users[index-1].biografia= inputEditBio.value;
+      users[index-1].phoneNumber= inputEditPhone.value;
+      users[index-1].bornData= inputEditDataBorn.value;
+      users[index-1].genere= inputEditgenere.value;
+      saveStorage();
+      Modal.open('../assets/imagens/icons8_ok.ico','Dados alterrado com sucesso!');
+      handleScreensEditProfile();
+      addNameUser();
+      getDataProfile();
+    }else{
+      console.warn('error campos obritório')
+    }
+  });
+  
+}
+function getDataProfile(){
+  const name=document.getElementById('name-user');
+  const Email=document.getElementById('email-user');
+  const bio=document.getElementById('bio-user');
+  const phone=document.getElementById('phone-user');
+  const dataBorn=document.getElementById('born-data-user');
+  const genere=document.getElementById('genere-user');
+
+  name.value=users[index-1].userName;
+  Email.value=users[index-1].email;
+
+  if(users[index-1].biografia!==undefined){
+    bio.innerText=users[index-1].biografia;
+  }
+
+  if(users[index-1].phoneNumber!==undefined){
+    phone.value=users[index-1].phoneNumber;
+  }
+
+  if(users[index-1].bornData!==undefined){
+    dataBorn.value=users[index-1].bornData;
+  }
+
+  if(users[index-1].genere!==undefined){
+    genere.value=users[index-1].genere;
+  }
+
+}
+
+
+
 openCart.btncloseCart.onclick=()=>{
   openCart.close();
 }
@@ -36,5 +191,9 @@ function closeWidthESC(event){
 
 document.addEventListener('DOMContentLoaded',()=>{
   addNameUser();
+  initTabProfile();
+  initRenderShoppingUser();
+  initWorkProfileUser();
   initWorkCartPage();
+  getDataProfile();
 })
