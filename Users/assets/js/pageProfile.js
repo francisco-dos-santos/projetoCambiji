@@ -1,6 +1,7 @@
 import { addNameUser } from "./workheaderLogado.js";
 import { handleScreensEditProfile} from "./toggles.js";
 import { Modal } from "./modal.js";
+import {GerinceService} from "./pageToDoService.js";
 import { initWorkCartPage,openCart,iconCart } from "./workCart.js";
 import { setSucess,setError,ismail } from "./funtctionValidatyForm.js";
 const users=JSON.parse(localStorage.getItem("BD_Users"))??[];
@@ -30,7 +31,6 @@ tabsButton.forEach(tab=>{
 function initRenderShoppingUser(){
   const containerShoppings=document.querySelector('.container-shopping-user');
   const template= document.querySelector('.container-shopping-user template');
-  console.log(template);
 if(users[index-1].shoppings!==undefined){
   containerShoppings.innerHTML="";
   for (let shopping of users[index-1].shoppings){
@@ -48,7 +48,7 @@ if(users[index-1].shoppings!==undefined){
     }
     containerShoppings.innerHTML+=`
       <div class="separator-shoppings">
-      <p>${shopping.date}&nbsp;/&nbsp;${shopping.time.replace(':','H')}min</p>
+      <p>${shopping.date}&nbsp;/&nbsp;${shopping.time.replace(':','h')}</p>
       <p>Valor: A0 ${shopping.valor}</p>
       </div>
     `;
@@ -61,32 +61,6 @@ if(users[index-1].shoppings!==undefined){
   containerShoppings.appendChild(h3);
 }
   
-}
-function saveStorage(){
-  localStorage.setItem('BD_Users',JSON.stringify(users));
-}
-function validarFieldsObrigators(){
-  const inputEditName=document.getElementById('edit-name-user');
-  const inputEditEmail=document.getElementById('edit-email-user');
-
-  if(inputEditName.value==""){
-    setError(inputEditName,'O nome é obrigatório');
-    return
-  }else{
-    setSucess(inputEditName);
-  }
-
-  if(inputEditEmail.value===""){
-    setError(inputEditEmail,'O email é obrigatório');
-    return
-  }else if(!ismail(inputEditEmail.value)){
-    setError(inputEditEmail,'Não é um email valido ex:francisco@gmail.com');
-    return
-  }else{
-    setSucess(inputEditEmail);
-  }
-
-  return true;
 }
 function initWorkProfileUser(){
   const btnAlterData=document.querySelector('.screen-1 #alter-user');
@@ -102,7 +76,7 @@ function initWorkProfileUser(){
 
 
   btnAlterData.addEventListener('click',function(){
-    if(true){
+    if(Boolean(btnSalveData)){
       handleScreensEditProfile();
     }
   });
@@ -136,14 +110,99 @@ function initWorkProfileUser(){
       users[index-1].genere= inputEditgenere.value;
       saveStorage();
       Modal.open('../assets/imagens/icons8_ok.ico','Dados alterrado com sucesso!');
+      getDataProfile();
       handleScreensEditProfile();
       addNameUser();
-      getDataProfile();
     }else{
-      console.warn('error campos obritório')
+      console.warn('error campos obritório não preenchido')
     }
   });
   
+}
+function initworkServiveUser(){
+  class ExtendServForDelAndRender extends GerinceService
+  {
+    constructor(){
+      super('');
+      this.renderService();
+    }
+    renderService(){
+      // this.containerService=document.querySelector('.container-reserve-user');
+      let containerBodyTable=document.querySelector('table tbody.body-table');
+      // this.template= document.querySelector('.container-reserve-user template');
+    if(this.users[this.index-1].Services!==undefined){
+      // this.containerService.innerHTML="";
+      containerBodyTable="";
+      for(let service of this.users[this.index-1].Services){
+        let newlistServ=`
+        <tr>
+          <td ><span>${service.type}</span></td>
+          <td><span>${service.valor}</span></td>
+          <td><span>${service.data}</span></td>
+          <td><span>${service.hour}</span></td>
+          <td><span class="td-pay">${service.pay}</span></td>
+          <td><span class="td-status">Em process</span></td>
+          <td class="content-td-action">
+            <div class="btn-action-main">
+              <span>•••</span>
+                <div class="content-actions-btn fadeIn">
+                  <button>ver</button>
+                  <button>Cancelar</button>
+                </div>
+              </div>
+            <div class="countdown-profile">contDown</div>
+          </td>
+        </tr>
+        `;
+        // this.containerService.innerHTML+=`
+        // <div class="separator-shoppings">
+        // <p>${service.datanow}&nbsp;/&nbsp;${service.hournow.replace(':','h')}</p>
+        // <p>Valor: A0 ${service.valor}</p>
+        // </div>
+        // `;
+
+        containerBodyTable+=newlistServ;
+      }
+      }else{
+      const h3=document.createElement('h3');
+      const texto=document.createTextNode('Estas sem Serviços efeituados!');
+      h3.appendChild(texto);
+      h3.style.textAlign="center";
+      this.containerService.appendChild(h3);
+      }
+    }
+  }
+
+  let service=new ExtendServForDelAndRender();
+  console.log(service);
+}
+
+//fuctions utilits
+function saveStorage(){
+  localStorage.setItem('BD_Users',JSON.stringify(users));
+}
+function validarFieldsObrigators(){
+  const inputEditName=document.getElementById('edit-name-user');
+  const inputEditEmail=document.getElementById('edit-email-user');
+
+  if(inputEditName.value==""){
+    setError(inputEditName,'O nome é obrigatório');
+    return
+  }else{
+    setSucess(inputEditName);
+  }
+
+  if(inputEditEmail.value===""){
+    setError(inputEditEmail,'O email é obrigatório');
+    return
+  }else if(!ismail(inputEditEmail.value)){
+    setError(inputEditEmail,'Não é um email valido ex:francisco@gmail.com');
+    return
+  }else{
+    setSucess(inputEditEmail);
+  }
+
+  return true;
 }
 function getDataProfile(){
   const name=document.getElementById('name-user');
@@ -174,8 +233,6 @@ function getDataProfile(){
 
 }
 
-
-
 openCart.btncloseCart.onclick=()=>{
   openCart.close();
 }
@@ -194,6 +251,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   initTabProfile();
   initRenderShoppingUser();
   initWorkProfileUser();
+  initworkServiveUser();
   initWorkCartPage();
   getDataProfile();
 })

@@ -156,29 +156,29 @@
                         <div class="wrapper-inputs">
                           <div class="input-wrapper">
                             <label for="bio-user">Biografia</label>
-                            <textarea id="bio-user" wrap="soft" class="bio" disabled>Sua Bibiografia
+                            <textarea id="bio-user" wrap="soft" class="bio" readonly>Sua Bibiografia
                             </textarea>
                           </div>
                           <div class="input-wrapper">
                             <label for="name-user">Seu Nome</label>
-                            <input type="text" name="" id="name-user" disabled >
+                            <input type="text" name="" id="name-user" readonly/>
                           </div>
                           <div class="input-wrapper">
                             <label for="email-user">Seu Email</label>
-                            <input type="email" name="" id="email-user" disabled>
+                            <input type="email" name="" id="email-user" readonly>
                           </div>
                           <div class="input-wrapper">
                             <label for="phone-user">Seu Telefone</label>
-                            <input type="tel" name="" id="phone-user" disabled placeholder="ex: 920005874">
+                            <input type="tel" name="" id="phone-user" placeholder="ex: 920005874" readonly/>
                           </div>
                           <div class="input-wrapper icone-wrapper">
                             <label for="born-data-user">Sua Data de Nascimento</label>
-                            <input type="text" name="" id="born-data-user" disabled placeholder="02/03/2025">
+                            <input type="text" name="" id="born-data-user" placeholder="02/03/2025" readonly>
                             <i class="ph-bold ph-calendar"></i>
                           </div>
                           <div class="input-wrapper icone-wrapper">
                             <label for="genere-user">Seu Genero</label>
-                            <input list="genere" id="genere-user" placeholder="Genero" disabled>
+                            <input list="genere" id="genere-user" placeholder="Genero" readonly />
                             <i class="ph-fill ph-caret-down"></i>
                           </div>
                         </div>
@@ -225,7 +225,7 @@
                             <datalist id="genere">
                               <option value="Masculino"></option>
                               <option value="Femenino"></option>
-                              <option value="outro"></option>
+                              <option value="Outro"></option>
                             </datalist>
                           </div>
                         </div>
@@ -272,6 +272,7 @@
                   </form>
                 </div>
               </div>
+
             </div>
           </article>
 
@@ -314,6 +315,40 @@
                 <p>&nbsp;/&nbsp;20h48min</p>
               </div>
             </template> -->
+
+            <table width="100%" style="text-align:center;">
+              <thead class="head-table">
+                <tr>
+                  <th>Tipo de Serviço</th>
+                  <th>Valor</th>
+                  <th>Data</th>
+                  <th>Hora</th>
+                  <th>tipo de payment</th>
+                  <th>Status</th>
+                  <th>Aççôes</th>
+                </tr>
+              </thead>
+              <tbody class="body-table">
+                <!-- <tr>
+                  <td ><span>massagem</span></td>
+                  <td><span>2000</span></td>
+                  <td><span>03/04/2023</span></td>
+                  <td><span>10h30</span></td>
+                  <td><span class="td-pay">paypal</span></td>
+                  <td><span class="td-status">Em process</span></td>
+                  <td class="content-td-action">
+                      <div class="btn-action-main">
+                        <span>•••</span>
+                        <div class="content-actions-btn fadeIn">
+                          <button>ver</button>
+                          <button>Cancelar</button>
+                        </div>
+                      </div>
+                    <div class="countdown-profile">contDown</div>
+                  </td>
+                </tr> -->
+              </tbody>
+            </table>
             </div>
           </article>
           <article id="analits" class="content">

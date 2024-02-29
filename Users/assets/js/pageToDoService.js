@@ -67,7 +67,8 @@ class GerinceService{
         type,
         valor,
         durection,
-        description});
+        description
+      });
     const currentUser = this.users[this.index-1];
     currentUser.Services = currentUser.Services || [];
     currentUser.Services.push(this.List);
@@ -81,7 +82,7 @@ class GerinceService{
     console.log(this.users[this.index-1].Services);
   }
 }
-
+export{GerinceService}
 //functions
 function initValidateFields(){
   let NumberValue = phoneNumber.value.trim();
@@ -89,6 +90,8 @@ function initValidateFields(){
   let hReservValue = hourReserv.value.trim();
   let MetodValue =payMetod.value.trim();
   let ServiceValue=typeService.value.trim();
+  
+  let dateAtual=new Date();
 
   if(NumberValue===""){
     setError(phoneNumber,'O campo é obrigatório');
@@ -99,12 +102,12 @@ function initValidateFields(){
   }else{
     setSucess(phoneNumber);
   }
-
+    
   if(dReservValue===""){
     setError(dataReserv,'A data é obrigatório');
     return 
-  }else if(timeAtual>=dReservValue){
-    setError(dataReserv,'A data vencida digite data valida');
+  }else if(dateAtual<=dReservValue){
+    setError(dataReserv,'A data é vencida digite data valida');
   }else{
     setSucess(dataReserv);
   }
@@ -143,30 +146,11 @@ function initReserveToService(){
   let durection='';
   let description='';
 
-  dataReserv.addEventListener("change", function() {
-    dataReservValue= this.value;
-    // console.log("Valor selecionado:", dataReservValue);
-  });
-
-  hourReserv.addEventListener("change", function() {
-    hourReservValue= this.value;
-    // console.log("Valor selecionado:", hourReservValue);
-  });
-
-  phoneNumber.addEventListener("change", function() {
-    phoneNumberValue= this.value;
-    // console.log("Valor selecionado:", phoneNumberValue);
-  });
-  
-  payMetod.addEventListener("change", function() {
-    payMetodValue= this.value;
-    // console.log("Valor selecionado:", hourReservValue);
-  });
-
-  typeService.addEventListener("change", function() {
-    typeServiceValue= this.value;
-    // console.log("Valor selecionado:", hourReservValue);
-  });
+  dataReserv.addEventListener("change",function(){dataReservValue= this.value;});
+  hourReserv.addEventListener("change",function(){hourReservValue= this.value;});
+  phoneNumber.addEventListener("change",function(){phoneNumberValue= this.value;});
+  payMetod.addEventListener("change", function(){payMetodValue= this.value;});
+  typeService.addEventListener("change", function(){typeServiceValue= this.value;});
 
 
   btnReserv.addEventListener('click',(event)=>{
@@ -183,7 +167,8 @@ function initReserveToService(){
       }
 
       let gerinceService = new GerinceService();
-      gerinceService.add({
+      gerinceService.add(
+      {
         data:dataReservValue,
         hour:hourReservValue,
         pay:payMetodValue,
@@ -192,22 +177,18 @@ function initReserveToService(){
         valor:valueService,
         durection:durection,
         description:description
-    });
-    Modal.open('../assets/imagens/icons8_ok.ico','Serviço Reservado com sucesso!');
-    // console.log("phoneNumberValue:", phoneNumberValue);
-    // console.log("dataReservValue:", dataReservValue);
-    // console.log("hourReservValue:", hourReservValue);
-    // console.log("payMetodValue:", payMetodValue);
-    // console.log("typeServiceValue:", typeServiceValue);
-    // console.log('valor',valueService);      
-    // console.log('duração',durection);      
-    // console.log('descrição',description);      
+      });
+      Modal.open('../assets/imagens/icons8_ok.ico','"/Serviço Reservado com sucesso!"/');
+      phoneNumber.value='';
+      hourReserv.value='';
+      dataReserv.value=''
+      payMetod.value='';
+      typeService.value=''; 
   }else{
-    console.warn('não pode enviar os dados');
+    console.warn('erro algum Campo Vazio');
   }
   });
 }
-
 
 openCart.btncloseCart.addEventListener('click',()=>{
   openCart.close();
@@ -224,6 +205,8 @@ function closeWidthESC(event){
 document.addEventListener("DOMContentLoaded", function(){
   addNameUser();
   initWorkCartPage();
-  initReserveToService();
+  if(Boolean(btnReserv)){
+    initReserveToService();
+  }
 })
 
