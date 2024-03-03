@@ -119,7 +119,7 @@ function initWorkProfileUser(){
   });
   
 }
-function initworkServiveUser(){
+function initworkProfileServiveUser(){
   class ExtendServForDelAndRender extends GerinceService
   {
     constructor(){
@@ -127,12 +127,9 @@ function initworkServiveUser(){
       this.renderService();
     }
     renderService(){
-      // this.containerService=document.querySelector('.container-reserve-user');
-      let containerBodyTable=document.querySelector('table tbody.body-table');
-      // this.template= document.querySelector('.container-reserve-user template');
-    if(this.users[this.index-1].Services!==undefined){
-      // this.containerService.innerHTML="";
-      containerBodyTable="";
+      let containerBodyTable=document.querySelector('table tbody');
+    if(this.users[this.index-1].Services && this.users[this.index-1].Services.length){
+      containerBodyTable.innerHTML="";
       for(let service of this.users[this.index-1].Services){
         let newlistServ=`
         <tr>
@@ -161,14 +158,14 @@ function initworkServiveUser(){
         // </div>
         // `;
 
-        containerBodyTable+=newlistServ;
+        containerBodyTable.innerHTML+=newlistServ;
       }
       }else{
       const h3=document.createElement('h3');
       const texto=document.createTextNode('Estas sem Serviços efeituados!');
       h3.appendChild(texto);
-      h3.style.textAlign="center";
-      this.containerService.appendChild(h3);
+      h3.style.textAlign="end"
+      containerBodyTable.appendChild(h3);
       }
     }
   }
@@ -251,7 +248,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   initTabProfile();
   initRenderShoppingUser();
   initWorkProfileUser();
-  initworkServiveUser();
+  initworkProfileServiveUser();
   initWorkCartPage();
   getDataProfile();
 })

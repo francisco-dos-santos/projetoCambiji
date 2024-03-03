@@ -321,14 +321,16 @@ fieldset legend{
 
 	border-radius: .5rem;
 	box-shadow: 0 0 0 .1rem rgba(0,0,0,0.1);
-	padding: 1rem;
 }
 table{
-	border:1px solid #9b9797;
-	border-radius:.3rem;
+	border-collapse:collapse;
+	text-align:center;
+	width:100%;
 }
-thead th{
-	border-bottom:1px solid #9b9797;
+thead{
+	border-bottom:1px solid #dddddd;
+}
+th,td{
 	padding:1.6rem 1rem;
 }
 td .td-pay{
@@ -358,7 +360,7 @@ td .td-status{
 	padding:.5rem;
 	display:none;
 	position:absolute;
-	bottom:-2.6rem;
+	bottom:-2rem;
 	right:0;
 	box-shadow:0 0 2px #bcbcbc;
 	border-radius:.8rem;
