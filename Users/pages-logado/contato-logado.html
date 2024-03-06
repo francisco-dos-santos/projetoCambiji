@@ -1,57 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>contato logado</title>
-    <link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/pageContacts.css">
-</head>
-<body>
-	<header id="header-main">
-		<div class="container-head">
-			<h1 class="logo"> 
-				<a href="#">
-					<img src="../assets/imagens/logo.png" alt="cambiji_nature">
-				</a>
-			</h1>
-			<nav>
-				<ul>
-					<li><a href="./inicio-logado.html">Inicio</a></li>
-					<li><a href="loja-logado.html">Loja</a></li>
-					<li><a href="servicos-logado.html">Serviços</a></li>
-					<li><a href="sobre-nos-logado.html">Sobre nós</a></li>
-					<li class="botao"><a href="contato-logado.html">Contacto</a></li>
-				</ul>
-			</nav>
-			<article class="pesquisar">
-					<input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
-					<label for="pesq"><img src="../assets/imagens/icons8_search.ico" alt="icon-search"></label>
-			</article>
-					<div class="conta">
-						<a href="#" id="cont-link" title="Francisco dos santos" >
-							<img src="../assets/imagens/icons8_male_user-logado.ico" width="32px" alt="usuario cambiji">
-							<span id="user-name">Nome</span>
-						</a>
-						<div class="dropdown" >
-							<a href="perfil.html">Perfil</a>
-							<a href="../index.html">Sair</a>
-						</div>
-					</div>
-					<div class="cart-wrapper"  id="icon-cart" data-count="0">
-							<a href="carrinho-logado.html">
-								<img 
-								src="../assets/imagens/icons8_handcart.ico" 
-								alt="sacola_cambiji"
-								>
-							</a>
-							<div class="container-cart bouncedireito">
-								<div id="content-text-cart">
-									<p>Seu carrinho tem <span class="quantity">5</span> itens</p>
-									<button id="close-cart">x</button>
-								</div>
-								<section id="content-cards-cart">
-									<!-- <div class="content-card-cart">
+    <link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/pageContacts.css" />
+  </head>
+  <body>
+    <header id="header-main">
+      <div class="container-head">
+        <h1 class="logo">
+          <a href="#">
+            <img src="../assets/imagens/logo.png" alt="cambiji_nature" />
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="./inicio-logado.html">Inicio</a></li>
+            <li><a href="loja-logado.html">Loja</a></li>
+            <li><a href="servicos-logado.html">Serviços</a></li>
+            <li><a href="sobre-nos-logado.html">Sobre nós</a></li>
+            <li class="botao"><a href="contato-logado.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <article class="pesquisar">
+          <input
+            type="search"
+            name=""
+            id="pesq"
+            placeholder="Pesquisar produtos..."
+          />
+          <label for="pesq"
+            ><img src="../assets/imagens/icons8_search.ico" alt="icon-search"
+          /></label>
+        </article>
+        <div class="conta">
+          <a href="#" id="cont-link" title="Francisco dos santos">
+            <span id="user-name">Nome</span>
+          </a>
+          <div class="dropdown">
+            <div class="content-img-info-user">
+              <img
+                src="../assets/imagens/icons8_male_user-logado.ico"
+                alt="imagem de icone do user"
+              />
+            </div>
+            <div class="content-info-people-user">
+              <span class="info-user-name">Nome Completo user</span>
+              <span class="info-user-email">Email do user</span>
+            </div>
+            <div class="content-btn-info-user">
+              <a href="perfil.html">Perfil</a>
+              <a href="../index.html">Sair</a>
+            </div>
+          </div>
+        </div>
+        <div class="cart-wrapper" id="icon-cart" data-count="0">
+          <a href="carrinho-logado.html">
+            <img
+              src="../assets/imagens/icons8_handcart.ico"
+              alt="sacola_cambiji"
+            />
+          </a>
+          <div class="container-cart bouncedireito">
+            <div id="content-text-cart">
+              <p>Seu carrinho tem <span class="quantity">5</span> itens</p>
+              <button id="close-cart">x</button>
+            </div>
+            <section id="content-cards-cart">
+              <!-- <div class="content-card-cart">
 										<div class="content-img">
 											<img src="../assets/imagens/produto6.png" alt="produto-1">
 										</div>
@@ -67,175 +85,228 @@
 											</div>
 										</div>
 									</div> -->
-			
-								</section>
-								<div class="content-finally-cart">
-									<div class="content-price-total">
-										<span>Total:Kz</span>
-										<span id="Total-Cart">Kz0,00</span>
-									</div>
-									<button id="finally-cart-button">Finalizar Compra</button>
-								</div>
-							</div>
-					</div>
-		</div>
-	</header>
-    <main> 
-			<!--titulo-pagina-->
-			<section class="title descendo">
-				<p>Saudável e Verde</p>
-				<h3>Página Contato</h3>
-				<div class="row-title"></div>
-				<p>A Cambiji Nature da aos cliente a possibilidade</p>
-				<p>de enviar mensagem e como sempre respondemos dentro de 24h</p>
-			</section>
+            </section>
+            <div class="content-finally-cart">
+              <div class="content-price-total">
+                <span>Total:Kz</span>
+                <span id="Total-Cart">Kz0,00</span>
+              </div>
+              <button id="finally-cart-button">Finalizar Compra</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!--titulo-pagina-->
+      <section class="title descendo">
+        <p>Saudável e Verde</p>
+        <h3>Página Contato</h3>
+        <div class="row-title"></div>
+        <p>A Cambiji Nature da aos cliente a possibilidade</p>
+        <p>de enviar mensagem e como sempre respondemos dentro de 24h</p>
+      </section>
 
-			<article class="fundo-cont">
-				<section class="fund-1"> 
-					<h5>Contato-nos</h5>
-					<h4>Venha saber sobre</h4>
-					<h4> O amor que sentimos por ti!</h4>
-				</section>
+      <article class="fundo-cont">
+        <section class="fund-1">
+          <h5>Contato-nos</h5>
+          <h4>Venha saber sobre</h4>
+          <h4>O amor que sentimos por ti!</h4>
+        </section>
 
-				<section class="fund-2">
-					<article class="fund-card-1">
-							<div class="card-cont">
-									<img src="../imagens/icons8_place_marker_32.png" alt="">
-									<div >
-											<h3>Nossa localização</h3>
-											<span>Avenida Torres Vandunen<br>[Junto a escola nova esperança]</span>
-									</div>
-							</div>
+        <section class="fund-2">
+          <article class="fund-card-1">
+            <div class="card-cont">
+              <img src="../imagens/icons8_place_marker_32.png" alt="" />
+              <div>
+                <h3>Nossa localização</h3>
+                <span
+                  >Avenida Torres Vandunen<br />[Junto a escola nova
+                  esperança]</span
+                >
+              </div>
+            </div>
 
-							<div class="card-cont">
-									<img src="../imagens/icons8_secured_letter_32.png" alt="">
-									<div>
-											<h3>Email da Empresa</h3>
-											<span>CAMBIJI@GMAIL.COM<br>possibilidade de enviar</span>
-									</div>
-							</div>
-					</article>
-					<!-- 2 -->
+            <div class="card-cont">
+              <img src="../imagens/icons8_secured_letter_32.png" alt="" />
+              <div>
+                <h3>Email da Empresa</h3>
+                <span>CAMBIJI@GMAIL.COM<br />possibilidade de enviar</span>
+              </div>
+            </div>
+          </article>
+          <!-- 2 -->
 
-					<article  class="fund-card-2">
-							<div class="card-cont">
-									<img src="../imagens/icons8_phone_32.png" alt="">
-									<div>
-											<h3>Telefone Central</h3>
-											<span>+244 &nbsp;932925758</span>
-									</div>
-							</div>
+          <article class="fund-card-2">
+            <div class="card-cont">
+              <img src="../imagens/icons8_phone_32.png" alt="" />
+              <div>
+                <h3>Telefone Central</h3>
+                <span>+244 &nbsp;932925758</span>
+              </div>
+            </div>
 
-							<div class="card-cont">
-									<img src="../imagens/icons8_naira_32.png" alt="">
-									<div>
-											<h3>Nosso NIF</h3>
-											<span>000027542LB0339</span>
-									</div>
-							</div>
-					</article>
+            <div class="card-cont">
+              <img src="../imagens/icons8_naira_32.png" alt="" />
+              <div>
+                <h3>Nosso NIF</h3>
+                <span>000027542LB0339</span>
+              </div>
+            </div>
+          </article>
+        </section>
 
-				</section>
+        <!-- editando o card input -->
+        <div class="card-input subindo">
+          <h2>Envia-nos uma Mensagem</h2>
+          <form action="" method="get" autocomplete="on">
+            <p>Nome Completo*</p>
+            <input
+              type="text"
+              name=""
+              class="input"
+              id="nome"
+              placeholder="Francisco dos Santos"
+              required
+              autofocus
+            />
+            <p>Email*</p>
+            <input
+              type="email"
+              name=""
+              class="input"
+              id="email"
+              placeholder="francisco@gmail.com"
+              required
+            />
+            <p>Número*</p>
+            <input
+              type="tel"
+              name=""
+              class="input"
+              id="telefone"
+              placeholder="+244 932925647"
+            />
+            <p>Mensagem*</p>
+            <textarea
+              name=""
+              id=""
+              cols="0"
+              rows="1"
+              class="input"
+              placeholder="escreve aqui a mensagem"
+            ></textarea>
+            <br />
+            <input type="button" value="Enviar Mensagem" id="bt-cont" />
+          </form>
+        </div>
+      </article>
 
-				<!-- editando o card input -->
-				<div class="card-input subindo" >
-						<h2>Envia-nos uma Mensagem</h2>
-						<form action="" method="get" autocomplete="on">
-								<p>Nome Completo*</p>
-								<input type="text" name="" class="input" id="nome" placeholder="Francisco dos Santos" required autofocus>
-								<p>Email*</p>
-								<input type="email" name=""class="input" id="email" placeholder="francisco@gmail.com" required>
-								<p>Número*</p>
-								<input type="tel" name="" class="input" id="telefone" placeholder="+244 932925647">
-								<p>Mensagem*</p>
-								<textarea name="" id="" cols="0" rows="1" class="input" placeholder="escreve aqui a mensagem" ></textarea>
-								<br>
-								<input type="button"  value="Enviar Mensagem" id="bt-cont">
-						</form>
-				</div>
-			</article>
-            
-    <!-- FOOTER SECUNDARIO -->
-		<section class="sess6">
-			<article>
-				<div class="footer-seg">
-						<h2>
-							<img src="../assets/imagens/logo.png" width="80px" alt="icone-logo">
-							Cambiji Nature
-						</h2>
-						<p>Uma empresa que presta serviços de cosmetics, trabalhando
-							para bem da tua pele natural.
-						</p>
-					<div class="section-rede">
-						<a href="#" class="rede">
-							<img src="../assets/imagens/icons8_facebook_f.ico" alt="facebook-icone">
-						</a>
-						<a href="#" class="rede">
-							<img src="../assets/imagens/icons8_whatsapp.ico" alt="watsapp-icone">
-						</a>
-						<a href="#" class="rede">
-							<img src="../assets/imagens/icons8_youtube_play_button.ico" alt="youtube-icone">
-						</a>
-						<a href="#" class="rede">
-							<img src="../assets/imagens/icons8_instagram_logo.ico" alt="instagram-icone">
-						</a>
-					</div>
-				</div>
-				<div class="footer-seg">
-						<h2>Links Rápidos </h2>
-						<div>
-							<a href="#">Inicio</a>
-							<a href="produto-logado.html">Produtos</a>
-							<a href="servicos-logado.html">Serviços</a>
-							<a href="sobre-nos-logado.html">Sobre-nós</a>
-							<a href="contato-logado.html">Conctato</a>
-						</div>
-				</div>
-				<div class="footer-seg">
-					<h2>Atendimento ao Cliente</h2>
-					<div>
-					<a href="#">Ajuda central</a>
-					<a href="#">Termos e condições de uso</a>
-					<a href="politica-privacidade-logado.html">Politica e privacidade</a>
-					<a href="contato-logado.html">Enviar Feedeback</a>
-					<a href="#cont">Conta</a>
-					</div>
-				</div>
-				<div class="footer-seg">
-					<h2>Informações de Contato</h2>
-					<p>Subscreve-se na nossa Newsletter</p>
-					<form>
-						<input type="email"class="input" id="Newsletter-email" 
-						placeholder="your@gmail.com" required>
-						<button id="btn-newsletter">Subscrever</button>
-					</form>
-					<p>Telefone: (+244) 932945647</p>
-					<p>Email: [Cambiji@gmail.com]</p>
-					<p>Seg-Sab: 8h-22h</p>
-				</div>
-			</article>  
-		</section>
-		</main>
-<!-- FOOTER PRINCIPAL -->
-		<footer>
-		<div class="copyright">
-				 &COPY;2023 Cambiji_Nature Todos os direitos reservados.
-		</div>
-		<div class="method-pay">
-			<a href="#">
-				<img src="" alt="visa">
-			</a>
-			<a href="#">
-				<img src="" alt="paypay">
-			</a>
-			<a href="#">
-				<img src="" alt="bank">
-			</a>
-			<a href="#">
-				<img src="" alt="unitelMoney">
-			</a>
-		</div> 
-		</footer>
-	<script type="module" src="../assets/js/pageContacto.js"></script>
-</body>
+      <!-- FOOTER SECUNDARIO -->
+      <section class="sess6">
+        <article>
+          <div class="footer-seg">
+            <h2>
+              <img
+                src="../assets/imagens/logo.png"
+                width="80px"
+                alt="icone-logo"
+              />
+              Cambiji Nature
+            </h2>
+            <p>
+              Uma empresa que presta serviços de cosmetics, trabalhando para bem
+              da tua pele natural.
+            </p>
+            <div class="section-rede">
+              <a href="#" class="rede">
+                <img
+                  src="../assets/imagens/icons8_facebook_f.ico"
+                  alt="facebook-icone"
+                />
+              </a>
+              <a href="#" class="rede">
+                <img
+                  src="../assets/imagens/icons8_whatsapp.ico"
+                  alt="watsapp-icone"
+                />
+              </a>
+              <a href="#" class="rede">
+                <img
+                  src="../assets/imagens/icons8_youtube_play_button.ico"
+                  alt="youtube-icone"
+                />
+              </a>
+              <a href="#" class="rede">
+                <img
+                  src="../assets/imagens/icons8_instagram_logo.ico"
+                  alt="instagram-icone"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="footer-seg">
+            <h2>Links Rápidos</h2>
+            <div>
+              <a href="#">Inicio</a>
+              <a href="produto-logado.html">Produtos</a>
+              <a href="servicos-logado.html">Serviços</a>
+              <a href="sobre-nos-logado.html">Sobre-nós</a>
+              <a href="contato-logado.html">Conctato</a>
+            </div>
+          </div>
+          <div class="footer-seg">
+            <h2>Atendimento ao Cliente</h2>
+            <div>
+              <a href="#">Ajuda central</a>
+              <a href="#">Termos e condições de uso</a>
+              <a href="politica-privacidade-logado.html"
+                >Politica e privacidade</a
+              >
+              <a href="contato-logado.html">Enviar Feedeback</a>
+              <a href="#cont">Conta</a>
+            </div>
+          </div>
+          <div class="footer-seg">
+            <h2>Informações de Contato</h2>
+            <p>Subscreve-se na nossa Newsletter</p>
+            <form>
+              <input
+                type="email"
+                class="input"
+                id="Newsletter-email"
+                placeholder="your@gmail.com"
+                required
+              />
+              <button id="btn-newsletter">Subscrever</button>
+            </form>
+            <p>Telefone: (+244) 932945647</p>
+            <p>Email: [Cambiji@gmail.com]</p>
+            <p>Seg-Sab: 8h-22h</p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!-- FOOTER PRINCIPAL -->
+    <footer>
+      <div class="copyright">
+        &COPY;2023 Cambiji_Nature Todos os direitos reservados.
+      </div>
+      <div class="method-pay">
+        <a href="#">
+          <img src="" alt="visa" />
+        </a>
+        <a href="#">
+          <img src="" alt="paypay" />
+        </a>
+        <a href="#">
+          <img src="" alt="bank" />
+        </a>
+        <a href="#">
+          <img src="" alt="unitelMoney" />
+        </a>
+      </div>
+    </footer>
+    <script type="module" src="../assets/js/pageContacto.js"></script>
+  </body>
 </html>

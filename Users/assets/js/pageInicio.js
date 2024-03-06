@@ -1,6 +1,7 @@
 
 import { addCart,openCart, iconCart,initWorkCartPage} from "./workCart.js";
 import {addNameUser} from"./workheaderLogado.js";
+import Countdown from "./countdown.js";
 
 fetch("../products.json")
 .then((response)=>{
@@ -14,6 +15,31 @@ fetch("../products.json")
   const containerProducts=document.getElementById("produt-recomed");
   const cronoment=document.getElementById("time");
   
+  function initCountDown(){
+    const tempoForEndPromotion=new Countdown({futureDate:'07 March 2024 00:27:59'});
+    console.log(tempoForEndPromotion.total);
+    console.log(cronoment);
+    const cronoSetInterval = setInterval(()=>{
+      cronoment.textContent=
+        `${String(tempoForEndPromotion.total.days).padStart(2,'0')}d:
+        ${String(tempoForEndPromotion.total.hours).padStart(2,'0')}h:
+        ${String(tempoForEndPromotion.total.minutes).padStart(2,'0')}:
+        ${String(tempoForEndPromotion.total.seconds).padStart(2,'0')}
+      `;
+
+    },1000);
+    
+    if(tempoForEndPromotion.isTimeDiffEqualZero){
+      clearInterval(cronoSetInterval);
+       cronoment.textContent='0d:00h:00:00';
+       containerOfortDay.innerHTML=`
+       <h3 style="width:100vw;
+        height:250px; 
+        text-align:center;">
+        Não há productos em Promução...
+        </h3>`;
+    }
+  }
   function renderProducts(){
     let countf=0;
     let countp=0;
@@ -66,9 +92,18 @@ fetch("../products.json")
     });
   }
   
-//functions exexute
+  containerOfortDay.innerHTML=`<h3 
+  style="width:100vw;
+  height:250px; 
+  text-align:center;">buscando dados...</h3>`;
+  containerProducts.innerHTML=`<h3 
+  style="width:100vw;
+  height:250px; 
+  text-align:center;">buscando dados...</h3>`;
+//functions execute
 setTimeout(()=>{
   renderProducts();
+  initCountDown();
    document.addEventListener('click', function(event){
     if(event.target.parentNode.classList.contains('add-cart')){
       let id = parseInt(event.target.parentNode.id);
@@ -93,15 +128,9 @@ function closeWidthESC(event){
 document.addEventListener("DOMContentLoaded", function(){
   addNameUser();
   initWorkCartPage();
+  initCountDown();
 })
 
 
-containerOfortDay.innerHTML=`<h3 
-  style="width:100vw;
-  height:250px; 
-text-align:center;">buscando dados...</h3>`;
-containerProducts.innerHTML=`<h3 
-  style="width:100vw;
-  height:250px; 
-text-align:center;">buscando dados...</h3>`;
+
 

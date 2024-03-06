@@ -1,6 +1,7 @@
 import { addNameUser } from "./workheaderLogado.js";
 import { handleScreensEditProfile} from "./toggles.js";
 import { Modal } from "./modal.js";
+import Countdown  from "./countdown.js";
 import {GerinceService} from "./pageToDoService.js";
 import { initWorkCartPage,openCart,iconCart } from "./workCart.js";
 import { setSucess,setError,ismail } from "./funtctionValidatyForm.js";
@@ -147,7 +148,7 @@ function initworkProfileServiveUser(){
                   <button>Cancelar</button>
                 </div>
               </div>
-            <div class="countdown-profile">contDown</div>
+            <div class="countdown-profile"></div>
           </td>
         </tr>
         `;
@@ -171,6 +172,7 @@ function initworkProfileServiveUser(){
   }
 
   let service=new ExtendServForDelAndRender();
+  const countdown= new Countdown({futureDate:'24 March 2024 23:59:59'});
   console.log(service);
 }
 
@@ -242,6 +244,9 @@ function closeWidthESC(event){
     openCart.close();
   }
 }
+
+
+
 
 document.addEventListener('DOMContentLoaded',()=>{
   addNameUser();
