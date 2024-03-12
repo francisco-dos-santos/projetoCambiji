@@ -16,9 +16,9 @@ fetch("../products.json")
   const cronoment=document.getElementById("time");
   
   function initCountDown(){
-    const tempoForEndPromotion=new Countdown({futureDate:'07 March 2024 00:27:59'});
-    console.log(tempoForEndPromotion.total);
-    console.log(cronoment);
+    const tempoForEndPromotion=new Countdown({futureDate:'20 March 2024 23:59:59'});
+    // console.log(cronoment);
+    // console.log(tempoForEndPromotion.total);
     const cronoSetInterval = setInterval(()=>{
       cronoment.textContent=
         `${String(tempoForEndPromotion.total.days).padStart(2,'0')}d:

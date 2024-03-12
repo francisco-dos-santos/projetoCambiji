@@ -8,7 +8,7 @@
 .sess1 {
 	background: #f6fff1fa;
 	background-image: url("../imagens/headline.png");
-	height: 300px;
+	height:300px;
 	/* background-size:cover; */
 	background-position: top;
 	background-repeat: no-repeat;
@@ -18,7 +18,7 @@
 .headline {
 	margin-left: 8%;
 	/* border:1px solid red; */
-	width: 360px;
+	width:360px;
 }
 
 .headline h3 {
@@ -85,7 +85,7 @@
 .content-ground {
 	background-color: #fff;
 	position: relative;
-	height: 350px;
+	min-height:350px;
 }
 
 .container-ofert-day {
@@ -123,8 +123,8 @@
 
 .content-cards-products {
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	place-items: center;
+	grid-template-columns:repeat(6,1fr);
+	place-items:center;
 	/* border: 1px solid red; */
 	padding: 0.6em 0;
 }
@@ -198,7 +198,7 @@
 
 /* section products recomedations */
 .container-products {
-	width: 95%;
+	max-width: 95%;
 	margin: 0 auto 0.4em;
 	background: #fff;
 }

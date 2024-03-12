@@ -127,14 +127,20 @@ function initworkProfileServiveUser(){
       super('');
       this.renderService();
     }
+    getTimeForDateService(futureDate){
+      const countdown= new Countdown({futureDate:futureDate});
+      return countdown;
+    }
     renderService(){
       let containerBodyTable=document.querySelector('table tbody');
     if(this.users[this.index-1].Services && this.users[this.index-1].Services.length){
       containerBodyTable.innerHTML="";
       for(let service of this.users[this.index-1].Services){
+        let futureDate=`${service.data} ${service.hour}`;
+        
         let newlistServ=`
         <tr>
-          <td ><span>${service.type}</span></td>
+          <td><span>${service.type}</span></td>
           <td><span>${service.valor}</span></td>
           <td><span>${service.data}</span></td>
           <td><span>${service.hour}</span></td>
@@ -142,38 +148,50 @@ function initworkProfileServiveUser(){
           <td><span class="td-status">Em process</span></td>
           <td class="content-td-action">
             <div class="btn-action-main">
-              <span>•••</span>
-                <div class="content-actions-btn fadeIn">
-                  <button>ver</button>
+              •••
+                <div class="content-actions-btn">
+                  <button>Ver</button>
                   <button>Cancelar</button>
                 </div>
-              </div>
-            <div class="countdown-profile"></div>
+            </div>
+            <div class="countdown-profile">
+            ${String(this.getTimeForDateService(futureDate).total.days).padStart(2,'0')}d:
+            ${String(this.getTimeForDateService(futureDate).total.hours).padStart(2,'0')}h:
+            ${String(this.getTimeForDateService(futureDate).total.minutes).padStart(2,'0')}:
+            ${String(this.getTimeForDateService(futureDate).total.seconds).padStart(2,'0')}
+            </div>
           </td>
         </tr>
         `;
-        // this.containerService.innerHTML+=`
-        // <div class="separator-shoppings">
-        // <p>${service.datanow}&nbsp;/&nbsp;${service.hournow.replace(':','h')}</p>
-        // <p>Valor: A0 ${service.valor}</p>
-        // </div>
-        // `;
-
         containerBodyTable.innerHTML+=newlistServ;
+       
+
+        // console.log(this.getTimeForDateService(futureDate,atualDate).total);
+        // console.log(countdownText.textContent);
+        // countdownText.textContent=
+        // console.log(countdownText.textContent);
+        
+        if(this.getTimeForDateService(futureDate).isTimeDiffEqualZero){
+            let countdownText=document.querySelector('td.content-td-action .countdown-profile');
+            countdownText.textContent='00d:00h:00:00';
+        }
+
       }
       }else{
-      const h3=document.createElement('h3');
-      const texto=document.createTextNode('Estas sem Serviços efeituados!');
-      h3.appendChild(texto);
-      h3.style.textAlign="end"
-      containerBodyTable.appendChild(h3);
+      const tr=document.createElement('tr');
+      const td= document.createElement('td');
+      const texto=document.createTextNode('Estas sem Serviços efeituados');
+      tr.appendChild(td);
+      td.appendChild(texto);
+      td.style.textAlign="center";
+      td.style.columnFill="5";
+      containerBodyTable.appendChild(tr);
       }
     }
   }
 
   let service=new ExtendServForDelAndRender();
-  const countdown= new Countdown({futureDate:'24 March 2024 23:59:59'});
-  console.log(service);
+  // console.log(service);
 }
 
 //fuctions utilits

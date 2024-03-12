@@ -96,7 +96,9 @@
 	background:#F9FAFB;
 }
 
-/* section the profile-user perfil */
+
+
+/* section the profile-user date People */
 .container-profile-date{
 	margin-top: 1rem;
 
@@ -236,7 +238,9 @@ fieldset legend{
 {
 	display:none;
 }
-/* section the profile-user shopping */
+
+
+/* section the profile-user shopping datas */
 .container-shopping-user{
 	background-color: #fff;
 	max-width:100%;
@@ -313,6 +317,7 @@ fieldset legend{
 	color:#f30000;
 }
 
+
 /* section progile-suer pedidos serviços */
 .container-reserve-user{
 	background-color: #fff;
@@ -342,6 +347,13 @@ td .td-status{
 	border:1px solid #f30000;
 	border-radius:3rem;
 }
+.content-td-action .countdown-profile{
+	background-color: #e74c3c;
+	color: #fff;
+	border-radius:.8rem;
+	padding:.6rem;
+}
+
 .content-td-action {
 	display:flex;
 	align-items:center;
@@ -350,25 +362,7 @@ td .td-status{
 	flex-direction: row-reverse;
 	position: relative;
 }
-.content-td-action .countdown-profile{
-	background-color: #e74c3c;
-	color: #fff;
-	border-radius:.8rem;
-	padding:.6rem;
-}
-.content-td-action .content-actions-btn{
-	padding:.5rem;
-	display:none;
-	position:absolute;
-	bottom:-2rem;
-	right:0;
-	box-shadow:0 0 2px #bcbcbc;
-	border-radius:.8rem;
-	background-color: #F9FAFB;
 
-	flex-direction:column;
-	gap: 1rem;
-}
 .content-td-action .btn-action-main
 {
 	font-size:1.8rem;
@@ -376,8 +370,34 @@ td .td-status{
 	color:#111111;
 	cursor: pointer;
 }
+.content-td-action .content-actions-btn{
+	padding:0;
+	display:none;
+	position:absolute;
+	bottom:-2rem;
+	right:0;
+	box-shadow:0 0 2px #bcbcbc;
+	border-radius:.8rem;
+	background-color: #F9FAFB;
+	flex-direction:column;
+	width: fit-content;
+	text-align:start;
+	gap:.3rem;
+}
+.content-actions-btn> button{
+	text-align: start;
+	font-size: 1.4rem;
+	padding:.8rem;
+	background-color: #F9FAFB;
+	border-radius:.8rem;
+}
+.content-actions-btn> button:hover{
+	background:#e1e1e1;
+	transition: background .2s ease-in;
+}
 td .btn-action-main:hover .content-actions-btn{
 	display: flex;
+	animation:fadeIn .2s forwards;
 }
 /* section profile-user analists e reportios */
 .container-analytics-user{

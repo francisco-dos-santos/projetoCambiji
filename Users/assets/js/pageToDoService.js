@@ -91,7 +91,8 @@ function initValidateFields(){
   let MetodValue =payMetod.value.trim();
   let ServiceValue=typeService.value.trim();
   
-  let dateAtual=new Date();
+  let dateAtual=new Date().getTime();
+  let isDatePassed= new Date(dReservValue).getTime()< dateAtual;
 
   if(NumberValue===""){
     setError(phoneNumber,'O campo é obrigatório');
@@ -106,7 +107,7 @@ function initValidateFields(){
   if(dReservValue===""){
     setError(dataReserv,'A data é obrigatório');
     return 
-  }else if(dateAtual<=dReservValue){
+  }else if(isDatePassed){
     setError(dataReserv,'A data é vencida digite data valida');
   }else{
     setSucess(dataReserv);

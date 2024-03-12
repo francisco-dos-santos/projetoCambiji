@@ -19,7 +19,8 @@ export default class Countdown{
     return this._futureDate.getTime() - this.atualDate.getTime();
   }
   get isTimeDiffEqualZero(){
-    if(this._TimeDiff<=0){
+    let isFineshedTime = this._TimeDiff <= 0;
+    if(isFineshedTime){
       return true;
     }else{
       return false
