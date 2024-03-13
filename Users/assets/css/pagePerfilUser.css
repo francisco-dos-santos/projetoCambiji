@@ -1,6 +1,38 @@
 @import "./headerFooter.css";
 @import "./animacão.css";
 /* Editando a pagina do perfil */
+#wrapper-modal{
+	background-color: rgba(0,0,0,0.1);
+	position:fixed;
+	width:100%;
+	inset:0;
+	z-index: 999;
+	display:none;
+}
+.modal{
+position: relative;
+	background-color: #F3F4F6;
+	max-width:90rem;
+	width:100%;
+	padding:4.8rem 6.4rem;
+	border-radius:.8rem;
+	justify-self:center;
+	align-self:center;
+}
+.modal > .btn-close{
+	position: absolute;
+	top:2rem;
+	right:2rem;
+	font-size: 2rem;
+	color:#f30000;
+	font-weight: 500;
+}
+.modal > .container-description{
+	display:flex;
+	align-items:center;
+	/* flex-wrap:wrap; */
+	gap: 1rem;
+}
 .wrapper-profile
 {
 	display:grid;
