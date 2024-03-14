@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-smoothing:grayscale;
+}
+
+:root{
+  --ff-text:'Roboto', sans-serif;
+  --hue:160;
+  --bg-primary:#FFFFFF;
+  --bg-secondary:#67db7e;
+  --fc-primary:#010101;
+  --fc-secondary:#F3F4F6;
+  --fc-gray:#DADADA;
+  --fc-border:#F3F8E9;
+    font-size: 62.5%;
+  --fs-body:1.6rem;
+  --fs-h1:clamp(2rem, 2rem + 8.5vw, 3.6rem);
+  --fs-text:clamp(1rem, 1rem + 5vw, 1.6rem);
+  --fs-text-sm:clamp(0.5rem, 1rem + 5vw, 1.3rem);
+}
+button{
+  font-family:var(--ff-text);
+  font-size: var(--fs-text);
+  color:var(--fc-secondary);
+  background-color: transparent;
+  border:0;
+  outline:0;
+}
