@@ -7,6 +7,37 @@
     <link rel="stylesheet" href="./assets/css/index.css">
   </head>
   <body>
+    <section id="wrapper-modal-login" class="">
+      <div class="modal">
+        <button class="btn-close">✖</button>
+        <h2>Bem-Vindo(a) a CAMBIJI</h2>
+        <form action="" autocomplete="on" class="form-login">
+          <div class="warn-data hide-warn">
+            <img src="./assets/imagens/icons8_error.ico" width="20" alt="imagens de aviso">
+            <p class="text-warn">Senha ou email do administrador está errado!</p>
+          </div>
+          <div class="wrapper-input ">
+            <label for="email-admin">Email<span> (digite um email valido)</span></label>
+            <input type="email" id="email-admin" placeholder="Seu email valido">
+            <small>Error</small>
+          </div>
+          <div class="wrapper-input">
+            <label for="password-admin">Senha<span> (digite uma senha valida)</span></label>
+            <input type="password" id="password-admin" placeholder="Sua senha valida">
+            <img src="./assets/imagens/icons8_eye.ico" alt="icone eyes" class="eye">
+            <small>Error</small>
+          </div>
+          <div class="wrapper-info-additionals">
+            <div class="wrapper-remember-data">
+              <input type="checkbox" name="" id="remember-data">
+              <label for="remember-data">lembrar me</label>
+            </div>
+            <a href="#">Esqueceu-se da senha?</a>
+          </div>
+          <button class="btn-enter">Entrar</button>
+        </form>
+      </div>
+    </section>
     <header>
       <section id="wrapper-search">
         <label for="search">
@@ -37,7 +68,7 @@
         <img src="./assets/imagens/logo.png" alt="logo da cambiji">
       </div>
       <div class="wrapper-navigation flex-column">
-        <button class="btn-sidebar active">
+        <button class="btn-sidebar">
           <img src="" alt="">
           Dashboard
         </button>
@@ -86,6 +117,6 @@
         <noscript>Este siste só funciona com o javascript</noscript>
       </div>
     </main>
-
   </body>
+  <script src="./assets/javascript/index.js" type="module"></script>
 </html>

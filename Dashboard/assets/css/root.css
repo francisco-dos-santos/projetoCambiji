@@ -8,13 +8,15 @@
 
 :root{
   --ff-text:'Roboto', sans-serif;
-  --hue:160;
-  --bg-primary:#FFFFFF;
-  --bg-secondary:#67db7e;
-  --fc-primary:#010101;
-  --fc-secondary:#F3F4F6;
-  --fc-gray:#DADADA;
-  --fc-border:#F3F8E9;
+  --hue:132;
+  --bg-primary:hsl(var(--hue), 0%, 100%);
+  --bg-modal:hsla(var(--hue), 0%, 0%, 0.2);
+  --bg-secondary:hsl(var(--hue), 62%, 63%);
+  --fc-primary:hsl(var(--hue), 0%, 0%);
+  --fc-secondary:hsl(var(--hue), 14%, 96%);
+  --fc-error:hsl(2, 96%, 50%);
+  --fc-gray:hsl(var(--hue), 0%, 59%);
+  --fc-border:hsl(2, 8%, 85%);
     font-size: 62.5%;
   --fs-body:1.6rem;
   --fs-h1:clamp(2rem, 2rem + 8.5vw, 3.6rem);
@@ -28,4 +30,12 @@ button{
   background-color: transparent;
   border:0;
   outline:0;
+  cursor: pointer;
+}
+label{
+  cursor: pointer;
+}
+label >span{
+  color:var(--fc-gray);
+  font-size: var(--fs-text-sm);
 }
