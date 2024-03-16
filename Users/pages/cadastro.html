@@ -29,16 +29,28 @@
       <label for="pesq"><img src="../assets/imagens/icons8_search.ico" alt="icon-search"></label>
     </article>
     <div class="conta">
-      <a href="#" id="cont" title="Francisco dos santos">
-        <img src="../assets/imagens/icons8_male_user_32.png" alt="usuario cambiji">
-      </a>
-      <div class="dropdown">
-        <a href="./login.html">Entrar</a>
-        <a href="#">Criar conta</a>
-      </div>
-    </div>
+			<a href="#" id="cont-link" title="Francisco dos santos">
+				<img src="../assets/imagens/icons8_male_user_32.png" width="40" alt="imagem de icone não logado">
+			</a>
+			<div class="dropdown">
+				<div class="content-img-info-user">
+					<img
+						src="../assets/imagens/icons8_male_user-logado.ico"
+						alt="imagem de icone do user"
+					/>
+				</div>
+				<div class="content-info-people-user">
+					<span class="info-user-name">Nome Completo user</span>
+					<span class="info-user-email">Email do user</span>
+				</div>
+				<div class="content-btn-info-user">
+					<a href="./login.html">Entrar</a>
+					<a href="#">Cadastrar-se</a>
+				</div>
+			</div>
+		</div>
     <div class="cart-wrapper" id="icon-cart" data-count="0">
-      <a href="carrinho logado.html">
+      <a href="./cadastro.html">
         <img src="../assets/imagens/icons8_handcart.ico" width="32px" alt="sacola_cambiji">
       </a>
     </div>
@@ -47,49 +59,58 @@
 
 <body>
   <main>
-    <section class="title descendo">
-			<h3>Página De Cadastro</h3>
-			<!-- <div class="row-title"></div> -->
-			<p>Bem-Vindo A Cambiji Nature</p>
-		</section>
-
-    <section class="pag-cadast">
-      <article class="card-cadast descendo">
-        <img src="../assets/imagens/logo.png" alt="logo-cambiji">
-        <div class="card-2-cadast">
-
+    <section class="wrapper-sign-up-login">
+      <article class="card-sign-up-login descendo">
+        <h2>Bem-Vindo(a) a Cambiji Nature</h2>
+        <h3>Digite o seus dados para criar a tua conta!</h3>
           <form action="" method="GET" class="form" autocomplete="on">
+
+            <div class="warn-login hide-warn descendo">
+							<img src="../assets/imagens/icons8_error.ico" width="25" 
+							alt="imagem de aviso de erro">
+							<p class="text-warn">algum Error</p>
+						</div>
+
             <div>
-              <input type="text" name="nome" class="input" id="name" placeholder="Nome Completo" autofocus>
+              <label for="name">Nome Completo</label>
+              <input type="text" name="nome" class="input" id="name" 
+              placeholder="Digite o teu nome" autofocus>
               <small>Error message</small>
             </div>
 
             <div>
-              <input type="email" name="email" class="input" id="email" placeholder="francisco@gmail.com">
+              <label for="email">Email</label>
+              <input type="email" name="email" class="input" id="email" 
+              placeholder="francisco@gmail.com">
               <small>Error message</small>
             </div>
 
             <div>
-              <input type="password" name="passe1" class="input" id="passe1" placeholder="Palavra-passe">
+              <label for="passe1">Palavra Passe</label>
+              <input type="password" name="passe1" class="input" 
+              id="passe1" placeholder="Digite a tua palvra passe">
               <img src="../assets/imagens/icons8_eye.ico" alt="eyes" class="eye">
               <small>Error message</small>
             </div>
+
             <div>
-              <input type="password" name="passe2" class="input" id="passe2" placeholder="Confirmar Palavra-passe">
+              <label for="passe2">Palavra passe 2</label>
+              <input type="password" name="passe2" class="input" id="passe2" 
+              placeholder="Confirme a tua Palavra-passe">
               <img src="../assets/imagens/icons8_eye.ico" alt="eyes" class="eye">
               <small>Error message</small>
             </div>
 
             <button type="button" id="btn-access">
-              <img src="../assets/imagens/icons8_loader.ico" width="32px" alt="loader" class="loader">
+              <img src="../assets/imagens/icons8_loader.ico" width="25px" 
+              alt="loader" class="loader">
               Cadastra-se
             </button>
+            <p>já tens uma conta?<a href="./login.html">entrar</a></p>
+            <p>A tua conta será criada com nossos 
+              <a href="politica-privacidade.html">Termos e política de privacidade</a>
+            </p>
           </form>
-          <p>já tens uma conta?<a href="./login.html">entrar</a></p>
-          <p>A tua conta será criada com nossos 
-            <a href="politica-privacidade.html">Termos e política de privacidade</a>
-          </p>
-        </div>
       </article>
     </section>
 

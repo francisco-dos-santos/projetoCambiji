@@ -1,146 +1,132 @@
 @import "./headerFooter.css";
 @import "./animacão.css";
 /* editando a pagina cadastro e login */
-.title {
-	text-align: center;
-	padding: 1.5rem 0;
-  background: #fff;
-}
-.title>p {
-	line-height: 2.5rem;
-}
-.title h3 {
-	font-size: 2.5rem;
-	margin:1rem 0;
-}
-.pag-cadast
-{
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    background:#fff;
-    position:relative;
-    z-index:400;
-    margin:0;
-}
-.card-cadast
-{
-    text-align:center;
-    margin-top:0px;
-    margin-bottom:10rem;
-    padding:5rem 6.5rem;
-    width:min(95vw, 500px);
-    border-radius: 10px;
-    background: #ffffff;
-    box-shadow: 0px 4px 8px 0px rgba(230, 248, 226, 0.877), 0 6px 20px 0px rgba(228, 247, 228, 0.897) ;
-}
 
-.card-2-cadast .form
-{
+.wrapper-sign-up-login{
   display:grid;
+  min-height:100vh;
+  place-content:center;
+  padding-top: 2rem;
+  margin:0;
+}
+.card-sign-up-login{
+  text-align:start;
+  margin-top:0px;
+  margin-bottom:10rem;
+  padding:5rem 4.5rem;
+  width: min(95vw, 500px);
+  border-radius:10px;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px 0px rgba(230, 248, 226, 0.877),
+    0 6px 20px 0px rgba(228, 247, 228, 0.897);
+}
+.card-sign-up-login >h2{
+  line-height: 3.5rem;
+}
+.card-sign-up-login > h3{
+  font-weight:400;
+  font-size:1.6rem;
+}
+.card-sign-up-login .form {
+  display: grid;
   grid-template-columns:1fr;
-  grid-template-rows: 3fr;
   row-gap:1.5rem;
   text-align:left;
-  color: #36b64f;
-  border-radius:3px;
   margin-top:2rem;
 }
-.card-2-cadast>p{
-  margin-top: 1rem;
-  font-size: 1.4rem;
+.warn-login {
+  display:flex;
+  align-items: center;
+  gap:1.5rem;
+  padding:1rem .5rem;
+  color: #ff0009;
+  border-radius: 0.3rem;
+  background-color: #ff00084f;
 }
-.card-2-cadast .form .input
-{
-    display:block;
-    width:100%;
-    font-size:1.6rem;
-    background:rgb(255, 252, 252) ;
-    padding:1.2rem;
-    border: .1rem solid  rgb(238, 230, 230);
-    border-radius:.5rem;
-    outline: none;
+.hide-warn{
+	display: none;
+}
+.form> p {
+  font-size:1.4rem;
+}
+.form div > .input {
+  display:block;
+  width:100%;
+  font-size:1.6rem;
+  background:rgb(255, 252, 252);
+  padding:1.4rem;
+  margin-top:.4rem;
+  border:0.1rem solid rgb(238, 230, 230);
+  border-radius: 0.5rem;
+  outline:none;
 }
 
-.form .input:focus-visible
-{
-    border: .1rem solid #36b64f;
-    transition: all .5s;
+.form .input:focus-visible {
+  border: 0.1rem solid #36b64f;
+  transition: all 0.5s;
 }
-.card-2-cadast p a:link
-{
-    color: #36b64f;
+.form >p:last-child{
+  text-align:center;
 }
-.card-2-cadast p a:visited
-{
-    color: #36b64f;
+.form > p > a{
+  color: #36b64f;
 }
-.card-2-cadast h5
-{
-    font-weight: 500;
+
+#btn-access {
+  text-align: center;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  background: #36b64f;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 1.2rem;
 }
-#btn-access
-{
-    text-align: center;
-    font-size: 17px;
-    border: none;
-    outline: none;
-    background: #36b64f;
-    padding-top:15px;
-    padding-bottom:15px;
-    text-align: center;
-    color:#ffffff;
-    border-radius:5px;
-    cursor:pointer;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    gap:1.2rem;
+#btn-access:hover {
+  background-color:#36b650c8;
+  transition: all 0.5s;
 }
-#btn-access:hover
-{
-    color: #36b64f;
-    background: #fff;
-    outline: 1px solid #36b64f;
-    transition: all .5s;
+.loader {
+  display:none;
+  animation:loader 0.9s infinite forwards;
 }
-.loader{
-    display: none;
-    animation: loader .9s infinite ease-out;
-}
-.show{
-    display: block;
+.show {
+  display:block;
 }
 form div{
-  position: relative;
+  position:relative;
 }
-.eye{
-	position:absolute;
-	right:1.2rem;
-	top:0.9rem;
-	cursor:pointer;
-    max-width:2.5rem;
-}
-
-.form>div.error .input{
-    border-color: #e74c3c;
-}
-.form>div.sucess .input{
-    border-color:#2ecc71;
+.eye {
+  position:absolute;
+  right:1.2rem;
+  top:3.5rem;
+  cursor:pointer;
+  max-width:2.5rem;
 }
 
+.form > div.error .input {
+  border-color: #e74c3c;
+}
+.form > div.sucess .input {
+  border-color: #2ecc71;
+}
 
-.form div small{
-    color: #e74c3c;
-    display: flex;
-    display:none;
-    transition: .4s;
+.form div small {
+  color: #e74c3c;
+  display: flex;
+  display: none;
+  transition: 0.4s;
 }
-.form div.sucess small
-{
-    display: none;
+.form div.sucess small {
+  display: none;
 }
-.form div.error small
-{
-    display: block;
+.form div.error small {
+  display: block;
 }

@@ -39,21 +39,24 @@ function clearField(){
   userEmail.value="";
   userSenha.value="";
 }
-function isUsersExit(){
+
+function isUsers(){
   let userEmailV= userEmail.value;
   let userSenhaV=userSenha.value;
+  const warnData= document.querySelector('form .warn-login');
+  let textWarn=document.querySelector('form .text-warn');
   if(checkedInputs()){
+    warnData.classList.add('hide-warn');
     setTimeout(()=>{
       loader.classList.remove("show");
-      let isUser=usersList.find(user=>{
-        return (user.email===userEmailV) && (user.password===userSenhaV);
-      })
-      if(isUser){
-        saveIdUsers(isUser.id);
+      let isUser=usersList.findIndex(user=>(user.email===userEmailV) && (user.password===userSenhaV));
+      if(isUser!==-1){
+        saveIdUsers(isUser);
         window.location.href="../pages-logado/inicio-logado.html";
         clearField();
       }else{
-        Modal.open("../assets/imagens/icons8_error.ico","Dados invalido(email ou senha) digite outros dados");
+        warnData.classList.remove('hide-warn');
+        textWarn.textContent="Senha ou Email invalidos, digite novamente!";
       }
       console.log("finally")
     },4000);
@@ -66,7 +69,7 @@ function saveIdUsers(index){
 // events
 btnLogin.addEventListener("click",(event)=>{
   event.preventDefault();
-  isUsersExit();
+  isUsers();
   console.log("checked there is users exists");
 });
 eye.addEventListener("click",toggleEye)

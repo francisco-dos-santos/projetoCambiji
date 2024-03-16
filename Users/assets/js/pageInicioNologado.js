@@ -62,7 +62,8 @@ fetch("../products.json")
         <div class="content">
           <small class="categoria">${element.category}</small>
           <button class="add-cart">
-            <img src="./assets/imagens/icons8_add_shopping_cart.ico"" alt="cart" onclick=goLodin()>
+            <img src="./assets/imagens/icons8_add_shopping_cart.ico"" 
+            alt="cart" onclick=goLodin()>
           </button>
         </div>
     </div>

@@ -1,7 +1,9 @@
 *{
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-smoothing:grayscale;
 }
 
 :root{
@@ -10,11 +12,11 @@
 
 body{
 	font-family: 'Roboto', sans-serif;
-	font-weight: normal;
+	font-weight:normal;
 	color: rgba(0, 0, 0, 0.9);
-	font-size: 1.6rem;
+	font-size:1.6rem;
 	min-height:100vh;
-	scroll-behavior: smooth;
+	scroll-behavior:smooth;
 }
 
 ::-webkit-scrollbar{
@@ -28,7 +30,7 @@ body{
 }
 a{
 	text-decoration: none;
-	cursor: pointer;
+	cursor:pointer;
 	color: rgba(0, 0, 0, 0.9);
 }
 
@@ -40,7 +42,7 @@ button{
 	border: none;
 	outline: none;
 	background-color: transparent;
-	cursor: pointer;
+	cursor:pointer;
 	font-family: 'Roboto' sans-serif;
 }
 
@@ -434,7 +436,7 @@ nav ul li a:hover::after {
 
 /*conteudo principal*/
 main{
-	background-color: #f6fff1fa;
+	background-color:#f6fff1fa;
 	padding-top:10.3rem;
 }
 

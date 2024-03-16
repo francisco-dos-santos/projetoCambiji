@@ -29,51 +29,65 @@
 			<label for="pesq"><img src="../assets/imagens/icons8_search.ico" alt="icon-search"></label>
 		</article>
 		<div class="conta">
-			<a href="#" id="cont" title="Francisco dos santos"><img src="../assets/imagens/icons8_male_user_32.png"
-					alt="usuario cambiji"></a>
+			<a href="#" id="cont-link" title="Francisco dos santos">
+				<img src="../assets/imagens/icons8_male_user_32.png" width="40" alt="imagem de icone não logado">
+			</a>
 			<div class="dropdown">
-				<a href="#">Entrar</a>
-				<a href="./cadastro.html">Criar conta</a>
+				<div class="content-img-info-user">
+					<img
+						src="../assets/imagens/icons8_male_user-logado.ico"
+						alt="imagem de icone do user"
+					/>
+				</div>
+				<div class="content-info-people-user">
+					<span class="info-user-name">Nome Completo user</span>
+					<span class="info-user-email">Email do user</span>
+				</div>
+				<div class="content-btn-info-user">
+					<a href="#">Entrar</a>
+					<a href="./cadastro.html">Cadastrar-se</a>
+				</div>
 			</div>
 		</div>
 		<div class="cart-wrapper" id="icon-cart" data-count="0">
-			<a href="carrinho.html">
-				<img src="../assets/imagens/icons8_handcart.ico" width="32px" alt="sacola_cambiji">
-			</a>
-		</div>
+      <a href="./cadastro.html">
+        <img src="../assets/imagens/icons8_handcart.ico" width="32px" alt="sacola_cambiji">
+      </a>
+    </div>
 	</div>
 </header>
 
 <body>
 	<main>
-		<section class="title descendo">
-			<h3>Página De Login</h3>
-			<!-- <div class="row-title"></div> -->
-			<p>Bem-Vindo A Cambiji Nature</p>
-		</section>
-		<section class="pag-cadast">
-			<article class="card-cadast subindo">
-				<div class="card-2-cadast">
-					<img src="../assets/imagens/logo.png" alt="logo-cambiji">
+		<section class="wrapper-sign-up-login">
+			<article class="card-sign-up-login subindo">
+					<h2>Bem-Vindo(a) a Cambiji Nature</h2>
+					<h3>Digite os dados para entrar em sua conta!</h3>
 					<form autocomplete="on" class="form">
+						<div class="warn-login hide-warn descendo">
+							<img src="../assets/imagens/icons8_error.ico" width="25" 
+							alt="imagem de aviso de erro">
+							<p class="text-warn">algum Error</p>
+						</div>
 						<div>
+							<label for="email">Email</label>
 							<input type="email" name="" class="input" id="email" placeholder="francisco@gmail.com" autofocus>
 							<small>Error messsage</small>
 						</div>
 						<div>
+							<label for="passe">Palavra Passe</label>
 							<input type="password" name="" class="input" id="passe" placeholder="Palavra-passe">
 							<img src="../assets/imagens/icons8_eye.ico" alt="eyes" class="eye">
 							<small>Error message</small>
 						</div>
 						<button type="button" id="btn-access">
-							<img src="../assets/imagens/icons8_loader.ico" width="32px" alt="loader" class="loader">
+							<img src="../assets/imagens/icons8_loader.ico" 
+							width="25px" alt="loader" class="loader">
 							Entrar
 						</button>
+						<p><a href="#">Esqueceu a Senha?</a></p>
+						<p>Não tens uma conta?<a href="./cadastro.html">Cadastra-se</a></p>
 					</form>
-
-					<p>Esqueceu a Senha? <a href="#"> Clica aqui</a></p>
-					<p>Não tens uma conta?<a href="./cadastro.html">Cadastra-se</a></p>
-				</div>
 			</article>
 		</section>
 	</main>

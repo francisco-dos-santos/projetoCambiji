@@ -9,6 +9,7 @@ const dezodorizante = document.querySelector("#container-dezodorizantes .content
 const miniatura = document.querySelector("#container-miniaturas .contents-product");
 const creme = document.querySelector("#container-cremes .contents-product");
 const oleo = document.querySelector("#container-oleos .contents-product");
+
 // functions
 function renderPoducts() {
   let counta= 0;
