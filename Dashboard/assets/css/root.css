@@ -10,7 +10,7 @@
   --ff-text:'Roboto', sans-serif;
   --hue:132;
   --bg-primary:hsl(var(--hue), 0%, 100%);
-  --bg-modal:hsla(var(--hue), 0%, 0%, 0.2);
+  --bg-modal:hsla(var(--hue), 1%, 1%,0.1);
   --bg-secondary:hsl(var(--hue), 62%, 63%);
   --fc-primary:hsl(var(--hue), 0%, 0%);
   --fc-secondary:hsl(var(--hue), 14%, 96%);
@@ -22,6 +22,9 @@
   --fs-h1:clamp(2rem, 2rem + 8.5vw, 3.6rem);
   --fs-text:clamp(1rem, 1rem + 5vw, 1.6rem);
   --fs-text-sm:clamp(0.5rem, 1rem + 5vw, 1.3rem);
+}
+a{
+  text-decoration:none;
 }
 button{
   font-family:var(--ff-text);
