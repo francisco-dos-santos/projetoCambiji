@@ -79,22 +79,29 @@ function initworkMain(){
       const response = await fetch('../admin.json');
       const userAdmin = await response.json();
 
+      const warnUSer=form.querySelector('.warn-data');
+      buttonEnter.textContent="Buscando...";
+      warnUSer.classList.add('hide-warn');
+
       setTimeout(function(){
-        const warnUSer=form.querySelector('.warn-data');
-        let isUserAdmin= userAdmin.find(user=>user.email==email && user.password==senha);
+        buttonEnter.textContent="Enter";
+        let isUserAdmin= userAdmin.find(user=>user.email==email.value && user.password==senha.value);
         if(isUserAdmin){
-          console.log(isUserAdmin);
-          warnUSer.classList.add('hide-warn');
+          sessionStorage.setItem('userAdmin',JSON.stringify(isUserAdmin));
+          // console.log(isUserAdmin);
+          email.value="";
+          senha.value="";
+          window.location.href="./pages/indexLog.html";
         }else{
           warnUSer.classList.remove('hide-warn');
         }
-      },1000);
+      },1300);
     }
 
     buttonEnter.addEventListener('click',async (event)=>{
       event.preventDefault();
       if(validatyFields()){
-        await getUserAdmin(inputEmail.value,inputPassword.value);
+        await getUserAdmin(inputEmail,inputPassword);
       }else{ 
         console.warn('error de campos do input');
       }

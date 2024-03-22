@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>administrador</title>
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/cssLogado/indexlog.css">
   </head>
   <body>
     <header>
       <section id="wrapper-search">
         <label for="search">
-          <img src="./assets/imagens/icons8_search.ico" alt="icone de pesquisa">
+          <img src="../assets/imagens/icons8_search.ico" alt="icone de pesquisa">
         </label>
         <input type="search" name="" id="search" placeholder="Search">
       </section>
 
       <div id="wrapper-logo-notif">
-        <div class="wrapper-notification">
-          <img src="" alt="icone de notificação">
+        <div class="wrapper-notification" data-count="0">
+          <img src="../assets/imagens/icons8_notification.ico"  
+          alt="icone de notificação">
         </div>
         <section id="wrapper-logo-admin">
           <div class="content-img-admin">
             <span class="actiov-login"></span>
-            <img src="./assets/imagens/avatar-miro.png" alt="imagem do administrador">
+            <img src="" alt="imagem do administrador">
           </div>
           <div class="content-info-people-admin">
             <span class="name-admin text-break">Nome do admin</span>
@@ -34,7 +35,7 @@
 
     <aside>
       <div class="container-logo-main">
-        <img src="./assets/imagens/logo.png" alt="logo da cambiji">
+        <img src="../assets/imagens/logo.png" alt="logo da cambiji">
       </div>
       <div class="wrapper-navigation flex-column">
         <button class="btn-sidebar active" content_Id="dashboad">
@@ -57,10 +58,6 @@
           <img src="" alt="">
           Serviços Feitos
         </button>
-        <button class="btn-sidebar" content_Id="anality&reporting">
-          <img src="" alt="">
-          Analises & Reportagens
-        </button>
         <button class="btn-sidebar" content_Id="ajuda&suporte">
           <img src="" alt="">
           Ajuda & Suporte
@@ -82,6 +79,6 @@
       <!-- aqui é onde renderizará o conteudo das paginas-->
       <noscript>Este site só funciona com o javascript!</noscript>
     </main>
-
+    <script src="../assets/javascript/jsLogado/indexLog.js" type="module" ></script>
   </body>
 </html>

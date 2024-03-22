@@ -1,4 +1,4 @@
-@import './root.css';
+@import '../root.css';
 
 /* editando o madal do login */
 .warn-data{
@@ -95,8 +95,8 @@ form> .wrapper-info-additionals
   gap:1rem;
 }
 .wrapper-info-additionals> .wrapper-remember-data> #remember-data{
-  width:1.8rem;
-  height:1.8rem;
+  width:1.6rem;
+  height:1.6rem;
 }
 form> .btn-enter{
   width: fit-content;
@@ -170,6 +170,29 @@ header{
   display:flex;
   align-items:center;
   gap: 3.5rem;
+}
+#wrapper-logo-notif> .wrapper-notification{
+  max-width:7rem;
+  /* border: 1px solid red; */
+}
+#wrapper-logo-notif> .wrapper-notification{
+  display:block;
+  position:relative;
+}
+#wrapper-logo-notif> .wrapper-notification::before{
+  content:attr(data-count);
+	background:var(--fc-error);
+	position:absolute;
+	font-size:1.1rem;
+	color:var(--fc-secondary);
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	min-width: 1.6rem;
+	min-height:1.6rem;
+	top:0;
+	right:0;
+	border-radius:50%;
 }
 #wrapper-logo-admin{
   display: inline-flex;
