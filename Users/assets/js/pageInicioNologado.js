@@ -81,11 +81,13 @@ fetch("../products.json")
     window.location.href="./pages/login.html";
   }
   containerOfortDay.innerHTML=`<h3 
-  style="width:100vw;
+  style="width:100%;
   height:200px; 
-  text-align:center;">buscando dados...</h3>`;
+  text-align:center;">
+  <img src="./assets/imagens/init-loading.gif" alt="icone de loading"></img></h3>`;
   containerProducts.innerHTML=`<h3 
-  style="width:100vw;
+  style="width:100%;
   height:200px; 
-  text-align:center;">buscando dados...</h3>`;
+  text-align:center;">
+  <img src="./assets/imagens/init-loading.gif" alt="icone de loading"></h3>`;
 

@@ -128,11 +128,15 @@ function initworkProfileServiveUser(){
       this.renderService();
     }
     getTimeForDateService(futureDate){
-      const countdown= new Countdown({futureDate:futureDate});
+      let countdown=new Countdown({futureDate:futureDate});
+      if(countdown.isTimeDiffEqualZero){
+        return;
+      }
       return countdown;
     }
+
     renderService(){
-      let containerBodyTable=document.querySelector('table tbody');
+      let containerBodyTable=document.querySelector('table tbody.body-table');
     if(this.users[this.index-1].Services && this.users[this.index-1].Services.length){
       containerBodyTable.innerHTML="";
       for(let service of this.users[this.index-1].Services){
@@ -164,19 +168,12 @@ function initworkProfileServiveUser(){
         </tr>
         `;
         containerBodyTable.innerHTML+=newlistServ;
-       
-
-        // console.log(this.getTimeForDateService(futureDate,atualDate).total);
-        // console.log(countdownText.textContent);
-        // countdownText.textContent=
-        // console.log(countdownText.textContent);
-        
-        if(this.getTimeForDateService(futureDate).isTimeDiffEqualZero){
-            let countdownText=document.querySelector('td.content-td-action .countdown-profile');
-            countdownText.textContent='00d:00h:00:00';
-        }
 
       }
+
+      
+      //   let btnCancelar= countdownText.previousElementSibling.querySelector('.content-actions-btn button:last-child');
+
       }else{
       const tr=document.createElement('tr');
       const td= document.createElement('td');
@@ -190,7 +187,7 @@ function initworkProfileServiveUser(){
     }
   }
 
-  let service=new ExtendServForDelAndRender();
+  new ExtendServForDelAndRender();
   // console.log(service);
 }
 

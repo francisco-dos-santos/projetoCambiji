@@ -1,115 +1,5 @@
 @import '../root.css';
 
-/* editando o madal do login */
-.warn-data{
-  display:flex;
-  align-items:center;
-  gap:1.5rem;
-  padding:1rem;
-  color: var(--fc-error);
-  width:100%;
-  border-radius:.3rem;
-  background-color:#ff00084f;
-}
-.hide-warn{
-  display:none;
-}
-
-#wrapper-modal-login{
-  background-color:var(--bg-modal);
-  backdrop-filter:blur(2px);
-  display:none;
-  position:fixed;
-  inset: 0;
-  z-index:999;
-  place-items:center;
-}
-#wrapper-modal-login .modal{
-  position:relative;
-  max-width:60rem;
-  width:100%;
-  background-color: var(--bg-primary);
-  padding:3.5rem;
-  border-radius:1rem;
-  box-shadow: 0 0 0 1px var(--fc-secondary);
-}
-#wrapper-modal-login .modal> .btn-close{
-  position: absolute;
-  top:1.5rem;
-  right:1.5rem;
-  color:var(--fc-error);
-  font-size:2rem;
-}
-#wrapper-modal-login .modal> h2{
-  margin-bottom:2.5rem;
-}
-#wrapper-modal-login> .modal> form{
-  display:flex;
-  flex-direction:column;
-  gap:2rem;
-}
-form > .wrapper-input{
-  position: relative;
-}
-form > .wrapper-input input{
-  display:block;
-  width:100%;
-  padding:1.6rem;
-  margin-top:1rem;
-  outline:0;
-  border: 1px solid var(--fc-border);
-  border-radius:1rem;
-}
-form > .wrapper-input .eye{
-  position:absolute;
-  top:4.2rem;
-  right:1.5rem;
-  cursor: pointer;
-}
-
-
-form > .wrapper-input.error input{
-  border-color:var(--fc-error);
-}
-form > .wrapper-input.error small{
-  display: block;
-  color: var(--fc-error);
-}
-form > .wrapper-input small{
-  display:none;
-}
-form > .wrapper-input input{
-  border-color:var(--bg-secondary);
-}
-
-form> .wrapper-info-additionals
-{
-  display: flex;
-  align-items:center;
-  justify-content:space-between;
-  padding: 1rem 0;
-}
-.wrapper-info-additionals> .wrapper-remember-data{
-  display: flex;
-  align-items:center;
-  gap:1rem;
-}
-.wrapper-info-additionals> .wrapper-remember-data> #remember-data{
-  width:1.6rem;
-  height:1.6rem;
-}
-form> .btn-enter{
-  width: fit-content;
-  background-color: var(--bg-secondary);
-  border-radius: .8rem;
-  padding:1.6rem 2.5rem;
-}
-form > .wrapper-info-additionals> a {
-  color: var(--bg-secondary);
-}
-.open-modal{
-  display:grid !important;
-}
 
 /* editando o body da dashboard */
 body{
@@ -178,6 +68,7 @@ header{
 #wrapper-logo-notif> .wrapper-notification{
   display:block;
   position:relative;
+  cursor: pointer;
 }
 #wrapper-logo-notif> .wrapper-notification::before{
   content:attr(data-count);
@@ -279,6 +170,12 @@ aside .wrapper-logout-settings{
 aside .btn-sidebar{
   text-align: justify;
   padding:1rem 2rem;
+  display: flex;
+  align-items:center;
+  gap:1rem;
+ }
+ aside .btn-sidebar > img{
+  width:1.6rem;
  }
  aside .btn-sidebar.active-sidebar{
   color: var(--bg-primary);
@@ -304,4 +201,14 @@ main{
 }
 main >h1{
   font-size: var(--fs-h1);
+}
+#root > h1 ~ p{
+  padding-bottom: 1rem;
+}
+#root > .page-main{
+  width:100%;
+  max-height:100%;
+  border:1px solid var(--fc-border);
+  border-radius:.8rem;
+  padding: 1rem;
 }

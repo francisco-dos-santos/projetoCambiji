@@ -24,7 +24,9 @@
 }
 
 .pagina-sob {
+	max-width:90%;
 	height:500px;
+	margin: 0 auto;
 }
 
 .sess2 {
@@ -99,22 +101,24 @@
 
 /* editando a sessão 2 bem-vido */
 .cont-bev {
-	margin:1.5rem auto;
-	padding:1rem 0;
+	margin:0 auto 2rem;
+	padding:1rem;
 	/* background: chocolate; */
-	width:80%;
+	max-width:80%;
 }
 
 .bv-two2 {
 	display:grid;
-	grid-template-columns: repeat(4,1fr);
+	padding:1rem;
+	grid-template-columns:repeat(4,1fr);
+	place-items: center;
 	row-gap:2.5rem;
 	/* background: #36b64f; */
 }
 
 .bv-loja2 {
 	width:240px;
-	background:#ffffff;
+	/* background:#ffffff; */
 	border-radius: 5px;
 	color: rgba(41, 40, 40, 0.842);
 	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.2);

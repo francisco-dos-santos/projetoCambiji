@@ -1,19 +1,6 @@
 @import './root.css';
 
 /* editando o madal do login */
-.warn-data{
-  display:flex;
-  align-items:center;
-  gap:1.5rem;
-  padding:1rem;
-  color: var(--fc-error);
-  width:100%;
-  border-radius:.3rem;
-  background-color:#ff00084f;
-}
-.hide-warn{
-  display:none;
-}
 
 #wrapper-modal-login{
   background-color:var(--bg-modal);
@@ -40,13 +27,27 @@
   color:var(--fc-error);
   font-size:2rem;
 }
-#wrapper-modal-login .modal> h2{
-  margin-bottom:2.5rem;
+
+#wrapper-modal-login .modal> p{
+  margin-bottom:2rem;
 }
 #wrapper-modal-login> .modal> form{
   display:flex;
   flex-direction:column;
   gap:2rem;
+}
+.warn-data{
+  display:flex;
+  align-items:center;
+  gap:1.5rem;
+  padding:1rem;
+  color: var(--fc-error);
+  width:100%;
+  border-radius:.3rem;
+  background-color:#ff00084f;
+}
+.hide-warn{
+  display:none;
 }
 form > .wrapper-input{
   position: relative;

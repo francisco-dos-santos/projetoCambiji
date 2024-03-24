@@ -19,7 +19,7 @@
   --fc-border:hsl(2, 8%, 85%);
     font-size: 62.5%;
   --fs-body:1.6rem;
-  --fs-h1:clamp(2rem, 2rem + 8.5vw, 3.6rem);
+  --fs-h1:clamp(2rem, 2rem + 8.5vw, 3rem);
   --fs-text:clamp(1rem, 1rem + 5vw, 1.6rem);
   --fs-text-sm:clamp(0.5rem, 1rem + 5vw, 1.3rem);
 }
@@ -41,4 +41,7 @@ label{
 label >span{
   color:var(--fc-gray);
   font-size: var(--fs-text-sm);
+}
+h1{
+  font-size: var(--fs-h1);
 }

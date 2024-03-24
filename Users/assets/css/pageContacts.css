@@ -20,20 +20,22 @@
 	border-radius: .5rem;
 }
 .fundo-cont {
-	min-height: 700px;
-	/* background:#ffa200; */
-	position: relative;
+	min-height:70rem;
+	background-image:linear-gradient(180deg ,#e3f7d8fa 50% , #ffffff 50%);
+	display: flex;
+	align-items:center;
+	justify-content:space-around;
+	flex-wrap:wrap;
 }
 
 .fund-1 {
-	background: #e3f7d8fa;
-	padding-left: 30px;
-	padding-top: 180px;
-	padding-bottom: 50px;
+	padding-left:3rem;
+	padding-top:18rem;
+	padding-bottom:5rem;
 }
 
 .fund-1>h5 {
-	font-size: 23px;
+	font-size: 2.3rem;
 	font-weight: 500;
 	padding: 0px;
 	margin: 0px;
@@ -41,27 +43,27 @@
 
 .fund-1>h4 {
 	font-weight: 700;
-	font-size: 30px;
+	font-size: 3rem;
 	padding: 0px;
 	margin: 0px;
 }
 
 .fund-2 {
-	background: #ffffff;
-	height: 360px;
+	padding-top:2rem ;
+	height:360px;
 }
 
 .fund-card-1 {
 	/* background: #67db7e; */
-	display: flex;
-	align-items: center;
-	gap: 16.2rem;
-	margin-left: 30px;
+	display:flex;
+	align-items:center;
+	gap:16.2rem;
+	margin-left:3rem;
 }
 
 .fund-card-2 {
-	margin-top: 50px;
-	margin-left: 30px;
+	margin-top:5rem;
+	margin-left:3rem;
 	/* background:#ffa200; */
 	display: flex;
 	align-items: center;
@@ -73,7 +75,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap:10px;
+	gap:1rem;
 }
 
 .card-cont div {
@@ -87,9 +89,6 @@
 .card-input {
 	background: #ffffff;
 	padding:5rem;
-	position:absolute;
-	top:5rem;
-	right:5rem;
 	border-radius:1rem;
 	box-shadow: 0px 4px 8px 0px rgba(230, 248, 226, 0.877), 0 6px 20px 0px rgba(228, 247, 228, 0.897);
 }
@@ -102,7 +101,7 @@
 	color: black;
 }
 
-form .input {
+.card-input > form .input {
 	width:100%;
 	font-size:1.6rem;
 	padding: 10px 0px 15px 0px;
@@ -112,7 +111,7 @@ form .input {
 	border-bottom:.1rem solid rgb(238, 230, 230);
 }
 
-form .input:focus-visible {
+.card-input> form .input:focus-visible {
 	border-bottom: 1px solid #36b64f;
 	transition: all .5s;
 }

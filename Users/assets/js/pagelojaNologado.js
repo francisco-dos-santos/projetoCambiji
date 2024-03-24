@@ -7,6 +7,7 @@ const dezodorizante = document.querySelector("#container-dezodorizantes .content
 const miniatura = document.querySelector("#container-miniaturas .contents-product");
 const creme = document.querySelector("#container-cremes .contents-product");
 const oleo = document.querySelector("#container-oleos .contents-product");
+const imgLoading=document.querySelector('#products .init-loading');
 
 // functions
 function renderPoducts() {
@@ -16,6 +17,7 @@ function renderPoducts() {
   let countm= 0;
   let countc= 0;
   let counto= 0;
+  imgLoading.style.display="none";
   aromas.innerHTML = "";
   sabonete.innerHTML = "";
   dezodorizante.innerHTML = "";
@@ -82,7 +84,6 @@ function initTabsCategoty(){
       const href= event.currentTarget.getAttribute('href');
       const article = document.querySelector(href);
       article.classList.add('active');
-  
     }
     tabsCategory.forEach((link)=>{
       link.addEventListener('click',function(event){ 
@@ -92,7 +93,6 @@ function initTabsCategoty(){
   }
 }
 
-
 setTimeout(() => {
   renderPoducts();
   document.addEventListener('click', function(event){
@@ -100,7 +100,8 @@ setTimeout(() => {
       window.location.href="./login.html";
     }
    })
-}, 1500)
+}, 1000)
+
 document.addEventListener('DOMContentLoaded',function(){
   handleArrowForToggle();
   initTabsCategoty();

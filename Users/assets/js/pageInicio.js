@@ -16,7 +16,7 @@ fetch("../products.json")
   const cronoment=document.getElementById("time");
   
   function initCountDown(){
-    const tempoForEndPromotion=new Countdown({futureDate:'20 March 2024 23:59:59'});
+    const tempoForEndPromotion=new Countdown({futureDate:'31 March 2024 23:59:59'});
     // console.log(cronoment);
     // console.log(tempoForEndPromotion.total);
     const cronoSetInterval = setInterval(()=>{
@@ -93,13 +93,13 @@ fetch("../products.json")
   }
   
   containerOfortDay.innerHTML=`<h3 
-  style="width:100vw;
-  height:250px; 
-  text-align:center;">buscando dados...</h3>`;
+  style="width:100%;
+  height:200px; 
+  text-align:center;"><img src="../assets/imagens/init-loading.gif" alt="icone de loading"></img></h3>`;
   containerProducts.innerHTML=`<h3 
-  style="width:100vw;
-  height:250px; 
-  text-align:center;">buscando dados...</h3>`;
+  style="width:100%;
+  height:200px; 
+  text-align:end;"><img src="../assets/imagens/init-loading.gif" alt="icone de loading"></h3>`;
 //functions execute
 setTimeout(()=>{
   renderProducts();

@@ -407,7 +407,7 @@
 	display: flex;
 }
 
-#navegation label {
+#navegation label{
 	width: 28px;
 	height: 28px;
 	border: 2px solid #36b64f;
@@ -419,6 +419,10 @@
 
 #navegation label:hover {
 	background: #76df8b;
+}
+
+#content-testimony > input:checked  #navegation > label{
+	background-color:#67db7e;
 }
 
 #slide1,
@@ -450,6 +454,7 @@
 #slide3:checked~.s1 {
 	margin-left: -1800px;
 }
+
 
 .card-dep {
 

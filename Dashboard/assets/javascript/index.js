@@ -76,15 +76,15 @@ function initworkMain(){
       return true;
     }
     async function getUserAdmin(email,senha){
-      const response = await fetch('../admin.json');
+      try{
+      const response = await fetch('./admin.json');
       const userAdmin = await response.json();
-
       const warnUSer=form.querySelector('.warn-data');
       buttonEnter.textContent="Buscando...";
       warnUSer.classList.add('hide-warn');
 
       setTimeout(function(){
-        buttonEnter.textContent="Enter";
+        buttonEnter.textContent="Entrar";
         let isUserAdmin= userAdmin.find(user=>user.email==email.value && user.password==senha.value);
         if(isUserAdmin){
           sessionStorage.setItem('userAdmin',JSON.stringify(isUserAdmin));
@@ -96,6 +96,13 @@ function initworkMain(){
           warnUSer.classList.remove('hide-warn');
         }
       },1300);
+  
+      } catch (error) {
+        console.error(error)  ;
+      }finally{
+        console.log('finalizada a resposta');
+      }
+            
     }
 
     buttonEnter.addEventListener('click',async (event)=>{

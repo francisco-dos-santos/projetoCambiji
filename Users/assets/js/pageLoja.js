@@ -9,6 +9,7 @@ const dezodorizante = document.querySelector("#container-dezodorizantes .content
 const miniatura = document.querySelector("#container-miniaturas .contents-product");
 const creme = document.querySelector("#container-cremes .contents-product");
 const oleo = document.querySelector("#container-oleos .contents-product");
+const imgLoading=document.querySelector('#products .init-loading');
 
 // functions
 function renderPoducts() {
@@ -18,6 +19,7 @@ function renderPoducts() {
   let countm= 0;
   let countc= 0;
   let counto= 0;
+  imgLoading.style.display="none";
   aromas.innerHTML = "";
   sabonete.innerHTML = "";
   dezodorizante.innerHTML = "";
@@ -102,7 +104,7 @@ setTimeout(() => {
     }
    })
 }, 1500)
-// events
+
 // events
 openCart.btncloseCart.onclick=()=>{
   openCart.close();
