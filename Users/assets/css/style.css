@@ -1,6 +1,101 @@
 @import "./headerFooter.css";
 @import "./animacão.css";
 @import"./responsive.css";
+
+.modal-wrapper-edit-perfil{
+	position:fixed;
+	width:100vw;
+	height:100vh;
+	background: rgba(0, 0, 0, 0.1);
+  backdrop-filter:blur(5px);
+	display: none;
+	justify-content: center;
+	align-items:flex-start;
+	z-index:999;
+
+}
+.modal-edit-perfil{
+	max-width:60rem;
+	background-color:#fff;
+	border-radius:.8rem;
+	margin-top:4rem;
+	padding: 2.5rem 4rem;
+}
+form > fieldset{
+	border:0;
+	margin-bottom:1.5rem;
+}
+fieldset > legend{
+	font-weight: 600;
+
+}
+.fieldset-wrapper{
+	display:grid;
+	row-gap:.5rem;
+	padding-top:1rem;
+}
+.wrapper-input > input{
+	display: block;
+	width: 100%;
+	border:1px solid #dedede;;
+	outline: 0;
+	padding: 1.6rem;
+	margin-top:.5rem;
+	border-radius:.8rem;
+}
+.wrapper-input > input:focus{
+	outline: 2px solid #c5cfef;
+}
+.wrapper-input> label{
+	font-size: 1.4rem;
+}
+.wrapper-input > small{
+	display: none;
+}
+
+.wrapper-input.error > input{
+	border-color:#f00;
+}
+.wrapper-input.error > small{
+	display: block;
+	color:#f00;
+}
+.wrapper-input.sucess > input{
+	border-color:#76df8b;
+}
+.wrapper-input.sucess > small{
+	display: none;
+}
+
+#salve-data-user{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	gap:1rem;
+	background-color:#67db7e;
+	color: #fff;
+	font-size: 1.6rem;
+	padding: 1.6rem;
+	width:100%;
+	border-radius:.8rem;
+	transition:background .3s;
+	margin-top: 1rem;
+}
+.loader{
+  display:none;
+  animation:loader 0.7s infinite forwards;
+}
+.show-loader{
+  display:block;
+} 
+#salve-data-user:hover{
+	background-color: #83cc92;
+}
+.show-modal-edit{
+	display:flex;
+}
+
+
 #wrapper {
 	background: #fff;
 }
@@ -47,7 +142,7 @@
 
 .content-sess1-btn {
 	display: flex;
-	align-items: center;
+	align-items:center;
 	gap: 2.5rem;
 }
 
@@ -84,13 +179,13 @@
 /* section deals do day */
 .content-ground {
 	background-color: #fff;
-	position: relative;
+	position:relative;
 	min-height:350px;
 }
 
 .container-ofert-day {
 	background-color: #fff;
-	position: absolute;
+	position:absolute;
 	top:-4rem;
 	left:50%;
 	transform: translateX(-50%);
@@ -98,7 +193,6 @@
 	border-top-right-radius: 1rem;
 	border-top-left-radius: 1rem;
 	box-shadow: 0.1em 0.5em 0 #ffffff, 0.2em 0 0.2em rgba(0, 0, 0, 0.2);
-	/* border: 1px solid #e1e1e1; */
 }
 
 .container-ofert-day-title {
@@ -124,9 +218,8 @@
 .content-cards-products {
 	display: grid;
 	grid-template-columns:repeat(6,1fr);
-	place-items:center;
-	/* border: 1px solid red; */
-	padding: 0.6em 0;
+	/* border:1px solid red; */
+	padding:0.6em 0.8rem;
 }
 
 .card {
@@ -135,6 +228,7 @@
 	width:180px;
 	padding: 0.5em;
 	box-shadow: 0.1em 0.1em 0.4em #c5cfef, 0.1em 0.1em 0.1em #c5cfef;
+	align-self: baseline;
 }
 
 .cont-img {
@@ -166,8 +260,8 @@
 }
 .card .content {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	justify-content:space-between;
+	align-items:center;
 }
 .card h3 {
 	font-size: 1.5rem;
@@ -457,9 +551,6 @@
 
 
 .card-dep {
-
-	/* background-image: linear-gradient(300deg,#36b6506e,#36b75013); */
-	/* background: #ffa200; */
 	padding: 1px;
 	border-radius: 0px 0px 8px 8px;
 	width: 300px;

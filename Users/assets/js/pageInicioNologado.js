@@ -1,5 +1,5 @@
-console.log('testando');
-fetch("../users.json")
+console.log('parte do user');
+fetch("./users.json")
 .then((response)=>{
   return response.json();
 })
@@ -9,12 +9,7 @@ fetch("../users.json")
   }
 });
 
-fetch("../products.json")
-.then((response)=>{
-  return response.json();
-}).then((data)=>{
-  localStorage.setItem('BD_products',JSON.stringify(data));
-});
+
   const products=JSON.parse(localStorage.getItem('BD_products'))??[];
   const containerOfortDay=document.getElementById("ofert-day");
   const containerProducts=document.getElementById("produt-recomed");
@@ -31,7 +26,7 @@ fetch("../products.json")
         let newCard=`
       <div class="card descendo">
         <div class="cont-img" onclick=salveIdProduct(${element.id})>
-          <img src="./assets/${element.imageProduct}" alt="produto-1">
+          <img src="${element.imageProduct}" alt="produto-${index+1}">
           <div class="percentage" id="porcent">60%</div>
         </div>
         <h3 class="preco">Kz ${des}</h3>
@@ -53,7 +48,7 @@ fetch("../products.json")
         let newCard=`
       <div class="card subindo">
         <div class="cont-img">
-          <img src="./assets/${element.imageProduct}" alt="produto-1"onclick=salveIdProduct(${element.id}) >
+          <img src="${element.imageProduct}" alt="produto-${index+1}"onclick=salveIdProduct(${element.id}) >
           <!--<div class="percentage" id="porcent">60%</div>-->
         </div>
         <h3 class="preco">Kz ${element.price}.00</h3>
@@ -82,12 +77,15 @@ fetch("../products.json")
   }
   containerOfortDay.innerHTML=`<h3 
   style="width:100%;
-  height:200px; 
-  text-align:center;">
-  <img src="./assets/imagens/init-loading.gif" alt="icone de loading"></img></h3>`;
+  height:200px;">
+  <center>
+    <img src="./assets/imagens/init-loading.gif" alt="icone de loading"></img>
+  </center>
+  </h3>`;
   containerProducts.innerHTML=`<h3 
   style="width:100%;
   height:200px; 
   text-align:center;">
-  <img src="./assets/imagens/init-loading.gif" alt="icone de loading"></h3>`;
+  <img src="./assets/imagens/init-loading.gif" alt="icone de loading">
+  </h3>`;
 

@@ -8,20 +8,20 @@
 
 :root{
   --ff-text:'Roboto', sans-serif;
-  --hue:132;
+  --hue:134;
   --bg-primary:hsl(var(--hue), 0%, 100%);
   --bg-modal:hsla(var(--hue), 1%, 1%,0.1);
   --bg-secondary:hsl(var(--hue), 62%, 63%);
   --fc-primary:hsl(var(--hue), 0%, 0%);
   --fc-secondary:hsl(var(--hue), 14%, 96%);
-  --fc-error:hsl(2, 96%, 50%);
-  --fc-gray:hsl(var(--hue), 0%, 59%);
-  --fc-border:hsl(2, 8%, 85%);
+  --fc-error:hsl(0, 96%, 50%);
+  --fc-gray:hsl(var(--hue), 0%, 65%);
+  --fc-border:hsl(var(--hue), 0%, 87%);
     font-size: 62.5%;
   --fs-body:1.6rem;
-  --fs-h1:clamp(2rem, 2rem + 8.5vw, 3rem);
+  --fs-h1:clamp(1.8rem, 2rem + 8.5vw, 2rem);
   --fs-text:clamp(1rem, 1rem + 5vw, 1.6rem);
-  --fs-text-sm:clamp(0.5rem, 1rem + 5vw, 1.3rem);
+  --fs-text-sm:clamp(0.5rem, 1rem + 5vw, 1.2rem);
 }
 a{
   text-decoration:none;
@@ -44,4 +44,5 @@ label >span{
 }
 h1{
   font-size: var(--fs-h1);
+  margin: 0;
 }

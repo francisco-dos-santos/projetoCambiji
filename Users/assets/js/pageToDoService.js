@@ -3,14 +3,17 @@ import {openCart, iconCart,initWorkCartPage} from "./workCart.js";
 import {addNameUser} from"./workheaderLogado.js";
 import { Modal } from "./modal.js";
 import { setError,setSucess,isNumberA0} from "./funtctionValidatyForm.js";
- 
+
+
+const users=JSON.parse(localStorage.getItem("BD_Users"))??[];
+const index=1+JSON.parse(sessionStorage.getItem("Id_users"))||'';
+
 const btnReserv=document.getElementById("btn-encomenda");
 const phoneNumber=document.getElementById("number-reserv");
 const dataReserv=document.getElementById("data-reserv");
 const hourReserv=document.getElementById("hour-reserv");
 const payMetod=document.getElementById("pay-metod");
 const typeService=document.getElementById("type-service");
-
 
 
 const Services=[
@@ -37,11 +40,12 @@ const Services=[
 const Service = class {
     constructor({number,data,hour,pay,type,valor,durection,description}){
       this.number=number;
-      this.data=data;
+      this.data=new Date(data);
       this.hour=hour;
       this.pay=pay;
       this.type=type;
       this.valor=valor;
+      this.status=false;
       this.durection=durection;
       this.description=description;
       this.datanow=`${String(this._Data.getDate()).padStart(2, '0')}/${String(this._Data.getMonth() + 1).padStart(2, '0')}/${this._Data.getFullYear()}`;
@@ -51,7 +55,7 @@ const Service = class {
     return new Date();
   }
 };
-class GerinceService{
+export class GerinceService{
   constructor(){
     this.users=JSON.parse(localStorage.getItem('BD_Users'))??[];
     this.index = 1 + JSON.parse(sessionStorage.getItem("Id_users")) || '';
@@ -82,7 +86,6 @@ class GerinceService{
     console.log(this.users[this.index-1].Services);
   }
 }
-export{GerinceService}
 //functions
 function initValidateFields(){
   let NumberValue = phoneNumber.value.trim();
@@ -207,6 +210,7 @@ document.addEventListener("DOMContentLoaded", function(){
   addNameUser();
   initWorkCartPage();
   if(Boolean(btnReserv)){
+    phoneNumber.value=users[index-1].phoneNumber;
     initReserveToService();
   }
 })

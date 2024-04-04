@@ -49,7 +49,7 @@ function renderCart(){
     newcart=`
     <div class="content-card-cart">
     <div class="content-img">
-      <img src="../assets/${element.imageProduct}" alt="produto-${index}">
+      <img src="${element.imageProduct}" alt="produto-${index}">
     </div>
     <div class="contents-info-product-cart">
       <p>${element.product}<br><span class="description-cart">descrição...</span></p>
@@ -84,7 +84,7 @@ function renderShopping(){
     <div class="product-content">
       <div class="content-img">
         <img
-          src="../assets/${element.imageProduct}"
+          src="${element.imageProduct}"
           alt="produto-imagem"
         />
       </div>

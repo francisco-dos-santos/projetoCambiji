@@ -28,7 +28,7 @@ function renderPoducts() {
     let newCard = `
     <div class="card subindo">
       <div class="cont-img">
-        <img src="../assets/${element.imageProduct}" alt="produto-${element.id}">
+        <img src="${element.imageProduct}" alt="produto-${element.id}">
         <!--<div class="percentage" id="porcent">60%</div>-->
       </div>
       <h3 class="preco">A0A ${element.price}.00</h3>

@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>administrador</title>
     <link rel="stylesheet" href="../assets/css/cssLogado/indexlog.css">
+    <script src="../assets/javascript/jsLogado/indexLog.js" type="module" defer ></script>
   </head>
   <body>
+    <div class="modal-wrapper-alert">
+      <p class="text-modal">Produto cadastrado com sucesso !</p>
+    </div>
     <header>
       <section id="wrapper-search">
         <label for="search">
@@ -39,37 +43,33 @@
       </div>
       <div class="wrapper-navigation flex-column">
         <button class="btn-sidebar " content_Id="dashboard">
-          <img src="" alt="">
+          <img src="../assets/imagens/house-light.png" alt="">
           Dashboard
         </button>
-        <button class="btn-sidebar" content_Id="messages">
-          <img src="" alt="">
-          Messagens
-        </button>
         <button class="btn-sidebar" content_Id="users">
-          <img src="" alt="">
+          <img src="../assets/imagens/user-square.png" alt="">
           Usuários
         </button>
         <button class="btn-sidebar" content_Id="shoppings">
-          <img src="" alt="">
+          <img src="../assets/imagens/shopping-back.png" alt="">
           Compras Feitas
         </button>
         <button class="btn-sidebar" content_Id="services">
-          <img src="" alt="">
+          <img src="../assets/imagens/reserva.png" alt="">
           Serviços Feitos
         </button>
         <button class="btn-sidebar" content_Id="ajuda&suporte">
-          <img src="" alt="">
+          <img src="../assets/imagens/question-light.png" alt="">
           Ajuda & Suporte
         </button>
       </div>
       <div class="wrapper-logout-settings flex-column">
         <button class="btn-sidebar" content_Id="settings">
-          <img src="" alt="">
+          <img src="../assets/imagens/settings.png" alt="">
           Definições
         </button>
         <button class="btn-sidebar" content_Id="logout">
-          <img src="../assets/imagens/quit_1.ico"  alt="icone-logout">
+          <img src="../assets/imagens/quit_1.ico"  alt="icone-logout" height="20px">
           Sair
         </button>
       </div>
@@ -79,6 +79,5 @@
       <!-- aqui é onde renderizará o conteudo das paginas-->
       <noscript>Este site só funciona com o javascript!</noscript>
     </main>
-    <script src="../assets/javascript/jsLogado/indexLog.js" type="module"></script>
   </body>
 </html>

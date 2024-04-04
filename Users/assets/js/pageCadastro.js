@@ -7,6 +7,7 @@ import {
   ismail,
   isnumber,
 } from "./funtctionValidatyForm.js";
+
 import { Modal } from "./modal.js";
 
 fetch("../users.json")
@@ -18,6 +19,7 @@ fetch("../users.json")
       localStorage.setItem("BD_Users", JSON.stringify(data));
     }
   });
+
 const userName = document.querySelector("#name");
 const userEmail = document.querySelector("#email");
 const userPasse = document.querySelector("#passe1");
@@ -68,6 +70,9 @@ class SetUsers {
             "A sua conta foi criada com sucesso"
           );
           clearField();
+            setTimeout(()=>{
+              userSet.goPageInitial({email:email,senha:passe});
+            },1000);
         }else{
           userSet._getWarn = "Já existe uma conta com esse email, digite outro!";
         }
@@ -77,10 +82,27 @@ class SetUsers {
       loader.classList.add("show");
   }
 
+  goPageInitial({email,senha}){
+    let isUser=this.List.findIndex(user=>(user.email===email) && (user.password===senha));
+    if(isUser!==-1){
+      this.saveIdUsers(isUser);
+      this.UserGetFirstTimes();
+      window.location.href="../pages-logado/inicio-logado.html";
+    }
+  }
+
   saveStorage() {
     localStorage.setItem("BD_Users", JSON.stringify(this.List));
   }
+  saveIdUsers(index){
+    sessionStorage.setItem("Id_users",JSON.stringify(index));
+  }
+  UserGetFirstTimes(){
+    sessionStorage.setItem('User_first_times',JSON.stringify(true));
+  }
+
 }
+
 
 function clearField() {
   userName.value = "";

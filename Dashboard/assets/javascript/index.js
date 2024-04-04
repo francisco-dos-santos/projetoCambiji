@@ -1,6 +1,6 @@
 import eyestoggle from "./toogleEyes.js";
 import { setError,setSucess } from "./functionsSet&Get_Error.js";
-console.log('ola testando a app');
+console.log('ola app admin');
 
 function initworkMain(){
   

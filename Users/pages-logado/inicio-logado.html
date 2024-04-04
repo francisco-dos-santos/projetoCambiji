@@ -13,6 +13,52 @@
   </head>
 
   <body>
+    <div class="modal-wrapper-edit-perfil ">
+      <div class="modal-edit-perfil">
+        <form action="">
+          <fieldset>
+            <legend>Para continuar, precisa concluir o teus dados de perfil !</legend>
+            <div class="fieldset-wrapper">
+              <div class="wrapper-input">
+                <label for="name-user">Nome Completo</label>
+                <input type="text" name="" id="name-user" placeholder="John Due" readonly>
+                <small></small>
+              </div>
+              <div class="wrapper-input">
+                <label for="email-user">Email</label>
+                <input type="text" name="" id="email-user" placeholder="email@gmail.com" readonly>
+                <small></small>
+              </div>
+              <div class="wrapper-input">
+                <label for="number-user">Número</label>
+                <input type="tel" name="" id="number-user" placeholder="(+244) 93494934">
+                <small></small>
+              </div>
+              <div class="wrapper-input">
+                <label for="born-date-user">Data de Nascimento</label>
+                <input type="date" name="" id="born-date-user">
+                <small></small>
+              </div>
+              <div class="wrapper-input">
+                <label for="number-user">Genero</label>
+                <input list="generes"  id="genere-user">
+                <datalist id="generes">
+                  <option value="Masculino"></option>
+                  <option value="Femenino"></option>
+                  <option value="Outro"></option>
+                </datalist>
+                <small></small>
+              </div>
+            </div>
+          </fieldset>
+          <button id="salve-data-user">
+            <img src="../assets/imagens/icons8_loader.ico"
+            width="25px" alt="loader" class="loader">
+            Salvar Dados
+          </button>
+        </form>
+      </div>
+    </div>
     <header id="header-main">
       <div class="container-head">
         <h1 class="logo">

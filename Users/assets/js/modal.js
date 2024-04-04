@@ -53,7 +53,8 @@ export class Modal {
     modalWrapper.style.left = "0";
     modalWrapper.style.zIndex = "999";
     modalWrapper.style.display = "none";
-    modalWrapper.style.backgroundColor ="rgba(0,0,0,0.60)";
+    modalWrapper.style.backgroundColor ="rgba(0,0,0,0.2)";
+    modalWrapper.style.backdropFilter="blur(2px)";
     modalWrapper.style.placeContent = "center";
 
     modal.style.backgroundColor = "white";
@@ -73,7 +74,7 @@ export class Modal {
     this.style = document.createElement('style');
     this.style.textContent = `
       .modal {
-        transition: transform 0.3s ease;
+        transition: transform 0.2s;
         transform: translateY(-40px);
       }
     `;
@@ -167,7 +168,8 @@ export class ConfirmModal {
     modalWrapper.style.left = "0";
     modalWrapper.style.zIndex = "999";
     modalWrapper.style.display = "none";
-    modalWrapper.style.backgroundColor ="rgba(0,0,0,0.60)";
+    modalWrapper.style.backgroundColor ="rgba(0,0,0,0.2)";
+    modalWrapper.style.backdropFilter="blur(2px)";
     modalWrapper.style.placeContent = "center";
 
     p.style.textAlign="center";

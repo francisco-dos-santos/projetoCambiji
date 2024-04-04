@@ -1,5 +1,8 @@
-  
- function initWorkPageMain(){
+
+  import initSettings from "./settings.js";
+  import initUsers from "./users.js";
+ 
+  function initWorkPageMain(){
   const userAdmin=JSON.parse(sessionStorage.getItem('userAdmin'));
   
   function initWorkheader(){
@@ -44,9 +47,10 @@
           setTimeout(()=>{
             const response = xhr.responseText;
             root.innerHTML=response;
-            // alert(xhr.responseText);
-            // console.log(nameLink);
-          },800);
+           
+            initSettings();
+            initUsers();
+          },400);
 
         }
       }
@@ -61,7 +65,7 @@
         }else{
           let logout=confirm('Tens a certeza que desejas sair?');
           if(logout){
-            window.location.href="./index.html";
+            window.location.href=".././index.html";
           }
         }
       }

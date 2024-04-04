@@ -1,6 +1,203 @@
 
+<style>
+  @import url('../assets/css/cssLogado/settings.css');
+</style>
+
 <h1>Definições</h1>
 <p>Adminastrador. Cambiji</p>
-<div class="page-main" id="setting">
-  
-</div>
+<section class="page-main" id="setting">
+  <div class="asidebar-setting">
+    <button class="btn-sidebar " content_Id="add-Products">
+      <img src="../assets/imagens/icons8-fats-64.png" 
+      alt="icond de add products" width="20px">
+      Add Produtos
+    </button>
+    <button class="btn-sidebar " content_Id="list-Products">
+      <img src="" alt="">
+      Listar Produtos
+    </button>
+    <button class="btn-sidebar " content_Id="list-Prod-deals">
+      <img src="" alt="">
+      Listar Promocional
+    </button>
+  </div>
+  <section class="container-setting">
+    <article class="content" id="add-Products">
+      <div class="container-image">
+        <div class="wrapper-img">
+          <img src="../assets/imagens/icons8-fats-64.png" 
+          alt="imagens de onload do producto" 
+          id="picture-previous">
+          <label for="picture-input" tabindex="0">
+            <input type="file" id="picture-input" accept="image/*">
+            <img src="../assets/imagens/icons8_pictures_folder.ico" 
+            alt="icone de add imagens" width="55px" 
+            title=" clica aqui para escolher a imagem">
+          </label>
+        </div>
+        <div class="warn-data hide-warn">
+          <p class="text-warn">A imagem precisa ser selecionada!</p>
+        </div>
+      </div>
+
+      <div class="contianer-form">
+        <form action="" method="get" id="my-form">
+          <fieldset>
+            <div class="container-header-form" >
+              <legend>Informações do Produto</legend>
+              <div class="switch-type">
+                <div class="wrapper-input-switch">
+                  <input type="radio" name="switch" id="product-normal" value="normal" checked>
+                  <label for="product-normal">Normal</label>
+                </div>
+                <div class="wrapper-input-switch">
+                  <input type="radio" name="switch" id="product-promo" value="deals">
+                  <label for="product-promo">Promocional</label>
+                </div>
+              </div>
+            </div>
+            <div class="fieldset-wrapper  show-deals-normal" id="content-normal">
+              <div class="wrapper-input">
+                <label for="name-product">Nome do produto</label>
+                <input type="text" id="name-product" placeholder="Digite o nome do produto">
+                <small></small>
+              </div>
+              <div class="wrapper-input">
+                <label for="desc-product">Descrição do Produto</label>
+                <textarea id="desc-product" cols="30" rows="3"></textarea>
+                <small></small>
+              </div>
+              <div class="wrapper-input">
+                <label for="price-product">Preço(Ao)</label>
+                <input type="number" id="price-product" 
+                placeholder=" Digite O preço">
+                <small></small>
+              </div>
+              <div class="wrapper-input">
+                <label for="category-product">Categorias</label>
+                <select  id="category-product">
+                  <option value="">Selecione a Categoria</option>
+                  <option value="Aromas">Aroma</option>
+                  <option value="Sabonete">Sabonete</option>
+                  <option value="Oleo">Oleo</option>
+                  <option value="Creme">Creme</option>
+                  <option value="Dezodorizante">Dezodorizante</option>
+                </select>
+                <small></small>
+              </div>
+              <div class="wrapper-input">
+                <label for="marker-product">Marca</label>
+                <input list="markers-products" id="marker-product" placeholder="Selecione a marca do produro">
+                <datalist id="markers-products">
+                  <option value="ferrary-black"></option>
+                  <option value="breetisnys"></option>
+                </datalist>
+                <small></small>
+              </div>
+              <div class="cols-2">
+                <div class="wrapper-input">
+                  <label for="size-product">Tamanho em (ml)</label>
+                  <select  id="size-product">
+                    <option value=""><small>Selecione o Tamanho</small></option>
+                    <option value="50">50 ml</option>
+                    <option value="10">10 ml</option>
+                    <option value="30">30 ml</option>
+                    <option value="15">15 ml</option>
+                  </select>
+                  <small></small>
+                </div>
+                <div class="wrapper-input">
+                  <label for="stock-product">Stock(Qt)</label>
+                  <input type="number" id="stock-product" placeholder="quantidade">
+                  <small></small>
+                </div>
+              </div>
+            </div>
+            <div class="fieldset-wrapper" id="content-deals">
+              <div class="wrapper-input">
+                <label for="name-product">Nome do produto</label>
+                <input type="text" id="name-product" placeholder="Digite o nome do produto">
+                <small></small>
+              </div>
+              <div class="wrapper-input">
+                <label for="desc-product">Descrição do Produto</label>
+                <textarea id="desc-product" cols="30" rows="3"></textarea>
+                <small></small>
+              </div>
+              <div class="cols-2">
+                <div class="wrapper-input">
+                  <label for="price-old-product">Preço(Ao antigo)</label>
+                  <input type="number" id="price-old-product" 
+                  placeholder="O preço antigo">
+                  <small></small>
+                </div>
+                <div class="wrapper-input">
+                  <label for="price-new-product">Preço(Ao novo)</label>
+                  <input type="number" id="price-new-product"  
+                  placeholder="O preço novo">
+                  <small></small>
+                </div>
+              </div>
+              <div class="wrapper-input">
+                <label for="category-product">Categorias</label>
+                <select  id="category-product">
+                  <option value="">Selecione a Categoria</option>
+                  <option value="Aromas">Aroma</option>
+                  <option value="Sabonete">Sabonete</option>
+                  <option value="Oleo">Oleo</option>
+                  <option value="Creme">Creme</option>
+                  <option value="Dezodorizante">Dezodorizante</option>
+                </select>
+                <small></small>
+              </div>
+              <div class="wrapper-input">
+                <label for="marker-product">Marca</label>
+                <input list="markers-products" id="marker-product" placeholder="Selecione a marca do produro">
+                <datalist id="markers-products">
+                  <option value="ferrary-black"></option>
+                  <option value="breetisnys"></option>
+                </datalist>
+                <small></small>
+              </div>
+              <div class="cols-2">
+                <div class="wrapper-input">
+                  <label for="size-product">Tamanho em (ml)</label>
+                  <select  id="size-product">
+                    <option value=""><small>Selecione o Tamanho</small></option>
+                    <option value="50">50 ml</option>
+                    <option value="10">10 ml</option>
+                    <option value="30">30 ml</option>
+                    <option value="15">15 ml</option>
+                  </select>
+                  <small></small>
+                </div>
+                <div class="wrapper-input">
+                  <label for="stock-product">Stock(Qt)</label>
+                  <input type="number" id="stock-product" placeholder="quantidade">
+                  <small></small>
+                </div>
+              </div>
+            </div>
+            
+          </fieldset>
+          <footer class="cont-buttons">
+            <button type="reset" class="btn-add-prod">Cancelar</button>
+            <button id="btn-add-products" class="btn-add-prod">Adicionar</button>
+          </footer>
+        </form>
+      </div>
+    </article>
+
+    <article class="content" id="list-Products">
+      <div>
+        section para listar produtos
+      </div>
+    </article>
+
+    <article class="content" id="list-Prod-deals">
+      <div>
+        section para listar em promuction
+      </div>
+    </article>
+  </section>
+</section>

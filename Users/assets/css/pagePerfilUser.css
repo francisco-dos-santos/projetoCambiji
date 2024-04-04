@@ -271,7 +271,6 @@ fieldset legend{
 	display:none;
 }
 
-
 /* section the profile-user shopping datas */
 .container-shopping-user{
 	background-color: #fff;
@@ -281,7 +280,7 @@ fieldset legend{
 	border-radius: .5rem;
 	box-shadow: 0 0 0 .1rem rgba(0,0,0,0.1);
 	padding:1.6rem 2rem;
-
+	
 	display: flex;
 	flex-direction:column-reverse;
 	gap:1.6rem;

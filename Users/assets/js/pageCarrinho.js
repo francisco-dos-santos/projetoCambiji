@@ -5,6 +5,8 @@ import { initWorkCartPage,DataShopping,Total} from "./workCart.js";
 import { handleScreensToShowShopping } from "./toggles.js";
 import { Modal } from "./modal.js";
 
+const users=JSON.parse(localStorage.getItem("BD_Users"))??[];
+const index=1+JSON.parse(sessionStorage.getItem("Id_users"))||'';
 const btncheckedCard=document.getElementById('btn-cheked-card');
 const finallyCheckoutShopping=document.getElementById('finesh-checkout');
 
@@ -20,6 +22,9 @@ const provinceUser=document.getElementById('province');
 const cityUser=document.getElementById('cidade');
 const adressUser=document.getElementById('home-adress');
 
+nameCard.value=users[index-1].userName;
+numberPhoneMoney.value=users[index-1].phoneNumber;
+phoneNumberUser.value=users[index-1].phoneNumber;
 
 function checkIpuntsCardPay(){
   let nameCardValue = nameCard.value.trim();

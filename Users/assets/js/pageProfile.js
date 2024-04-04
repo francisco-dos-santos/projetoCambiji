@@ -4,7 +4,8 @@ import { Modal } from "./modal.js";
 import Countdown  from "./countdown.js";
 import {GerinceService} from "./pageToDoService.js";
 import { initWorkCartPage,openCart,iconCart } from "./workCart.js";
-import { setSucess,setError,ismail } from "./funtctionValidatyForm.js";
+import { setSucess,setError,ismail,isNumberA0 } from "./funtctionValidatyForm.js";
+
 const users=JSON.parse(localStorage.getItem("BD_Users"))??[];
 const index=1+JSON.parse(sessionStorage.getItem("Id_users"))||'';
 
@@ -38,7 +39,7 @@ if(users[index-1].shoppings!==undefined){
     for (let item of shopping.products){
       const ItemShopping=template.content.cloneNode(true);
       let contentImage=ItemShopping.querySelector('.content-item-img img');
-      contentImage.src="../assets/"+item.imageProduct;
+      contentImage.src=item.imageProduct;
       ItemShopping.querySelector('.info-product span:first-child').innerText=item.product;
       ItemShopping.querySelector('.info-product span:last-child').innerText="Categoria: "+item.category;
       ItemShopping.querySelector('.price-item').innerText="A0 "+item.price +" X"+item.quantity+' ->';
@@ -129,9 +130,6 @@ function initworkProfileServiveUser(){
     }
     getTimeForDateService(futureDate){
       let countdown=new Countdown({futureDate:futureDate});
-      if(countdown.isTimeDiffEqualZero){
-        return;
-      }
       return countdown;
     }
 
@@ -159,18 +157,16 @@ function initworkProfileServiveUser(){
                 </div>
             </div>
             <div class="countdown-profile">
-            ${String(this.getTimeForDateService(futureDate).total.days).padStart(2,'0')}d:
-            ${String(this.getTimeForDateService(futureDate).total.hours).padStart(2,'0')}h:
-            ${String(this.getTimeForDateService(futureDate).total.minutes).padStart(2,'0')}:
-            ${String(this.getTimeForDateService(futureDate).total.seconds).padStart(2,'0')}
+            ${futureDate}
             </div>
           </td>
         </tr>
         `;
         containerBodyTable.innerHTML+=newlistServ;
-
+        // const countdownText = document.querySelector('td.content-td-action > .countdown-profile');
+        // countdownText.textContent=`00d:00:00:00
+        // `; 
       }
-
       
       //   let btnCancelar= countdownText.previousElementSibling.querySelector('.content-actions-btn button:last-child');
 
@@ -181,7 +177,6 @@ function initworkProfileServiveUser(){
       tr.appendChild(td);
       td.appendChild(texto);
       td.style.textAlign="center";
-      td.style.columnFill="5";
       containerBodyTable.appendChild(tr);
       }
     }
@@ -198,6 +193,7 @@ function saveStorage(){
 function validarFieldsObrigators(){
   const inputEditName=document.getElementById('edit-name-user');
   const inputEditEmail=document.getElementById('edit-email-user');
+  const inputEditPhone=document.getElementById('edit-phone-user');
 
   if(inputEditName.value==""){
     setError(inputEditName,'O nome é obrigatório');
@@ -215,6 +211,18 @@ function validarFieldsObrigators(){
   }else{
     setSucess(inputEditEmail);
   }
+
+  if(inputEditPhone.value===""){
+    setError(inputEditPhone,'O número é obrigatório');
+    return
+  }else if(!isNumberA0(inputEditPhone.value)){
+    setError(inputEditPhone,'Dogite um número valido de angola, ex:934545544');
+    return
+  }else{
+    setSucess(inputEditPhone);
+  }
+
+
 
   return true;
 }

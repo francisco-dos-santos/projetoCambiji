@@ -1,96 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ínicio</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/imagens/logo2.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ínicio</title>
-  <link rel="shortcut icon" href="./assets/imagens/logo2.jpg" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-
-<body>
-  <header id="header-main">
-    <div class="container-head">
-      <h1 class="logo">
-        <a href="#">
-          <img src="./assets/imagens/logo.png" alt="cambiji_nature">
-        </a>
-      </h1>
-      <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="./pages/loja.html">Loja</a></li>
-          <li><a href="./pages/servicos.html">Serviços</a></li>
-          <li><a href="./pages/sobre-nos.html">Sobre nós</a></li>
-          <li class="botao"><a href="./pages/contato.html">Contacto</a></li>
-        </ul>
-      </nav>
-      <article class="pesquisar">
-        <input type="search" name="" id="pesq" placeholder="Pesquisar produtos...">
-        <label for="pesq"><img src="./assets/imagens/icons8_search.ico" alt="icon-search"></label>
-      </article>
-      <div class="conta">
-        <a href="#" id="cont-link" title="Francisco dos santos">
-          <img src="./assets/imagens/icons8_male_user_32.png" width="40" alt="">
-        </a>
-        <div class="dropdown">
-          <div class="content-img-info-user">
-            <img
-              src="..//assets/imagens/icons8_male_user-logado.ico"
-              alt="imagem de icone do user"
-            />
-          </div>
-          <div class="content-info-people-user">
-            <span class="info-user-name">Nome Completo user</span>
-            <span class="info-user-email">Email do user</span>
-          </div>
-          <div class="content-btn-info-user">
-            <a href="./pages/login.html">Entrar</a>
-            <a href="./pages/cadastro.html">Cadastrar-se</a>
-          </div>
-        </div>
-      </div>
-      <div class="cart-wrapper" id="icon-cart" data-count="0">
-        <a href="./pages/cadastro.html">
-          <img src="../assets/imagens/icons8_handcart.ico" width="32px" alt="sacola_cambiji">
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <article id="wrapper">
-      <section class="sess1">
-        <article class="headline fadeIn">
-          <h3>cosmetics products </h3>
-          <h2>Cambiji Nature S.A</h2>
-          <div id="linha">
-          </div>
-          <p>Acreditamos levar a natureza em realidade,
-            sobre os cuidados da pele.<strong>YOUR SKIN MATTERS</strong>
-          </p>
-          <div class="content-sess1-btn">
-            <a href="loja-logado.html" class="btn">Comprar</a>
-            <a href="servicos-logado.html" class="btn">Serviços</a>
-          </div>
+  <body>
+    <header id="header-main">
+      <div class="container-head">
+        <h1 class="logo">
+          <a href="#">
+            <img src="./assets/imagens/logo.png" alt="cambiji_nature" />
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="./pages/loja.html">Loja</a></li>
+            <li><a href="./pages/servicos.html">Serviços</a></li>
+            <li><a href="./pages/sobre-nos.html">Sobre nós</a></li>
+            <li class="botao"><a href="./pages/contato.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <article class="pesquisar">
+          <input
+            type="search"
+            name=""
+            id="pesq"
+            placeholder="Pesquisar produtos..."
+          />
+          <label for="pesq"
+            ><img src="./assets/imagens/icons8_search.ico" alt="icon-search"
+          /></label>
         </article>
-      </section>
-      <!-- PRODUTOS Oferta do day-->
-      <article class="content-ground">
-        <section class="container-ofert-day">
-          <div class="container-ofert-day-title">
-            <h2>Ofertas do dia</h2>
-            <div class="container-clock">
-              <img src="./assets/imagens/icons8_wall_clock.ico" width="25px" alt="relogio"> Terminará
-              <span id="time">5h:50:27</span>
+        <div class="conta">
+          <a href="#" id="cont-link" title="Francisco dos santos">
+            <img
+              src="./assets/imagens/icons8_male_user_32.png"
+              width="40"
+              alt=""
+            />
+          </a>
+          <div class="dropdown">
+            <div class="content-img-info-user">
+              <img
+                src="./assets/imagens/icons8_male_user-logado.ico"
+                alt="imagem de icone do user"
+              />
+            </div>
+            <div class="content-info-people-user">
+              <span class="info-user-name">Nome Completo user</span>
+              <span class="info-user-email">Email do user</span>
+            </div>
+            <div class="content-btn-info-user">
+              <a href="./pages/login.html">Entrar</a>
+              <a href="./pages/cadastro.html">Cadastrar-se</a>
             </div>
           </div>
+        </div>
+        <div class="cart-wrapper" id="icon-cart" data-count="0">
+          <a href="./pages/cadastro.html">
+            <img
+              src="./assets/imagens/icons8_handcart.ico"
+              width="32px"
+              alt="sacola_cambiji"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
 
-          <div class="content-cards-products" id="ofert-day">
-            <!-- cards -->
-            <!-- 1 -->
-            <!-- <div class="card">
+    <main>
+      <article id="wrapper">
+        <section class="sess1">
+          <article class="headline fadeIn">
+            <h3>cosmetics products</h3>
+            <h2>Cambiji Nature S.A</h2>
+            <div id="linha"></div>
+            <p>
+              Acreditamos levar a natureza em realidade, sobre os cuidados da
+              pele.<strong>YOUR SKIN MATTERS</strong>
+            </p>
+            <div class="content-sess1-btn">
+              <a href="loja-logado.html" class="btn">Comprar</a>
+              <a href="servicos-logado.html" class="btn">Serviços</a>
+            </div>
+          </article>
+        </section>
+        <!-- PRODUTOS Oferta do day-->
+        <article class="content-ground">
+          <section class="container-ofert-day">
+            <div class="container-ofert-day-title">
+              <h2>Ofertas do dia</h2>
+              <div class="container-clock">
+                <img
+                  src="./assets/imagens/icons8_wall_clock.ico"
+                  width="25px"
+                  alt="relogio"
+                />
+                Terminará
+                <span id="time">5h:50:27</span>
+              </div>
+            </div>
+
+            <div class="content-cards-products" id="ofert-day">
+              <!-- cards -->
+              <!-- 1 -->
+              <!-- <div class="card">
                     <div class="cont-img">
                         <img src="../assets/imagens/ponds-3.png" alt="produto-1">
                         <div class="percentage" id="porcent">50%</div>
@@ -105,21 +128,20 @@
                       </button>
                     </div>
                 </div> -->
-
-          </div>
-        </section>
-      </article>
-
-      <!-- PRODUTOS recomendados -->
-      <section class="container-products">
-        <article class="content-title-products">
-          <h2>Produtos Recomendados</h2>
-          <p>Saudável e Verde</p>
+            </div>
+          </section>
         </article>
-        <article class="content-cards-products" id="produt-recomed">
-          <!-- cards -->
-          <!-- 1 -->
-          <!-- <div class="card">
+
+        <!-- PRODUTOS recomendados -->
+        <section class="container-products">
+          <article class="content-title-products">
+            <h2>Produtos Recomendados</h2>
+            <p>Saudável e Verde</p>
+          </article>
+          <article class="content-cards-products" id="produt-recomed">
+            <!-- cards -->
+            <!-- 1 -->
+            <!-- <div class="card">
                   <div class="cont-img">
                       <img src="../assets/imagens/OIP(4).png" alt="produto-1">
                   </div>
@@ -133,249 +155,300 @@
                     </button>
                   </div>
               </div> -->
-
-        </article>
-      </section>
-
-      <!-- Secaão promocão -->
-      <section id="container-promotion">
-        <img src="../assets/imagens/icons8_euro_money_64.png" alt="">
-        <h2>DESCONTO DE ATÉ -50% PARA OS CLIENTES NOVOS</h2>
-        <div><a href="contato.html">Saber mais</a></div>
-      </section>
-
-      <!-- SERVIÇOS -->
-      <section id="container-service">
-        <section class="container-title">
-          <h2>Nossos Serviços</h2>
-          <p>A Cambiji Nature tem os melhores serviços para ti</p>
+          </article>
         </section>
-        <article id="content-service">
-          <!-- primeiro card serviço -->
 
-          <div class="card-serv bouncedireito">
-            <div class="img">
-              <div id="img-1"></div>
-            </div>
-            <h3>Combo Serviços</h3>
-            <h4>best to cosmetcs</h4>
-            <span>30000kz</span>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis aperiam
-              perferendis, reiciendis deleniti earum voluptas,autem itaque
-              corporis tempora quaerat.</p>
-            <a href="fazer-reserva.html" class="btn">reservar</a>
-          </div>
-          <!-- segundo card serviço -->
-
-          <div class="card-serv bouncedireito">
-            <div class="img">
-              <div id="img-2"></div>
-            </div>
-            <h3>Massagem simples</h3>
-            <h4>best to cosmetcs</h4>
-            <span>15000kz</span>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis aperiam
-              perferendis, reiciendis deleniti earum voluptas,autem itaque
-              corporis tempora quaerat.</p>
-            <a href="fazer-reserva.html" class="btn">reservar</a>
-          </div>
-          <!-- terceiro card serviço -->
-
-          <div class="card-serv bouncedireito">
-            <div class="img">
-              <div id="img-3"></div>
-            </div>
-            <h3>Limpeza Facial</h3>
-            <h4>best to cosmetcs</h4>
-            <span>10000kz</span>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis aperiam
-              perferendis, reiciendis deleniti earum voluptas,autem itaque
-              corporis tempora quaerat.</p>
-            <a href="fazer-reserva.html" class="btn">reservar</a>
-          </div>
-        </article>
-      </section>
-
-      <!-- DEPOIMENTOS -->
-      <section id="container-testimony">
-        <section class="container-title">
-          <h2>Depoimentos</h2>
-          <p>Os testemunhos dos nossos clientes são uma cagarantia da nossa qualidade</p>
+        <!-- Secaão promocão -->
+        <section id="container-promotion">
+          <img src="./assets/imagens/icons8_euro_money_64.png" alt="" />
+          <h2>DESCONTO DE ATÉ -50% PARA OS CLIENTES NOVOS</h2>
+          <div><a href="contato.html">Saber mais</a></div>
         </section>
-        <section id="content-testimony">
-          <div id="navegation">
-            <label for="slide1"></label>
-            <label for="slide2"></label>
-            <label for="slide3"></label>
-          </div>
-          <input type="radio" name="slide" id="slide1" checked>
-          <input type="radio" name="slide" id="slide2">
-          <input type="radio" name="slide" id="slide3">
 
+        <!-- SERVIÇOS -->
+        <section id="container-service">
+          <section class="title descendo">
+            <p>Saudável e Verde</p>
+            <h3>Nossos Serviços</h3>
+            <div class="row-title"></div>
+            <p>A Cambiji Nature tem os melhores serviços e de qualidade...</p>
+          </section>
+          <article id="content-service">
+            <!-- primeiro card serviço -->
 
-          <article class="testimony s1 descendo">
-
-            <div class="card-dep ">
-              <img src="./assets/imagens/depo.jpg">
-              <span>Carlitos Cambiji</span>
-              <p>Desde que aderece a cambiji nature só me sinto feliz,
-                serviços e produtos de qualidade, com entregas das encomedas
-                dentro do prazo adere não te arrependerás.
+            <div class="card-serv bouncedireito">
+              <div class="img">
+                <div id="img-1"></div>
+              </div>
+              <h3>Combo Serviços</h3>
+              <h4>best to cosmetcs</h4>
+              <span>30000kz</span>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                aperiam perferendis, reiciendis deleniti earum voluptas,autem
+                itaque corporis tempora quaerat.
               </p>
+              <a href="fazer-reserva.html" class="btn">reservar</a>
             </div>
-            <div class="card-dep">
-              <img src="./assets/imagens/depo2.jpg">
-              <span>Joana Silva</span>
-              <p>Desde que aderece a cambiji nature só me sinto feliz,
-                serviços e produtos de qualidade, com entregas das encomedas
-                dentro do prazo adere não te arrependerás.</p>
-            </div>
-            <div class="card-dep">
-              <img src="./assets/imagens/depo3.jpg">
-              <span>Rebeca Paulo</span>
-              <p>Desde que aderece a cambiji nature só me sinto feliz,
-                serviços e produtos de qualidade, com entregas das encomedas
-                dentro do prazo adere não te arrependerás.</p>
-            </div>
-          </article>
+            <!-- segundo card serviço -->
 
-          <!-- 2 -->
-          <article class="testimony s2 descendo">
-            <div class="card-dep">
-              <img src="./assets/imagens/depo.jpg">
-              <span>Carlitos Cambiji</span>
-              <p>Desde que aderece a cambiji nature só me sinto feliz,
-                serviços e produtos de qualidade, com entregas das encomedas
-                dentro do prazo adere não te arrependerás.</p>
+            <div class="card-serv bouncedireito">
+              <div class="img">
+                <div id="img-2"></div>
+              </div>
+              <h3>Massagem simples</h3>
+              <h4>best to cosmetcs</h4>
+              <span>15000kz</span>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                aperiam perferendis, reiciendis deleniti earum voluptas,autem
+                itaque corporis tempora quaerat.
+              </p>
+              <a href="fazer-reserva.html" class="btn">reservar</a>
             </div>
-            <div class="card-dep">
-              <img src="./assets/imagens/logado-2.JPG">
-              <span>Francisco dos Santos</span>
-              <p>Desde que aderece a cambiji nature só me sinto feliz,
-                serviços e produtos de qualidade, com entregas das encomedas
-                dentro do prazo adere não te arrependerás.</p>
-            </div>
-            <div class="card-dep">
-              <img src="./assets/imagens/logado-2.JPG">
-              <span>Oliveira pundo</span>
-              <p>Desde que aderece a cambiji nature só me sinto feliz,
-                serviços e produtos de qualidade, com entregas das encomedas
-                dentro do prazo adere não te arrependerás.</p>
-            </div>
-          </article>
+            <!-- terceiro card serviço -->
 
-          <!-- 3 -->
-
-          <article class="testimony s3 descendo">
-            <div class="card-dep">
-              <img src="./assets/imagens/logado-2.JPG">
-              <span>Eo Tobra</span>
-              <p>Desde que aderece a cambiji nature só me sinto feliz,
-                serviços e produtos de qualidade, com entregas das encomedas
-                dentro do prazo adere não te arrependerás.</p>
-            </div>
-            <div class="card-dep">
-              <img src="./assets/imagens/depo3.jpg">
-              <span>Joana Silva</span>
-              <p>Desde que aderece a cambiji nature só me sinto feliz,
-                serviços e produtos de qualidade, com entregas das encomedas
-                dentro do prazo adere não te arrependerás.</p>
-            </div>
-            <div class="card-dep">
-              <img src="./assets/imagens/logado-2.JPG">
-              <span>Carmen</span>
-              <p>Desde que aderece a cambiji nature só me sinto feliz,
-                serviços e produtos de qualidade, com entregas das encomedas
-                dentro do prazo adere não te arrependerás.</p>
+            <div class="card-serv bouncedireito">
+              <div class="img">
+                <div id="img-3"></div>
+              </div>
+              <h3>Limpeza Facial</h3>
+              <h4>best to cosmetcs</h4>
+              <span>10000kz</span>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                aperiam perferendis, reiciendis deleniti earum voluptas,autem
+                itaque corporis tempora quaerat.
+              </p>
+              <a href="fazer-reserva.html" class="btn">reservar</a>
             </div>
           </article>
         </section>
-      </section>
-    </article>
-    <!-- FOOTER SECUNDARIO -->
-			<section class="sess6">
-				<article>
-					<div class="footer-seg">
-						<h2>
-							<img src="../assets/imagens/logo.png" width="80px" alt="icone-logo">
-							Cambiji Nature
-						</h2>
-						<p>Uma empresa que presta serviços de cosmetics, trabalhando
-							para bem da tua pele natural.
-						</p>
-						<div class="section-rede">
-							<a href="#" class="rede">
-								<img src="../assets/imagens/icons8_facebook_f.ico" alt="facebook-icone">
-							</a>
-							<a href="#" class="rede">
-								<img src="../assets/imagens/icons8_whatsapp.ico" alt="watsapp-icone">
-							</a>
-							<a href="#" class="rede">
-								<img src="../assets/imagens/icons8_youtube_play_button.ico" alt="youtube-icone">
-							</a>
-							<a href="#" class="rede">
-								<img src="../assets/imagens/icons8_instagram_logo.ico" alt="instagram-icone">
-							</a>
-						</div>
-					</div>
-					<div class="footer-seg">
-						<h2>Links Rápidos </h2>
-						<div>
-							<a href="#">Inicio</a>
-							<a href="produto-logado.html">Produtos</a>
-							<a href="servicos-logado.html">Serviços</a>
-							<a href="sobre-nos-logado.html">Sobre-nós</a>
-							<a href="contato-logado.html">Conctato</a>
-						</div>
-					</div>
-					<div class="footer-seg">
-						<h2>Atendimento ao Cliente</h2>
-						<div>
-							<a href="#">Ajuda central</a>
-							<a href="#">Termos e condições de uso</a>
-							<a href="politica-privacidade-logado.html">Politica e privacidade</a>
-							<a href="contato-logado.html">Enviar Feedeback</a>
-							<a href="#cont">Conta</a>
-						</div>
-					</div>
-					<div class="footer-seg">
-						<h2>Informações de Contato</h2>
-						<p>Subscreve-se na nossa Newsletter</p>
-						<form>
-							<input type="email" class="input" id="Newsletter-email" placeholder="your@gmail.com" required>
-							<button id="btn-newsletter">Subscrever</button>
-						</form>
-						<p>Telefone: (+244) 932945647</p>
-						<p>Email: [Cambiji@gmail.com]</p>
-						<p>Seg-Sab: 8h-22h</p>
-					</div>
-				</article>
-			</section>
-  </main>
-  <!-- FOOTER PRINCIPAL -->
-  <footer>
-    <div class="copyright">
-      &COPY;2024 Cambiji_Nature Todos os direitos reservados.
-    </div>
-    <div class="method-pay">
-      <a href="#">
-        <img src="../assets/imagens/visaCard.png" alt="visa" />
-      </a>
-      <a href="#">
-        <img src="../assets/imagens/paypal-logo.png" alt="paypay" />
-      </a>
-      <a href="#">
-        <img src="../assets/imagens/credit-card..png" alt="bank" />
-      </a>
-      <a href="#">
-        <img src="../assets/imagens/afrimoney.png" alt="bank" />
-      </a>
-      <a href="#">
-        <img src="../assets/imagens/unitelMoney.png" alt="unitelMoney" />
-      </a>
-    </div>
-  </footer>
-  <script src="./assets/js/pageInicioNologado.js"></script>
-</body>
 
+        <!-- DEPOIMENTOS -->
+        <section id="container-testimony">
+          <section class="title descendo">
+            <p>Saudável e Verde</p>
+            <h3>Depoimentos</h3>
+            <div class="row-title"></div>
+            <p>
+              Os testemunhos dos nossos clientes são uma cagarantia da nossa
+              qualidade
+            </p>
+          </section>
+          <section id="content-testimony">
+            <div id="navegation">
+              <label for="slide1"></label>
+              <label for="slide2"></label>
+              <label for="slide3"></label>
+            </div>
+            <input type="radio" name="slide" id="slide1" checked />
+            <input type="radio" name="slide" id="slide2" />
+            <input type="radio" name="slide" id="slide3" />
+
+            <article class="testimony s1 descendo">
+              <div class="card-dep">
+                <img src="./assets/imagens/depo.jpg" />
+                <span>Carlitos Cambiji</span>
+                <p>
+                  Desde que aderece a cambiji nature só me sinto feliz, serviços
+                  e produtos de qualidade, com entregas das encomedas dentro do
+                  prazo adere não te arrependerás.
+                </p>
+              </div>
+              <div class="card-dep">
+                <img src="./assets/imagens/depo2.jpg" />
+                <span>Joana Silva</span>
+                <p>
+                  Desde que aderece a cambiji nature só me sinto feliz, serviços
+                  e produtos de qualidade, com entregas das encomedas dentro do
+                  prazo adere não te arrependerás.
+                </p>
+              </div>
+              <div class="card-dep">
+                <img src="./assets/imagens/depo3.jpg" />
+                <span>Rebeca Paulo</span>
+                <p>
+                  Desde que aderece a cambiji nature só me sinto feliz, serviços
+                  e produtos de qualidade, com entregas das encomedas dentro do
+                  prazo adere não te arrependerás.
+                </p>
+              </div>
+            </article>
+
+            <!-- 2 -->
+            <article class="testimony s2 descendo">
+              <div class="card-dep">
+                <img src="./assets/imagens/depo.jpg" />
+                <span>Carlitos Cambiji</span>
+                <p>
+                  Desde que aderece a cambiji nature só me sinto feliz, serviços
+                  e produtos de qualidade, com entregas das encomedas dentro do
+                  prazo adere não te arrependerás.
+                </p>
+              </div>
+              <div class="card-dep">
+                <img src="./assets/imagens/logado-2.JPG" />
+                <span>Francisco dos Santos</span>
+                <p>
+                  Desde que aderece a cambiji nature só me sinto feliz, serviços
+                  e produtos de qualidade, com entregas das encomedas dentro do
+                  prazo adere não te arrependerás.
+                </p>
+              </div>
+              <div class="card-dep">
+                <img src="./assets/imagens/logado-2.JPG" />
+                <span>Oliveira pundo</span>
+                <p>
+                  Desde que aderece a cambiji nature só me sinto feliz, serviços
+                  e produtos de qualidade, com entregas das encomedas dentro do
+                  prazo adere não te arrependerás.
+                </p>
+              </div>
+            </article>
+
+            <!-- 3 -->
+
+            <article class="testimony s3 descendo">
+              <div class="card-dep">
+                <img src="./assets/imagens/logado-2.JPG" />
+                <span>Eo Tobra</span>
+                <p>
+                  Desde que aderece a cambiji nature só me sinto feliz, serviços
+                  e produtos de qualidade, com entregas das encomedas dentro do
+                  prazo adere não te arrependerás.
+                </p>
+              </div>
+              <div class="card-dep">
+                <img src="./assets/imagens/depo3.jpg" />
+                <span>Joana Silva</span>
+                <p>
+                  Desde que aderece a cambiji nature só me sinto feliz, serviços
+                  e produtos de qualidade, com entregas das encomedas dentro do
+                  prazo adere não te arrependerás.
+                </p>
+              </div>
+              <div class="card-dep">
+                <img src="./assets/imagens/logado-2.JPG" />
+                <span>Carmen</span>
+                <p>
+                  Desde que aderece a cambiji nature só me sinto feliz, serviços
+                  e produtos de qualidade, com entregas das encomedas dentro do
+                  prazo adere não te arrependerás.
+                </p>
+              </div>
+            </article>
+          </section>
+        </section>
+      </article>
+      <!-- FOOTER SECUNDARIO -->
+      <section class="sess6">
+        <article>
+          <div class="footer-seg">
+            <h2>
+              <img
+                src="./assets/imagens/logo.png"
+                width="80px"
+                alt="icone-logo"
+              />
+              Cambiji Nature
+            </h2>
+            <p>
+              Uma empresa que presta serviços de cosmetics, trabalhando para bem
+              da tua pele natural.
+            </p>
+            <div class="section-rede">
+              <a href="#" class="rede">
+                <img
+                  src="./assets/imagens/icons8_facebook_f.ico"
+                  alt="facebook-icone"
+                />
+              </a>
+              <a href="#" class="rede">
+                <img
+                  src="./assets/imagens/icons8_whatsapp.ico"
+                  alt="watsapp-icone"
+                />
+              </a>
+              <a href="#" class="rede">
+                <img
+                  src="./assets/imagens/icons8_youtube_play_button.ico"
+                  alt="youtube-icone"
+                />
+              </a>
+              <a href="#" class="rede">
+                <img
+                  src="./assets/imagens/icons8_instagram_logo.ico"
+                  alt="instagram-icone"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="footer-seg">
+            <h2>Links Rápidos</h2>
+            <div>
+              <a href="#">Inicio</a>
+              <a href="produto-logado.html">Produtos</a>
+              <a href="servicos-logado.html">Serviços</a>
+              <a href="sobre-nos-logado.html">Sobre-nós</a>
+              <a href="contato-logado.html">Conctato</a>
+            </div>
+          </div>
+          <div class="footer-seg">
+            <h2>Atendimento ao Cliente</h2>
+            <div>
+              <a href="#">Ajuda central</a>
+              <a href="#">Termos e condições de uso</a>
+              <a href="politica-privacidade-logado.html"
+                >Politica e privacidade</a
+              >
+              <a href="contato-logado.html">Enviar Feedeback</a>
+              <a href="#cont">Conta</a>
+            </div>
+          </div>
+          <div class="footer-seg">
+            <h2>Informações de Contato</h2>
+            <p>Subscreve-se na nossa Newsletter</p>
+            <form>
+              <input
+                type="email"
+                class="input"
+                id="Newsletter-email"
+                placeholder="your@gmail.com"
+                required
+              />
+              <button id="btn-newsletter">Subscrever</button>
+            </form>
+            <p>Telefone: (+244) 932945647</p>
+            <p>Email: [Cambiji@gmail.com]</p>
+            <p>Seg-Sab: 8h-22h</p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!-- FOOTER PRINCIPAL -->
+    <footer>
+      <div class="copyright">
+        &COPY;2024 Cambiji_Nature Todos os direitos reservados.
+      </div>
+      <div class="method-pay">
+        <a href="#">
+          <img src="./assets/imagens/visaCard.png" alt="visa" />
+        </a>
+        <a href="#">
+          <img src="./assets/imagens/paypal-logo.png" alt="paypay" />
+        </a>
+        <a href="#">
+          <img src="./assets/imagens/credit-card..png" alt="bank" />
+        </a>
+        <a href="#">
+          <img src="./assets/imagens/afrimoney.png" alt="bank" />
+        </a>
+        <a href="#">
+          <img src="./assets/imagens/unitelMoney.png" alt="unitelMoney" />
+        </a>
+      </div>
+    </footer>
+    <script src="./assets/js/pageInicioNologado.js"></script>
+  </body>
 </html>

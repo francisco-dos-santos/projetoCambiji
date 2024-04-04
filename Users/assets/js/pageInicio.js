@@ -1,39 +1,34 @@
 
 import { addCart,openCart, iconCart,initWorkCartPage} from "./workCart.js";
 import {addNameUser} from"./workheaderLogado.js";
-import Countdown from "./countdown.js";
+import Countdown from "./countdown.js"; 
+import { setError,setSucess,isNumberA0} from "./funtctionValidatyForm.js";
+import { Modal } from "./modal.js";
 
-fetch("../products.json")
-.then((response)=>{
-  return response.json();
-}).then((data)=>{
-  localStorage.setItem('BD_products',JSON.stringify(data));
-})
 
   const products=JSON.parse(localStorage.getItem('BD_products'))??[];
   const containerOfortDay=document.getElementById("ofert-day");
   const containerProducts=document.getElementById("produt-recomed");
   const cronoment=document.getElementById("time");
-  
+
+  const cronoSetInterval=setInterval(initCountDown,1000); 
+
   function initCountDown(){
-    const tempoForEndPromotion=new Countdown({futureDate:'31 March 2024 23:59:59'});
+    const tempoForEndPromotion=new Countdown({futureDate:'08 April 2024 23:59:59'});
     // console.log(cronoment);
     // console.log(tempoForEndPromotion.total);
-    const cronoSetInterval = setInterval(()=>{
-      cronoment.textContent=
-        `${String(tempoForEndPromotion.total.days).padStart(2,'0')}d:
+      cronoment.innerHTML=
+      `${String(tempoForEndPromotion.total.days).padStart(2,'0')}d:
         ${String(tempoForEndPromotion.total.hours).padStart(2,'0')}h:
         ${String(tempoForEndPromotion.total.minutes).padStart(2,'0')}:
         ${String(tempoForEndPromotion.total.seconds).padStart(2,'0')}
       `;
-
-    },1000);
     
     if(tempoForEndPromotion.isTimeDiffEqualZero){
       clearInterval(cronoSetInterval);
        cronoment.textContent='0d:00h:00:00';
        containerOfortDay.innerHTML=`
-       <h3 style="width:100vw;
+       <h3 style="width:85vw;
         height:250px; 
         text-align:center;">
         Não há productos em Promução...
@@ -51,7 +46,7 @@ fetch("../products.json")
         let newCard=`
       <div class="card descendo">
         <div class="cont-img">
-          <img src="../assets/${element.imageProduct}" alt="produto-1">
+          <img src="${element.imageProduct}" alt="produto-1">
           <div class="percentage" id="porcent">60%</div>
         </div>
         <h3 class="preco">A0A ${des}</h3>
@@ -72,7 +67,7 @@ fetch("../products.json")
         let newCard=`
       <div class="card subindo">
         <div class="cont-img">
-          <img src="../assets/${element.imageProduct}" alt="produto-1"onclick=salveIdProduct(${element.id}) >
+          <img src="${element.imageProduct}" alt="produto-1">
           <!--<div class="percentage" id="porcent">60%</div>-->
         </div>
         <h3 class="preco">A0A ${element.price}.00</h3>
@@ -88,6 +83,84 @@ fetch("../products.json")
     `;
     containerProducts.innerHTML+=newCard;
     countp++;
+      }
+    });
+  }
+  function seeIfUserFirstTimes(){
+   return JSON.parse(sessionStorage.getItem('User_first_times'));
+  }
+
+  function initWorkIfUserLoginFirstTimes(){
+    const users=JSON.parse(localStorage.getItem("BD_Users"))??[];
+    const index=1+JSON.parse(sessionStorage.getItem("Id_users"))||'';
+
+    const modalWrapperEditPerfil=document.querySelector(' .modal-wrapper-edit-perfil ');
+    modalWrapperEditPerfil.classList.add('show-modal-edit');
+    const form=modalWrapperEditPerfil.querySelector('.modal-edit-perfil > form');
+  
+    form.querySelector(' .wrapper-input > #name-user').value=users[index-1].userName;
+    form.querySelector('.wrapper-input > #email-user').value=users[index-1].email;
+
+    const inputNumberUser= form.querySelector('.wrapper-input > #number-user');
+    const inputDateBorn=form.querySelector('.wrapper-input > #born-date-user');
+    const inputGenere= form.querySelector('.wrapper-input > #genere-user');
+    const loader= form.querySelector('#salve-data-user > .loader');
+
+    function validatyFields(){
+      let number=inputNumberUser.value.trim();
+      let dateBorn= inputDateBorn.value.trim();
+      let genere=inputGenere.value.trim();
+
+      if(number===""){
+        setError(inputNumberUser,'Campo obrigário');
+        return
+      }else if(!isNumberA0(number)){
+        setError(inputNumberUser,'Não é um número angolano valido, Ex:932343465');
+        return
+      }else{
+        setSucess(inputNumberUser);
+      }
+
+      if(dateBorn===""){
+        setError(inputDateBorn,'O campo é obrigátrio');
+        return
+      }else{
+        setSucess(inputDateBorn);
+      }
+
+      if(genere===""){
+        setError(inputGenere,'O campo é obrigatório');
+        return
+      }else{
+        setSucess(inputGenere);
+      }
+
+      return true
+    }
+
+    function saveStorage(){
+      localStorage.setItem('BD_Users',JSON.stringify(users));
+    }
+
+    function salveDateUser(){
+      loader.classList.add('show-loader');
+      setTimeout(()=>{
+        loader.classList.remove('show-loader');
+        users[index-1].phoneNumber=inputNumberUser.value;
+        users[index-1].bornData=inputDateBorn.value;
+        users[index-1].genere=inputGenere.value;
+        saveStorage();
+        modalWrapperEditPerfil.classList.remove('show-modal-edit');
+        sessionStorage.removeItem('User_first_times');
+        Modal.open('../assets/imagens/icons8_ok.ico','Dados salvo com sucesso!');
+      },2000);
+
+    }
+
+    form.addEventListener('submit',function(event){
+      event.preventDefault();
+      if(validatyFields()){
+        salveDateUser();
       }
     });
   }
@@ -128,7 +201,11 @@ function closeWidthESC(event){
 document.addEventListener("DOMContentLoaded", function(){
   addNameUser();
   initWorkCartPage();
-  initCountDown();
+  // initCountDown();
+
+  if(seeIfUserFirstTimes()){
+    initWorkIfUserLoginFirstTimes();
+  }
 })
 
 
