@@ -443,22 +443,23 @@ main{
 /* editando a sessao do footer segundo */
 .sess6 {
 	background:#f6fff1fa;
-	height: 35rem;
+	min-height:35rem;
 	display: grid;
 	place-items:center;
 }
 
 .sess6 article {
-	width: 95%;
-	max-width: 120rem;
+	max-width:120rem;
+	width:95%;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	/* background:#76df8b; */
 }
 
 .footer-seg:first-child {
-	width: 26.5rem;
+	width:26.5rem;
 }
 
 .footer-seg h2 {
@@ -561,6 +562,7 @@ footer {
 	display:flex;
 	align-items:center;
 	justify-content:space-between;
+	flex-wrap: wrap;
 	padding:0 10rem;
 	/* margin-bottom:.8rem; */
 }
@@ -573,7 +575,7 @@ footer .copyright {
 footer > .method-pay{
 	display: inline-flex;
 	align-items: center;
-	justify-content: center;
+	justify-content:center;
 	gap: 1.6rem;
 }
 .method-pay a{

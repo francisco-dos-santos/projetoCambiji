@@ -14,8 +14,7 @@ import { Modal } from "./modal.js";
   const cronoSetInterval=setInterval(initCountDown,1000); 
 
   function initCountDown(){
-    const tempoForEndPromotion=new Countdown({futureDate:'08 April 2024 23:59:59'});
-    // console.log(cronoment);
+    const tempoForEndPromotion=new Countdown({futureDate:'20 April 2024 23:59:59'});
     // console.log(tempoForEndPromotion.total);
       cronoment.innerHTML=
       `${String(tempoForEndPromotion.total.days).padStart(2,'0')}d:
@@ -36,21 +35,19 @@ import { Modal } from "./modal.js";
     }
   }
   function renderProducts(){
-    let countf=0;
     let countp=0;
     containerOfortDay.innerHTML="";
     containerProducts.innerHTML="";
     products.forEach((element)=>{
-      if(countf!==6){
-        let des=((element.price*60)/100).toFixed(2);
+      if(element.status){
         let newCard=`
       <div class="card descendo">
         <div class="cont-img">
-          <img src="${element.imageProduct}" alt="produto-1">
-          <div class="percentage" id="porcent">60%</div>
+          <img src="${element.imageProduct}" alt="produto-${element.id+1}">
+          <div class="percentage" id="porcent">70%</div>
         </div>
-        <h3 class="preco">A0A ${des}</h3>
-        <del class="text-riscado">Kz ${element.price}.00</del>
+        <h3 class="preco">A0A ${element.priceNew}.00</h3>
+        <del class="text-riscado">A0A ${element.price}.00</del>
         <p>${element.product}</p>
         <div class="content">
           <small class="categoria">${element.category}</small>
@@ -60,32 +57,35 @@ import { Modal } from "./modal.js";
         </div>
     </div>
     `;
-    containerOfortDay.innerHTML+=newCard;
-    countf++;
+      containerOfortDay.innerHTML+=newCard;
+      }else{
+        if(countp!==18){
+          let newCard=`
+        <div class="card subindo">
+          <div class="cont-img">
+            <img src="${element.imageProduct}" alt="produto-${element.id+1}">
+            <!--<div class="percentage" id="porcent">60%</div>-->
+          </div>
+          <h3 class="preco">A0A ${element.price}.00</h3>
+          <!--<del class="text-riscado">A0A${element.price}</del>-->
+          <p>${element.product}</p>
+          <div class="content">
+            <small class="categoria">${element.category}</small>
+            <button class="add-cart" id="${element.id}">
+              <img src="../assets/imagens/icons8_add_shopping_cart.ico"" alt="cart">
+            </button>
+          </div>
+      </div>
+      `;
+      containerProducts.innerHTML+=newCard;
+      countp++;
+        }
       }
-      if(countp!==18){
-        let newCard=`
-      <div class="card subindo">
-        <div class="cont-img">
-          <img src="${element.imageProduct}" alt="produto-1">
-          <!--<div class="percentage" id="porcent">60%</div>-->
-        </div>
-        <h3 class="preco">A0A ${element.price}.00</h3>
-        <!--<del class="text-riscado">Kz${element.price}</del>-->
-        <p>${element.product}</p>
-        <div class="content">
-          <small class="categoria">${element.category}</small>
-          <button class="add-cart" id="${element.id}">
-            <img src="../assets/imagens/icons8_add_shopping_cart.ico"" alt="cart">
-          </button>
-        </div>
-    </div>
-    `;
-    containerProducts.innerHTML+=newCard;
-    countp++;
-      }
+
     });
+
   }
+
   function seeIfUserFirstTimes(){
    return JSON.parse(sessionStorage.getItem('User_first_times'));
   }
@@ -152,7 +152,7 @@ import { Modal } from "./modal.js";
         saveStorage();
         modalWrapperEditPerfil.classList.remove('show-modal-edit');
         sessionStorage.removeItem('User_first_times');
-        Modal.open('../assets/imagens/icons8_ok.ico','Dados salvo com sucesso!');
+        Modal.open('../assets/imagens/icons8_ok.ico','Dados do perfil concluido!');
       },2000);
 
     }
@@ -165,14 +165,14 @@ import { Modal } from "./modal.js";
     });
   }
   
-  containerOfortDay.innerHTML=`<h3 
-  style="width:100%;
-  height:200px; 
-  text-align:center;"><img src="../assets/imagens/init-loading.gif" alt="icone de loading"></img></h3>`;
-  containerProducts.innerHTML=`<h3 
-  style="width:100%;
-  height:200px; 
-  text-align:end;"><img src="../assets/imagens/init-loading.gif" alt="icone de loading"></h3>`;
+  containerOfortDay.innerHTML=`
+  <div style="width:90vw;text-align:center;"> 
+    <img src="../assets/imagens/init-loading.gif" alt="icone de loading"></img>
+  </div>`;
+  containerProducts.innerHTML=`
+  <div style="width:90vw;text-align:center;"> 
+    <img src="../assets/imagens/init-loading.gif" alt="icone de loading"></img>
+  </div>`;
 //functions execute
 setTimeout(()=>{
   renderProducts();

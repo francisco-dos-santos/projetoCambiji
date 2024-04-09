@@ -11,9 +11,7 @@ import {
 import { Modal } from "./modal.js";
 
 fetch("../users.json")
-  .then((response) => {
-    return response.json();
-  })
+  .then((response) => response.json())
   .then((data) => {
     if (localStorage.getItem("BD_Users") == null) {
       localStorage.setItem("BD_Users", JSON.stringify(data));

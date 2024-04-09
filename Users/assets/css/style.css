@@ -95,49 +95,50 @@ fieldset > legend{
 	display:flex;
 }
 
-
+/* editado a pagia incial */
 #wrapper {
 	background: #fff;
 }
 /* sessao 1  */
-.sess1 {
+.sess1{
 	background: #f6fff1fa;
 	background-image: url("../imagens/headline.png");
-	height:300px;
+	min-height:350px;
 	/* background-size:cover; */
-	background-position: top;
-	background-repeat: no-repeat;
-	padding-top: 2.2rem;
+	background-position:top;
+	background-repeat:no-repeat;
+	display:flex;
+	align-items:center;
 }
 
-.headline {
-	margin-left: 8%;
+.headline{
+	margin-left:8%;
 	/* border:1px solid red; */
-	width:360px;
+	max-width:41rem;
+	width:100%;
+	display:grid;
+	row-gap:1.5rem;
 }
 
 .headline h3 {
 	font-weight: 500;
 	font-size: 1.6rem;
 	color: #36b64f;
-	letter-spacing: .5rem;
-	margin-bottom: .5rem;
+	letter-spacing:.5rem;
 }
 
 .headline h2 {
-	font-weight: 600;
-	font-size: 3.5rem;
+	font-weight:600;
+	font-size:3.5rem;
 	color: #36b64f;
-	margin: 0;
-	margin-bottom: 1rem;
+	margin:0;
 }
 
-#linha {
+#linha{
 	border-bottom: .5rem solid #36b64f;
 	width: 16rem;
 	box-shadow: 0 .2rem .2rem #76df8b;
 	border-radius: 0.5rem;
-	margin-bottom: .9rem;
 }
 
 .content-sess1-btn {
@@ -148,8 +149,6 @@ fieldset > legend{
 
 .headline p {
 	text-align: left;
-	margin-top: 0;
-	margin-bottom: 1.3rem;
 	font-size: 1.6rem;
 	line-height: 2.5rem;
 	word-break: break-all;
@@ -179,20 +178,19 @@ fieldset > legend{
 /* section deals do day */
 .content-ground {
 	background-color: #fff;
-	position:relative;
-	min-height:350px;
+	min-height:45rem;
 }
 
 .container-ofert-day {
 	background-color: #fff;
 	position:absolute;
-	top:-4rem;
 	left:50%;
-	transform: translateX(-50%);
+	transform:translate(-50%,-4rem);
 	width:95%;
-	border-top-right-radius: 1rem;
-	border-top-left-radius: 1rem;
-	box-shadow: 0.1em 0.5em 0 #ffffff, 0.2em 0 0.2em rgba(0, 0, 0, 0.2);
+	border-radius: 1rem;
+	box-shadow: 0 0 5px  rgba(0, 0, 0, 0.2);
+	/* border: 1px solid red; */
+	overflow-y: hidden;
 }
 
 .container-ofert-day-title {
@@ -212,14 +210,22 @@ fieldset > legend{
 	background: #a82020dc;
 	color: #fff;
 	border-radius: 0.3em;
-	margin-top: 0.3em;
+	margin-top:0.3em;
 }
 
+#ofert-day {
+	max-height:40rem;
+	overflow-y:auto;
+	/* border: 1px solid red; */
+}
+#ofert-day::-webkit-scrollbar-track-piece{
+	background-color:#fff;
+}
 .content-cards-products {
 	display: grid;
 	grid-template-columns:repeat(6,1fr);
-	/* border:1px solid red; */
-	padding:0.6em 0.8rem;
+	padding:1em 0;
+	row-gap:3.5rem;
 }
 
 .card {
@@ -229,6 +235,7 @@ fieldset > legend{
 	padding: 0.5em;
 	box-shadow: 0.1em 0.1em 0.4em #c5cfef, 0.1em 0.1em 0.1em #c5cfef;
 	align-self: baseline;
+	justify-self: center;
 }
 
 .cont-img {
@@ -253,6 +260,9 @@ fieldset > legend{
 	color: #fff;
 	font-size: 0.8em;
 	border-radius: 0.3em;
+}
+.text-riscado{
+	color: #b7b7b7;
 }
 .cont-img img {
 	max-width: 100%;
@@ -292,9 +302,10 @@ fieldset > legend{
 
 /* section products recomedations */
 .container-products {
-	max-width: 95%;
-	margin: 0 auto 0.4em;
+	width:95%;
+	margin:0 auto 0.4em;
 	background: #fff;
+	min-height:40rem;
 }
 
 .content-title-products {
@@ -307,11 +318,6 @@ fieldset > legend{
 
 .content-title-products p {
 	margin-top: 0.3em;
-}
-
-.container-products .content-cards-products {
-	/* border: 1px solid red; */
-	row-gap:2.5rem;
 }
 
 /* Editando a sessaõ promoção */
@@ -380,11 +386,13 @@ fieldset > legend{
 	display:flex;
 	align-items:center;
 	justify-content:space-around;
+	flex-wrap:wrap;
 }
 
 .card-serv {
-	height: 480px;
-	width: 350px;
+	max-width:350px;
+	width:100%;
+	min-height:480px;
 	background: #f6fff1fa;
 }
 
@@ -477,7 +485,7 @@ fieldset > legend{
 
 /* editando depoimentos */
 #container-testimony {
-	width: 100%;
+	width:100%;
 	min-height:500px;
 	/* background: #76df8b; */
 }
@@ -485,15 +493,16 @@ fieldset > legend{
 #content-testimony {
 	margin:0 auto;
 	padding-top: 2em;
-	width: 900px;
+	max-width:900px;
+	width:100%;
 	/* background: #fe4200; */
-	display: flex;
+	display:flex;
 	align-items: flex-start;
 	overflow: hidden;
 	position: relative;
 }
 
-#navegation {
+#navegation{
 	position: absolute;
 	bottom: 0;
 	left: 50%;
@@ -515,22 +524,22 @@ fieldset > legend{
 	background: #76df8b;
 }
 
-#content-testimony > input:checked  #navegation > label{
+#content-testimony > input:checked #navegation label{
 	background-color:#67db7e;
 }
 
 #slide1,
 #slide2,
 #slide3 {
-	display: none;
+	display:none;
 }
 
 .testimony {
-	display: flex;
-	max-width: 900px;
-	width: 100%;
-	align-items: center;
-	justify-content: space-between;
+	display:flex;
+	max-width:900px;
+	width:100%;
+	align-items:center;
+	justify-content:space-between;
 	gap: 10px;
 	/* background:#36b64f; */
 	padding: 40px 10px;
@@ -538,7 +547,7 @@ fieldset > legend{
 }
 
 #slide1:checked~.s1 {
-	margin-left: 0;
+	margin-left:0;
 }
 
 #slide2:checked~.s1 {
@@ -546,7 +555,7 @@ fieldset > legend{
 }
 
 #slide3:checked~.s1 {
-	margin-left: -1800px;
+	margin-left:-1800px;
 }
 
 

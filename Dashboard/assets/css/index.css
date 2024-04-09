@@ -44,7 +44,7 @@
   color: var(--fc-error);
   width:100%;
   border-radius:.3rem;
-  background-color:#ff9100ed;
+  background-color:#ff00084f;
 }
 .hide-warn{
   display:none;

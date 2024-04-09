@@ -239,7 +239,7 @@ fieldset legend{
 	transition: background .3s ease;
 }
 .btn:hover{
-	border: .1rem solid #67db7e;
+	outline:.1rem solid #67db7e;
 	background: #fff;
 	color:#67db7e;
 }
