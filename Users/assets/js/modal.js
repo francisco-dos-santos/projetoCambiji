@@ -174,9 +174,9 @@ export class ConfirmModal {
 
     p.style.textAlign="center";
     
-    btnCancel.textContent = "Cancelar";
+    btnCancel.textContent = "NÃO";
 
-    btnConfirm.textContent = "Confirmar";
+    btnConfirm.textContent = "OK";
 
     // Adiciona o estilo CSS para a animação ao modal
     this.style = document.createElement('style');
@@ -196,6 +196,7 @@ export class ConfirmModal {
         transform: translateY(-40px);
       }
       .modal-confirm>div{
+        width:100%;
         display:flex;
         align-items:center;
         justify-content:flex-end;
@@ -203,6 +204,7 @@ export class ConfirmModal {
       }
       .modal-confirm button.cancel, 
       .modal-confirm button.confirm{
+        width:50%;
         padding:1rem;
         border-radius:.8rem;
         font-weight:bold;

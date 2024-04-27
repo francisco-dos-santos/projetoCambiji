@@ -1,6 +1,5 @@
-import { Products } from "./classProducts.js";
+import { Products,updateProduct } from "./classProducts.js";
 import{setError,setSucess}from '../functionsSet&Get_Error.js';
-import { Modal} from "./modal.js";
 
 export default function initSettings(){
 const setting = document.getElementById("setting");
@@ -26,9 +25,16 @@ if(setting){
     buttons.forEach(button=>{
       button.addEventListener('click',()=>{
         ativeTab(button);
+        renderProducts();
       })
     });
   }
+  function renderProducts(){
+    new updateProduct('list-Products');
+    new updateProduct('list-Prod-deals');
+    // console.log(update);
+  }
+  
   function showfields(){
     const wrapperPrNormal=document.getElementById('content-normal');
     const wrapperPrDeals= document.getElementById('content-deals');
@@ -46,9 +52,13 @@ if(setting){
       });
     });
   }
+
   function iniWorkForAddProduct(){
-    const buttonAddProd= document.getElementById('btn-add-products');
+    const buttonAddProd=document.getElementById('btn-add-products');
+    const buttonCancelar=document.getElementById('btn-reset-fields');
+    const IdEditProduct=JSON.parse(sessionStorage.getItem('Edit-product')) || '';
     let image;
+    let percentage;
 
     function getImage(){
       const pictureInput = document.getElementById("picture-input");
@@ -213,82 +223,242 @@ if(setting){
 
       return true
     }
-    
-    function handleClickAddProduct(event){
-      event.preventDefault();
-      const warnImage=setting.querySelector('.container-image> .warn-data');
-      const filedsetWrapper = document.querySelector('fieldset > .fieldset-wrapper.show-deals-normal');
-      const nameProductInput= filedsetWrapper.querySelector('.wrapper-input> #name-product');
-      const descriptionInput= filedsetWrapper.querySelector('.wrapper-input> #desc-product');
-      const priceInput= filedsetWrapper.querySelector('.wrapper-input> #price-product');
 
-      const priceOldInput = filedsetWrapper.querySelector('.wrapper-input> #price-old-product');
-      const priceNewInput = filedsetWrapper.querySelector('.wrapper-input> #price-new-product');
+    function getDataProductForEdit(products){
 
-      const categoryInput = filedsetWrapper.querySelector('.wrapper-input> #category-product');
-      const markInput = filedsetWrapper.querySelector('.wrapper-input> #marker-product');
-      const sizeInput = filedsetWrapper.querySelector('.wrapper-input> #size-product');
-      const stockInput = filedsetWrapper.querySelector('.wrapper-input> #stock-product');
-
-
-      if(image){
-        warnImage.classList.add('hide-warn');
-        let isDealsField =filedsetWrapper.getAttribute('id');
-        if(isDealsField==='content-deals'){
+      if(IdEditProduct.status){
+        document.querySelector('.wrapper-input-switch > #product-promo + label').click();
+        const filedsetWrapper = document.querySelector('fieldset > .fieldset-wrapper.show-deals-normal');
+        filedsetWrapper.querySelector('.wrapper-input> #name-product').value=products[IdEditProduct.id].product;
+        filedsetWrapper.querySelector('.wrapper-input> #desc-product').value=products[IdEditProduct.id].description;
+        filedsetWrapper.querySelector('.wrapper-input> #price-old-product').value=products[IdEditProduct.id].price;
+        filedsetWrapper.querySelector('.wrapper-input> #price-new-product').value=products[IdEditProduct.id].priceNew;
+        filedsetWrapper.querySelector('.wrapper-input> #category-product').value=products[IdEditProduct.id].category;
+        filedsetWrapper.querySelector('.wrapper-input> #marker-product').value=products[IdEditProduct.id].mark;
+        filedsetWrapper.querySelector('.wrapper-input> #size-product').value=products[IdEditProduct.id].size;
+        filedsetWrapper.querySelector('.wrapper-input> #stock-product').value=products[IdEditProduct.id].stock;
         
-          if(validatyFieldsDeals({nameProductInput,descriptionInput,priceOldInput,
-            priceNewInput,categoryInput,markInput,sizeInput,stockInput}))
-          {
-            console.log(image);
-            console.log(isDealsField);
-            Products.addProductDeals(
-              { 
-                priceNew:priceNewInput.value,
-                product:nameProductInput.value,
-                price:priceOldInput.value,
-                category:categoryInput.value,
-                description:descriptionInput.value,
-                imageProduct:image,
-                stock:stockInput.value,
-                mark:markInput.value,
-                size:sizeInput.value
-              })
-          }
-        }else{
+        image=products[IdEditProduct.id].imageProduct;
+        percentage=products[IdEditProduct.id].porcent;
+        setting.querySelector('.wrapper-img> #picture-previous')
+        .setAttribute('src',image);
 
-          if(validatyFieldsNormal({nameProductInput,descriptionInput,priceInput,
-            categoryInput,markInput,sizeInput,stockInput}))
-          {
-            // console.log(isDealsField);
-            Products.addProduct(
-              {
-                product:nameProductInput.value,
-                price:priceInput.value,
-                category:categoryInput.value,
-                description:descriptionInput.value,
-                imageProduct:image,
-                stock:stockInput.value,
-                mark:markInput.value,
-                size:sizeInput.value
-              });
-
-          }
-        } 
+        console.log('esta tentando editar o promocional?',IdEditProduct);
       }else{
-        warnImage.classList.remove('hide-warn');
+        const filedsetWrapper = document.querySelector('fieldset > .fieldset-wrapper.show-deals-normal');
+        filedsetWrapper.querySelector('.wrapper-input> #name-product').value=products[IdEditProduct.id].product;
+        filedsetWrapper.querySelector('.wrapper-input> #desc-product').value=products[IdEditProduct.id].description;
+        filedsetWrapper.querySelector('.wrapper-input> #price-product').value=products[IdEditProduct.id].price;
+        filedsetWrapper.querySelector('.wrapper-input> #category-product').value=products[IdEditProduct.id].category;
+        filedsetWrapper.querySelector('.wrapper-input> #marker-product').value=products[IdEditProduct.id].mark;
+        filedsetWrapper.querySelector('.wrapper-input> #size-product').value=products[IdEditProduct.id].size;
+        filedsetWrapper.querySelector('.wrapper-input> #stock-product').value=products[IdEditProduct.id].stock;
+
+        image=products[IdEditProduct.id].imageProduct;
+        setting.querySelector('.wrapper-img> #picture-previous')
+        .setAttribute('src',image);
       }
-      
+    }
+    function getPercentage(){
+      const wrapperModalPorcent=document.querySelector('#add-Products .wrapper-modal-porcent');
+      const btnClose=wrapperModalPorcent.querySelector('.close-inputs');
+      const priceOldProduct=document.getElementById('price-old-product');
+      const priceNewProduct=document.getElementById('price-new-product');
+
+      if(priceOldProduct){
+        priceOldProduct.addEventListener('input',handlePriceOld);
+        function handlePriceOld(){
+            const inputPriceOld=wrapperModalPorcent.querySelector('#price-Old');
+            const inputPorcent=wrapperModalPorcent.querySelector('#porcent-descount');
+            const inputPriceNew=wrapperModalPorcent.querySelector('#price-new');
+            inputPriceOld.value=priceOldProduct.value;
+            wrapperModalPorcent.classList.add('show-info-modal');
+
+              inputPorcent.addEventListener('input',handleCalculDescount);
+
+              function handleCalculDescount(){
+                if(inputPorcent.value && inputPriceOld.value){
+                  inputPriceNew.value=(parseInt(inputPriceOld.value)-(parseInt(inputPorcent.value)/100)*parseInt(inputPriceOld.value)).toFixed(2);
+                  priceNewProduct.value=inputPriceNew.value;
+                  priceOldProduct.value=inputPriceOld.value;
+                  percentage=inputPorcent.value;
+                  // console.log('desconto de'+percentage);
+                }
+              }
+            
+
+            btnClose.onclick=function(){
+              wrapperModalPorcent.classList.remove('show-info-modal');
+              inputPriceNew.value="";
+              inputPriceOld.value="";
+              inputPorcent.value="";
+            }
+
+            console.log(inputPorcent.value);
+        }
+      }
     }
 
+    if(IdEditProduct){
+      const products=JSON.parse(localStorage.getItem('BD_products'))??[];
+      getDataProductForEdit(products);
+      getPercentage();
+      function handleClickEditProduct(event){
+        event.preventDefault();
+        
+        const warnImage=setting.querySelector('.container-image> .warn-data');
+        const filedsetWrapper = document.querySelector('fieldset > .fieldset-wrapper.show-deals-normal');
+        const nameProductInput= filedsetWrapper.querySelector('.wrapper-input> #name-product');
+        const descriptionInput= filedsetWrapper.querySelector('.wrapper-input> #desc-product');
+        const priceInput= filedsetWrapper.querySelector('.wrapper-input> #price-product');
+  
+        const priceOldInput = filedsetWrapper.querySelector('.wrapper-input> #price-old-product');
+        const priceNewInput = filedsetWrapper.querySelector('.wrapper-input> #price-new-product');
+  
+        const categoryInput = filedsetWrapper.querySelector('.wrapper-input> #category-product');
+        const markInput = filedsetWrapper.querySelector('.wrapper-input> #marker-product');
+        const sizeInput = filedsetWrapper.querySelector('.wrapper-input> #size-product');
+        const stockInput = filedsetWrapper.querySelector('.wrapper-input> #stock-product');
 
-    buttonAddProd.addEventListener('click',handleClickAddProduct);
+        if(image){
+          let isDealsField =filedsetWrapper.getAttribute('id');
+          if(isDealsField==='content-deals'){
+            if(validatyFieldsDeals({nameProductInput,descriptionInput,priceOldInput,priceNewInput,categoryInput,markInput,sizeInput,stockInput})){
+              setTimeout(function(){
+                Products.editProduct({
+                  id:IdEditProduct.id,
+                  status:'deals',
+                  priceNew:priceNewInput.value,
+                  porcent:percentage,
+                  product:nameProductInput.value,
+                  price:priceOldInput.value,
+                  category:categoryInput.value,
+                  description:descriptionInput.value,
+                  imageProduct:image,
+                  stock:stockInput.value,
+                  size:sizeInput.value,
+                  mark:markInput.value
+                }); 
+              },400);
 
+              document.body.querySelectorAll("aside > .wrapper-logout-settings> button")[0].click();
+
+            }
+
+          }else{
+
+            if(validatyFieldsNormal({nameProductInput,descriptionInput,priceInput,categoryInput,markInput,sizeInput,stockInput})){
+              setTimeout(function(){
+                Products.editProduct({
+                  id:IdEditProduct.id,
+                  product:nameProductInput.value,
+                  price:priceInput.value,
+                  category:categoryInput.value,
+                  description:descriptionInput.value,
+                  imageProduct:image,
+                  stock:stockInput.value,
+                  size:sizeInput.value,
+                  mark:markInput.value
+                });
+              },400);
+
+              document.body.querySelectorAll("aside > .wrapper-logout-settings> button")[0].click();
+
+            }
+          }
+
+        }else{
+          warnImage.classList.remove('hide-warn');
+        }
+
+      }
+      
+      sessionStorage.removeItem('Edit-product');
+      buttonAddProd.addEventListener('click',handleClickEditProduct);
+    }else{
+      getPercentage();
+      function handleClickAddProduct(event){
+        event.preventDefault();
+        const warnImage=setting.querySelector('.container-image> .warn-data');
+        const filedsetWrapper = document.querySelector('fieldset > .fieldset-wrapper.show-deals-normal');
+        const nameProductInput= filedsetWrapper.querySelector('.wrapper-input> #name-product');
+        const descriptionInput= filedsetWrapper.querySelector('.wrapper-input> #desc-product');
+        const priceInput= filedsetWrapper.querySelector('.wrapper-input> #price-product');
+  
+        const priceOldInput = filedsetWrapper.querySelector('.wrapper-input> #price-old-product');
+        const priceNewInput = filedsetWrapper.querySelector('.wrapper-input> #price-new-product');
+  
+        const categoryInput = filedsetWrapper.querySelector('.wrapper-input> #category-product');
+        const markInput = filedsetWrapper.querySelector('.wrapper-input> #marker-product');
+        const sizeInput = filedsetWrapper.querySelector('.wrapper-input> #size-product');
+        const stockInput = filedsetWrapper.querySelector('.wrapper-input> #stock-product');
+  
+  
+        if(image){
+          warnImage.classList.add('hide-warn');
+          let isDealsField =filedsetWrapper.getAttribute('id');
+          if(isDealsField==='content-deals'){
+            if(validatyFieldsDeals({nameProductInput,descriptionInput,priceOldInput,
+              priceNewInput,categoryInput,markInput,sizeInput,stockInput}))
+            {
+              // console.log(image);
+              console.log(isDealsField);
+              Products.addProductDeals(
+                { 
+                  priceNew:priceNewInput.value,
+                  porcent:percentage,
+                  product:nameProductInput.value,
+                  price:priceOldInput.value,
+                  category:categoryInput.value,
+                  description:descriptionInput.value,
+                  imageProduct:image,
+                  stock:stockInput.value,
+                  mark:markInput.value,
+                  size:sizeInput.value
+                })
+            }
+          }else{
+  
+            if(validatyFieldsNormal({nameProductInput,descriptionInput,priceInput,
+              categoryInput,markInput,sizeInput,stockInput}))
+            {
+              // console.log(isDealsField);
+              Products.addProduct(
+                {
+                  product:nameProductInput.value,
+                  price:priceInput.value,
+                  category:categoryInput.value,
+                  description:descriptionInput.value,
+                  imageProduct:image,
+                  stock:stockInput.value,
+                  mark:markInput.value,
+                  size:sizeInput.value
+                });
+  
+            }
+          } 
+        }else{
+          warnImage.classList.remove('hide-warn');
+        }
+        
+      }
+
+      function resetFieldsInput(event){
+        event.preventDefault();
+        const filedsetWrapper = document.querySelector('fieldset > .fieldset-wrapper.show-deals-normal');
+        filedsetWrapper.querySelectorAll(".wrapper-input > .input-clean").forEach(input=>input.value="");
+      }
+
+
+      buttonCancelar.addEventListener('click',resetFieldsInput);
+      buttonAddProd.addEventListener('click',handleClickAddProduct);
+    }
+    
     document.body.onload=getImage();
   }
   initTab();
   showfields();
   iniWorkForAddProduct();
-  
 }
 
 }

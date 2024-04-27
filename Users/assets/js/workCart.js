@@ -18,11 +18,16 @@ function incrementP(pos){
   if(carts[pos].quantity===10){
     return;
   }else{
+    if(carts[pos].stock > 0){
     carts[pos].quantity+=1;
+    carts[pos].stock-=1;
     savecartStorage();
     renderCart();
     renderShopping();
     getTotalValues(); 
+    }else{
+      Modal.open("../assets/imagens/icons8_error.ico","Produto no stock esgotado");
+    }
   }
   // console.log("entrou na funcão incrementar ")
 }
@@ -34,6 +39,7 @@ async function decrementP(pos){
     }
   }else{
     carts[pos].quantity-=1;
+    carts[pos].stock+=1;
   }
   savecartStorage()
   renderCart();
@@ -54,7 +60,7 @@ function renderCart(){
     <div class="contents-info-product-cart">
       <p>${element.product}<br><span class="description-cart">descrição...</span></p>
       <div class="content-price-quantity">
-        <p class="price-cart">Kz ${element.price}</p>
+        <p class="price-cart">Kz ${element.priceNew?element.priceNew:element.price}</p>
         <div class="content-add-quantity">
           <button class="control-less-plus btn-less" id="${index}">–</button>
           <input type="button" id="input-quantity" value="${element.quantity}">
@@ -112,7 +118,7 @@ function renderShopping(){
     <div class="price-cont">
       <p>
         A0 <span class="price">
-          ${element.price}
+          ${element.priceNew?element.priceNew : element.price}
         </span>
       </p>
     </div>
@@ -123,7 +129,7 @@ function renderShopping(){
     </div>
     <div class="tl-price-cont">
       <p>A0 <span class="tl-price">
-        ${element.price*element.quantity}
+        ${element.priceNew?element.priceNew*element.quantity:element.price*element.quantity}
       </span>
       </p>
     </div>
@@ -144,7 +150,7 @@ function getTotalValues(){
   let TotalValueCart=document.getElementById("Total-Cart");
   const contentTotalShopping=document.querySelector(".content-total")
   let prices = carts.map((item)=>{
-    return Number(item.price)*Number(item.quantity);
+    return item.priceNew ? Number(item.priceNew)*Number(item.quantity):Number(item.price)*Number(item.quantity);
   });
   Total = prices.reduce((prev,next)=>{
     return prev + next;
@@ -154,10 +160,10 @@ function getTotalValues(){
     let TotalValueShopping=document.querySelectorAll(".total-screen");
     let subTotalValueshopping=document.querySelectorAll(".subtotal-screen");
     TotalValueShopping.forEach(element=>{
-      element .innerText=Total.toFixed(2);
+      element.innerText=Total.toFixed(2);
     })
     subTotalValueshopping.forEach(element=>{
-      element .innerText=Total.toFixed(2);
+      element.innerText=Total.toFixed(2);
     })
   }
 }
@@ -231,6 +237,30 @@ export class DataShopping {
     const { date, time } = this.setDateAndhour();
     this.date = date;
     this.time = time;
+    this.codeverify=this._randomCode;
+  }
+  get _randomCode(){
+    let code="";
+    let letters='abcde@fjgyj&%klm$pqrst#vwz$';
+    let number='0123456789';
+    for(let i=0;i<=6;i++){
+      code=letters[Math.floor(Math.random()*letters.length)]+
+      number[Math.floor(Math.random()*number.length)]+
+      letters[Math.floor(Math.random()*letters.length)]+
+      number[Math.floor(Math.random()*number.length)]+'-'+
+      letters[Math.floor(Math.random()*letters.length)]+
+      number[Math.floor(Math.random()*number.length)]+
+      number[Math.floor(Math.random()*number.length)]+
+      letters[Math.floor(Math.random()*letters.length)]+'-'+
+      letters[Math.floor(Math.random()*letters.length)]+
+      letters[Math.floor(Math.random()*letters.length)]+
+      number[Math.floor(Math.random()*number.length)]+
+      number[Math.floor(Math.random()*number.length)]+
+      letters[Math.floor(Math.random()*letters.length)]+'-'+
+      letters[Math.floor(Math.random()*letters.length)]+
+      letters[Math.floor(Math.random()*letters.length)];
+    }
+    return code;
   }
 
   static addShoppings({ numberPhone, province, municipe, adress, payment,valor }) {
@@ -244,8 +274,9 @@ export class DataShopping {
         payment,
         date: shopping.date,
         time: shopping.time,
+        codeverify:shopping.codeverify,
         valor:valor,
-        products: shopping.carts,
+        products:shopping.carts,
         status:false
       };
       const currentUser = shopping.ListUser[shopping.index - 1];
@@ -253,6 +284,9 @@ export class DataShopping {
       currentUser.shoppings.push(newShopping);
       shopping.saveStorage();
       sessionStorage.removeItem("BD_carts");
+      sessionStorage.setItem('shopping',JSON.stringify(newShopping));
+      
+      window.location.href="../pages-logado/dataToshopping.html";
     }
   }
 
@@ -264,7 +298,7 @@ export class DataShopping {
   }
 
   saveStorage() {
-    localStorage.setItem('BD_Users', JSON.stringify(this.ListUser));
+    localStorage.setItem('BD_Users',JSON.stringify(this.ListUser));
   }
 }
 

@@ -1,38 +1,50 @@
-/* sarmtphones(600px para baixo) */
-@media screen and (max-width:600px)
-{
-    .sacola
-    {
-        width: 10px;
-    }
-    .pesquisar
-    {
-        display: none;
-    }
-    .sess1
-    {
-        flex-direction: column;
-    }
-    .headline
-    {
-        flex:100%;
-        margin-left: 0;
-    }
-    .imag-headline
-    {
-        flex:100%;
-        margin-right: 0;
-    }
-    .container-cart{
-        right:0rem;
-        max-width:30rem;
-        width:100%;
-    }
+
+/* smatfones(767px para baixo) */
+@media only screen and (max-width:767px){
+  #wrapper .sess1 p {
+    background-color: #FFFFFF;
+    padding:1rem;
+    border-radius:1rem;
+  }
+
+  #ofert-day{
+    grid-template-columns:repeat(3,1fr);
+    gap:2rem;
+  }
+
+  #produt-recomed{
+    grid-template-columns:repeat(3,1fr);
+    gap:2rem;
+  }
+
+  #content-service{
+    align-items:normal;
+    justify-content:start;
+    flex-wrap:wrap;
+  }
 }
-/* smartphones com tela maiores a 600px */
-@media only screen and (max-width:1024px )
-{
-    .container-cart{
-        right:0rem;
-    }
+
+/* para tablet */
+@media only screen and (min-width:767px) and (max-width:967px){
+:root{
+  font-size:55%;
+}
+.dropdown{
+  right:0rem;
+}
+ #ofert-day{
+    grid-template-columns: repeat(4, 1fr);
+    gap:2rem;
+  }
+
+  #produt-recomed {
+    grid-template-columns: repeat(4, 1fr);
+    gap:2rem;
+  }
+
+  #content-service{
+    align-items:normal;
+    justify-content:start;
+  }
+  
 }

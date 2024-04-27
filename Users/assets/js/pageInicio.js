@@ -44,7 +44,7 @@ import { Modal } from "./modal.js";
       <div class="card descendo">
         <div class="cont-img">
           <img src="${element.imageProduct}" alt="produto-${element.id+1}">
-          <div class="percentage" id="porcent">70%</div>
+          <div class="percentage" id="porcent">${element.porcent}%</div>
         </div>
         <h3 class="preco">A0A ${element.priceNew}.00</h3>
         <del class="text-riscado">A0A ${element.price}.00</del>
@@ -85,7 +85,51 @@ import { Modal } from "./modal.js";
     });
 
   }
+  function initFetchService(){
+    fetch('../services.json')
+    .then(response=>response.json())
+    .then(data=>{
+      const contentServ=document.getElementById('content-service');
+      // console.log(contentServ);
+      for(let service of data) {
+        if(service.type.includes("Combo Serviços")){
+          const combo=contentServ.querySelector('#combo');
+          combo.querySelector('h3').textContent=service.type;
+          combo.querySelector('span').textContent='A0A '+ service.valor.toFixed(2);
+          combo.querySelector('p').textContent=service.description;
+          combo.querySelector('.btn').onclick=()=>{
+            goingForReserva(service);
+          };
+        }
 
+        if(service.type.includes("Massagem Simples")){
+          const massagem=contentServ.querySelector('#massagem');
+          massagem.querySelector('h3').textContent=service.type;
+          massagem.querySelector('span').textContent='A0A '+ service.valor.toFixed(2);
+          massagem.querySelector('p').textContent=service.description;
+          massagem.querySelector('.btn').onclick=()=>{
+            goingForReserva(service);
+          };
+        }
+
+        if(service.type.includes("Limpeza Facial")){
+          const facelimpa=contentServ.querySelector('#facelimpa');
+          facelimpa.querySelector('h3').textContent=service.type;
+          facelimpa.querySelector('span').textContent='A0A '+ service.valor.toFixed(2);
+          facelimpa.querySelector('p').textContent=service.description;
+          facelimpa.querySelector('.btn').onclick=()=>{
+            goingForReserva(service);
+          };
+        }
+
+        
+      }
+    })
+  }
+  function goingForReserva(service){
+    sessionStorage.setItem('info-reserva',JSON.stringify(service));
+    window.location.href="../pages-logado/fazer-reserva.html";
+  }
   function seeIfUserFirstTimes(){
    return JSON.parse(sessionStorage.getItem('User_first_times'));
   }
@@ -201,7 +245,7 @@ function closeWidthESC(event){
 document.addEventListener("DOMContentLoaded", function(){
   addNameUser();
   initWorkCartPage();
-  // initCountDown();
+  initFetchService();
 
   if(seeIfUserFirstTimes()){
     initWorkIfUserLoginFirstTimes();

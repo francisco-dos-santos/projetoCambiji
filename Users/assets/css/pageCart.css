@@ -323,18 +323,25 @@ form.adress-content-shopping> .wrapper-input> label{
 
 #finesh-checkout{
 	background: #36b64f;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
 	border-radius:.5rem;
 	padding: 1.6rem;
 	color: #fff;
 	font-size:1.6rem;
 	transition: all .4s ease-out;
-	align-self: flex-end;
+	align-self:flex-end;
 }
 #finesh-checkout:hover{
-	color: #36b64f;
-	background: #ffffff;
+	filter:brightness(0.9);
 	outline: .1rem solid #36b64f;
-	box-shadow: inset 0rem 0rem .9rem #36b64f;
+	box-shadow: inset 0rem 0rem .5rem #f7f7f7;
+}
+.loader{
+	display:none;
+	animation: loader .6s ease-in infinite;
 }
 .list-product-for-checkeout{
 	display:flex;

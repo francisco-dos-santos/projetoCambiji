@@ -93,7 +93,7 @@
   background-color:#36b650c8;
   transition: all 0.5s;
 }
-.loader {
+.loader{
   display:none;
   animation:loader 0.9s infinite forwards;
 }

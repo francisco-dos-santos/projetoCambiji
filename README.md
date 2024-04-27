@@ -2,7 +2,7 @@
 
 <p align="center">
   Project exclusivo and free, for me make on Unydevtch comnunity as test to diagnósticts at lenguages to HTML,CSS and javascript . <br/>
-  Projecto feito por min na Unydevtch comnunity como teste de diagnóstico nas linguagens de HTML CSS e Javascritp.<br/>
+  Projecto excluisivo e livre, feito por min na Unydevtch comnunity como teste de diagnóstico nas linguagens de HTML CSS e Javascritp.<br/>
 </p>
 
 
@@ -27,11 +27,15 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- HTML e CSS e javascript
+- HTML 
+- CSS  
+- javascript
 - Git e Github
 
 ## 💻 Projeto
-A Cambiji-Nature é um site de vendas de produtos cosmetis, e também permite fazer reserva de serviços da pel.
+<p>
+  A Cambiji-Nature é um site de vendas de produtos cosmeticos(produtos diversos da pele), e também permite fazer reserva de serviços diversos relacionado a lazer e do corpo.
+</p>
 
 - [Acesse o projeto finalizado, online](https://francisco-dos-santos.github.io/projetoCambiji/)
 
@@ -40,3 +44,6 @@ A Cambiji-Nature é um site de vendas de produtos cosmetis, e também permite fa
  para acessá-lo. Clica no link anterior
 
 ## :memo: Licença
+<p align="center">Esse projeto existe e já está em funcionamento no mercado, qualquer copia da empresa, 
+  desde a logo até as informações irrelevantes é passível nos termos da lei de crime segundo Nº 2 Art 20º.  
+</p>

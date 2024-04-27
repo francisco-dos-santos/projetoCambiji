@@ -1,22 +1,14 @@
 export default class Countdown{
-  constructor({futureDate,atualDate}){
+  constructor({futureDate}){
     this.futureDate=futureDate;
-    this._atualDate=atualDate;
+    this._atualDate=new Date();
   }
-  set _atualDate(atualDate){
-    if(atualDate){
-      this.atualDate=new Date(atualDate);
-      return this.atualDate;
-    }else{
-      this.atualDate=new Date();
-      return this.atualDate;
-    }
-  }
+
   get _futureDate(){
     return new Date(this.futureDate);
   }
   get _TimeDiff(){
-    return this._futureDate.getTime() - this.atualDate.getTime();
+    return this._futureDate.getTime() - this._atualDate.getTime();
   }
   get isTimeDiffEqualZero(){
     let isFineshedTime = this._TimeDiff <= 0;

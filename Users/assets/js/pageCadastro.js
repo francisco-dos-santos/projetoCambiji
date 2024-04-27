@@ -30,6 +30,7 @@ class SetUser {
     this.email = email;
     this.password = password;
     this.id = id;
+    this.dateCreate=new Date().toLocaleDateString();
   }
 }
 

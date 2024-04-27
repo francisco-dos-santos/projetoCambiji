@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="../assets/imagens/logo2.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="../assets/css/segundo.css" />
     
     <title>Page-Dados da Entrega</title>
@@ -37,17 +37,24 @@
           </label>
         </article>
         <div class="conta">
-          <a href="#" id="cont-link">
-            <img
-              src="../assets/imagens/icons8_male_user-logado.ico"
-              width="32px"
-              alt="usuario cambiji"
-            />
+          <a href="#" id="cont-link" title="Francisco dos santos">
             <span id="user-name">Nome</span>
           </a>
           <div class="dropdown">
-            <a href="perfil.html">Perfil</a>
-            <a href="../index.html">Sair</a>
+            <div class="content-img-info-user">
+              <img
+                src="../assets/imagens/icons8_male_user-logado.ico"
+                alt="imagem de icone do user"
+              />
+            </div>
+            <div class="content-info-people-user">
+              <span class="info-user-name">Nome Completo user</span>
+              <span class="info-user-email">Email do user</span>
+            </div>
+            <div class="content-btn-info-user">
+              <a href="perfil.html">Perfil</a>
+              <a href="#" class="go-out">Sair</a>
+            </div>
           </div>
         </div>
         <div class="cart-wrapper" id="icon-cart" data-count="0">
@@ -64,21 +71,21 @@
             </div>
             <section id="content-cards-cart">
               <!-- <div class="content-card-cart">
-                          <div class="content-img">
-                            <img src="../assets/imagens/produto6.png" alt="produto-1">
-                          </div>
-                          <div class="contents-info-product-cart">
-                            <p>Nome produto<br><span class="description-cart">descrição...</span></p>
-                            <div class="content-price-quantity">
-                              <p class="price-cart">Kz 2000</p>
-                              <div class="content-add-quantity">
-                                <button id="btn-less" class="control-less-plus">--</button>
-                                <input type="button" id="input-quantity" value="1">
-                                <button id="btn-plus" class="control-less-plus">+</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div> -->
+                    <div class="content-img">
+                      <img src="../assets/imagens/produto6.png" alt="produto-1">
+                    </div>
+                    <div class="contents-info-product-cart">
+                      <p>Nome produto<br><span class="description-cart">descrição...</span></p>
+                      <div class="content-price-quantity">
+                        <p class="price-cart">Kz 2000</p>
+                        <div class="content-add-quantity">
+                          <button id="btn-less" class="control-less-plus">--</button>
+                          <input type="button" id="input-quantity" value="1">
+                          <button id="btn-plus" class="control-less-plus">+</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
             </section>
             <div class="content-finally-cart">
               <div class="content-price-total">
@@ -91,84 +98,139 @@
         </div>
       </div>
     </header>
-    <main>
+    <main style="background-color: #ffff;">
+      <div class="wrapper-modal-request">
+        <img src="../assets/imagens/icons8_ok.ico" alt="icone de ok" width="30">
+        <p>Seu pedido foi realizado com sucesso, para ver a lista completa, <span class="go-perfil">clica aqui.</span></p>
+      </div>
+      <h1>Pedido Concluído</h1>
       <article class="wrapper-finaliza">
-        <h2>Detalhes de facturação</h2>
-        <section class="Finaliza-pag bouncedireito">
-          <article class="card-finlaiza content">
-            <form action="" method="get" autocomplete="on">
-              <p>Codigo da encomenda*</p>
-              <input type="text" value="efr2001-d8984-03/1043">
-              <p>Numero de Telefone*</p>
-              <input type="tel" placeholder="932925647"/>
-              <p>Metodo de pagamento</p>
-              <input type="text" value="unitelMoney">
-              <p>Pais/Região*</p>
-              <select
-                name="pais"
-                class="input-finaliza"
-                id="ipais"
-                disabled
-              >
-                <option value="">Angola</option>
-              </select>
-              <p>Enderenço Da entrega*</p>
-              <input
-                type="text"
-                class="input-finaliza"
-                name=""
-                id=""
-                placeholder="Rocha Pinto/ rua 12 / 35"
-              />
+        <h3>Obrigado! seu pedido foi recebido.</h3>
+        <section class="wrappeer-title-shopping">
+          <div class="wrapper-code content-info">
+            <p>Código do Pedido:</p>
+            <h4>123cd-4nfnd-0ye80-85fk3$</h4>
+          </div>
+          <div class="wrapper-date content-info">
+            <p>Data:</p>
+            <h4>22/04/2024</h4>
+          </div>
+          <div class="wrapper-total content-info">
+            <p>Total:</p>
+            <h4>A0A 3500,00</h4>
+          </div>
+          <div class="wrapper-payment content-info">
+            <p>Método de Pagamento:</p>
+            <h4>Cartão de Credito</h4>
+          </div>
+        </section>
 
-            </form>
-          </article>
-          <!-- card-2 -->
-          <article class="card-finliza2 content">
-            <h3>A sua encomenda</h3>
-            <div class="alinhar-preco">
-              <p>Produto</p>
-              <p>subtotal</p>
+        <section class="wrapper-shoppings-request">
+          <h2>Detalhes do Pedido</h2>
+          <div class="shopping-request-title">
+            <h4>Produtos</h4>
+            <p>Quantidade</p>
+          </div>
+          <div class="container-request">
+            <div class="shopping-request">
+              <h4><span class="name-product">Produtos</span> X <span class="quantity">2</span></h4>
+              <p class="price-product">A0A 2050,00</p>
             </div>
-            <!-- 1 -->
-            <div class="alinhar-preco">
-              <p><img src="../imagens/produto7.png" alt="" /></p>
-              <p>
-                <span>Creme</span>
-                <br /><br />
-                3000kz
-              </p>
+            <div class="shopping-request">
+              <h4><span class="name-product">Produtos</span> X <span class="quantity">2</span></h4>
+              <p class="price-product">A0A 2050,00</p>
             </div>
-            <!-- 2 -->
-            <div class="alinhar-preco">
-              <p><img src="../imagens/produto6.png" alt="" /></p>
-              <p>
-                <span>Aromas</span>
-                <br /><br />
-                500kz
-              </p>
-            </div>
-            <!-- 3-->
-            <div class="alinhar-preco">
-              <p><img src="../imagens/produto4.png" alt="" /></p>
-              <p>
-                <span>Perfume </span>
-                <br /><br />
-                3000kz
-              </p>
-            </div>
-            <!-- 4-->
-            <div class="alinhar-preco">
-              <p>Total</p>
-              <p>6500kz</p>
-            </div>
-            <div class="alinhar-preco">
-              <p>Envio</p>
-              <p>gratis</p>
-            </div>
-          </article>
+          </div>
+          <div class="shopping-request-title">
+            <h4>Total</h4>
+            <p class="total-shopping">A0A 5000,00</p>
+          </div>
         </section>
       </article>
+      <!-- FOOTER SECUNDARIO -->
+      <section class="sess6">
+        <article>
+          <div class="footer-seg">
+            <h2>
+              <img
+                src="../assets/imagens/logo.png"
+                width="80px"
+                alt="icone-logo"
+              />
+              Cambiji Nature
+            </h2>
+            <p>
+              Uma empresa que presta serviços de cosmetics, trabalhando para bem
+              da tua pele natural.
+            </p>
+            <div class="section-rede">
+              <a href="#" class="rede">
+                <img
+                  src="../assets/imagens/icons8_facebook_f.ico"
+                  alt="facebook-icone"
+                />
+              </a>
+              <a href="#" class="rede">
+                <img
+                  src="../assets/imagens/icons8_whatsapp.ico"
+                  alt="watsapp-icone"
+                />
+              </a>
+              <a href="#" class="rede">
+                <img
+                  src="../assets/imagens/icons8_youtube_play_button.ico"
+                  alt="youtube-icone"
+                />
+              </a>
+              <a href="#" class="rede">
+                <img
+                  src="../assets/imagens/icons8_instagram_logo.ico"
+                  alt="instagram-icone"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="footer-seg">
+            <h2>Links Rápidos</h2>
+            <div>
+              <a href="#">Inicio</a>
+              <a href="produto-logado.html">Produtos</a>
+              <a href="servicos-logado.html">Serviços</a>
+              <a href="sobre-nos-logado.html">Sobre-nós</a>
+              <a href="contato-logado.html">Conctato</a>
+            </div>
+          </div>
+          <div class="footer-seg">
+            <h2>Atendimento ao Cliente</h2>
+            <div>
+              <a href="#">Ajuda central</a>
+              <a href="#">Termos e condições de uso</a>
+              <a href="politica-privacidade-logado.html"
+                >Politica e privacidade</a
+              >
+              <a href="contato-logado.html">Enviar Feedeback</a>
+              <a href="#cont">Conta</a>
+            </div>
+          </div>
+          <div class="footer-seg">
+            <h2>Informações de Contato</h2>
+            <p>Subscreve-se na nossa Newsletter</p>
+            <form>
+              <input
+                type="email"
+                class="input"
+                id="Newsletter-email"
+                placeholder="your@gmail.com"
+                required
+              />
+              <button id="btn-newsletter">Subscrever</button>
+            </form>
+            <p>Telefone: (+244) 932945647</p>
+            <p>Email: [Cambiji@gmail.com]</p>
+            <p>Seg-Sab: 8h-22h</p>
+          </div>
+        </article>
+      </section>
     </main>
     <!-- FOOTER PRINCIPAL -->
     <footer>
@@ -177,16 +239,16 @@
       </div>
       <div class="method-pay">
         <a href="#">
-          <img src="" alt="visa" />
+          <img src="../assets/imagens/visaCard.png" alt="visa" />
         </a>
         <a href="#">
-          <img src="" alt="paypay" />
+          <img src="../assets/imagens/afrimoney.png" alt="afrimoney" />
         </a>
         <a href="#">
-          <img src="" alt="bank" />
+          <img src="../assets/imagens/credit-card..png" alt="bank" />
         </a>
         <a href="#">
-          <img src="" alt="unitelMoney" />
+          <img src="../assets/imagens/unitelMoney.png" alt="unitelMoney" />
         </a>
       </div>
     </footer>

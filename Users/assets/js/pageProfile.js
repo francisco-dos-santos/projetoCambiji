@@ -1,6 +1,6 @@
 import { addNameUser } from "./workheaderLogado.js";
 import { handleScreensEditProfile} from "./toggles.js";
-import { Modal } from "./modal.js";
+import { Modal,ConfirmModal } from "./modal.js";
 import Countdown  from "./countdown.js";
 import {GerinceService} from "./pageToDoService.js";
 import { initWorkCartPage,openCart,iconCart } from "./workCart.js";
@@ -12,23 +12,23 @@ const index=1+JSON.parse(sessionStorage.getItem("Id_users"))||'';
 // functions
 function initTabProfile(){
   const tabsButton= document.querySelectorAll('.list-navbar li button');
-function tabclicked(tab){
-  const contents=document.querySelectorAll('.zone-content .content');
-  contents.forEach(content=>content.classList.remove('show'));
-  tabsButton.forEach(tab=>tab.classList.remove('activo'));
-  const contentId=tab.getAttribute('content-id');
-  const contentTarget= document.getElementById(contentId)
-  if(contentTarget){
-    tab.classList.add('activo');
-    setTimeout(()=>{contentTarget.classList.add('show')},500);
+  function tabclicked(tab){
+    const contents=document.querySelectorAll('.zone-content .content');
+    contents.forEach(content=>content.classList.remove('show'));
+    tabsButton.forEach(tab=>tab.classList.remove('activo'));
+    const contentId=tab.getAttribute('content-id');
+    const contentTarget= document.getElementById(contentId)
+    if(contentTarget){
+      tab.classList.add('activo');
+      setTimeout(()=>{contentTarget.classList.add('show')},500);
+    }
   }
-}
-// events
-tabsButton.forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    tabclicked(tab);
+  // events
+  tabsButton.forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      tabclicked(tab);
+    });
   });
-});
 };
 function initRenderShoppingUser(){
   const containerShoppings=document.querySelector('.container-shopping-user');
@@ -42,10 +42,17 @@ if(users[index-1].shoppings!==undefined){
       contentImage.src=item.imageProduct;
       ItemShopping.querySelector('.info-product span:first-child').innerText=item.product;
       ItemShopping.querySelector('.info-product span:last-child').innerText="Categoria: "+item.category;
-      ItemShopping.querySelector('.price-item').innerText="A0 "+item.price +" X"+item.quantity+' ->';
-
-      ItemShopping.querySelector('.sub-total').textContent="A0 "+item.price*item.quantity;
+      ItemShopping.querySelector('.price-item').innerText="A0A "+item.price +" X"+item.quantity+' ->';
+      ItemShopping.querySelector('.code').textContent=shopping.codeverify;
+      ItemShopping.querySelector('.sub-total').textContent="A0A "+(item.price*item.quantity).toFixed(2);
       ItemShopping.querySelector('.payment').textContent=shopping.payment;
+
+      if(shopping.status){
+        ItemShopping.querySelector('.status').textContent='Concluido';
+        ItemShopping.querySelector('.status').style.color="aqua";
+        ItemShopping.querySelector('.status').style.borderColor="aqua";
+      }
+
       containerShoppings.appendChild(ItemShopping);
     }
     containerShoppings.innerHTML+=`
@@ -62,7 +69,14 @@ if(users[index-1].shoppings!==undefined){
   h3.style.textAlign="center";
   containerShoppings.appendChild(h3);
 }
-  
+
+function seeUserDoneShoppings(){
+  if(JSON.parse(sessionStorage.getItem('see-shoppigs'))){
+    document.querySelectorAll('.list-navbar li button')[1].click();
+    sessionStorage.removeItem('see-shoppigs');
+  }
+}
+seeUserDoneShoppings();
 }
 function initWorkProfileUser(){
   const btnAlterData=document.querySelector('.screen-1 #alter-user');
@@ -122,6 +136,16 @@ function initWorkProfileUser(){
   
 }
 function initworkProfileServiveUser(){
+  function seeUserDoneReserva(){
+    if(JSON.parse(sessionStorage.getItem('gotPerfilServ'))){
+      document.querySelectorAll('.list-navbar li button')[2].click();
+      Modal.open(
+        "../assets/imagens/icons8_ok.ico",
+        'Serviço Reservado com sucesso'
+      );
+      sessionStorage.removeItem('gotPerfilServ');
+    }
+  }
   class ExtendServForDelAndRender extends GerinceService
   {
     constructor(){
@@ -132,43 +156,69 @@ function initworkProfileServiveUser(){
       let countdown=new Countdown({futureDate:futureDate});
       return countdown;
     }
+    
+    delete(id){
+      this.users[this.index-1].Services.splice(id,1);
+      this.saveStorage();
+      this.renderService();
+      setTimeout(()=>{
+        Modal.open(
+          "../assets/imagens/icons8_ok.ico",
+          'Serviço Cancelado com sucesso!'
+        );
+      },400)
+    }
 
     renderService(){
       let containerBodyTable=document.querySelector('table tbody.body-table');
-    if(this.users[this.index-1].Services && this.users[this.index-1].Services.length){
-      containerBodyTable.innerHTML="";
+      this.removeAllTr();
+      if(this.users[this.index-1].Services && this.users[this.index-1].Services.length){
       for(let service of this.users[this.index-1].Services){
-        let futureDate=`${service.data} ${service.hour}`;
+        const row=this.createTr();
+        let dates= service.data.split('/');
+        let hours=service.hour.replaceAll('h',':').split(':');
+
+        let futureDate= new Date(dates[2],dates[1]-1,dates[0], hours[0],hours[1],59);
         
-        let newlistServ=`
-        <tr>
-          <td><span>${service.type}</span></td>
-          <td><span>${service.valor}</span></td>
-          <td><span>${service.data}</span></td>
-          <td><span>${service.hour}</span></td>
-          <td><span class="td-pay">${service.pay}</span></td>
-          <td><span class="td-status">Em process</span></td>
-          <td class="content-td-action">
-            <div class="btn-action-main">
-              •••
-                <div class="content-actions-btn">
-                  <button>Ver</button>
-                  <button>Cancelar</button>
-                </div>
-            </div>
-            <div class="countdown-profile">
-            ${futureDate}
-            </div>
-          </td>
-        </tr>
-        `;
-        containerBodyTable.innerHTML+=newlistServ;
-        // const countdownText = document.querySelector('td.content-td-action > .countdown-profile');
-        // countdownText.textContent=`00d:00:00:00
-        // `; 
+        row.querySelector('span.td-type').textContent=service.type;
+        row.querySelector('span.td-valor').textContent=service.valor;
+        row.querySelector('span.td-date').textContent=service.data+' «» '+service.hour;
+        row.querySelector('span.td-pay').textContent=service.pay;
+        row.querySelector('span.td-code').textContent=service.codeverify;
+        row.querySelector('span.td-status').textContent=service.status?'Concluido':'Pendente';
+        if(service.status){
+          row.querySelector("td .td-status").style.color="aqua";
+          row.querySelector('td .td-status').style.borderColor="aqua";
+        }
+        row.querySelector('.content-td-action #cancel').onclick= async()=>{
+          let id=this.users[this.index-1].Services.indexOf(service);
+          let isOk=await ConfirmModal.open('Desejas Canselar o serviço ?');
+          if(isOk){
+            this.delete(id);
+          }
+        }
+        let cronoment=row.querySelector('.content-td-action .countdown-profile');
+       
+        let count=setInterval(getcoutdowm,1000);
+
+        function getcoutdowm(){
+          let timeStemp=new Countdown({futureDate:futureDate});
+          cronoment.textContent=
+          `${String(timeStemp.total.days).padStart(2,'0')}d:
+            ${String(timeStemp.total.hours).padStart(2,'0')}h:
+            ${String(timeStemp.total.minutes).padStart(2,'0')}:
+            ${String(timeStemp.total.seconds).padStart(2,'0')}
+          `;
+
+          if(timeStemp.isTimeDiffEqualZero){
+            clearInterval(count);
+            cronoment.textContent='0d:00h:00:00';
+            row.querySelector('.content-td-action #cancel').style.display='none';
+          }
+        }
+
+        containerBodyTable.append(row);
       }
-      
-      //   let btnCancelar= countdownText.previousElementSibling.querySelector('.content-actions-btn button:last-child');
 
       }else{
       const tr=document.createElement('tr');
@@ -176,13 +226,43 @@ function initworkProfileServiveUser(){
       const texto=document.createTextNode('Estas sem Serviços efeituados');
       tr.appendChild(td);
       td.appendChild(texto);
+      td.setAttribute('colspan','6');
       td.style.textAlign="center";
       containerBodyTable.appendChild(tr);
       }
     }
+
+    createTr(){
+      let tr=document.createElement('tr');
+
+      tr.innerHTML=`
+        <td><span class="td-type"></span></td>
+        <td><span class="td-valor"></span></td>
+        <td><span class="td-date"></span></td>
+        <td><span class="td-code"></span></td>
+        <td><span class="td-pay"></span></td>
+        <td><span class="td-status"></span></td>
+        <td class="content-td-action">
+          <div class="btn-action-main">
+            •••
+              <div class="content-actions-btn">
+                <button id="see">Ver</button>
+                <button id="cancel">Cancelar</button>
+              </div>
+          </div>
+          <div class="countdown-profile">
+          </div>
+        </td>
+      `;
+      return tr;
+    }
+    removeAllTr(){
+      document.querySelectorAll('table tbody tr').forEach(tr=>tr.remove());
+    }
   }
 
   new ExtendServForDelAndRender();
+  seeUserDoneReserva();
   // console.log(service);
 }
 

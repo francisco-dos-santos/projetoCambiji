@@ -25,7 +25,7 @@ fetch("./users.json")
       <div class="card descendo">
         <div class="cont-img" onclick=salveIdProduct(${element.id})>
           <img src="${element.imageProduct}" alt="produto-${index+1}">
-          <div class="percentage" id="porcent">70%</div>
+          <div class="percentage" id="porcent">${element.porcent}%</div>
         </div>
         <h3 class="preco">Kz ${element.priceNew}.00</h3>
         <del class="text-riscado">Kz ${element.price}.00</del>

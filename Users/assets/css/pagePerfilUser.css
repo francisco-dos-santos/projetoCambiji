@@ -286,12 +286,12 @@ fieldset legend{
 	gap:1.6rem;
 }
 .separator-shoppings{
-	background: #F3F4F6;
+	border-bottom:1px solid #e1e1e1;
 	padding:.5rem 1.6rem;
-	border-radius: .3rem;
-	font-size: 1.4rem;
+	border-radius:.3rem;
+	font-size:1.4rem;
 	color: #111111;
-	text-align: end;
+	text-align:end;
 }
 .separator-shoppings p:last-child{
 	font-weight:600;
@@ -299,28 +299,27 @@ fieldset legend{
 
 .item-shopping{
 	display:grid;
-	grid-template-columns: 2fr repeat(4,1fr);
+	grid-template-columns:1.5fr repeat(5,1fr);
 	align-items:center;
 	column-gap: 1.6rem;
 
 }
 .content-item-img{
 	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	gap:2rem;
+	align-items:center;
+	gap:1rem;
 }
 .content-item-img img{
 	max-width:5rem;
 	max-height:5rem;
 	border-radius:50%;
-	border: .1rem solid #F3F4F6;
+	border:.1rem solid #F3F4F6;
 }
 .content-item-img .info-product{
 	display: flex;
 	flex-direction:column;
 	gap:.2rem;
-	font-size: 1.4rem;
+	font-size:1.4rem;
 }
 .info-product >span:last-child{
 	color:#9b9797;
@@ -329,23 +328,24 @@ fieldset legend{
 	font-weight: bold;
 }
 .item-shopping >p{
-	padding:1.4rem;
-	font-size: 1.4rem;
-	text-align: center;
+	padding:1rem;
+	font-size:1.4rem;
+	text-align:center;
 }
 .item-shopping .price-item{
 	font-weight: bold;
 }
 .item-shopping .payment, 
 .item-shopping .status{
-	background-color: #F9FAFB;
 	border-radius:.8rem;
 }
 .item-shopping .payment{
 	color:#67db7e;
+	border: 1px solid #67db7e;
 }
 .item-shopping .status{
 	color:#f30000;
+	border: 1px solid #f30000;
 }
 
 
@@ -382,6 +382,7 @@ td .td-status{
 	background-color: #e74c3c;
 	color: #fff;
 	border-radius:.8rem;
+	font-size: 1.4rem;
 	padding:.6rem;
 }
 
@@ -405,9 +406,10 @@ td .td-status{
 	padding:0;
 	display:none;
 	position:absolute;
-	bottom:-2rem;
+	bottom:0;
 	right:0;
 	box-shadow:0 0 2px #bcbcbc;
+	padding:.5rem;
 	border-radius:.8rem;
 	background-color: #F9FAFB;
 	flex-direction:column;
@@ -416,8 +418,8 @@ td .td-status{
 	gap:.3rem;
 }
 .content-actions-btn> button{
-	text-align: start;
-	font-size: 1.4rem;
+	text-align:start;
+	font-size:1.4rem;
 	padding:.8rem;
 	background-color: #F9FAFB;
 	border-radius:.8rem;

@@ -1,10 +1,15 @@
 
+  import initDashboard from "./dashboard.js";
   import initSettings from "./settings.js";
   import initUsers from "./users.js";
+  import initServices from "./services.js";
+  import initShoppings from "./shoppings.js";
+  import { Modal} from "./modal.js";
  
   function initWorkPageMain(){
   const userAdmin=JSON.parse(sessionStorage.getItem('userAdmin'));
-  
+
+
   function initWorkheader(){
     const header= document.querySelector('header');
 
@@ -24,10 +29,14 @@
     const tabButtons= document.querySelectorAll('aside .btn-sidebar');
     const root=document.getElementById("root");
     let xhr;
-
     tabButtons[0].classList.add('active-sidebar');
     if(tabButtons[0].classList.contains('active-sidebar')){
       let name= tabButtons[0].getAttribute('content_Id');
+      let signIn=JSON.parse(sessionStorage.getItem('sign-in')) ?? '';
+      if(signIn.sign){
+        new Modal({type:"sucess",message:"Benvindo a pagina de administrador, da Cambiji Nature"});
+        sessionStorage.removeItem('sign-in');
+      }
       navegatingInSections(name);
     }
     
@@ -47,10 +56,12 @@
           setTimeout(()=>{
             const response = xhr.responseText;
             root.innerHTML=response;
-           
-            initSettings();
+            initDashboard();
             initUsers();
-          },400);
+            initShoppings();
+            initServices();
+            initSettings();
+          },200);
 
         }
       }
@@ -62,16 +73,19 @@
         const nameLink= button.getAttribute('content_Id');
         if(nameLink!=='logout'){
           navegatingInSections(nameLink);
-        }else{
-          let logout=confirm('Tens a certeza que desejas sair?');
-          if(logout){
-            window.location.href=".././index.html";
-          }
         }
       }
       
     }
 
+    tabButtons[6].onclick=()=>{
+      let logout= confirm('Tens a certeza que desejas sair?');
+        console.log(logout);
+          if(logout){
+            window.location.href=".././index.html";
+            sessionStorage.removeItem('userAdmin');
+        }
+      }
     tabButtons.forEach(button=>{
       button.addEventListener('click',function(){
         activeTab(button);
@@ -80,7 +94,6 @@
     console.log(root);
     
   }
-
   initWorkheader();
   initNavTab();
 }

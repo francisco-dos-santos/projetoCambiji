@@ -26,24 +26,44 @@ function renderPoducts() {
   miniatura.innerHTML = "";
   creme.innerHTML = "";
   oleo.innerHTML = "";
-  products.forEach(element => {
-    let newCard = `
-    <div class="card subindo">
-      <div class="cont-img">
-        <img src="${element.imageProduct}" alt="produto-${element.id}">
-        <!--<div class="percentage" id="porcent">60%</div>-->
-      </div>
-      <h3 class="preco">A0A ${element.price}.00</h3>
-      <!--<del class="text-riscado">Kz${element.price}</del>-->
-      <p>${element.product}</p>
-      <div class="content">
-        <small class="categoria">${element.category}</small>
-        <button class="add-cart" id="${element.id}">
-          <img src="../assets/imagens/icons8_add_shopping_cart.ico"" alt="cart">
-        </button>
-      </div>
-  </div>
-  `;
+  products.forEach(element =>{
+    let newCard;
+    if(element.status){
+      newCard=`
+      <div class="card subindo">
+        <div class="cont-img">
+          <img src="${element.imageProduct}" alt="produto-${element.id}">
+          <div class="percentage" id="porcent">${element.porcent}%</div>
+        </div>
+        <h3 class="preco">A0A ${element.priceNew}.00</h3>
+        <del class="text-riscado">Kz${element.price}</del>
+        <p>${element.product}</p>
+        <div class="content">
+          <small class="categoria">${element.category}</small>
+          <button class="add-cart" id="${element.id}">
+            <img src="../assets/imagens/icons8_add_shopping_cart.ico"" alt="cart">
+          </button>
+        </div>
+      </div>`;
+
+    }else{
+      newCard= `
+        <div class="card subindo">
+          <div class="cont-img">
+            <img src="${element.imageProduct}" alt="produto-${element.id}">
+            <!--<div class="percentage" id="porcent">60%</div>-->
+          </div>
+          <h3 class="preco">A0A ${element.price}.00</h3>
+          <!--<del class="text-riscado">Kz${element.price}</del>-->
+          <p>${element.product}</p>
+          <div class="content">
+            <small class="categoria">${element.category}</small>
+            <button class="add-cart" id="${element.id}">
+              <img src="../assets/imagens/icons8_add_shopping_cart.ico"" alt="cart">
+            </button>
+          </div>
+        </div>`;
+    }
     if (element.category === 'Aromas' && counta <10) {
       aromas.innerHTML += newCard;
       counta++;

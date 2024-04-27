@@ -74,7 +74,7 @@ function checkInputsCardPayMoney(){
   let nameCardValue = nameCard.value.trim(); 
   let numberPhoneMoneyValue = numberPhoneMoney.value.trim();
 
-  if(nameCardValue === "") {
+  if(nameCardValue === ""){
     setError(nameCard, "O nome do titular da conta é obrigatório!");
     return;
   } else {
@@ -170,10 +170,10 @@ function renderListProductForCheckout(){
       <li>
       <h5>${element.product}</h5>
       <small>descrição...</small>
-      <p class="price-list-for-checkout">${element.price}kz</p>
+      <p class="price-list-for-checkout">${element.priceNew?element.priceNew:element.price}kz</p>
       <p>
         <span class="quantity-list-for-checkout">${element.quantity}x</span>
-        <span>${element.quantity*element.price}kz</span>
+        <span>${element.priceNew?element.quantity*element.priceNew:element.quantity*element.price}kz</span>
       </p>
       </li>
     `;
@@ -197,7 +197,7 @@ function getPayment() {
 btncheckedCard.addEventListener('click', (event) => {
   event.preventDefault();
   setTimeout(() =>{
-    if (checkIpuntsCardPay() || checkInputsCardPayMoney()){
+    if(checkIpuntsCardPay()){
       clearInputs({
         input1: nameCard,
         input2: numberCard,
@@ -210,6 +210,27 @@ btncheckedCard.addEventListener('click', (event) => {
     } else {
       console.warn('não validou para fazer checking');
     }
+
+    getPayment().then(payment=>{
+      if(payment=="UnitelMoney" || payment=="AfriMoney"){
+        if(checkInputsCardPayMoney()){
+          clearInputs({
+            input1: nameCard,
+            input2: numberCard,
+            input3: dataExperation,
+            input4: numberPhoneMoney,
+            input5: numberCVV
+          });
+          handleScreensToShowShopping();
+          console.log('validou para fazer checking');
+        } else {
+          console.warn('não validou para fazer checking');
+        }
+
+      }
+
+    }); //fim promise
+
   }, 100);
   
 });
@@ -217,20 +238,21 @@ btncheckedCard.addEventListener('click', (event) => {
 finallyCheckoutShopping.addEventListener('click',()=>{
   setTimeout(()=>{
     if(checkeInputsAdressShopping()){
-      getPayment().then(payment =>{
-        DataShopping.addShoppings({
-          numberPhone:phoneNumberUser.value,
-          province:provinceUser.value,
-          municipe:cityUser.value,
-          adress:adressUser.value,
-          payment:payment,
-          valor:Total
+      finallyCheckoutShopping.querySelector('.loader').style.display='block';
+      setTimeout(()=>{
+        getPayment().then(payment =>{
+          DataShopping.addShoppings({
+            numberPhone:phoneNumberUser.value,
+            province:provinceUser.value,
+            municipe:cityUser.value,
+            adress:adressUser.value,
+            payment:payment,
+            valor:Total
+          });
+          finallyCheckoutShopping.querySelector('.loader').style.display='none';
+          handleScreensToShowShopping();
         });
-        Modal.open('../assets/imagens/icons8_ok.ico','Compra efituado com sucesso!');
-        // console.log(payment);
-        handleScreensToShowShopping();
-        window.location.href="../pages-logado/dataToshopping.html";
-      });
+      },2000);
       console.log('validou para finalizar compra');
     }else{
       console.warn('não validou para finalizar compra ');

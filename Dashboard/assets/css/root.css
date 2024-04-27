@@ -15,7 +15,7 @@
   --fc-primary:hsl(var(--hue), 0%, 0%);
   --fc-secondary:hsl(var(--hue), 14%, 96%);
   --fc-error:hsl(0, 96%, 50%);
-  --fc-gray:hsl(var(--hue), 0%, 65%);
+  --fc-gray:hsl(var(--hue), 0%,50%);
   --fc-border:hsl(var(--hue), 0%, 87%);
     font-size: 62.5%;
   --fs-body:1.6rem;
@@ -25,6 +25,9 @@
 }
 a{
   text-decoration:none;
+}
+ul,ol{
+  list-style-type:none;
 }
 button{
   font-family:var(--ff-text);

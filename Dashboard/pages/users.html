@@ -5,6 +5,21 @@
 <h1>Usuários</h1>
 <p>Adminastrador. Cambiji</p>
 <div class="page-main" id="users">
+  <section class="wrapper-modal-info">
+    <button class="back-section" title="voltar na lista de compras">&hookleftarrow;</button>
+    <div class="info-full-shop">
+      <p>nome</p>
+      <p>data</p>
+      <p>valor Total</p>
+      <p>Enderenço,pronvicia,status</p>
+    </div>
+    <div class="wrapper-list-products">
+      <ul>
+        <li>image producto,nome, preço x quantidade,description,size</li>
+      </ul>
+    </div>
+  </section>
+
   <table>
     <thead>
       <tr>
@@ -14,6 +29,7 @@
         <th>Genero</th>
         <th>T/de Compras</th>
         <th>T/de serviços</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -37,59 +53,17 @@
           <span>4 Servs</span>
         </td>
         <td class="actions">
-          <button>•••</button>
-          <div class="content-buttons">
-            <button>Ver</button>
-            <button>Eliminar</button>
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td class="td-user-avatar">
-            <img src="../assets/imagens/icons8_male_user.ico" 
-            alt="imagem do produto" width="40px" />
-            <p class="info-user">
-              <strong class="name-user">Francisco dos Santos</strong>
-              <br>
-              <small class="email-user">francsicodeveloper@gmail.com</small>
-            </p>
-        </td>
-        <td>04/02/2024</td>
-        <td class="number-user">945454345</td>
-        <td class="genere-user">Masculino</td>
-        <td class="shoppngs-total-user">
-          <span>3 Shops</span>
-        </td>
-        <td class="service-total-user">
-          <span>4 Servs</span>
-        </td>
-        <td class="actions">
-          <button>•••</button>
-          <div class="content-buttons">
-            <button>Ver</button>
-            <button>Eliminar</button>
+          <button class="menu-v" title="Menu de opções">•••</button>
+          <div class="dropdrow">
+            <button class="see" title="ver informações da usuário">
+              <img src="../assets/imagens/icons8_eye.ico" width="18px" alt="eyes">
+              Ver
+            </button>
+            <button class="remove" title="Eliminar usuário">&times; Confirmar</button>
           </div>
         </td>
       </tr>
     </tbody>
   </table>
-
-
-  <template>
-    <div class="item-shopping">
-      <div class="content-item-img">
-        <img src="../assets/imagens/icons8_male_user.ico" alt="imagem do produto" />
-        <p class="info-product">
-          <span>Nome</span>
-          <span>descrição</span>
-        </p>
-      </div>
-      <p class="price-item">A0 200.00</p>
-      <p class="sub-total">A0 400.00</p>
-      <p class="payment">pagamento</p>
-      <p class="status">Em process</p>
-    </div>
-  </template>
   
 </div>

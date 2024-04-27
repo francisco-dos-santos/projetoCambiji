@@ -4,10 +4,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="vierwport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="../imagens/logo2.jpg" type="image/x-icon">
+	<link rel="shortcut icon" href="../assets/imagens/logo2.jpg" type="image/x-icon">
 	<link rel="stylesheet" href="../assets/css/pageServices.css">
 
 	<title>Fazer reserva</title>
+	<style>
+		main{
+			background-color: #ffffff;
+		}
+	</style>
 </head>
 
 <body>
@@ -45,7 +50,7 @@
           </div>
           <div class="content-btn-info-user">
             <a href="perfil.html">Perfil</a>
-            <a href="../index.html">Sair</a>
+						<a href="#" class="go-out">Sair</a>
           </div>
         </div>
       </div>
@@ -102,58 +107,39 @@
 	</header>
 
 	<main>
+
 		<div class="wrapper-Reserv">
+
 			<section class="fazer-reser descendo">
-				<!-- session 1 -->
-				<div class="dest-reserva">
-					<div class="img-reserva">
-						<img src="../assets/imagens/logo.png" alt="logo">
-					</div>
-	
-					<div class="text-reserva">
-						<p>A cambiji nature tem os seus serviços prestados com qualidade.
-							<strong> E com vagas limitadas,</strong> de segunda <br> à sábado das( 8h as 17h30)
-						</p>
-					</div>
-					<div class="cont-serv-reserva subindo">
-						<div class="serv-reserva">
-							<img src="../assets/imagens/combo2 - pequeno.jpg" alt="">
-							<h6>Combo Serviço</h6>
-							<p>30.00kz</p>
-							<p>duração:2h00</p>
-						</div>
-						<div class="serv-reserva">
-							<img src="../assets/imagens/massagem2 - pequeno.jpg" alt="">
-							<h6>massagem Simples</h6>
-							<p>10.000kz</p>
-							<p>duração:1h30</p>
-						</div>
-						<div class="serv-reserva">
-							<img src="../assets/imagens/lipaface - pequeno.jpg" alt="">
-							<h6>Limpeza &nbsp;facial</h6>
-							<p>15.000kz</p>
-							<p>duração:1h00</p>
-						</div>
-					</div>
+				<div class="wrapper-img">
+					<section class="info-service">
+						<span>Nome: <small class="name-serv">Combo Serviço</small></span>
+						<span>Duração: <small class="durection-serv">1:30</small></span>
+						<span>Preço: AOA <small class="price-serv">6000</small></span>
+					</section>
+					<img src="../assets/imagens/combo2.jpg" alt="imagem do serviço" >
 				</div>
-	
-				<!-- session 2 -->
-				<article class="sess-input-1">
-					<form autocomplete="on">
+					<form autocomplete="on" id="form-reserv-data">
 						<fieldset>
 							<div class="wrapper-fieldset">
 								<legend>Fazer Reservas</legend>
+
 								<div class="input-wrapper">
-									<label for="number-reserv">Numero de Telefone <span>(Somente números validos em Angola)</span></label>
-									<input 
-									type="tel" 
-									class="input" 
-									id="number-reserv" 
-									placeholder="+244(932925647)">
-									<small></small>
+									<label for="type-service">Tipo de serviço</label>
+									<input type="text" list="service" id="type-service" placeholder="Escolha Tipo Serviço" readonly>
+									<small>Error</small>
 								</div>
+
+									<div class="input-wrapper">
+										<label for="number-reserv">Numero de Telefone <span>(Somente números validos em Angola)</span></label>
+										<input 
+										type="tel" 
+										class="input" 
+										id="number-reserv" 
+										placeholder="+244(932925647)">
+										<small></small>
+									</div>
 	
-								<div class="wrapper-date-time">
 									<div class="input-wrapper">
 										<label for="data-reserv">Data da reserva*</label>
 										<input type="date" 
@@ -174,43 +160,82 @@
 											<option value="17:45"></option>
 										</datalist>
 										<small></small>
-									</div>
-								</div>
-	
-								<div class="input-wrapper">
-									<label for="pay-metod">Metodo de pagamnetos*</label>
-									<datalist  id="metod">
-										<option value="Transferência-Bancaria"></option>
-										<option value="Visa"></option>
-										<option value="Paypal"></option>
-										<option value="UnitelMoney"></option>
-										<option value="AfriMoney"></option>
-									</datalist>
-									<input type="text" id="pay-metod" list="metod" placeholder="Escolha Metodo de Pagamento">
-									<small>Error</small>
-								</div>
-	
-								<div class="input-wrapper">
-									<label for="type-service">Tipo de serviço</label>
-									<input type="text" list="service" id="type-service" placeholder="Escolha Tipo Serviço">
-									<datalist  id="service">
-										<option value="Massagem Simples">8.000kz</option>
-										<option value="Combo Serviço">20.000kz</option>
-										<option value="Limpeza Facial">8.000kz</option>
-									</datalist>
-									<small>Error</small>
-								</div>
-	
+									</div>	
 							</div>
 						</fieldset>
-	
-						<button id="btn-encomenda">
-							Confirmar Reserva
-						</button>
 					</form>
 				</article>
 	
 			</section>
+
+			<div id="payment-info">
+
+				<h2>Informações de Pagamentos</h2>
+				<p>Seleciona o tipo de pagamento clicando 👇..!</p>
+				<div class="wrapper-card">
+					<div class="pay-visa pay">
+						<input type="radio" name="card" id="visa" value="Visa Card" checked>
+						<label for="visa">
+							<img src="../assets/imagens/visaCard.png" alt="visa-card">
+						</label>
+					</div>
+					<div class="pay-back-card pay">
+						<input type="radio" name="card" id="back-card" value="Cart Credit">
+						<label for="back-card">
+							<img src="../assets/imagens/credit-card..png" alt="card-card">
+						</label>
+					</div>
+					<div class="pay-money-unitel pay">
+						<input type="radio" name="card" id="money-unitel" value="UnitelMoney">
+						<label for="money-unitel">
+							<img src="../assets/imagens/unitelMoney.png" alt="money-unitel">
+						</label>
+					</div>
+					<div class="pay-afrimoney pay">
+						<input type="radio" name="card" id="afrimoney" value="AfriMoney">
+						<label for="afrimoney">
+							<img src="../assets/imagens/afrimoney.png" alt="afrimoney-card"/>
+						</label>
+					</div>
+				</div>
+			
+				<div class="content-inputs">
+					<form action="" id="form-payment">
+						<div class="wrapper-input ">
+							<label for="name-card">Nome do titular do Cartão</label>
+							<input type="text" name="" id="name-card" placeholder="Francisco dos Santos">
+							<small></small>
+						</div>
+						<div class="wrapper-input  card-pay">
+							<label for="number-card">Número do Cartão</label>
+							<input type="number" name="" min="0" id="number-card" placeholder="•••• ••••• •••••• ••••••• 4893">
+							<small></small>
+						</div>
+						<div class="wrapper-input mobileMoney">
+							<label for="number-phone">Número de Telemovel money</label>
+							<input type="tel" name="" id="number-mobilemoney" placeholder="••••• ••••• •••• 4543">
+							<small></small>
+						</div>
+						<div class="wrapper-input   card-pay">
+							<label for="data-experição">Data de Experição</label>
+							<div >
+								<input type="text" name="" id="data-experição" placeholder="20/05/2023">
+								<input type="number" name="" min="0" id="number-cvv" size="2" placeholder="Cvv">
+							</div>
+							<small></small>
+						</div>
+
+						<button id="btn-cheked-card">
+							<img src="../assets/imagens/icons8_loader.ico" width="25px"
+							alt="icone de loader" class="loader"> 
+							CheckOut
+						</button>
+					</form>
+				</div>
+
+			</div>
+
+
 		</div>
 	</main>
 	<!-- FOOTER PRINCIPAL -->
@@ -223,7 +248,7 @@
 				<img src="" alt="visa">
 			</a>
 			<a href="#">
-				<img src="" alt="paypay">
+				<img src="" alt="Afrimoney">
 			</a>
 			<a href="#">
 				<img src="" alt="bank">

@@ -6,6 +6,7 @@
 <h1>Definições</h1>
 <p>Adminastrador. Cambiji</p>
 <section class="page-main" id="setting">
+
   <div class="asidebar-setting">
     <button class="btn-sidebar " content_Id="add-Products">
       <img src="../assets/imagens/icons8-fats-64.png" 
@@ -21,8 +22,43 @@
       Listar Promocional
     </button>
   </div>
+
   <section class="container-setting">
+
+    <section class="wrapper-modal-info">
+      <button class="back-section" title="voltar na lista de produtos">&hookleftarrow;</button>
+      <div class="wrapper-img-product">
+        <img src="../assets/imagens/avatar-miro.png" alt="image de produtos">
+        <p class="porcentage">50%</p>
+      </div>
+      <div class="wrapper-info-product">
+        <ul>
+          <li><h2 class="name-product">Aroma aqueos</h2></li>
+          <li><p class="description">descrição do produtos</p></li>
+          <li>Categoria: <span class="category-product">Aroma</span></li>
+          <li>Marca: <span class="mark-product">Ferrari Black</span></li>
+          <li>Stock: <span class="stock-product">20</span></li>
+          <li>Tamanho: <span class="stock-product">20</span> ml</li>
+          <li>
+            <h2 class="price-product">A0A 400,04</h2>
+            <del class="old-price"></del>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <article class="content" id="add-Products">
+      <section class="wrapper-modal-porcent">
+        <div class="modal-inputs">
+          <button class="close-inputs" title="fechar o modal">&times;</button>
+          <p>Digite o preço antigo e o porcento de desconto</p>
+          <div>
+            <input type="number" name="" id="price-Old" placeholder="Preço antigo" min="1">
+            <input type="number" name="" id="porcent-descount" placeholder="30%" min="1" max="100">
+          </div>
+          <input type="number" name="" id="price-new" readonly placeholder="Valor calculdado">
+        </div>
+      </section>
       <div class="container-image">
         <div class="wrapper-img">
           <img src="../assets/imagens/icons8-fats-64.png" 
@@ -56,124 +92,152 @@
                 </div>
               </div>
             </div>
+            
             <div class="fieldset-wrapper  show-deals-normal" id="content-normal">
               <div class="wrapper-input">
                 <label for="name-product">Nome do produto</label>
-                <input type="text" id="name-product" placeholder="Digite o nome do produto">
+                <input type="text" id="name-product"  class="input-clean" 
+                placeholder="Digite o nome do produto">
                 <small></small>
               </div>
               <div class="wrapper-input">
                 <label for="desc-product">Descrição do Produto</label>
-                <textarea id="desc-product" cols="30" rows="3"></textarea>
+                <textarea id="desc-product"  class="input-clean" cols="30" rows="3"></textarea>
                 <small></small>
               </div>
               <div class="wrapper-input">
                 <label for="price-product">Preço(Ao)</label>
-                <input type="number" id="price-product" 
+                <input type="number" class="input-clean" id="price-product" min="1"
                 placeholder=" Digite O preço">
                 <small></small>
               </div>
               <div class="wrapper-input">
                 <label for="category-product">Categorias</label>
-                <select  id="category-product">
+                <select  id="category-product"  class="input-clean">
                   <option value="">Selecione a Categoria</option>
                   <option value="Aromas">Aroma</option>
                   <option value="Sabonete">Sabonete</option>
                   <option value="Oleo">Oleo</option>
                   <option value="Creme">Creme</option>
                   <option value="Dezodorizante">Dezodorizante</option>
+                  <option value="Miniatura">Miniatura</option>
                 </select>
                 <small></small>
               </div>
               <div class="wrapper-input">
                 <label for="marker-product">Marca</label>
-                <input list="markers-products" id="marker-product" placeholder="Selecione a marca do produro">
+                <input list="markers-products" id="marker-product"  class="input-clean" 
+                placeholder="Selecione a marca do produro">
                 <datalist id="markers-products">
-                  <option value="ferrary-black"></option>
-                  <option value="breetisnys"></option>
+                  <option value="Cambiji"></option>
+                  <option value="Ferra Black"></option>
+                  <option value="Versace Man"></option>
+                  <option value="Paco 1 Millian"></option>
+                  <option value="Hugo Boss"></option>
+                  <option value="Britney Fantasy"></option>
+                  <option value="Lavie Est Bella"></option>
+                  <option value="Caroline Goorgl"></option>
                 </datalist>
                 <small></small>
               </div>
               <div class="cols-2">
                 <div class="wrapper-input">
                   <label for="size-product">Tamanho em (ml)</label>
-                  <select  id="size-product">
+                  <select  id="size-product"  class="input-clean">
                     <option value=""><small>Selecione o Tamanho</small></option>
                     <option value="50">50 ml</option>
-                    <option value="10">10 ml</option>
                     <option value="30">30 ml</option>
+                    <option value="20">20 ml</option>
+                    <option value="Sem">Sem Tamanho</option>
                     <option value="15">15 ml</option>
+                    <option value="10">10 ml</option>
+                    <option value="5">5 ml</option>
                   </select>
                   <small></small>
                 </div>
                 <div class="wrapper-input">
                   <label for="stock-product">Stock(Qt)</label>
-                  <input type="number" id="stock-product" placeholder="quantidade">
+                  <input type="number" id="stock-product"  class="input-clean" max="60" min="1"
+                  placeholder="quantidade">
                   <small></small>
                 </div>
               </div>
             </div>
+
             <div class="fieldset-wrapper" id="content-deals">
               <div class="wrapper-input">
                 <label for="name-product">Nome do produto</label>
-                <input type="text" id="name-product" placeholder="Digite o nome do produto">
+                <input type="text" id="name-product"  class="input-clean" 
+                placeholder="Digite o nome do produto">
                 <small></small>
               </div>
               <div class="wrapper-input">
                 <label for="desc-product">Descrição do Produto</label>
-                <textarea id="desc-product" cols="30" rows="3"></textarea>
+                <textarea id="desc-product"  class="input-clean" cols="30" rows="3"></textarea>
                 <small></small>
               </div>
               <div class="cols-2">
                 <div class="wrapper-input">
                   <label for="price-old-product">Preço(Ao antigo)</label>
-                  <input type="number" id="price-old-product" 
+                  <input type="number" id="price-old-product"  class="input-clean" min="1"
                   placeholder="O preço antigo">
                   <small></small>
                 </div>
                 <div class="wrapper-input">
                   <label for="price-new-product">Preço(Ao novo)</label>
-                  <input type="number" id="price-new-product"  
-                  placeholder="O preço novo">
+                  <input type="number" id="price-new-product" class="input-clean" 
+                  placeholder="O preço novo" readonly>
                   <small></small>
                 </div>
               </div>
               <div class="wrapper-input">
                 <label for="category-product">Categorias</label>
-                <select  id="category-product">
+                <select  id="category-product"  class="input-clean">
                   <option value="">Selecione a Categoria</option>
                   <option value="Aromas">Aroma</option>
                   <option value="Sabonete">Sabonete</option>
                   <option value="Oleo">Oleo</option>
                   <option value="Creme">Creme</option>
                   <option value="Dezodorizante">Dezodorizante</option>
+                  <option value="Miniatura">Miniatura</option>
                 </select>
                 <small></small>
               </div>
               <div class="wrapper-input">
                 <label for="marker-product">Marca</label>
-                <input list="markers-products" id="marker-product" placeholder="Selecione a marca do produro">
+                <input list="markers-products" id="marker-product" class="input-clean" 
+                placeholder="Selecione a marca do produro">
                 <datalist id="markers-products">
-                  <option value="ferrary-black"></option>
-                  <option value="breetisnys"></option>
+                  <option value="Ferra Black"></option>
+                  <option value="Versace Man"></option>
+                  <option value="Paco 1 Millian"></option>
+                  <option value="Hugo Boss"></option>
+                  <option value="Britney Fantasy"></option>
+                  <option value="Lavie Est Bella"></option>
+                  <option value="Cambiji"></option>
+                  <option value="Caroline Goorgl"></option>
                 </datalist>
                 <small></small>
               </div>
               <div class="cols-2">
                 <div class="wrapper-input">
                   <label for="size-product">Tamanho em (ml)</label>
-                  <select  id="size-product">
+                  <select  id="size-product"  class="input-clean">
                     <option value=""><small>Selecione o Tamanho</small></option>
                     <option value="50">50 ml</option>
-                    <option value="10">10 ml</option>
                     <option value="30">30 ml</option>
+                    <option value="20">20 ml</option>
                     <option value="15">15 ml</option>
+                    <option value="Sem">Sem Tamanho</option>
+                    <option value="10">10 ml</option>
+                    <option value="5">5 ml</option>
                   </select>
                   <small></small>
                 </div>
                 <div class="wrapper-input">
                   <label for="stock-product">Stock(Qt)</label>
-                  <input type="number" id="stock-product" placeholder="quantidade">
+                  <input type="number" id="stock-product" class="input-clean" min="1" max="60"
+                   placeholder="quantidade">
                   <small></small>
                 </div>
               </div>
@@ -181,7 +245,7 @@
             
           </fieldset>
           <footer class="cont-buttons">
-            <button type="reset" class="btn-add-prod">Cancelar</button>
+            <button id="btn-reset-fields" class="btn-add-prod">Cancelar</button>
             <button id="btn-add-products" class="btn-add-prod">Adicionar</button>
           </footer>
         </form>
@@ -190,14 +254,72 @@
 
     <article class="content" id="list-Products">
       <div>
-        section para listar produtos
+        <h3>Lista de produtos! <small class="q">mais de 20 produtos</small> </h3>
+        <section class="wrapper-products">
+
+          <template>
+            <div class="card-product">
+              <div class="content-img">
+                <img src="../assets/imagens/avatar-miro.png" alt="produto-1">
+                  <div class="percentage" id="porcent">50%</div>
+                </div>
+                <h3 class="price">A0 200.00</h3>
+                <p class="name-product">Nome</p>
+                <p class="category">Categoria</p>
+                <div class="content-actons-stk">
+                  <small class="stock">Stock:50</small>
+                  <div class="actions">
+                    <button class="see-product"title="Ver informações">
+                      <img src="../assets/imagens/icons8_eye.ico" width="16" alt="eyes ">
+                    </button>
+                    <button class="edit-product" title="Editar informações">
+                      <img src="../assets/imagens/icons8_edit_product.ico" width="16" alt="editar product">
+                    </button>
+                    <button class="clear-product" title="Eliminar da lista">
+                      <img src="../assets/imagens/icons8_delete.ico" width="16" alt="eliminar">
+                    </button>
+                  </div>
+                </div>
+            </div>
+          </template>
+          
+        </section>
       </div>
     </article>
 
     <article class="content" id="list-Prod-deals">
       <div>
-        section para listar em promuction
+        <h3> Lista de produtos em promoção! <small class="q">mais de 4 produtos</small></h3>
+        <section class="wrapper-products">
+          <template>
+            <div class="card-product">
+              <div class="content-img">
+                <img src="../assets/imagens/avatar-miro.png" alt="produto-1">
+                  <div class="percentage" id="porcent">50%</div>
+                </div>
+                <h3 class="price">A0 200.00</h3>
+                <p class="name-product">Nome</p>
+                <p class="category">Categoria</p>
+                <div class="content-actons-stk">
+                  <small class="stock">Stock:50</small>
+                  <div class="actions">
+                    <button class="see-product"title="Ver informações">
+                      <img src="../assets/imagens/icons8_eye.ico" width="16" alt="eyes ">
+                    </button>
+                    <button class="edit-product" title="Editar informações">
+                      <img src="../assets/imagens/icons8_edit_product.ico" width="16" alt="editar product">
+                    </button>
+                    <button class="clear-product" title="Eliminar da lista">
+                      <img src="../assets/imagens/icons8_delete.ico" width="16" alt="eliminar">
+                    </button>
+                  </div>
+                </div>
+            </div>
+          </template>
+        </section>
       </div>
     </article>
+
   </section>
+
 </section>

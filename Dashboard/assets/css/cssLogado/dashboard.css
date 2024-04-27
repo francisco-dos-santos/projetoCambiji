@@ -1,5 +1,156 @@
 
-
 #dashboard{
+  padding:2rem 1rem 0;
+  max-width:100%;
+	overflow-y:auto;
+	max-height:100%;
+  position: relative;
+}
+::-webkit-scrollbar{
+	background-color:transparent;
+	border-radius:3rem;
+	width:8px;
+}
+::-webkit-scrollbar-thumb{
+	background-color:var(--bg-secondary);
+	border-radius:50px;
+}
+
+#dashboard > .wrapper-cards{
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom: 3.5rem;
+}
+.content-card{
+  position: relative;
+  max-width:25rem;
+  width:100%;
+  border:1px solid var(--fc-border);
+  border-radius:1rem;
+  box-shadow: 0 0 5px var(--bg-modal);
+  padding:2.5rem 2rem;
+  display:grid;
+  align-self:center;
+  gap:2rem;
+
+}
+.content-icone{
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  max-width:4rem;
+  max-height:4rem;
+  background-color: var(--bg-secondary);
+  border-radius:.8rem;
+  padding:.2rem;
+  display: grid;
+  place-content:center;
+}
+.content-card> p{
+  color: var(--fc-gray);
+}
+.wrapper-activity{
+  padding:1rem;
+  display: grid;
+  grid-template-columns:2.5fr 1fr;
+  column-gap:2rem;
+}
+#dashboard .content-activity{
+  border:1px solid var(--fc-border);
+  border-radius:1rem;
+  padding:2rem 3rem;
+}
+.content-activity> ul{
+  display:grid;
+  row-gap:2rem;
+}
+.wrapper-title-activity{
+  display: flex;
+  align-items:center;
+  gap:2rem;
+}
+.content-activity ul> li{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+ul> li .content-icone-activity{
+  width:5rem;
+  height:5rem;
+  background-color: var(--bg-secondary);
+  border-radius:.8rem;
+  padding:.2rem;
+  display: grid;
+  place-content:center;
+}
+#dashboard .content-grafic{
+  box-shadow: 0 0 15px var(--bg-modal), 0 0 2px var(--bg-modal);
+  border-radius:1rem;
+  padding:1rem;
+}
+.title-grafic{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.title-grafic div {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: .3rem;
+}
+.title-grafic div >span{
+  display: block;
+  min-width:3.5rem;
+  height:1.5rem;
+}
+div .aqua{
+  background-color: aqua;
+}
+div .green{
+  background-color: var(--bg-secondary);
+}
+
+div .gray{
   background-color: var(--fc-border);
 }
+.content-grafic .grafic-number{
+  position:relative;
+  margin-top:2rem;
+  min-height:20rem;
+  z-index:1;
+ }
+.content-grafic .circulo{
+  position:absolute;
+  top:.3rem;
+  right:50%;
+  transform: translateX(50%);
+  z-index:2;
+  width:20rem;
+  height: 20rem;
+  border-top:4rem solid aqua;
+  border-bottom:4rem solid var(--bg-secondary);
+  border-left:4rem solid var(--fc-border);
+  border-right:4rem solid aqua;
+  border-radius: 50%;
+}
+
+.grafic-number .content-line{
+  display:flex;
+  width: 100%;
+}
+.grafic-number .content-line .line{
+  border-top: 1px solid var(--fc-border);
+  border-left: 1px solid var(--fc-border);
+  border-right: 1px solid var(--fc-border);
+  padding:2rem 1rem;
+  margin-left: .3rem;
+  width:100%;
+}
+.grafic-number .content-line .line:nth-child(4){
+  border-bottom: 1px solid var(--fc-border);
+}
+

@@ -1,0 +1,23 @@
+[
+  {
+    "type": "Combo Serviços",
+    "image":"combo2.jpg",
+    "valor": 20000,
+    "durection": "1:30",
+    "description":"Serviço de Limpeza Facial e Massagem Corporal com produtos avaliados pelo departamento da saúde, tornamos o teu corpo leve e uma cara livres de rugas."
+  },
+  {
+    "type": "Massagem Simples",
+    "image": "massagem2.jpg",
+    "valor": 8000,
+    "durection": "45min",
+    "description":"Serviço de massagem corporal com produtos avaliados pelo departamento da saúde, para se sentires melhores e com um bem estar suave."
+  },
+  {
+    "type": "Limpeza Facial",
+    "image":"lipaface.jpg",
+    "valor": 8000,
+    "durection": "45min",
+    "description":"Serviço de Limpeza Facial com produtos avaliados pelo departamento da saúde , tornamos a tua pele brilhante como a alva e clareado."
+  }
+]

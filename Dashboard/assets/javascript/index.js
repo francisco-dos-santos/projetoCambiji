@@ -92,13 +92,17 @@ function initworkMain(){
           email.value="";
           senha.value="";
           window.location.href="./pages/indexLog.html";
+          let signIn={
+            sign:true       
+          }
+          sessionStorage.setItem('sign-in',JSON.stringify(signIn));
         }else{
           warnUSer.classList.remove('hide-warn');
         }
       },1300);
   
-      } catch (error) {
-        console.error(error)  ;
+      }catch(error){
+        console.error(error);
       }finally{
         console.log('finalizada a resposta');
       }
